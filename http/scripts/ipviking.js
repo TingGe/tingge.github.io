@@ -1878,7 +1878,7 @@ function hideMessage() {
     $.ajax({
       url: loc || settings.wsHost,
       data: 'stime=' + (stime || settings.stime) + '&etime=' + (etime || settings.etime),
-      dataType:'jsonp',
+      type:'get',
       success: function(data) {
         //called when successful
         wsDiscTime = 0;
