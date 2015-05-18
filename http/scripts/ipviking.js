@@ -1877,10 +1877,8 @@ function hideMessage() {
 
     $.ajax({
       url: loc || settings.wsHost,
-      type: 'get',
-      dataType:'jsonp',
-      jsonp:'callback',
       data: 'stime=' + (stime || settings.stime) + '&etime=' + (etime || settings.etime),
+      dataType:'jsonp',
       success: function(data) {
         //called when successful
         wsDiscTime = 0;
@@ -1891,7 +1889,7 @@ function hideMessage() {
       },
       error: function(e) {
         //called when there is an error
-        console.log(e.message);
+        console.error(e.message);
         setTimeout(function(){
           reconnect();
         }, 5000);
