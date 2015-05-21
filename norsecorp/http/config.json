@@ -1,6 +1,6 @@
 {
   "stream": {
-    "host": "data/data.js"
+    "host": "http://124.126.242.54:8099/data.php"
   },
   "ui": {
     "logo": "assets/norse-white.png",

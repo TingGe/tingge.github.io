@@ -53,8 +53,8 @@ function hideMessage() {
     dataPruneInterval: 60,
 
     // 获取攻击数据设置
-    wsHost: "data/data.js",
-    //wsHost: "http://124.126.242.54:8099/center/data.php",
+    //wsHost: "data/data.js",
+    wsHost: "http://124.126.242.54:8099/data.php",
     stime:  Math.round(new Date().setMinutes(new Date().getMinutes() -5)/1000),
     etime:  Math.round(new Date().setMinutes(new Date().getMinutes())/1000),
     wsTimeout: 30000
