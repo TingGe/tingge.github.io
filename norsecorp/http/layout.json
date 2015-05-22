@@ -1,103 +1,103 @@
 [
   {
-    "name": "Attack Origins",
+    "name": "\u653B\u51FB\u6E90",
     "type": "source",
     "key": "source",
     "columns": [
       {
-        "display": "#",
+        "display": "\u653B\u51FB\u6B21\u6570",
         "attr": "count",
-        "width": "15%"
+        "width": "30%"
       },
       {
-        "display": "Country",
+        "display": "\u56FD\u5BB6",
         "attr": "country",
-        "width": "85%"
+        "width": "70%"
       }
     ],
     "width": "12%",
     "viz": true
   },
   {
-    "name": "Attack Types",
+    "name": "\u653B\u51FB\u7C7B\u578B",
     "type": "service",
     "key": "service",
     "columns": [
       {
-        "display": "#",
+        "display": "\u653B\u51FB\u6B21\u6570",
         "attr": "count",
-        "width": "15%"
+        "width": "20%"
       },
       {
-        "display": "Port",
+        "display": "\u7AEF\u53E3",
         "attr": "port",
         "width": "20%"
       },
       {
-        "display": "Service Type",
+        "display": "\u670D\u52A1\u7C7B\u578B",
         "attr": "service",
-        "width": "65%"
+        "width": "40%"
       }
     ],
     "width": "15%",
     "viz": true
   },
   {
-    "name": "Attack Targets",
+    "name": "\u653B\u51FB\u76EE\u6807",
     "type": "target",
     "key": "target",
     "columns": [
       {
-        "display": "#",
+        "display": "\u653B\u51FB\u6B21\u6570",
         "attr": "count",
-        "width": "15%"
+        "width": "30%"
       },
       {
-        "display": "Country",
+        "display": "\u56FD\u5BB6",
         "attr": "country",
-        "width": "85%"
+        "width": "70%"
       }
     ],
     "width": "12%",
     "viz": true
   },
   {
-    "name": "Live Attacks",
+    "name": "\u5B9E\u65F6\u653B\u51FB",
     "type": "events",
     "key": "events",
     "columns": [
       {
-        "display": "Timestamp",
+        "display": "\u65F6\u95F4\u6233",
         "attr": "timestamp",
-        "width": "15%"
+        "width": "19%"
       },
       {
-        "display": "Attacker",
+        "display": "\u653B\u51FB\u8005",
         "attr": "org",
-        "width": "30%"
+        "width": "28%"
       },
       {
-        "display": "Attacker IP",
+        "display": "\u653B\u51FB\u8005IP",
         "attr": "ip",
-        "width": "12%"
+        "width": "14%"
       },
       {
-        "display": "Attacker Geo",
+        "display": "\u653B\u51FB\u8005\u4F4D\u7F6E",
         "attr": "source",
         "width": "12%"
       },
       {
-        "display": "Target Geo",
+        "display": "\u76EE\u6807\u4F4D\u7F6E",
         "attr": "target",
         "width": "12%"
       },
       {
-        "display": "Attack Type",
+        "display": "\u653B\u51FB\u7C7B\u578B",
         "attr": "service",
-        "width": "14%"
+        "width": "10%"
       },
       {
-        "display": "Port",
+        "display": "\u7AEF\u53E3",
         "attr": "port",
         "width": "5%"
       }

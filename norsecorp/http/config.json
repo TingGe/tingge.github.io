@@ -1,6 +1,6 @@
 {
   "stream": {
-    "host": "http://124.126.242.54:8099/data.php"
+    "host": "data/data.js"
   },
   "ui": {
     "logo": "assets/norse-white.png",
@@ -16,7 +16,7 @@
       "zoom": 3,
       "center": [24.5271348225978, -0.17578125],
       "maxBounds": [[75, 179], [-61, -181]],
-      "minZoom": 2,
+      "minZoom": 1,
       "maxZoom": 9
     }
   }
