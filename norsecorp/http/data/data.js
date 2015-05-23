@@ -304,7 +304,7 @@
     "longitude": 30.5233,
     "countrycode": "UA",
     "country": "UA",
-    "city": "",
+    "city": "\u798F\u5DDE",
     "org": "FORTUNE-AS Fortune Science and Production Company,UA",
     "latitude2": 30.5801,
     "longitude2": 114.2734,
