@@ -14,35 +14,36 @@
 <div id='controls'>
   <!--<img id="logo">-->
 </div>
-<div id='infobox'>
-  <div class='close'>X</div>
-  <div id='infobox-header'><h2>图例</h2></div>
-  <div id='infobox-main'>的说法是否</div>
-</div>
-<div id="legend-container">
-  <div id="particle-legend" class='legend'>
-    <h4><p>Each particle represents an attack</p></h4>
-    <p id="particle-legend-content"><img src='assets/particle-inverse.png'></p>
+<div id="infobox">
+  <div class="close">X</div>
+  <div id="infobox-header"><h2>Norse Dark Intelligence</h2></div>
+
+  <div id="legend-container">
+    <!--
+    <div id="particle-legend" class='legend'>
+      <h4><p>Each particle represents an attack</p></h4>
+      <p id="particle-legend-content"><img src='assets/particle-inverse.png'></p>
+    </div>
+    -->
+    <div id="origin-legend" class="legend">
+      <h4><p>Attack origins are grouped into clusters</p></h4>
+      <p>
+        <span class="icon-one"></span>
+        <span class="icon-ten"></span>
+        <span class="icon-twohundred"></span>
+      </p>
+    </div>
+    <div id="country-legend" class="legend">
+      <h4><p>Countries are shaded in as they're attacked</p></h4>
+      <p>
+        <span class="icon-one" style="color: #1e1e1e;"></span>
+        <span class="icon-five" style="color: #1e2637;"></span>
+        <span class="icon-twentyfive" style="color: #1e2e50;"></span>
+        <span class="icon-onehundred" style="color: #1e3565;"></span>
+        <span class="icon-fivehundred" style="color: #1e3d7e;"></span>
+      </p>
+    </div>
   </div>
-  <div id="origin-legend" class='legend'>
-    <h4><p>Attack origins are grouped into clusters</p></h4>
-    <p>
-      <span class="icon-one"></span>
-      <span class="icon-ten"></span>
-      <span class="icon-twohundred"></span>
-    </p>
-  </div>
-  <div id="country-legend" class='legend'>
-    <h4><p>Countries are shaded in as they're attacked</p></h4>
-    <p>
-      <span class="icon-one" style="color: #1e1e1e;"></span>
-      <span class="icon-five" style="color: #1e2637;"></span>
-      <span class="icon-twentyfive" style="color: #1e2e50;"></span>
-      <span class="icon-onehundred" style="color: #1e3565;"></span>
-      <span class="icon-fivehundred" style="color: #1e3d7e;"></span>
-    </p>
-  </div>
-</div>
 </div>
 <div id='chevron-container'></div>
 <div id='preload'></div>
@@ -58,6 +59,7 @@
 <script src='js/vendor/moment.min.js'></script>
 <script src='js/vendor/leaflet-0.7.3.js'></script>
 <script src='js/vendor/jquery-2.1.4.min.js'></script>
+<script src='js/vendor/underscore-min.js'></script>
 
 <script src='js/vendor/L.svgOverlay.js'></script>
 <script src='js/vendor/L.CanvasOverlay.js'></script>
