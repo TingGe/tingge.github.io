@@ -74,7 +74,7 @@
       {
         "display": "\u653B\u51FB\u8005",
         "attr": "org",
-        "width": "28%"
+        "width": "18%"
       },
       {
         "display": "\u653B\u51FB\u8005IP",
@@ -84,12 +84,12 @@
       {
         "display": "\u653B\u51FB\u8005\u4F4D\u7F6E",
         "attr": "source",
-        "width": "12%"
+        "width": "17%"
       },
       {
         "display": "\u76EE\u6807\u4F4D\u7F6E",
         "attr": "target",
-        "width": "12%"
+        "width": "17%"
       },
       {
         "display": "\u653B\u51FB\u7C7B\u578B",
