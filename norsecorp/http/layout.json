@@ -31,12 +31,12 @@
       {
         "display": "\u7AEF\u53E3",
         "attr": "port",
-        "width": "20%"
+        "width": "0%"
       },
       {
-        "display": "\u670D\u52A1\u7C7B\u578B",
+        "display": "\u653B\u51FB\u7C7B\u578B",
         "attr": "service",
-        "width": "40%"
+        "width": "60%"
       }
     ],
     "width": "15%",
