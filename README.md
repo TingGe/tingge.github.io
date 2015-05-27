@@ -14,4 +14,4 @@ http://map.norsecorp.com/norse-basemap-v1_1/（数字范围1）/（数字范围2
 *  数字范围2：0 —— 2 的（数字范围1）方- 1
 *  数字范围3：0 —— ?
 
-进度：从 http://map.norsecorp.com/norse-basemap-v1_1/5/19/0.png （）到31.png）开始。
+进度：从 http://map.norsecorp.com/norse-basemap-v1_1/5/13/30.png （到31.png）开始。
