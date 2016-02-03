@@ -1,0 +1,53 @@
+{
+  "name": "JavaScript 应用领域",
+  "children": [
+    {
+      "name": "Web应用",
+      "children": [{
+        "name": "Web网站",
+        "children": [
+          {
+            "name": "React",
+            "size": 1000
+          },{
+            "name": "Angular",
+            "size": 1000
+          },{
+            "name": "Vue",
+            "size": 1000
+          }
+        ]
+      },{
+        "name": "浏览器扩展Extensions",
+        "size": 1000
+        },{
+          "name": "浏览器书签Bookmarklet",
+          "size": 1000
+          }]
+    }, {
+      "name": "移动应用",
+      "children": [{
+        "name": "React Native",
+        "size": 1000
+      }]
+    }, {
+      "name": "Web Server端",
+      "size": 1000
+    }, {
+      "name": "硬件领域",
+      "children": [{
+        "name": "johnny-five",
+        "size": 1000
+      },{
+        "name": "Cylon.js",
+        "size": 1000
+      }]
+    }, {
+      "name": "物联网（Internet of Things）",
+      "size": 1000
+    }, {
+      "name": "智能家居",
+      "size": 1000
+    }
+  ]
+}
