@@ -49,7 +49,7 @@
         }
       });
       ReactDOM.render(
-        <RepoList promise={$.getJSON("https://api.github.com/search/repositories?q=javascript&sort=stars")} />,
+        <RepoList promise={$.getJSON("https://api.github.com/search/repositories?q=javascript&sort=forks")} />,
         document.getElementById("example")
       );
     </script>
