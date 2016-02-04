@@ -8,27 +8,30 @@
         "children": [
           {
             "name": "React",
-            "size": 1000
+            "size": 35881
           },{
-            "name": "Angular",
-            "size": 1000
+            "name": "Meteor",
+            "size": 31803
           },{
             "name": "Vue",
-            "size": 1000
+            "size": 13687
+          }, {
+            "name": "Angular",
+            "size": 8763
           }
         ]
       },{
         "name": "浏览器扩展Extensions",
-        "size": 1000
+        "size": 23263
         },{
           "name": "浏览器书签Bookmarklet",
-          "size": 1000
+          "size": 1622
           }]
     }, {
       "name": "移动应用",
       "children": [{
         "name": "React Native",
-        "size": 1000
+        "size": 26802
       }]
     }, {
       "name": "Web Server端",
@@ -37,13 +40,13 @@
       "name": "硬件领域",
       "children": [{
         "name": "johnny-five",
-        "size": 1000
+        "size": 5414
       },{
-        "name": "Cylon.js",
-        "size": 1000
+        "name": "Cylon",
+        "size": 2135
       }]
     }, {
-      "name": "物联网（Internet of Things）",
+      "name": "物联网",
       "size": 1000
     }, {
       "name": "智能家居",
