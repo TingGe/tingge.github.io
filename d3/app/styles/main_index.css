@@ -1,3 +1,14 @@
+svg {
+  width: 960px;
+  overflow: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px auto;
+}
+
 .node {
   cursor: pointer;
 }
