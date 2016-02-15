@@ -61,6 +61,7 @@ ol.tabs li a.active {
   background: #ffffff repeat-x top;
   color: #333333;
   border: 1px solid #464c54;
+  border-left-width: 0; 
   border-bottom: 1px solid #ffffff;
 }
 .content {
