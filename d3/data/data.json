@@ -1,59 +1,61 @@
 {
   "name": "JavaScript 应用领域",
-  "children": [
-    {
-      "name": "Web应用",
+  "children": [{
+    "name": "Web应用",
+    "children": [{
+      "name": "Web网站",
       "children": [{
-        "name": "Web网站",
-        "children": [
-          {
-            "name": "React",
-            "size": 35881
-          },{
-            "name": "Meteor",
-            "size": 31803
-          },{
-            "name": "Vue",
-            "size": 13687
-          }, {
-            "name": "Angular",
-            "size": 8763
-          }
-        ]
-      },{
-        "name": "浏览器扩展Extensions",
-        "size": 23263
-        },{
-          "name": "浏览器书签Bookmarklet",
-          "size": 1622
-          }]
-    }, {
-      "name": "移动应用",
-      "children": [{
-        "name": "React Native",
-        "size": 26802
+        "name": "React",
+        "size": 35881
+      }, {
+        "name": "Meteor",
+        "size": 31803
+      }, {
+        "name": "Ember",
+        "size": 15676
+      }, {
+        "name": "Vue",
+        "size": 13687
+      }, {
+        "name": "Angular",
+        "size": 8763
       }]
     }, {
-      "name": "Web Server端",
-      "children": [{
-        "name": "Harp",
-        "size": 3617
-      }]
+      "name": "浏览器扩展Extensions",
+      "size": 23263
     }, {
-      "name": "硬件领域",
-      "children": [{
-        "name": "johnny-five",
-        "size": 5414
-      },{
-        "name": "Cylon",
-        "size": 2135
-      }]
+      "name": "浏览器书签Bookmarklet",
+      "size": 1622
+    }]
+  }, {
+    "name": "移动应用",
+    "children": [{
+      "name": "Meteor",
+      "size": 31803
     }, {
-      "name": "物联网",
-      "size": 1000
+      "name": "React Native",
+      "size": 26802
+    }]
+  }, {
+    "name": "Web Server端",
+    "children": [{
+      "name": "Harp",
+      "size": 3617
+    }]
+  }, {
+    "name": "硬件领域",
+    "children": [{
+      "name": "johnny-five",
+      "size": 5414
     }, {
-      "name": "智能家居",
-      "size": 1000
-    }
-  ]
+      "name": "Cylon",
+      "size": 2135
+    }]
+  }, {
+    "name": "物联网",
+    "size": 1000
+  }, {
+    "name": "智能家居",
+    "size": 1000
+  }]
 }
