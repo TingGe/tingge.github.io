@@ -4,17 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <title>在线书柜</title>
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
   <link rel="stylesheet" href="./app/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./app/lib/bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./app/styles/theme.css">
 </head>
 
-<body>
+<body role="document">
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">我的书柜</a>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
 
-  <div class="container" ng-controller="BookCtrl">
-    <h2>我的书柜</h2>
-    <input type="search" ng-model="criteria">
-    <ul class="unstyled">
+  <!-- Begin page content -->
+  <div class="container theme-showcase" role="main" ng-controller="BookCtrl">
+    <input type="search" class="form-control" ng-model="criteria" placeholder="即时搜索">
+    <ul class="list-unstyled">
       <li ng-repeat="book in books | filter : criteria | orderBy : 'name'">
-        <span><a href="{{book.url}}">{{book.name}}</a> written by {{book.author}}</span>
+        <span><a href="{{book.url}}" target="_blank">{{book.name}}</a> written by {{book.author}}</span>
       </li>
     </ul>
   </div>
