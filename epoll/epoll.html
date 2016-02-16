@@ -1,0 +1,66 @@
+<head>
+  <title>TingGe : 随心想象，随时分享</title>
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
+</head>
+
+<body>
+  <div class="navbar navbar-static-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">随心享</a>
+        <ul class="nav pull-right">
+          <li>
+            {{> loginButtons}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="main" class="container">
+    {{#if currentUser}} {{> addquestion}} {{/if}} {{#unless currentUser}} {{> banner}} {{/unless}}
+    {{> questions}}
+  </div>
+  <footer class="footer container">
+    <div class="pull-right">
+      Copy © 2016 <a href="https://github.com/tingge">TingGe</a>
+    </div>
+  </footer>
+</body>
+
+<template name="banner">
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        <div class="well">
+          <h4>用GitHub登录，可提交新创意或对创意进行投票</h4> {{> loginButtons}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="addquestion">
+  <textarea id="questionText" name="questionText" class="input-xxlarge" rows="3"></textarea>
+  <br>
+  <input type="button" class="btn-info add-question" value="添加创意">
+</template>
+
+<template name="questions">
+  <h2>创意列表</h2> {{#each items}} {{> question}} {{/each}}
+</template>
+
+<template name="question">
+  <div>
+    <p class="lead">
+      {{questionText}}
+      <a class="btn btn-small btn-success yes {{#unless currentUser}}disabled{{/unless}}" href="#">
+        <i class="icon-thumbs-up"></i> Yes {{yes}}
+      </a>
+      <a class="btn btn-small btn-danger no {{#unless currentUser}}disabled{{/unless}}" href="#">
+        <i class="icon-thumbs-down"></i> No {{no}}
+      </a>
+      {{submitttedOn}}
+    </p>
+  </div>
+</template>
