@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>在线书柜</title>
+  <link rel="stylesheet" type="text/css" href="./app/lib/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container" ng-controller="BookCtrl">
+    <h2>我的书柜</h2>
+    <input type="search" ng-model="criteria">
+    <ul class="unstyled">
+      <li ng-repeat="book in books | filter : criteria | orderBy : 'name'">
+        <span><a href="book.url">{{book.name}}</a> written by {{book.author}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="./app/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="./app/scritpts/app.js"></script>
+</body>
+
+</html>
