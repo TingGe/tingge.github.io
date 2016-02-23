@@ -19,6 +19,9 @@
       }, {
         "name": "Angular",
         "size": 8763
+      }, {
+        "name": "Avalon",
+        "size": 2932
       }]
     }, {
       "name": "浏览器扩展Extensions",
@@ -36,12 +39,12 @@
       "name": "React Native",
       "size": 26802
     }]
-  },{
+  }, {
     "name": "桌面应用",
     "children": [{
       "name": "Electron",
       "size": 23943
-    },{
+    }, {
       "name": "NW.js",
       "size": 27350
     }]
