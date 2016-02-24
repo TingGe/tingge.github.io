@@ -1,0 +1,28 @@
+<ion-view title="个人资料">
+  <ion-nav-buttons side="right">
+    <button ng-click="profile.updateName()" ng-disabled="!profile.name || profile.name.length === 0" class="button button-clear button-positive">完成</button>
+  </ion-nav-buttons>
+
+  <ion-content class="profile">
+    <a class="profile-picture positive" ng-click="profile.updatePicture()">
+      <div ng-if="profile.currentUser.profile.picture">
+        <img ng-src="{{ profile.currentUser.profile.picture }}" alt="个人照片">
+        编辑
+      </div>
+      <div ng-if="!profile.currentUser.profile.picture" class="upload-placehoder">
+        添加照片
+      </div>
+    </a>
+
+    <div class="instructions">
+      输入你的名字和添加一个可选的头像
+    </div>
+
+    <div class="list profile-name">
+      <label class="item item-input">
+        <input ng-model="profile.name" on-return="profile.updateName()" type="text" placeholder="名称">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>
+

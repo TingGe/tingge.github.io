@@ -1,0 +1,21 @@
+<ion-view title="{{confirmation.phone}}">
+  <ion-nav-buttons side="right">
+    <button ng-click="confirmation.confirm()" ng-disabled="!confirmation.code || confirmation.code.length === 0" class="button button-clear button-positive">完成</button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="text-center padding">
+      我们已经向您发送了一个带有验证码的短信
+    </div>
+    <div class="text-center padding">
+      完成你的手机号码验证WhatsApp，请输入4位激活码。
+    </div>
+
+    <div class="list padding-top">
+      <label class="item item-input">
+        <input ng-model="confirmation.code" on-return="confirmation.confirm()" type="text" placeholder="验证码">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>
+

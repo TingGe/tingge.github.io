@@ -1,0 +1,16 @@
+<ion-view title="您的手机号码">
+  <ion-nav-buttons side="right">
+    <button ng-click="logger.login()" ng-disabled="!logger.phone || logger.phone.length === 0" class="button button-clear button-positive">完成</button>
+  </ion-nav-buttons>
+  <ion-content class="login">
+    <div class="text-center instructions">
+      请确认您的国家代码，输入您的手机号
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <input ng-model="logger.phone" on-return="logger.login()" type="text" placeholder="您的手机号">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>
+
