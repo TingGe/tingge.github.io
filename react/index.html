@@ -13,19 +13,19 @@
   <script src="./js/main.js"></script>
   <!-- GrowingIO Start -->
   <script type='text/javascript'>
-      var _vds = _vds || [];
-      window._vds = _vds;
-      (function(){
-        _vds.push(['setAccountId', '3be1e6ea787c4b6aa3ebb658153a36a7']);
-        (function() {
-          var vds = document.createElement('script');
-          vds.type='text/javascript';
-          vds.async = true;
-          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(vds, s);
-        })();
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function() {
+      _vds.push(['setAccountId', '3be1e6ea787c4b6aa3ebb658153a36a7']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type = 'text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
       })();
+    })();
   </script>
   <!-- GrowingIO End -->
   <base href="https://api.github.com/" target="preview_page" />
@@ -40,11 +40,19 @@
       <ol class="tabs">
         <li><a title="stars" class="tab active">最多 Stars</a></li>
         <li><a title="forks" class="tab">最多 Forks</a></li>
+        <li><a title="opengithub" class="tab">GitHub 新项目快报</a></li>
+        <li><a title="opengithubtop" class="tab">GitHub 近期热门项目</a></li>
         <li><a title="js-fields" class="tab">JavaScript 应用领域</a></li>
         <li><a title="skilltree" class="tab">Web 技能树</a></li>
       </ol>
       <div style="display: block;" id="stars" class="content"></div>
       <div style="display: none;" id="forks" class="content"></div>
+      <div style="display: none;" id="opengithub" class="content">
+        <iframe width="100%" height="100%" frameborder="0" src="http://www.open-open.com/github/" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" allowfullscreen="true"></iframe>
+      </div>
+      <div style="display: none;" id="opengithubtop" class="content">
+        <iframe width="100%" height="100%" frameborder="0" src="http://www.open-open.com/github/view/top" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" allowfullscreen="true"></iframe>
+      </div>
       <div style="display: none;" id="js-fields" class="content">
         <iframe width="100%" height="100%" frameborder="0" src="http://tingge.github.io/d3/index.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" allowfullscreen="true"></iframe>
       </div>
