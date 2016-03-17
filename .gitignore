@@ -1,1 +1,11 @@
-.DS_Store
+.project
+.settings
+*~
+*.diff
+*.patch
+/*.html
+.idea
+*.DS_Store
+node_modules
+bower_components
+

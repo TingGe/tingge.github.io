@@ -1,0 +1,20 @@
+{
+  "name": "nightmare-test",
+  "version": "1.0.0",
+  "description": "a nightmare test project",
+  "main": "yahoo.js",
+  "dependencies": {
+    "nightmare": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1"
+  },
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "files": [
+    "test/"
+  ],
+  "author": "TingGe",
+  "license": "MIT"
+}
