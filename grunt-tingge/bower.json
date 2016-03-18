@@ -1,18 +1,21 @@
 {
-  "name": "blog",
-  "description": "My awesome blog",
+  "name": "TingGe",
+  "description": "TingGe",
   "main": "",
   "authors": [
     "TingGe <505253293@163.com>"
   ],
   "license": "MIT",
   "moduleType": [],
-  "homepage": "",
+  "homepage": "http://tingge.github.io",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
 }

@@ -6,14 +6,8 @@ module.exports = grunt => {
     copy: {
       main: {
         files: [
-          {expand: true, src: ['bower_components/**'], dest: 'app/html/'}
+          {expand: true, src: ['bower_components/**'], dest: '../'}
         ]
-      }
-    },
-    uglify: {
-      build: {
-        src: ['js/app.js'],
-        dest: 'js/app.min.js'
       }
     },
     markdown: {
@@ -21,8 +15,8 @@ module.exports = grunt => {
         files: [
           {
             expand: true,
-            src: 'doc/*.md',
-            dest: 'app/html/',
+            src: '*.md',
+            dest: '../',
             ext: '.html'
           }
         ],
@@ -49,19 +43,17 @@ module.exports = grunt => {
         options: {
           open: true, //自动打开网页 http://
           base: [
-            'app'  //主目录
+            '../'  //主目录
           ]
         }
       }
     },
-
     watch: {
       livereload: {
         options: {
           livereload: '<%=connect.options.livereload%>'  //监听前面声明的端口  35729
         },
         files: [
-          'js/app.js',
           'doc/*.md',
           'css/*.css'
        ]
@@ -70,6 +62,5 @@ module.exports = grunt => {
   });
 
   grunt.registerTask('serve', ['connect:server', 'watch']);
-  grunt.registerTask('default', ['copy', 'markdown', 'uglify', 'serve']);
+  grunt.registerTask('default', ['copy', 'markdown', 'serve']);
 };
-
