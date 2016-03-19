@@ -1,6 +1,6 @@
 /**
 * 模拟登录手机新浪网并截屏
-* Todo：还没找到
+* Todo：nightmare 对清空 eletron 的 cookies.clear() 不够强，所有登录后需手动退出。
 */
 
 var urls = [];
