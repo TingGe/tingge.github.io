@@ -26,7 +26,7 @@
     <input type="search" class="form-control" ng-model="criteria" placeholder="即时搜索">
     <ul class="list-unstyled">
       <li ng-repeat="book in books | filter : criteria | orderBy : 'name'">
-        <span><a href="{{book.url}}" target="_blank">{{book.name}}</a> written by {{book.author}}</span>
+        <span><a href="{{book.url}}" target="_blank">《{{book.name}}》</a> －－作者： {{book.author}}</span>
       </li>
     </ul>
   </div>
