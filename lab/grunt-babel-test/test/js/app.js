@@ -56,7 +56,8 @@ var person = {
 
 
 var main = document.getElementById('main');
-var str = ['<h1>Welcome to My Grunt-Babel-Project. </h1>', 'My Name: ' + ting.getName() + '<br/>', 'square(5)= ' + (0, _import.square)(5) + ' '].join('');
-main.innerHTML = str;
+var str = ['<h1>Console: </h1>', '<pre>My Name: ' + ting.getName() + '<br/>', 'square(5)= ' + (0, _import.square)(5) + ' </pre>'].join('');
+console.log(str);
+main.innerHTML += str;
 
 },{"./import":1}]},{},[2]);

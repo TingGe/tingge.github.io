@@ -9,8 +9,9 @@ ting = new MyClass(person);
 
 var main = document.getElementById('main');
 var str = [
-  `<h1>Welcome to My Grunt-Babel-Project. </h1>`,
-  `My Name: ${ting.getName()}<br/>`,
-  `square(5)= ${square(5)} `
+  `<h1>Console 内容: </h1>`,
+  `<pre>My Name: ${ting.getName()}<br/>`,
+  `square(5)= ${square(5)} </pre>`
 ].join('');
-main.innerHTML = str;
+console.log(str);
+main.innerHTML += str;
