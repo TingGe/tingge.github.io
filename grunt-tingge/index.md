@@ -1,9 +1,9 @@
 # 项目管理／JavaScript技术／在线广告行业
 
-1. [react](http://tingge.github.io/lab/react/index.html)
-2. [angular](http://tingge.github.io/lab/angular/index.html)
-3. [d3](http://tingge.github.io/lab/d3/index.html)
-4. [meteor](http://tingge.github.io/lab/meteor/index.html)
-5. [vue](http://tingge.github.io/lab/vue/index.html)
-6. [grunt-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/grunt-test)
+1. [react-test](http://tingge.github.io/lab/react-test/index.html)
+2. [angular-test](http://tingge.github.io/lab/angular-test/index.html)
+3. [d3-test](http://tingge.github.io/lab/d3-test/index.html)
+4. [meteor-test](http://tingge.github.io/lab/meteor-test/index.html)
+5. [vue-test](http://tingge.github.io/lab/vue-test/index.html)
+6. [grunt-babel-test](https://tingge.github.io/lab/grunt-babel-test/dist/index.html)
 7. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
