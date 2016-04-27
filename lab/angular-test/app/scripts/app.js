@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'JavaScript版数据结构与算法',
+    'author': '',
+    'url': 'https://github.com/JsAaron/data-structures-and-algorithms'
+  }, {
     'name': 'JavaScript 标准参考教程（alpha）',
     'author': '阮一峰',
     'url': 'http://javascript.ruanyifeng.com/'
