@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Understanding ECMAScript 6',
+    'author': 'Nicholas C. Zakas',
+    'url': 'https://github.com/nzakas/understandinges6'
+  }, {
     'name': 'JavaScript版数据结构与算法',
     'author': '',
     'url': 'https://github.com/JsAaron/data-structures-and-algorithms'
