@@ -1,4 +1,4 @@
-1. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
+1. [我的前端技能路线图](https://raw.githubusercontent.com/TingGe/tingge.github.io/master/grunt-tingge/img/frontend.png)
 2. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
 3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
 4. [JavaScript应用领域（d3-test）](http://tingge.github.io/lab/d3-test/index.html)
