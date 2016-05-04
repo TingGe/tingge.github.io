@@ -15,6 +15,10 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'url': 'http://javascript.ruanyifeng.com/'
 
   }, {
+    'name': '深入浅出ES6',
+    'author': 'InfoQ 中文站',
+    'url': 'http://www.infoq.com/cn/minibooks/ES6-in-Depth'
+  }, {
     'name': 'ECMAScript 6入门',
     'author': '阮一峰',
     'url': 'http://es6.ruanyifeng.com/'
@@ -35,5 +39,9 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'name': '全栈工程师之路-Node.js',
     'author': '桑世龙',
     'url': 'http://i5ting.github.io/nodejs-fullstack/'
+  }, {
+    'name': 'JavaScript 模块化七日谈',
+    'author': '黄玄',
+    'url': 'http://huangxuan.me/2015/07/09/js-module-7day/'
   }]
 });
