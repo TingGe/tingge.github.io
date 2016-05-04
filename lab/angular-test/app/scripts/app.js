@@ -6,7 +6,7 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'author': 'Nicholas C. Zakas',
     'url': 'https://github.com/nzakas/understandinges6'
   }, {
-    'name': 'JavaScript版数据结构与算法',
+    'name': 'JavaScript 版数据结构与算法',
     'author': '',
     'url': 'https://github.com/JsAaron/data-structures-and-algorithms'
   }, {
@@ -15,11 +15,11 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'url': 'http://javascript.ruanyifeng.com/'
 
   }, {
-    'name': '深入浅出ES6',
+    'name': '深入浅出 ES6',
     'author': 'InfoQ 中文站',
     'url': 'http://www.infoq.com/cn/minibooks/ES6-in-Depth'
   }, {
-    'name': 'ECMAScript 6入门',
+    'name': 'ECMAScript 6 入门',
     'author': '阮一峰',
     'url': 'http://es6.ruanyifeng.com/'
 
