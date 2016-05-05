@@ -16,7 +16,7 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
 
   }, {
     'name': '深入浅出 ES6',
-    'author': 'InfoQ 中文站',
+    'author': 'Eric-Faust',
     'url': 'http://www.infoq.com/cn/es6-in-depth/'
   }, {
     'name': 'ECMAScript 6 入门',
