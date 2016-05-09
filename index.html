@@ -1,32 +1,36 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>听歌实验室</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="./lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
-    <style>
-      body {
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="http://tingge.github.io/">听歌实验室</a>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>听歌实验室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="./lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://tingge.github.io/">听歌实验室</a>
       </div>
     </div>
-    <div id="main" class="container">
-      <ol>
+  </div>
+  <div id="main" class="container">
+    <div class="row">
+      <div class="col-md-9 content-container">
+        <ol>
 <li><a href="https://github.com/TingGe/develop-tools/">匠心之路</a></li>
 <li><a href="http://tingge.github.io/grunt-tingge/img/frontend.png">我的前端技能路线图</a></li>
 <li><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a></li>
@@ -41,7 +45,14 @@
 <li><a href="http://tingge.github.io/lab/meteor-test/index.html">meteor-test</a></li>
 </ol>
 
+      </div>
+      <div class="col-md-3">
+        <script data-name="TingGe" data-modules="base,details,stats,repos,eventsStatis,orgs" data-reposNum="3" src="http://octocard.in/o.js">
+        </script>
+      </div>
     </div>
-    <script src="http://localhost:9090/livereload.js"></script>
-  </body>
+  </div>
+
+</body>
+
 </html>

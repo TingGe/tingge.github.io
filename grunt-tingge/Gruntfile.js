@@ -7,8 +7,8 @@ module.exports = grunt => {
       main: {
         files: [{
           expand: true,
-          cwd: 'bower_components/',
-          src: ['**'],
+          cwd: 'node_modules',
+          src: ['bootstrap/dist/css/bootstrap.min.css'],
           dest: '../lib'
         }]
       }

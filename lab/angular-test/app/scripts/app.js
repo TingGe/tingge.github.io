@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '《JavaScript Patterns》 examples in ECMAScript6',
+    'author': 'DavidCai1993',
+    'url': 'https://github.com/DavidCai1993/JsPatterns-ES6'
+  }, {
     'name': 'Understanding ECMAScript 6',
     'author': 'Nicholas C. Zakas',
     'url': 'https://github.com/nzakas/understandinges6'
