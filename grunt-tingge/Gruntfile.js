@@ -6,10 +6,21 @@ module.exports = grunt => {
     copy: {
       main: {
         files: [{
-          expand: true,
+          src: ['css/**', 'img/**'],
+          dest: '../'
+        }, {
+          src: ['templates/index.html'],
+          dest: '../index.html'
+        }, {
           cwd: 'node_modules',
-          src: ['bootstrap/dist/css/bootstrap.min.css'],
-          dest: '../lib'
+          expand: true,
+          flatten: false,
+          src: [
+            'bootstrap/dist/**',
+            'font-awesome/**',
+            'jquery/dist/jquery.min.js'
+          ],
+          dest: '../lib/'
         }]
       }
     },
@@ -17,12 +28,12 @@ module.exports = grunt => {
       all: {
         files: [{
           expand: true,
-          src: '*.md',
+          src: 'html/*.md',
           dest: '../',
           ext: '.html'
         }],
         options: {
-          template: 'templates/index.html',
+          template: 'templates/article.html',
           markdownOptions: {
             gfm: true,
             condeLines: {
