@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Linux 设备驱动 Edition 3',
+    'author': 'Jonathan Corbet, Alessandro Rubini 和 Greg Kroah-Hartman',
+    'url': 'http://www.deansys.com/doc/ldd3/index.html'
+  },{
     'name': '《JavaScript Patterns》 examples in ECMAScript6',
     'author': 'DavidCai1993',
     'url': 'https://github.com/DavidCai1993/JsPatterns-ES6'
