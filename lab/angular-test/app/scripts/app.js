@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Linux设备驱动开发详解：基于最新的Linux 4.0内核',
+    'author': '宋宝华',
+    'url': 'http://book.2cto.com/201508/55118.html'
+  }, {
     'name': 'Linux 设备驱动 Edition 3',
     'author': 'Jonathan Corbet, Alessandro Rubini 和 Greg Kroah-Hartman',
     'url': 'http://www.deansys.com/doc/ldd3/index.html'
