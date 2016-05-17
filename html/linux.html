@@ -1,0 +1,209 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>听歌实验室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://tingge.github.io/">听歌实验室</a>
+      </div>
+    </div>
+  </div>
+  <div id="main" class="container">
+    <div class="row">
+      <div class="col-md-9 content-container">
+        <h1 id="linux">Linux</h1>
+<h2 id="-">概念</h2>
+<p>机制，解决提供什么能力；策略，处理如何使用这些能力。一般，驱动属于机制范畴；应用归于策略范畴。</p>
+<h4 id="-">（对策略透明的）驱动分类</h4>
+<ul>
+<li>字符设备（open、close、read、write）：USB、鼠标等</li>
+<li>块设备：硬盘等</li>
+<li>网络接口：</li>
+</ul>
+<h2 id="-">内核划分</h2>
+<p><img src="../img/linux-kernel.png" alt="Linux 内核划分"></p>
+<h2 id="-">应用、操作系统、驱动和硬件</h2>
+<p><img src="../img/app-driver-hardware.png" alt="无操作系统时硬件、设备驱动和应用软件的关系"></p>
+<p><img src="../img/app-os-driver-hardware.png" alt="有操作系统时硬件、驱动、操作系统和应用的关系"></p>
+<p><img src="../img/linux-ware.png" alt="Linux 设备驱动与整个软硬件系统的关系"></p>
+<h2 id="linux-">Linux 内核的组成部分</h2>
+<p><img src="../img/linux-kernel-core.png" alt="Linux 内核组成部分"></p>
+<h2 id="linux-">Linux 内核源代码目录结构</h2>
+<table>
+<thead>
+<tr>
+<th>目录、文件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Documentation/</td>
+<td>内核各部分的通用解释和注释</td>
+</tr>
+<tr>
+<td>arch/</td>
+<td>和硬件体系结构相关</td>
+</tr>
+<tr>
+<td>block/</td>
+<td>块设备驱动程序 I/O 调度</td>
+</tr>
+<tr>
+<td>certs/</td>
+<td></td>
+</tr>
+<tr>
+<td>crypto/</td>
+<td>常用加密和散列算法（如 AES 、 SHA 等），还有一些压缩和 CRC 校验算法</td>
+</tr>
+<tr>
+<td>drivers/</td>
+<td>设备驱动程序</td>
+</tr>
+<tr>
+<td>firmware/</td>
+<td></td>
+</tr>
+<tr>
+<td>fs/</td>
+<td>支持的各种文件系统</td>
+</tr>
+<tr>
+<td>include/</td>
+<td>头文件</td>
+</tr>
+<tr>
+<td>init/</td>
+<td>内核初始化代码</td>
+</tr>
+<tr>
+<td>ipc/</td>
+<td>进程间通信代码</td>
+</tr>
+<tr>
+<td>kernel/</td>
+<td>内核部分，包括进程调度、定时器等，而和平台相关的部分在 arch/*/kernel/</td>
+</tr>
+<tr>
+<td>lib/</td>
+<td>库文件</td>
+</tr>
+<tr>
+<td>mm/</td>
+<td>内存管理，和平台相关部分在 arch/*/mm/</td>
+</tr>
+<tr>
+<td>net/</td>
+<td>网络相关，实现各种网络协议</td>
+</tr>
+<tr>
+<td>samples/</td>
+<td></td>
+</tr>
+<tr>
+<td>scripts/</td>
+<td>用于配置内核的脚本文件</td>
+</tr>
+<tr>
+<td>security/</td>
+<td>主要是 SELinx 模块</td>
+</tr>
+<tr>
+<td>sound/</td>
+<td>ALSA 、OSS 音频设备驱动核心代码和常用设备驱动</td>
+</tr>
+<tr>
+<td>tools/</td>
+<td></td>
+</tr>
+<tr>
+<td>usr/</td>
+<td>实现用于打包和压缩的 cpio 等</td>
+</tr>
+<tr>
+<td>virt/</td>
+<td></td>
+</tr>
+<tr>
+<td>COPYING</td>
+<td></td>
+</tr>
+<tr>
+<td>CREDITS</td>
+<td></td>
+</tr>
+<tr>
+<td>Kbuild</td>
+<td>内核的编译系统</td>
+</tr>
+<tr>
+<td>Kconfig</td>
+<td>给用户提供配置选择的功能</td>
+</tr>
+<tr>
+<td>MAINTAINERS</td>
+<td></td>
+</tr>
+<tr>
+<td>Makefile</td>
+<td>定义 Linux 内核编译规则</td>
+</tr>
+<tr>
+<td>README</td>
+<td></td>
+</tr>
+<tr>
+<td>REPORTING-BUGS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">驱动开发</h2>
+<p>Linux 内核中增加程序需要完成以下3项工作：</p>
+<ol>
+<li>将编写的源代码复制到Linux内核源代码的相应目录</li>
+<li>在目录的 Kconfig 文件中增加关于新源代码对应项目的编译配置选项</li>
+<li>在目录的 Makefile 文件中增加对新源代码的编译条目</li>
+</ol>
+<h2 id="-">编程风格</h2>
+<ul>
+<li><a href="http://lxr.free-electrons.com/">Documents/CodingStyle</a></li>
+<li><a href="scripts/checkpatch.pl">scripts/checkpatch.pl</a>：检查代码风格是否符合 CodingStyle</li>
+<li>工程阶段，一般可以在 SCM 软件的服务器端用 pre-commit hook，自动检查工程师提交的代码是否符合 Linux 的编码风格，如果不符合，则自动拦截</li>
+</ul>
+<h2 id="-">附录</h2>
+<ol>
+<li><a href="http://lxr.free-electrons.com/">Linux Cross Reference</a>：Linux内核源码的交叉索引</li>
+<li>minicom：串口通信工具</li>
+</ol>
+
+      </div>
+      <div class="col-md-3">
+        <script data-name="TingGe" data-modules="base,details,stats,repos,eventsStatis,orgs" data-reposNum="3" src="http://octocard.in/o.js">
+        </script>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
