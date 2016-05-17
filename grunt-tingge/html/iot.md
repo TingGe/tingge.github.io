@@ -44,6 +44,10 @@
 2. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
 3. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
 
+### Jetson TX1
+
+1. [JetsonHacks](http://jetsonhacks.com/)
+
 ## 附录
 
 1. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
