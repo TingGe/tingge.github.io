@@ -2,9 +2,9 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
-    'name': '',
-    'author': '',
-    'url': ''
+    'name': 'Html5 课程',
+    'author': 'sallypanda',
+    'url': 'https://sallypanda.gitbooks.io/html5/content/'
   }, {
     'name': '跟我一起写Makefile (PDF重制版)',
     'author': 'SeisMan',
