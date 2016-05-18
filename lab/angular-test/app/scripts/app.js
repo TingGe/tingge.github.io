@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '',
+    'author': '',
+    'url': ''
+  }, {
     'name': '跟我一起写Makefile (PDF重制版)',
     'author': 'SeisMan',
     'url': 'http://how-to-write-makefile.readthedocs.io/zh_CN/latest/'

@@ -11,3 +11,7 @@
 11. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
 12. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
 13. [meteor-test](http://tingge.github.io/lab/meteor-test/index.html)
+
+## 附录
+
+- [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。个人总结大致思路是：flexible.js 或 metahandler.js
