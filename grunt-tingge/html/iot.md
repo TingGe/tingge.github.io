@@ -3,8 +3,9 @@
 ## ruff.io
 
 1. [Ruff官网](https://ruff.io/zh-cn/)
-2. [RuffHelper](https://github.com/runinspring/ruffhelper)
-3. [RuffApps](https://github.com/RuffApps/Apps)
+2. [ruff-issues](https://github.com/ruffjs)
+3. [RuffHelper](https://github.com/runinspring/ruffhelper)
+4. [RuffApps](https://github.com/RuffApps/Apps)
 
 ## Jetson TX1 and Jetson TK1 
 
