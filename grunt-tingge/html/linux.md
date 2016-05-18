@@ -81,4 +81,6 @@ Linux 内核中增加程序需要完成以下3项工作：
 
 1. [Linux Cross Reference](http://lxr.free-electrons.com/)：Linux内核源码的交叉索引
 2. minicom：串口通信工具
+3. [Linux Device Drivers 3 examples](https://github.com/martinezjavier/ldd3)
+4. [LinuxQuestions](https://www.linuxquestions.org/)
 
