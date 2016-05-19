@@ -6,29 +6,23 @@
 
 #### （对策略透明的）驱动分类
 
-- 字符设备（open、close、read、write）：USB、鼠标等
-- 块设备：硬盘等
+- 字符设备（open、close、read、write）：触摸屏、USB、鼠标等
+- 块设备：硬盘、eMMC等
 - 网络接口：
 
 ## 内核划分
 
 ![Linux 内核划分](../img/linux-kernel.png)
 
-## 应用、操作系统、驱动和硬件
-
-![无操作系统时硬件、设备驱动和应用软件的关系](../img/app-driver-hardware.png)
-
-
-
-![有操作系统时硬件、驱动、操作系统和应用的关系](../img/app-os-driver-hardware.png)
+## 设备驱动与整个软硬件系统的关系
 
 ![Linux 设备驱动与整个软硬件系统的关系](../img/linux-ware.png)
 
-## Linux 内核的组成部分
+## 内核的组成部分
 
 ![Linux 内核组成部分](../img/linux-kernel-core.png)
 
-## Linux 内核源代码目录结构
+## 内核源代码目录结构
 
 | 目录、文件          | 说明                                       |
 | -------------- | ---------------------------------------- |
@@ -76,6 +70,33 @@ Linux 内核中增加程序需要完成以下3项工作：
 - [Documents/CodingStyle](http://lxr.free-electrons.com/)
 - [scripts/checkpatch.pl](scripts/checkpatch.pl)：检查代码风格是否符合 CodingStyle
 - 工程阶段，一般可以在 SCM 软件的服务器端用 pre-commit hook，自动检查工程师提交的代码是否符合 Linux 的编码风格，如果不符合，则自动拦截
+
+## 硬件基础
+
+### 处理器
+
+![](../img/processor.png)
+
+### 存储器
+
+![](../img/storage.png)
+
+### 常见外设接口与总线工作方式
+
+- 串口
+- I2C（内置集成电路）
+- SPI（串行外设接口）
+- USB（通用串行总线）
+- 以太网接口
+- PCI（外围部件互连） 和 PCI-E
+- SD 和 SDIO
+- CPLD（复杂可编程逻辑器件）和 FPGA（现场可编程门阵列） 
+
+### 调试常用仪器仪表
+
+- 万用表：测量电平、使用二极管测量电路板上网络的连通性
+- 示波器
+- 逻辑分析仪
 
 ## 附录
 

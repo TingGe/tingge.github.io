@@ -52,6 +52,6 @@
 ## 附录
 
 1. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
-2. [CMake](https://cmake.org)：跨平台的安装（编译）工具
+2. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
 3. [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
 4. [Linux](./linux.html)

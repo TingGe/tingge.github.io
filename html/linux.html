@@ -35,19 +35,17 @@
 <p>机制，解决提供什么能力；策略，处理如何使用这些能力。一般，驱动属于机制范畴；应用归于策略范畴。</p>
 <h4 id="-">（对策略透明的）驱动分类</h4>
 <ul>
-<li>字符设备（open、close、read、write）：USB、鼠标等</li>
-<li>块设备：硬盘等</li>
+<li>字符设备（open、close、read、write）：触摸屏、USB、鼠标等</li>
+<li>块设备：硬盘、eMMC等</li>
 <li>网络接口：</li>
 </ul>
 <h2 id="-">内核划分</h2>
 <p><img src="../img/linux-kernel.png" alt="Linux 内核划分"></p>
-<h2 id="-">应用、操作系统、驱动和硬件</h2>
-<p><img src="../img/app-driver-hardware.png" alt="无操作系统时硬件、设备驱动和应用软件的关系"></p>
-<p><img src="../img/app-os-driver-hardware.png" alt="有操作系统时硬件、驱动、操作系统和应用的关系"></p>
+<h2 id="-">设备驱动与整个软硬件系统的关系</h2>
 <p><img src="../img/linux-ware.png" alt="Linux 设备驱动与整个软硬件系统的关系"></p>
-<h2 id="linux-">Linux 内核的组成部分</h2>
+<h2 id="-">内核的组成部分</h2>
 <p><img src="../img/linux-kernel-core.png" alt="Linux 内核组成部分"></p>
-<h2 id="linux-">Linux 内核源代码目录结构</h2>
+<h2 id="-">内核源代码目录结构</h2>
 <table>
 <thead>
 <tr>
@@ -190,10 +188,34 @@
 <li><a href="scripts/checkpatch.pl">scripts/checkpatch.pl</a>：检查代码风格是否符合 CodingStyle</li>
 <li>工程阶段，一般可以在 SCM 软件的服务器端用 pre-commit hook，自动检查工程师提交的代码是否符合 Linux 的编码风格，如果不符合，则自动拦截</li>
 </ul>
+<h2 id="-">硬件基础</h2>
+<h3 id="-">处理器</h3>
+<p><img src="../img/processor.png" alt=""></p>
+<h3 id="-">存储器</h3>
+<p><img src="../img/storage.png" alt=""></p>
+<h3 id="-">常见外设接口与总线工作方式</h3>
+<ul>
+<li>串口</li>
+<li>I2C（内置集成电路）</li>
+<li>SPI（串行外设接口）</li>
+<li>USB（通用串行总线）</li>
+<li>以太网接口</li>
+<li>PCI（外围部件互连） 和 PCI-E</li>
+<li>SD 和 SDIO</li>
+<li>CPLD（复杂可编程逻辑器件）和 FPGA（现场可编程门阵列） </li>
+</ul>
+<h3 id="-">调试常用仪器仪表</h3>
+<ul>
+<li>万用表：测量电平、使用二极管测量电路板上网络的连通性</li>
+<li>示波器</li>
+<li>逻辑分析仪</li>
+</ul>
 <h2 id="-">附录</h2>
 <ol>
 <li><a href="http://lxr.free-electrons.com/">Linux Cross Reference</a>：Linux内核源码的交叉索引</li>
 <li>minicom：串口通信工具</li>
+<li><a href="https://github.com/martinezjavier/ldd3">Linux Device Drivers 3 examples</a></li>
+<li><a href="https://www.linuxquestions.org/">LinuxQuestions</a></li>
 </ol>
 
       </div>

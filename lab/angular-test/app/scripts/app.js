@@ -2,26 +2,26 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Make 命令教程',
+    'author': '阮一峰',
+    'url': 'http://www.ruanyifeng.com/blog/2015/02/make.html'
+  }, {
     'name': 'Html5 课程',
     'author': 'sallypanda',
     'url': 'https://sallypanda.gitbooks.io/html5/content/'
   }, {
-    'name': '跟我一起写Makefile (PDF重制版)',
+    'name': '跟我一起写 Makefile (PDF重制版)',
     'author': 'SeisMan',
     'url': 'http://how-to-write-makefile.readthedocs.io/zh_CN/latest/'
-  },{
-    'name': '跟我一起写Makefile',
+  }, {
+    'name': '跟我一起写 Makefile',
     'author': '',
     'url': 'https://wiki.ubuntu.org.cn/%E8%B7%9F%E6%88%91%E4%B8%80%E8%B5%B7%E5%86%99Makefile'
-  }, {
-    'name': 'Linux设备驱动开发详解：基于最新的Linux 4.0内核',
-    'author': '宋宝华',
-    'url': 'http://book.2cto.com/201508/55118.html'
   }, {
     'name': 'Linux 设备驱动 Edition 3',
     'author': 'Jonathan Corbet, Alessandro Rubini 和 Greg Kroah-Hartman',
     'url': 'http://www.deansys.com/doc/ldd3/index.html'
-  },{
+  }, {
     'name': '《JavaScript Patterns》 examples in ECMAScript6',
     'author': 'DavidCai1993',
     'url': 'https://github.com/DavidCai1993/JsPatterns-ES6'
