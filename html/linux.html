@@ -30,7 +30,7 @@
   <div id="main" class="container">
     <div class="row">
       <div class="col-md-9 content-container">
-        <h1 id="linux">Linux</h1>
+        <h1 id="-"> </h1>
 <h2 id="-">概念</h2>
 <p>机制，解决提供什么能力；策略，处理如何使用这些能力。一般，驱动属于机制范畴；应用归于策略范畴。</p>
 <h4 id="-">（对策略透明的）驱动分类</h4>
@@ -175,6 +175,13 @@
 </tr>
 </tbody>
 </table>
+<h2 id="-">内核的编译</h2>
+<p>推荐 <code>make menuconfig</code></p>
+<ul>
+<li>Makefile</li>
+<li>配置文件（Kconfig）</li>
+<li>配置工具</li>
+</ul>
 <h2 id="-">驱动开发</h2>
 <p>Linux 内核中增加程序需要完成以下3项工作：</p>
 <ol>
@@ -188,6 +195,169 @@
 <li><a href="scripts/checkpatch.pl">scripts/checkpatch.pl</a>：检查代码风格是否符合 CodingStyle</li>
 <li>工程阶段，一般可以在 SCM 软件的服务器端用 pre-commit hook，自动检查工程师提交的代码是否符合 Linux 的编码风格，如果不符合，则自动拦截</li>
 </ul>
+<h2 id="-">内核模块程序结构</h2>
+<h3 id="-">模块加载函数：</h3>
+<ul>
+<li><p>insmod(或modprobe) 模块名参数名=参数值。运行时，应使用逗号分隔输入的数组元素</p>
+</li>
+<li><p>一般以 __init 标识声明</p>
+</li>
+<li>以 “module_init” 形式指定。成功返回 0，失败则返回错误编码（在 <linux/errno.h> 中定义）</li>
+<li>可使用 request_module(module_name) 加载其它内核模块</li>
+<li>只是初始化阶段需要的数据，也可被定义为 __initdata</li>
+</ul>
+<h3 id="-">模块卸载函数：</h3>
+<ul>
+<li>rmmod 模块名参数名</li>
+<li>一般以 __exit 标识声明</li>
+<li>以 “module_exit” 形式指定。成功返回 0，失败则返回错误编码（在 <linux/errno.h> 中定义）</li>
+<li>只是退出阶段采用的数据，可被定义为 __exitdata</li>
+</ul>
+<h3 id="-">模块许可证声明：</h3>
+<ul>
+<li>GPL、GPL v2、GPL and additional rights、Dual BSD/GPL、Dual MPL/GPL 和 Proprietary</li>
+</ul>
+<h3 id="-">模块参数（可选）</h3>
+<ul>
+<li>可用 “module_param(参数名, 参数类型, 参数读/写权限)” 为模块定义一个参数</li>
+<li>参数类型可以是 byte、short、short、int、uint、long、ulong、sharp、bool 或 invbool</li>
+<li>模块也可拥有参数数组，形式 &quot;module_param_array (参数组名, 数组类型, 数组长, 参数读/写权限)&quot;</li>
+</ul>
+<h3 id="-">模块导出符号（可选）</h3>
+<ul>
+<li>可使用宏 EXPORT_SYMBOL(符号名) 、EXPORT_SYMBOL_GPL(符号名) 导出符号到内核符号表中</li>
+</ul>
+<h3 id="-">模块声明与描述（可选）</h3>
+<ul>
+<li>MODULE_AUTHOR</li>
+<li>MODULE_DESCRIPTION</li>
+<li>MODULE_VERSION</li>
+<li>MODULE_DEVICE_TABLE</li>
+<li>MODULE_ALIAS</li>
+</ul>
+<h3 id="-">模块的使用计数</h3>
+<ul>
+<li>try_module_get (&amp;module) ：增加模块使用计数。0表示调用失败</li>
+<li>module_put (&amp;module) ：减少模块使用计数。</li>
+</ul>
+<h3 id="-">模块的编译</h3>
+<ul>
+<li><p>Makefile</p>
+</li>
+<li><p>一个模块包括多个 .c 文件，则 Makefile 中 </p>
+<pre><code class="lang-c++">obj-m := module name.o
+
+modulename-objs := file1.o file2.o
+</code></pre>
+</li>
+</ul>
+<h2 id="-">文件系统与设备文件</h2>
+<h3 id="-">文件操作系统调用</h3>
+<h4 id="-">创建</h4>
+<pre><code class="lang-c">int creat(const char *filename, mode_t mode);
+</code></pre>
+<p>参数  <code>mode</code> 指定新建文件存取，同 <code>umask</code> 一起决定文件最终权限</p>
+<h4 id="-">打开</h4>
+<pre><code class="lang-c">int open(const char *pathname, int flags);
+</code></pre>
+<h4 id="-">读写</h4>
+<pre><code class="lang-c">int read(int fd, const void *buf, size_t length);
+int write(int fd, const void *buf, size_t length);
+</code></pre>
+<h4 id="-">定位</h4>
+<pre><code class="lang-c">int lseek(int fd, offset_t offset, int whence);
+</code></pre>
+<ul>
+<li>whence：SEEK_SET、SEEK_CUR、SEEK_END</li>
+</ul>
+<h4 id="-">关闭</h4>
+<pre><code class="lang-c">int close(int fd);
+</code></pre>
+<h3 id="c-">C 库文件操作</h3>
+<h4 id="-">创建和打开</h4>
+<pre><code class="lang-c">FILE *fopen(const char *path, const char *mode);
+</code></pre>
+<h4 id="-">读写</h4>
+<pre><code class="lang-c">int fgetc(FILE *stream);
+int fputc(int c, FILE *stream);
+
+char *fgets(char *s, int n, FILE *stream);
+int fputs(const char *s, FILE *stream);
+
+int fprintf(FILE *stream, const char *format, …);
+int fscanf(FILE *stream, const char *format, …);
+
+size_t fread(void *ptr, size_t size, size_t n, FILE *stream);
+size_t fwrite(const void *ptr, size_t size, size_t n, FILE *stream);
+</code></pre>
+<h4 id="-">定位</h4>
+<pre><code class="lang-c">int fgetpos(FILE *stream, fpot_t *pos);
+int fsetpos(FILE *stream, const fpos_t *post);
+int fseek(FILE *stream, long offset, int whence);
+</code></pre>
+<h4 id="-">关闭</h4>
+<pre><code class="lang-c">int fclose(FILE *stream);
+</code></pre>
+<h3 id="-">文件系统目录结构</h3>
+<p>Linux 根目录（即 “/”）</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/bin</td>
+<td>基本明命令， ls、cp、mkdir 等</td>
+</tr>
+<tr>
+<td>/sbin</td>
+<td>系统命令，mod probe、hwclock、ifconfig 等</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>设备文件存储目录</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>系统配置文件</td>
+</tr>
+<tr>
+<td>/lib</td>
+<td>系统库文件存放</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>挂载存储设备等挂载目录</td>
+</tr>
+<tr>
+<td>/opt</td>
+<td>有些软件包安装位置</td>
+</tr>
+<tr>
+<td>/proc</td>
+<td>操作系统运行时，进程及内核信息存放。伪文件系统 proc 挂载目录，存在于内存</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td>临时文件</td>
+</tr>
+<tr>
+<td>/usr</td>
+<td>存放程序目录，如用户命令、用户库等</td>
+</tr>
+<tr>
+<td>/var</td>
+<td>存放系统日志等</td>
+</tr>
+<tr>
+<td>/sys</td>
+<td>sysfs 文件系统映射目录</td>
+</tr>
+</tbody>
+</table>
 <h2 id="-">硬件基础</h2>
 <h3 id="-">处理器</h3>
 <p><img src="../img/processor.png" alt=""></p>
@@ -211,11 +381,15 @@
 <li>逻辑分析仪</li>
 </ul>
 <h2 id="-">附录</h2>
+<p>建议 “微信读书” 王宝华的《Linux 设备驱动开发详解：基于最新的 Linux 4.0 内核》</p>
 <ol>
+<li><a href="https://pan.baidu.com/s/1o8ncCSa">Ubuntu 的 VirtualBox 镜像</a> (提取码 m7g5)。系统中 账号、密码 &quot;baohua&quot;</li>
 <li><a href="http://lxr.free-electrons.com/">Linux Cross Reference</a>：Linux内核源码的交叉索引</li>
 <li>minicom：串口通信工具</li>
 <li><a href="https://github.com/martinezjavier/ldd3">Linux Device Drivers 3 examples</a></li>
 <li><a href="https://www.linuxquestions.org/">LinuxQuestions</a></li>
+<li><a href="http://kernelnewbies.org/LinuxVersions">Linux Kernel Newbies</a>：Linux 每个版本具体变更</li>
+<li><a href="http://www.linuxfoundation.org/news-media/lwf">Linux Weather Forecast</a>：Linux 近期热点和走向</li>
 </ol>
 
       </div>

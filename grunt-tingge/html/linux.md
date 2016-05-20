@@ -1,4 +1,4 @@
-# Linux 
+#  
 
 ## 概念
 
@@ -57,6 +57,14 @@
 | README         |                                          |
 | REPORTING-BUGS |                                          |
 
+## 内核的编译
+
+推荐 `make menuconfig`
+
+- Makefile
+- 配置文件（Kconfig）
+- 配置工具
+
 ## 驱动开发
 
 Linux 内核中增加程序需要完成以下3项工作：
@@ -70,6 +78,161 @@ Linux 内核中增加程序需要完成以下3项工作：
 - [Documents/CodingStyle](http://lxr.free-electrons.com/)
 - [scripts/checkpatch.pl](scripts/checkpatch.pl)：检查代码风格是否符合 CodingStyle
 - 工程阶段，一般可以在 SCM 软件的服务器端用 pre-commit hook，自动检查工程师提交的代码是否符合 Linux 的编码风格，如果不符合，则自动拦截
+
+## 内核模块程序结构
+
+### 模块加载函数：
+
+- insmod(或modprobe) 模块名参数名=参数值。运行时，应使用逗号分隔输入的数组元素
+
+- 一般以 __init 标识声明
+- 以 “module_init” 形式指定。成功返回 0，失败则返回错误编码（在 <linux/errno.h> 中定义）
+- 可使用 request_module(module_name) 加载其它内核模块
+- 只是初始化阶段需要的数据，也可被定义为 __initdata
+
+### 模块卸载函数：
+
+- rmmod 模块名参数名
+- 一般以 __exit 标识声明
+- 以 “module_exit” 形式指定。成功返回 0，失败则返回错误编码（在 <linux/errno.h> 中定义）
+- 只是退出阶段采用的数据，可被定义为 __exitdata
+
+### 模块许可证声明：
+
+- GPL、GPL v2、GPL and additional rights、Dual BSD/GPL、Dual MPL/GPL 和 Proprietary
+
+
+### 模块参数（可选）
+
+-   可用 “module_param(参数名, 参数类型, 参数读/写权限)” 为模块定义一个参数
+-   参数类型可以是 byte、short、short、int、uint、long、ulong、sharp、bool 或 invbool
+-   模块也可拥有参数数组，形式 "module_param_array (参数组名, 数组类型, 数组长, 参数读/写权限)"
+
+
+### 模块导出符号（可选）
+
+- 可使用宏 EXPORT_SYMBOL(符号名) 、EXPORT_SYMBOL_GPL(符号名) 导出符号到内核符号表中
+
+### 模块声明与描述（可选）
+
+- MODULE_AUTHOR
+- MODULE_DESCRIPTION
+- MODULE_VERSION
+- MODULE_DEVICE_TABLE
+- MODULE_ALIAS
+
+### 模块的使用计数
+
+- try_module_get (&module) ：增加模块使用计数。0表示调用失败
+- module_put (&module) ：减少模块使用计数。
+
+### 模块的编译
+
+- Makefile
+
+- 一个模块包括多个 .c 文件，则 Makefile 中 
+
+  ```c++
+  obj-m := module name.o
+
+  modulename-objs := file1.o file2.o
+  ```
+
+## 文件系统与设备文件
+
+### 文件操作系统调用
+
+#### 创建
+
+```c
+int creat(const char *filename, mode_t mode);
+```
+
+参数  `mode` 指定新建文件存取，同 `umask` 一起决定文件最终权限
+
+#### 打开
+
+```c
+int open(const char *pathname, int flags);
+```
+
+#### 读写
+
+```c
+int read(int fd, const void *buf, size_t length);
+int write(int fd, const void *buf, size_t length);
+```
+
+#### 定位
+
+```c
+int lseek(int fd, offset_t offset, int whence);
+```
+
+- whence：SEEK_SET、SEEK_CUR、SEEK_END
+
+#### 关闭
+
+```c
+int close(int fd);
+```
+
+### C 库文件操作
+
+#### 创建和打开
+
+```c
+FILE *fopen(const char *path, const char *mode);
+```
+
+#### 读写
+
+```c
+int fgetc(FILE *stream);
+int fputc(int c, FILE *stream);
+
+char *fgets(char *s, int n, FILE *stream);
+int fputs(const char *s, FILE *stream);
+
+int fprintf(FILE *stream, const char *format, …);
+int fscanf(FILE *stream, const char *format, …);
+
+size_t fread(void *ptr, size_t size, size_t n, FILE *stream);
+size_t fwrite(const void *ptr, size_t size, size_t n, FILE *stream);
+```
+
+#### 定位
+
+```c
+int fgetpos(FILE *stream, fpot_t *pos);
+int fsetpos(FILE *stream, const fpos_t *post);
+int fseek(FILE *stream, long offset, int whence);
+```
+
+#### 关闭
+
+```c
+int fclose(FILE *stream);
+```
+
+### 文件系统目录结构
+
+Linux 根目录（即 “/”）
+
+| 目录    | 说明                                      |
+| ----- | --------------------------------------- |
+| /bin  | 基本明命令， ls、cp、mkdir 等                    |
+| /sbin | 系统命令，mod probe、hwclock、ifconfig 等       |
+| /dev  | 设备文件存储目录                                |
+| /etc  | 系统配置文件                                  |
+| /lib  | 系统库文件存放                                 |
+| /mnt  | 挂载存储设备等挂载目录                             |
+| /opt  | 有些软件包安装位置                               |
+| /proc | 操作系统运行时，进程及内核信息存放。伪文件系统 proc 挂载目录，存在于内存 |
+| /tmp  | 临时文件                                    |
+| /usr  | 存放程序目录，如用户命令、用户库等                       |
+| /var  | 存放系统日志等                                 |
+| /sys  | sysfs 文件系统映射目录                          |
 
 ## 硬件基础
 
@@ -100,8 +263,11 @@ Linux 内核中增加程序需要完成以下3项工作：
 
 ## 附录
 
-1. [Linux Cross Reference](http://lxr.free-electrons.com/)：Linux内核源码的交叉索引
-2. minicom：串口通信工具
-3. [Linux Device Drivers 3 examples](https://github.com/martinezjavier/ldd3)
-4. [LinuxQuestions](https://www.linuxquestions.org/)
-
+建议 “微信读书” 王宝华的《Linux 设备驱动开发详解：基于最新的 Linux 4.0 内核》
+1. [Ubuntu 的 VirtualBox 镜像](https://pan.baidu.com/s/1o8ncCSa) (提取码 m7g5)。系统中 账号、密码 "baohua"
+2. [Linux Cross Reference](http://lxr.free-electrons.com/)：Linux内核源码的交叉索引
+3. minicom：串口通信工具
+4. [Linux Device Drivers 3 examples](https://github.com/martinezjavier/ldd3)
+5. [LinuxQuestions](https://www.linuxquestions.org/)
+6. [Linux Kernel Newbies](http://kernelnewbies.org/LinuxVersions)：Linux 每个版本具体变更
+7. [Linux Weather Forecast](http://www.linuxfoundation.org/news-media/lwf)：Linux 近期热点和走向
