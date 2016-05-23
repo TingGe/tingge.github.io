@@ -1,0 +1,276 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>听歌实验室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://tingge.github.io/">听歌实验室</a>
+      </div>
+    </div>
+  </div>
+  <div id="main" class="container">
+    <div class="row">
+      <div class="col-md-9 content-container">
+        <h1 id="linux-">Linux  内核</h1>
+<h2 id="-">内核划分</h2>
+<p><img src="../img/linux-kernel.png" alt="Linux 内核划分"></p>
+<h2 id="-">内核的组成部分</h2>
+<p><img src="../img/linux-kernel-core.png" alt="Linux 内核组成部分"></p>
+<h2 id="-">内核源代码目录结构</h2>
+<table>
+<thead>
+<tr>
+<th>目录、文件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Documentation/</td>
+<td>内核各部分的通用解释和注释</td>
+</tr>
+<tr>
+<td>arch/</td>
+<td>和硬件体系结构相关</td>
+</tr>
+<tr>
+<td>block/</td>
+<td>块设备驱动程序 I/O 调度</td>
+</tr>
+<tr>
+<td>certs/</td>
+<td></td>
+</tr>
+<tr>
+<td>crypto/</td>
+<td>常用加密和散列算法（如 AES 、 SHA 等），还有一些压缩和 CRC 校验算法</td>
+</tr>
+<tr>
+<td>drivers/</td>
+<td>设备驱动程序</td>
+</tr>
+<tr>
+<td>firmware/</td>
+<td></td>
+</tr>
+<tr>
+<td>fs/</td>
+<td>支持的各种文件系统</td>
+</tr>
+<tr>
+<td>include/</td>
+<td>头文件</td>
+</tr>
+<tr>
+<td>init/</td>
+<td>内核初始化代码</td>
+</tr>
+<tr>
+<td>ipc/</td>
+<td>进程间通信代码</td>
+</tr>
+<tr>
+<td>kernel/</td>
+<td>内核部分，包括进程调度、定时器等，而和平台相关的部分在 arch/*/kernel/</td>
+</tr>
+<tr>
+<td>lib/</td>
+<td>库文件</td>
+</tr>
+<tr>
+<td>mm/</td>
+<td>内存管理，和平台相关部分在 arch/*/mm/</td>
+</tr>
+<tr>
+<td>net/</td>
+<td>网络相关，实现各种网络协议</td>
+</tr>
+<tr>
+<td>samples/</td>
+<td></td>
+</tr>
+<tr>
+<td>scripts/</td>
+<td>用于配置内核的脚本文件</td>
+</tr>
+<tr>
+<td>security/</td>
+<td>主要是 SELinx 模块</td>
+</tr>
+<tr>
+<td>sound/</td>
+<td>ALSA 、OSS 音频设备驱动核心代码和常用设备驱动</td>
+</tr>
+<tr>
+<td>tools/</td>
+<td></td>
+</tr>
+<tr>
+<td>usr/</td>
+<td>实现用于打包和压缩的 cpio 等</td>
+</tr>
+<tr>
+<td>virt/</td>
+<td></td>
+</tr>
+<tr>
+<td>COPYING</td>
+<td></td>
+</tr>
+<tr>
+<td>CREDITS</td>
+<td></td>
+</tr>
+<tr>
+<td>Kbuild</td>
+<td>内核的编译系统</td>
+</tr>
+<tr>
+<td>Kconfig</td>
+<td>给用户提供配置选择的功能</td>
+</tr>
+<tr>
+<td>MAINTAINERS</td>
+<td></td>
+</tr>
+<tr>
+<td>Makefile</td>
+<td>定义 Linux 内核编译规则</td>
+</tr>
+<tr>
+<td>README</td>
+<td></td>
+</tr>
+<tr>
+<td>REPORTING-BUGS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">内核的编译</h2>
+<p>推荐 <code>make menuconfig</code></p>
+<ul>
+<li>Makefile</li>
+<li>配置文件（Kconfig）</li>
+<li>配置工具</li>
+</ul>
+<h2 id="-">文件系统目录结构</h2>
+<p>Linux 根目录（即 “/”）</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/bin</td>
+<td>基本明命令， ls、cp、mkdir 等</td>
+</tr>
+<tr>
+<td>/sbin</td>
+<td>系统命令，mod probe、hwclock、ifconfig 等</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>设备文件存储目录</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>系统配置文件</td>
+</tr>
+<tr>
+<td>/lib</td>
+<td>系统库文件存放</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>挂载存储设备等挂载目录</td>
+</tr>
+<tr>
+<td>/opt</td>
+<td>有些软件包安装位置</td>
+</tr>
+<tr>
+<td>/proc</td>
+<td>操作系统运行时，进程及内核信息存放。伪文件系统 proc 挂载目录，存在于内存</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td>临时文件</td>
+</tr>
+<tr>
+<td>/usr</td>
+<td>存放程序目录，如用户命令、用户库等</td>
+</tr>
+<tr>
+<td>/var</td>
+<td>存放系统日志等</td>
+</tr>
+<tr>
+<td>/sys</td>
+<td>sysfs 文件系统映射目录</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">文件系统与设备驱动</h2>
+<p><img src="../img/fs-driver.png" alt="文件系统与设备驱动"></p>
+<h3 id="udev-">udev 用户空间设备管理</h3>
+<ul>
+<li>设备和驱动分离，并通过总线进行匹配。</li>
+<li>udev 利用内核通过 netlink 发出的 uevent 信息动态创建设备文件节点</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>设备管理</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>udev</td>
+<td></td>
+</tr>
+<tr>
+<td>mdev</td>
+<td>udev 轻量级版本，集成于 busybox 中</td>
+</tr>
+<tr>
+<td>vold</td>
+<td>Android 采用</td>
+</tr>
+</tbody>
+</table>
+<p>### </p>
+
+      </div>
+      <div class="col-md-3">
+        <script data-name="TingGe" data-modules="base,details,stats,repos,eventsStatis,orgs" data-reposNum="3" src="http://octocard.in/o.js">
+        </script>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

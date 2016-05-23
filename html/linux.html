@@ -30,162 +30,49 @@
   <div id="main" class="container">
     <div class="row">
       <div class="col-md-9 content-container">
-        <h1 id="-"> </h1>
+        <h1 id="linux-">Linux 驱动开发</h1>
 <h2 id="-">概念</h2>
-<p>机制，解决提供什么能力；策略，处理如何使用这些能力。一般，驱动属于机制范畴；应用归于策略范畴。</p>
-<h4 id="-">（对策略透明的）驱动分类</h4>
-<ul>
-<li>字符设备（open、close、read、write）：触摸屏、USB、鼠标等</li>
-<li>块设备：硬盘、eMMC等</li>
-<li>网络接口：</li>
-</ul>
-<h2 id="-">内核划分</h2>
-<p><img src="../img/linux-kernel.png" alt="Linux 内核划分"></p>
-<h2 id="-">设备驱动与整个软硬件系统的关系</h2>
-<p><img src="../img/linux-ware.png" alt="Linux 设备驱动与整个软硬件系统的关系"></p>
-<h2 id="-">内核的组成部分</h2>
-<p><img src="../img/linux-kernel-core.png" alt="Linux 内核组成部分"></p>
-<h2 id="-">内核源代码目录结构</h2>
+<p>Linux 设计中强调的一个基本观点是：机制和策略分离。因此，驱动应是对策略透明的。</p>
 <table>
 <thead>
 <tr>
-<th>目录、文件</th>
-<th>说明</th>
+<th></th>
+<th>功能</th>
+<th>运行空间</th>
+<th>特征</th>
+<th>一般场景</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Documentation/</td>
-<td>内核各部分的通用解释和注释</td>
+<td>策略</td>
+<td>处理如何使用这些能力</td>
+<td>用户空间</td>
+<td>灵活</td>
+<td>应用</td>
 </tr>
 <tr>
-<td>arch/</td>
-<td>和硬件体系结构相关</td>
-</tr>
-<tr>
-<td>block/</td>
-<td>块设备驱动程序 I/O 调度</td>
-</tr>
-<tr>
-<td>certs/</td>
-<td></td>
-</tr>
-<tr>
-<td>crypto/</td>
-<td>常用加密和散列算法（如 AES 、 SHA 等），还有一些压缩和 CRC 校验算法</td>
-</tr>
-<tr>
-<td>drivers/</td>
-<td>设备驱动程序</td>
-</tr>
-<tr>
-<td>firmware/</td>
-<td></td>
-</tr>
-<tr>
-<td>fs/</td>
-<td>支持的各种文件系统</td>
-</tr>
-<tr>
-<td>include/</td>
-<td>头文件</td>
-</tr>
-<tr>
-<td>init/</td>
-<td>内核初始化代码</td>
-</tr>
-<tr>
-<td>ipc/</td>
-<td>进程间通信代码</td>
-</tr>
-<tr>
-<td>kernel/</td>
-<td>内核部分，包括进程调度、定时器等，而和平台相关的部分在 arch/*/kernel/</td>
-</tr>
-<tr>
-<td>lib/</td>
-<td>库文件</td>
-</tr>
-<tr>
-<td>mm/</td>
-<td>内存管理，和平台相关部分在 arch/*/mm/</td>
-</tr>
-<tr>
-<td>net/</td>
-<td>网络相关，实现各种网络协议</td>
-</tr>
-<tr>
-<td>samples/</td>
-<td></td>
-</tr>
-<tr>
-<td>scripts/</td>
-<td>用于配置内核的脚本文件</td>
-</tr>
-<tr>
-<td>security/</td>
-<td>主要是 SELinx 模块</td>
-</tr>
-<tr>
-<td>sound/</td>
-<td>ALSA 、OSS 音频设备驱动核心代码和常用设备驱动</td>
-</tr>
-<tr>
-<td>tools/</td>
-<td></td>
-</tr>
-<tr>
-<td>usr/</td>
-<td>实现用于打包和压缩的 cpio 等</td>
-</tr>
-<tr>
-<td>virt/</td>
-<td></td>
-</tr>
-<tr>
-<td>COPYING</td>
-<td></td>
-</tr>
-<tr>
-<td>CREDITS</td>
-<td></td>
-</tr>
-<tr>
-<td>Kbuild</td>
-<td>内核的编译系统</td>
-</tr>
-<tr>
-<td>Kconfig</td>
-<td>给用户提供配置选择的功能</td>
-</tr>
-<tr>
-<td>MAINTAINERS</td>
-<td></td>
-</tr>
-<tr>
-<td>Makefile</td>
-<td>定义 Linux 内核编译规则</td>
-</tr>
-<tr>
-<td>README</td>
-<td></td>
-</tr>
-<tr>
-<td>REPORTING-BUGS</td>
+<td>机制</td>
+<td>解决提供什么能力</td>
+<td>内核空间</td>
+<td>相对稳定</td>
+<td>驱动</td>
 </tr>
 </tbody>
 </table>
-<h2 id="-">内核的编译</h2>
-<p>推荐 <code>make menuconfig</code></p>
+<h3 id="-">设备驱动与整个软硬件系统的关系</h3>
+<p><img src="../img/linux-ware.png" alt="Linux 设备驱动与整个软硬件系统的关系"></p>
+<p>Linux 用户空间的文件编程有两种方法，即通过 Linux API 和 通过 C 库函数访问文件。</p>
+<h2 id="-">驱动分类</h2>
 <ul>
-<li>Makefile</li>
-<li>配置文件（Kconfig）</li>
-<li>配置工具</li>
+<li>字符设备：按键、键盘、触摸屏、USB、鼠标等</li>
+<li>块设备：硬盘、eMMC等</li>
+<li>网络设备：</li>
 </ul>
 <h2 id="-">驱动开发</h2>
 <p>Linux 内核中增加程序需要完成以下3项工作：</p>
 <ol>
-<li>将编写的源代码复制到Linux内核源代码的相应目录</li>
+<li>将编写的源代码复制到 Linux 内核源代码的相应目录</li>
 <li>在目录的 Kconfig 文件中增加关于新源代码对应项目的编译配置选项</li>
 <li>在目录的 Makefile 文件中增加对新源代码的编译条目</li>
 </ol>
@@ -195,191 +82,24 @@
 <li><a href="scripts/checkpatch.pl">scripts/checkpatch.pl</a>：检查代码风格是否符合 CodingStyle</li>
 <li>工程阶段，一般可以在 SCM 软件的服务器端用 pre-commit hook，自动检查工程师提交的代码是否符合 Linux 的编码风格，如果不符合，则自动拦截</li>
 </ul>
-<h2 id="-">内核模块程序结构</h2>
-<h3 id="-">模块加载函数：</h3>
+<h3 id="-">字符设备驱动</h3>
+<p><img src="../img/cdev.png" alt="字符设备驱动的结构"></p>
+<h4 id="cdev-">cdev 结构体</h4>
 <ul>
-<li><p>insmod(或modprobe) 模块名参数名=参数值。运行时，应使用逗号分隔输入的数组元素</p>
-</li>
-<li><p>一般以 __init 标识声明</p>
-</li>
-<li>以 “module_init” 形式指定。成功返回 0，失败则返回错误编码（在 <linux/errno.h> 中定义）</li>
-<li>可使用 request_module(module_name) 加载其它内核模块</li>
-<li>只是初始化阶段需要的数据，也可被定义为 __initdata</li>
+<li>register_chrdev_region() 或 alloc_chrdev_region() 向系统申请设备号</li>
+<li>cdev_add() 向系统注册字符设备</li>
+<li>cdev_del() 从系统注销字符设备</li>
+<li>unregister_chrdev_region() 释放已申请的设备号</li>
 </ul>
-<h3 id="-">模块卸载函数：</h3>
-<ul>
-<li>rmmod 模块名参数名</li>
-<li>一般以 __exit 标识声明</li>
-<li>以 “module_exit” 形式指定。成功返回 0，失败则返回错误编码（在 <linux/errno.h> 中定义）</li>
-<li>只是退出阶段采用的数据，可被定义为 __exitdata</li>
-</ul>
-<h3 id="-">模块许可证声明：</h3>
-<ul>
-<li>GPL、GPL v2、GPL and additional rights、Dual BSD/GPL、Dual MPL/GPL 和 Proprietary</li>
-</ul>
-<h3 id="-">模块参数（可选）</h3>
-<ul>
-<li>可用 “module_param(参数名, 参数类型, 参数读/写权限)” 为模块定义一个参数</li>
-<li>参数类型可以是 byte、short、short、int、uint、long、ulong、sharp、bool 或 invbool</li>
-<li>模块也可拥有参数数组，形式 &quot;module_param_array (参数组名, 数组类型, 数组长, 参数读/写权限)&quot;</li>
-</ul>
-<h3 id="-">模块导出符号（可选）</h3>
-<ul>
-<li>可使用宏 EXPORT_SYMBOL(符号名) 、EXPORT_SYMBOL_GPL(符号名) 导出符号到内核符号表中</li>
-</ul>
-<h3 id="-">模块声明与描述（可选）</h3>
-<ul>
-<li>MODULE_AUTHOR</li>
-<li>MODULE_DESCRIPTION</li>
-<li>MODULE_VERSION</li>
-<li>MODULE_DEVICE_TABLE</li>
-<li>MODULE_ALIAS</li>
-</ul>
-<h3 id="-">模块的使用计数</h3>
-<ul>
-<li>try_module_get (&amp;module) ：增加模块使用计数。0表示调用失败</li>
-<li>module_put (&amp;module) ：减少模块使用计数。</li>
-</ul>
-<h3 id="-">模块的编译</h3>
-<ul>
-<li><p>Makefile</p>
-</li>
-<li><p>一个模块包括多个 .c 文件，则 Makefile 中 </p>
-<pre><code class="lang-c++">obj-m := module name.o
-
-modulename-objs := file1.o file2.o
-</code></pre>
-</li>
-</ul>
-<h2 id="-">文件系统与设备文件</h2>
-<h3 id="-">文件操作系统调用</h3>
-<h4 id="-">创建</h4>
-<pre><code class="lang-c">int creat(const char *filename, mode_t mode);
-</code></pre>
-<p>参数  <code>mode</code> 指定新建文件存取，同 <code>umask</code> 一起决定文件最终权限</p>
-<h4 id="-">打开</h4>
-<pre><code class="lang-c">int open(const char *pathname, int flags);
-</code></pre>
-<h4 id="-">读写</h4>
-<pre><code class="lang-c">int read(int fd, const void *buf, size_t length);
-int write(int fd, const void *buf, size_t length);
-</code></pre>
-<h4 id="-">定位</h4>
-<pre><code class="lang-c">int lseek(int fd, offset_t offset, int whence);
-</code></pre>
-<ul>
-<li>whence：SEEK_SET、SEEK_CUR、SEEK_END</li>
-</ul>
-<h4 id="-">关闭</h4>
-<pre><code class="lang-c">int close(int fd);
-</code></pre>
-<h3 id="c-">C 库文件操作</h3>
-<h4 id="-">创建和打开</h4>
-<pre><code class="lang-c">FILE *fopen(const char *path, const char *mode);
-</code></pre>
-<h4 id="-">读写</h4>
-<pre><code class="lang-c">int fgetc(FILE *stream);
-int fputc(int c, FILE *stream);
-
-char *fgets(char *s, int n, FILE *stream);
-int fputs(const char *s, FILE *stream);
-
-int fprintf(FILE *stream, const char *format, …);
-int fscanf(FILE *stream, const char *format, …);
-
-size_t fread(void *ptr, size_t size, size_t n, FILE *stream);
-size_t fwrite(const void *ptr, size_t size, size_t n, FILE *stream);
-</code></pre>
-<h4 id="-">定位</h4>
-<pre><code class="lang-c">int fgetpos(FILE *stream, fpot_t *pos);
-int fsetpos(FILE *stream, const fpos_t *post);
-int fseek(FILE *stream, long offset, int whence);
-</code></pre>
-<h4 id="-">关闭</h4>
-<pre><code class="lang-c">int fclose(FILE *stream);
-</code></pre>
-<h3 id="-">文件系统目录结构</h3>
-<p>Linux 根目录（即 “/”）</p>
-<table>
-<thead>
-<tr>
-<th>目录</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/bin</td>
-<td>基本明命令， ls、cp、mkdir 等</td>
-</tr>
-<tr>
-<td>/sbin</td>
-<td>系统命令，mod probe、hwclock、ifconfig 等</td>
-</tr>
-<tr>
-<td>/dev</td>
-<td>设备文件存储目录</td>
-</tr>
-<tr>
-<td>/etc</td>
-<td>系统配置文件</td>
-</tr>
-<tr>
-<td>/lib</td>
-<td>系统库文件存放</td>
-</tr>
-<tr>
-<td>/mnt</td>
-<td>挂载存储设备等挂载目录</td>
-</tr>
-<tr>
-<td>/opt</td>
-<td>有些软件包安装位置</td>
-</tr>
-<tr>
-<td>/proc</td>
-<td>操作系统运行时，进程及内核信息存放。伪文件系统 proc 挂载目录，存在于内存</td>
-</tr>
-<tr>
-<td>/tmp</td>
-<td>临时文件</td>
-</tr>
-<tr>
-<td>/usr</td>
-<td>存放程序目录，如用户命令、用户库等</td>
-</tr>
-<tr>
-<td>/var</td>
-<td>存放系统日志等</td>
-</tr>
-<tr>
-<td>/sys</td>
-<td>sysfs 文件系统映射目录</td>
-</tr>
-</tbody>
-</table>
-<h2 id="-">硬件基础</h2>
-<h3 id="-">处理器</h3>
-<p><img src="../img/processor.png" alt=""></p>
-<h3 id="-">存储器</h3>
-<p><img src="../img/storage.png" alt=""></p>
-<h3 id="-">常见外设接口与总线工作方式</h3>
-<ul>
-<li>串口</li>
-<li>I2C（内置集成电路）</li>
-<li>SPI（串行外设接口）</li>
-<li>USB（通用串行总线）</li>
-<li>以太网接口</li>
-<li>PCI（外围部件互连） 和 PCI-E</li>
-<li>SD 和 SDIO</li>
-<li>CPLD（复杂可编程逻辑器件）和 FPGA（现场可编程门阵列） </li>
-</ul>
-<h3 id="-">调试常用仪器仪表</h3>
-<ul>
-<li>万用表：测量电平、使用二极管测量电路板上网络的连通性</li>
-<li>示波器</li>
-<li>逻辑分析仪</li>
-</ul>
+<h4 id="file_operations-">file_operations 结构体</h4>
+<h2 id="-">设备驱动的分层思想</h2>
+<ol>
+<li>输入设备驱动</li>
+<li>RTC 设备驱动</li>
+<li>Framebuffer 设备驱动</li>
+<li>终端设备驱动</li>
+<li>misc 设备驱动</li>
+</ol>
 <h2 id="-">附录</h2>
 <p>建议 “微信读书” 王宝华的《Linux 设备驱动开发详解：基于最新的 Linux 4.0 内核》</p>
 <ol>
@@ -390,6 +110,8 @@ int fseek(FILE *stream, long offset, int whence);
 <li><a href="https://www.linuxquestions.org/">LinuxQuestions</a></li>
 <li><a href="http://kernelnewbies.org/LinuxVersions">Linux Kernel Newbies</a>：Linux 每个版本具体变更</li>
 <li><a href="http://www.linuxfoundation.org/news-media/lwf">Linux Weather Forecast</a>：Linux 近期热点和走向</li>
+<li><a href="./linux_kernel.html">Linux 内核</a></li>
+<li><a href="./hardware.html">硬件基础</a></li>
 </ol>
 
       </div>
