@@ -86,5 +86,6 @@ Linux 根目录（即 “/”）
 | mdev | udev 轻量级版本，集成于 busybox 中 |
 | vold | Android 采用               |
 
-### 
+## 附录
 
+1. [GCC 编译](https://gcc.gnu.org/)
