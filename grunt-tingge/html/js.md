@@ -15,3 +15,4 @@
 ## 附录
 
 - [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。个人总结大致思路是：flexible.js 或 metahandler.js
+- [Houdini：CSS 领域最令人振奋的革新](http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&mid=2651424725&idx=1&sn=c19801bf880556470bb21f8af0cb0225)
