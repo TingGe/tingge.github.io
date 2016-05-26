@@ -68,7 +68,7 @@ ARCH=arm make menuconfig
 </blockquote>
 <p>然后进行配置：</p>
 <ol>
-<li><p><strong>开启</strong> 下面 1 项</p>
+<li><p><strong>开启</strong> 下面 1 项（有点疑问，这里选 Y or M ？目前是两种都可以）</p>
 <p> Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support </p>
 </li>
 <li><p><strong>关闭</strong>下面 2 项</p>
@@ -86,9 +86,9 @@ export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
 <h3 id="-7">步骤 7</h3>
 <p><code>ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/arch/arm/boot/dts/include</code></p>
 <p>执行下列命令</p>
-<pre><code class="lang-shell">ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage －j4
+<pre><code class="lang-shell">ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage -j4
 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make modules -j4
-ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs -j4
 sudo ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make modules_install INSTALL_MOD_PATH=$LDK_ROOTFS_DIR
 sudo cp arch/arm/boot/zImage $LDK_ROOTFS_DIR/boot
 sudo cp arch/arm/boot/zImage $LDK_DIR/kernel/zImage

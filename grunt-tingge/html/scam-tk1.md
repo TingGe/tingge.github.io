@@ -60,7 +60,7 @@ ARCH=arm make menuconfig
 
 然后进行配置：
 
-1.  **开启** 下面 1 项
+1.  **开启** 下面 1 项（有点疑问，这里选 Y or M ？目前是两种都可以）
 
      Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
 
@@ -87,9 +87,9 @@ export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
 执行下列命令
 
 ```shell
-ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage －j4
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage -j4
 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make modules -j4
-ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs -j4
 sudo ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make modules_install INSTALL_MOD_PATH=$LDK_ROOTFS_DIR
 sudo cp arch/arm/boot/zImage $LDK_ROOTFS_DIR/boot
 sudo cp arch/arm/boot/zImage $LDK_DIR/kernel/zImage
