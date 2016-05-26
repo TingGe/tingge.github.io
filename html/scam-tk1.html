@@ -1,0 +1,174 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>听歌实验室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://tingge.github.io/">听歌实验室</a>
+      </div>
+    </div>
+  </div>
+  <div id="main" class="container">
+    <div class="row">
+      <div class="col-md-9 content-container">
+        <h1 id="jetson-tk1-tegra-k1-mipi-csi-2-ov5640">Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640</h1>
+<p>模块购买，建议淘宝 <a href="https://item.taobao.com/item.htm?id=522097991891">梦琪游戏资源店</a>。“卖家不光卖东西，还非常耐心细致的回答好多问题”。</p>
+<h2 id="-">安装过程</h2>
+<h3 id="-0">准备 0</h3>
+<pre><code class="lang-shell">cd ~ &amp;&amp; mkdir tegra &amp;&amp; cd ~/tegra
+wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra124_Linux_R21.4.0_armhf.tbz2
+wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
+</code></pre>
+<p><a href="http://pan.baidu.com/s/1nvdB7a5">nkernel.tar.gz</a>：内核（建议联系我 或 从卖家获取），存到  <code>~/tegra</code> 目录</p>
+<h3 id="-1">步骤 1</h3>
+<pre><code class="lang-shell">sudo tar -xif Tegra124Linux_R21.4.0armhf.tbz2
+cd Linux_for_Tegra/roofs
+sudo tar -xipf /home/ubuntu/tegra/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
+</code></pre>
+<h3 id="-2">步骤 2</h3>
+<pre><code class="lang-shell">cd ..
+export LDK_ROOTFS_DIR=/home/ubuntu/tegra/Linux_for_Tegra/rootfs
+sudo ./apply_binaries.sh
+</code></pre>
+<h3 id="-3">步骤 3</h3>
+<pre><code class="lang-shell">sudo apt-get install gcc-arm-linux-gnueabihf build-essential
+</code></pre>
+<h3 id="-4">步骤 4</h3>
+<pre><code class="lang-shell">tar -xif /home/ubuntu/tegra/nkernel.tar.gz
+cd nkernel/
+</code></pre>
+<h3 id="-5">步骤 5</h3>
+<pre><code class="lang-shell">ARCH=arm make tegra12_defconfig
+ARCH=arm make menuconfig
+</code></pre>
+<blockquote>
+<p>如 <code>ARCH=arm make menuconfig</code> 执行失败，需 <code>apt-get install libncurses5-dev</code></p>
+</blockquote>
+<p>然后进行配置：</p>
+<ol>
+<li><p><strong>开启</strong> 下面 1 项</p>
+<pre><code>Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support 
+</code></pre></li>
+<li><p><strong>关闭</strong>下面 2 项</p>
+<pre><code>Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
+Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver 
+</code></pre></li>
+<li><p>然后保存退出</p>
+</li>
+</ol>
+<h3 id="-6">步骤 6</h3>
+<p>设置环境变量</p>
+<pre><code class="lang-shell">export LDK_ROOTFS_DIR=/home/ubuntu/tegra/Linux_for_Tegra/rootfs/
+export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
+</code></pre>
+<h3 id="-7">步骤 7</h3>
+<p><code>ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/ar</code></p>
+<p>执行下列命令</p>
+<pre><code class="lang-shell">ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage －j4
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make modules -j4
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs
+sudo ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make modules_install INSTALL_MOD_PATH=$LDK_ROOTFS_DIR
+sudo cp arch/arm/boot/zImage $LDK_ROOTFS_DIR/boot
+sudo cp arch/arm/boot/zImage $LDK_DIR/kernel/zImage
+sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_DIR/kernel/dtb/
+sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_ROOTFS_DIR/boot/
+</code></pre>
+<h3 id="-8">步骤 8</h3>
+<ol>
+<li>装上 SCam-TK1 模块，usb 连接 开发机和 TK1。开发机上 执行 <code>lsusb</code> 查看是否ok。</li>
+<li>按住开发板上头的 FROC ERECOVERY 同时按下 Reset 键 进入恢复模式...确定进入恢复模式后执行下面语句，开始烧录。</li>
+</ol>
+<pre><code class="lang-shell">cd $LDK_DIR/
+sudo ./flash.sh jetson-tk1 mmcblk0p1
+</code></pre>
+<p><strong>注意事项：</strong>注意开发机磁盘空间是否够用。预防因磁盘空间不足中断。</p>
+<h3 id="-9">步骤 9</h3>
+<ol>
+<li>刷完以后，登录 TK1 机器，进入开发板桌面系统</li>
+</ol>
+<ol>
+<li><p>执行 </p>
+<pre><code class="lang-shell">sudo modprobe tegra_camera
+</code></pre>
+</li>
+<li><p>至此 摄像头驱动加载完成，可以用 V4L2 访问摄像头</p>
+</li>
+<li><p>可以用</p>
+<pre><code class="lang-shell">gst-launch-0.10 -v v4l2src queue-size=1 ! &#39;video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080&#39; ! xvimagesink
+</code></pre>
+</li>
+</ol>
+<p>命令进行测试。</p>
+<p><strong>注意事项：</strong>如 4 执行失败，可尝试是否安装以下开发库</p>
+<pre><code class="lang-shell">sudo apt-get install libv4l-dev
+sudo apt-get install v4l-utils
+sudo apt-get install gstreamer-tools
+</code></pre>
+<h2 id="-">参考</h2>
+<ul>
+<li><p><a href="http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture">Gstreamer cheat sheet</a></p>
+</li>
+<li><p><a href="http://www.mr-wu.cn/ubuntu-video4linux2-v4l2-development-library/">Ubuntu Video4Linux2 (v4l2) 开发库安装</a></p>
+</li>
+</ul>
+<h2 id="-">调试</h2>
+<h3 id="-">问题描述：</h3>
+<p>在 “步骤 9” 命令测试时，报错且卡死。</p>
+<p><img src="../img/scam-tk1-issue.jpg" alt=""></p>
+<h3 id="-">调试过程：</h3>
+<ol>
+<li><p>确认是否内核编译过且刷成功</p>
+</li>
+<li><p>查看dev下面有几个video 开头的设备</p>
+<pre><code class="lang-shell">ls /dev/video*
+</code></pre>
+</li>
+<li><p>测测 i2c 电压是否正常，正常值是 1.8</p>
+</li>
+<li><p>拿 i2c tools 看看能扫到ID不</p>
+<pre><code class="lang-shell">sudo apt-get install i2c-tools
+i2cdetect -y 0
+</code></pre>
+</li>
+<li><p><code>lsmod</code> 查看都加载了哪些模块</p>
+</li>
+<li><p>重启TK1 然后以 root 身份执行</p>
+<pre><code class="lang-shell">su
+echo 20 &gt; /proc/sys/kernel/printk 
+modprobe tegra_camera
+gst-launch-0.10 -v v4l2src queue-size=1 ! &#39;video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080&#39; ! xvimagesink
+</code></pre>
+</li>
+</ol>
+<p>注意事项：Ubuntu 下设定 root 密码 <code>sudo passwd root</code></p>
+
+      </div>
+      <div class="col-md-3">
+        <script data-name="TingGe" data-modules="base,details,stats,repos,eventsStatis,orgs" data-reposNum="3" src="http://octocard.in/o.js">
+        </script>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

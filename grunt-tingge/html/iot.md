@@ -43,8 +43,7 @@
 
 1. [NVIDIA  Jetson TK1 学习与开发](http://blog.csdn.net/frd2009041510/article/details/41901239)
 2. [Jetson TK1的一些事项](jetson-tk1.html)
-3. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
-4. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
+3. [Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640](scam-tk1.html)
 
 ### Jetson TX1
 
@@ -56,3 +55,5 @@
 2. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
 3. [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
 4. [Linux](./linux.html)
+5. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
+6. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
