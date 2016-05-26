@@ -2,6 +2,10 @@
 
 模块购买，建议淘宝 [梦琪游戏资源店](https://item.taobao.com/item.htm?id=522097991891)。“卖家不光卖东西，还非常耐心细致的回答好多问题”。
 
+TK1 Camera MIPI CSI-2 模块实物图
+
+![TK1 Camera MIPI CSI-2 模块实物图](../img/scam-tk1.png)
+
 ## 安装过程
 
 ### 准备 0
@@ -57,12 +61,12 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项
 
-        Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
+         Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
 
 2.  **关闭**下面 2 项
 
-        Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-        Device Drivers > Graphics support > Tegra video input host1x client driver 
+         Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+         Device Drivers > Graphics support > Tegra video input host1x client driver 
 
 3.  然后保存退出
 
@@ -146,7 +150,7 @@ sudo apt-get install gstreamer-tools
 
 在 “步骤 9” 命令测试时，报错且卡死。
 
-![](../img/scam-tk1-issue.jpg)
+![Scam-tk1 报错截图](../img/scam-tk1-issue.jpg)
 
 ### 调试过程：
 
