@@ -82,7 +82,7 @@ export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
 
 ### 步骤 7
 
-`ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/arm/boot/dts/include`
+`ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/arch/arm/boot/dts/include`
 
 执行下列命令
 
