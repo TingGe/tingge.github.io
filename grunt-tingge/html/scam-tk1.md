@@ -21,8 +21,8 @@ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra_Li
 ### 步骤 1 
 
 ```shell
-sudo tar -xif Tegra124Linux_R21.4.0armhf.tbz2
-cd Linux_for_Tegra/roofs
+sudo tar -xif Tegra124_Linux_R21.4.0_armhf.tbz2
+cd Linux_for_Tegra/rootfs
 sudo tar -xipf /home/ubuntu/tegra/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 ```
 
@@ -61,12 +61,12 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项
 
-          Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
+           Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
 
 2.  **关闭**下面 2 项
 
-          Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-          Device Drivers > Graphics support > Tegra video input host1x client driver 
+           Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+           Device Drivers > Graphics support > Tegra video input host1x client driver 
 
 3.  然后保存退出
 
