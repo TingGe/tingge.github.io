@@ -43,6 +43,7 @@ sudo apt-get install gcc-arm-linux-gnueabihf build-essential
 ### 步骤 4
 
 ```shell
+cd ~/tegra
 tar -xif /home/ubuntu/tegra/nkernel.tar.gz
 cd nkernel/
 ```
@@ -61,12 +62,12 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项
 
-           Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
+     Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
 
 2.  **关闭**下面 2 项
 
-           Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-           Device Drivers > Graphics support > Tegra video input host1x client driver 
+     Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+     Device Drivers > Graphics support > Tegra video input host1x client driver 
 
 3.  然后保存退出
 
@@ -81,7 +82,7 @@ export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
 
 ### 步骤 7
 
-`ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/ar`
+`ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/arm/boot/dts/include`
 
 执行下列命令
 
