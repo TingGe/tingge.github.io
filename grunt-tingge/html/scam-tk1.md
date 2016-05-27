@@ -60,14 +60,18 @@ ARCH=arm make menuconfig
 
 然后进行配置：
 
-1.  **开启** 下面 1 项（有点疑问，这里选 Y or M ？目前是两种都可以）
+1.  **开启** 下面 1 项（这里选 M）
 
-     Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support 
+     ```
+    Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
+     ```
 
 2.  **关闭**下面 2 项
 
-     Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-     Device Drivers > Graphics support > Tegra video input host1x client driver 
+     ```
+    Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+    Device Drivers > Graphics support > Tegra video input host1x client driver
+     ```
 
 3.  然后保存退出
 
@@ -99,8 +103,10 @@ sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_ROOTFS_D
 
 ### 步骤 8
 
-1. 装上 SCam-TK1 模块，usb 连接 开发机和 TK1。开发机上 执行 `lsusb` 查看是否ok。
-2. 按住开发板上头的 FROC ERECOVERY 同时按下 Reset 键 进入恢复模式...确定进入恢复模式后执行下面语句，开始烧录。
+1. 装上 SCam-TK1 模块，usb 连接 开发机和 TK1。
+2. 按住开发板上头的 FROC ERECOVERY 同时按下 Reset 键 进入恢复模式...
+3. 开发机上 （勾选 Nvidia Corp 的 usb 连接。如不确定，可执行 `lsusb` 查看是否有  Nvidia Corp 的设备。
+4. 确定以上通过后执行下面语句，开始烧录。烧录一般需要一个小时左右。
 
 ```shell
 cd $LDK_DIR/
@@ -157,7 +163,7 @@ sudo apt-get install gstreamer-tools
 
 1. 确认是否内核编译过且刷成功
 
-2. 查看dev下面有几个video 开头的设备
+2. 查看 dev 下面有几个 video 开头的设备
 
    ```shell
    ls /dev/video*
@@ -165,7 +171,7 @@ sudo apt-get install gstreamer-tools
 
 3. 测测 i2c 电压是否正常，正常值是 1.8
 
-4. 拿 i2c tools 看看能扫到ID不
+4. 拿 i2c tools 看看能扫到 ID 不
 
    ```shell
    sudo apt-get install i2c-tools
@@ -174,7 +180,7 @@ sudo apt-get install gstreamer-tools
 
 5. `lsmod` 查看都加载了哪些模块
 
-6. 重启TK1 然后以 root 身份执行
+6. 重启 TK1 然后以 root 身份执行
 
    ```shell
    su
@@ -185,4 +191,3 @@ sudo apt-get install gstreamer-tools
 
 
 注意事项：Ubuntu 下设定 root 密码 `sudo passwd root`
-
