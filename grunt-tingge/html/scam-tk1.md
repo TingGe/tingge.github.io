@@ -62,16 +62,16 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项（这里选 M）
 
-      ```
-     Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
-      ```
+       ```
+      Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
+       ```
 
 2.  **关闭**下面 2 项
 
-      ```
-     Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-     Device Drivers > Graphics support > Tegra video input host1x client driver
-      ```
+       ```
+      Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+      Device Drivers > Graphics support > Tegra video input host1x client driver
+       ```
 
 3.  然后保存退出
 
@@ -118,32 +118,15 @@ sudo ./flash.sh jetson-tk1 mmcblk0p1
 ### 步骤 9
 
 1. 刷完以后，登录 TK1 机器，进入开发板桌面系统
+2. 执行 `sudo modprobe tegra_camera`
+3. 至此 摄像头驱动加载完成，可以用 V4L2 访问摄像头
+4. 可以用
 
-
-1. 执行 
-
-   ```shell
-   sudo modprobe tegra_camera
-   ```
-
-2. 至此 摄像头驱动加载完成，可以用 V4L2 访问摄像头
-
-3. 可以用
-
-   ```shell
-   gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080' ! xvimagesink
-   ```
-
-命令进行测试。
-
-**注意事项：**如 4 执行失败，可尝试是否安装以下开发库
 
 ```shell
-sudo apt-get update
-sudo apt-get install libv4l-dev
-sudo apt-get install v4l-utils
-sudo apt-get install gstreamer-tools
+gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080' ! xvimagesink
 ```
+命令进行测试。
 
 ## 参考
 
