@@ -62,16 +62,16 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项（这里选 M）
 
-     ```
-    Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
-     ```
+      ```
+     Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
+      ```
 
 2.  **关闭**下面 2 项
 
-     ```
-    Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-    Device Drivers > Graphics support > Tegra video input host1x client driver
-     ```
+      ```
+     Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+     Device Drivers > Graphics support > Tegra video input host1x client driver
+      ```
 
 3.  然后保存退出
 
@@ -105,7 +105,7 @@ sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_ROOTFS_D
 
 1. 装上 SCam-TK1 模块，usb 连接 开发机和 TK1。
 2. 按住开发板上头的 FROC ERECOVERY 同时按下 Reset 键 进入恢复模式...
-3. 开发机上 （勾选 Nvidia Corp 的 usb 连接。如不确定，可执行 `lsusb` 查看是否有  Nvidia Corp 的设备。
+3. 开发机上勾选 Nvidia Corp 的 usb 连接。如不确定，可执行 `lsusb` 查看是否有  Nvidia Corp 设备。
 4. 确定以上通过后执行下面语句，开始烧录。烧录一般需要一个小时左右。
 
 ```shell
@@ -139,6 +139,7 @@ sudo ./flash.sh jetson-tk1 mmcblk0p1
 **注意事项：**如 4 执行失败，可尝试是否安装以下开发库
 
 ```shell
+sudo apt-get update
 sudo apt-get install libv4l-dev
 sudo apt-get install v4l-utils
 sudo apt-get install gstreamer-tools
@@ -147,7 +148,7 @@ sudo apt-get install gstreamer-tools
 ## 参考
 
 - [Gstreamer cheat sheet](http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture)
-
+- [LinuxTV](https://linuxtv.org)：Multimedia and Television Support on Linux
 - [Ubuntu Video4Linux2 (v4l2) 开发库安装](http://www.mr-wu.cn/ubuntu-video4linux2-v4l2-development-library/)
 
 

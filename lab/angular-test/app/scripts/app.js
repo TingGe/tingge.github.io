@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'The Web platform: Browser technologies',
+    'author': '',
+    'url': 'https://platform.html5.org/'
+  }, {
     'name': 'Make 命令教程',
     'author': '阮一峰',
     'url': 'http://www.ruanyifeng.com/blog/2015/02/make.html'

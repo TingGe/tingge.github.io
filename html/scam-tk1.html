@@ -69,11 +69,11 @@ ARCH=arm make menuconfig
 <p>然后进行配置：</p>
 <ol>
 <li><p><strong>开启</strong> 下面 1 项（这里选 M）</p>
-<pre><code>Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
+<pre><code> Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
 </code></pre></li>
 <li><p><strong>关闭</strong>下面 2 项</p>
-<pre><code>Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
-Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
+<pre><code> Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
+ Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
 </code></pre></li>
 <li><p>然后保存退出</p>
 </li>
@@ -99,7 +99,7 @@ sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_ROOTFS_D
 <ol>
 <li>装上 SCam-TK1 模块，usb 连接 开发机和 TK1。</li>
 <li>按住开发板上头的 FROC ERECOVERY 同时按下 Reset 键 进入恢复模式...</li>
-<li>开发机上 （勾选 Nvidia Corp 的 usb 连接。如不确定，可执行 <code>lsusb</code> 查看是否有  Nvidia Corp 的设备。</li>
+<li>开发机上勾选 Nvidia Corp 的 usb 连接。如不确定，可执行 <code>lsusb</code> 查看是否有  Nvidia Corp 设备。</li>
 <li>确定以上通过后执行下面语句，开始烧录。烧录一般需要一个小时左右。</li>
 </ol>
 <pre><code class="lang-shell">cd $LDK_DIR/
@@ -124,16 +124,16 @@ sudo ./flash.sh jetson-tk1 mmcblk0p1
 </ol>
 <p>命令进行测试。</p>
 <p><strong>注意事项：</strong>如 4 执行失败，可尝试是否安装以下开发库</p>
-<pre><code class="lang-shell">sudo apt-get install libv4l-dev
+<pre><code class="lang-shell">sudo apt-get update
+sudo apt-get install libv4l-dev
 sudo apt-get install v4l-utils
 sudo apt-get install gstreamer-tools
 </code></pre>
 <h2 id="-">参考</h2>
 <ul>
-<li><p><a href="http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture">Gstreamer cheat sheet</a></p>
-</li>
-<li><p><a href="http://www.mr-wu.cn/ubuntu-video4linux2-v4l2-development-library/">Ubuntu Video4Linux2 (v4l2) 开发库安装</a></p>
-</li>
+<li><a href="http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture">Gstreamer cheat sheet</a></li>
+<li><a href="https://linuxtv.org">LinuxTV</a>：Multimedia and Television Support on Linux</li>
+<li><a href="http://www.mr-wu.cn/ubuntu-video4linux2-v4l2-development-library/">Ubuntu Video4Linux2 (v4l2) 开发库安装</a></li>
 </ul>
 <h2 id="-">调试</h2>
 <h3 id="-">问题描述：</h3>
