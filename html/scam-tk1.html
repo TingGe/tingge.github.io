@@ -69,11 +69,15 @@ ARCH=arm make menuconfig
 <p>然后进行配置：</p>
 <ol>
 <li><p><strong>开启</strong> 下面 1 项（这里选 M）</p>
-<pre><code>  Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
+<pre><code>​```
+</code></pre><p>   Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support</p>
+<pre><code>​```
 </code></pre></li>
 <li><p><strong>关闭</strong>下面 2 项</p>
-<pre><code>  Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
-  Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
+<pre><code>​```
+</code></pre><p>   Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
+   Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver</p>
+<pre><code>​```
 </code></pre></li>
 <li><p>然后保存退出</p>
 </li>
@@ -119,39 +123,31 @@ sudo ./flash.sh jetson-tk1 mmcblk0p1
 <h2 id="-">参考</h2>
 <ul>
 <li><a href="http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture">Gstreamer cheat sheet</a></li>
+<li><a href="https://linux.cn/article-3587-1.html">Linux系统中 ‘dmesg’ 命令处理故障和收集系统信息的7种用法</a></li>
 <li><a href="https://linuxtv.org">LinuxTV</a>：Multimedia and Television Support on Linux</li>
 <li><a href="http://www.mr-wu.cn/ubuntu-video4linux2-v4l2-development-library/">Ubuntu Video4Linux2 (v4l2) 开发库安装</a></li>
 </ul>
-<h2 id="-">调试</h2>
-<h3 id="-">问题描述：</h3>
-<p>在 “步骤 9” 命令测试时，报错且卡死。</p>
-<p><img src="../img/scam-tk1-issue.png" alt="Scam-tk1 报错截图"></p>
-<h3 id="-">调试过程：</h3>
-<ol>
-<li><p>确认是否内核编译过且刷成功</p>
-</li>
-<li><p>查看 dev 下面有几个 video 开头的设备</p>
-<pre><code class="lang-shell">ls /dev/video*
-</code></pre>
-</li>
-<li><p>测测 i2c 电压是否正常，正常值是 1.8</p>
-</li>
-<li><p>拿 i2c tools 看看能扫到 ID 不</p>
-<pre><code class="lang-shell">sudo apt-get install i2c-tools
-i2cdetect -y 0
-</code></pre>
-</li>
-<li><p><code>lsmod</code> 查看都加载了哪些模块</p>
-</li>
-<li><p>重启 TK1 然后以 root 身份执行</p>
-<pre><code class="lang-shell">su
-echo 20 &gt; /proc/sys/kernel/printk 
-modprobe tegra_camera
-gst-launch-0.10 -v v4l2src queue-size=1 ! &#39;video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080&#39; ! xvimagesink
-</code></pre>
-</li>
-</ol>
-<p>注意事项：Ubuntu 下设定 root 密码 <code>sudo passwd root</code></p>
+<h2 id="-">常用调试</h2>
+<p>{0}. 确认是否内核编译过且刷成功</p>
+<p>{0}. 查看 dev 下面有几个 video 开头的设备</p>
+<pre><code> ```shell
+ ls /dev/video*
+ ```
+</code></pre><p>{0}. 测测 i2c 电压是否正常，正常值是 1.8</p>
+<p>{0}. 拿 i2c tools 看看能扫到 ID 不</p>
+<pre><code> ```shell
+ sudo apt-get install i2c-tools
+ i2cdetect -y 0
+ ```
+</code></pre><p>{0}. <code>lsmod</code> 查看都加载了哪些模块</p>
+<p>{0}. 重启 TK1 然后以 root 身份执行</p>
+<pre><code> ```shell
+ su
+ echo 20 &gt; /proc/sys/kernel/printk 
+ modprobe tegra_camera
+ gst-launch-0.10 -v v4l2src queue-size=1 ! &#39;video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080&#39; ! xvimagesink
+ ```
+</code></pre><p>注意事项：Ubuntu 下设定 root 密码 <code>sudo passwd root</code></p>
 
       </div>
       <div class="col-md-3">
