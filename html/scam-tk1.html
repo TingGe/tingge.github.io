@@ -69,15 +69,11 @@ ARCH=arm make menuconfig
 <p>然后进行配置：</p>
 <ol>
 <li><p><strong>开启</strong> 下面 1 项（这里选 M）</p>
-<pre><code>​```
-</code></pre><p>   Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support</p>
-<pre><code>​```
+<pre><code>Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
 </code></pre></li>
 <li><p><strong>关闭</strong>下面 2 项</p>
-<pre><code>​```
-</code></pre><p>   Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
-   Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver</p>
-<pre><code>​```
+<pre><code>Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
+Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
 </code></pre></li>
 <li><p>然后保存退出</p>
 </li>
@@ -130,24 +126,21 @@ sudo ./flash.sh jetson-tk1 mmcblk0p1
 <h2 id="-">常用调试</h2>
 <p>{0}. 确认是否内核编译过且刷成功</p>
 <p>{0}. 查看 dev 下面有几个 video 开头的设备</p>
-<pre><code> ```shell
- ls /dev/video*
- ```
-</code></pre><p>{0}. 测测 i2c 电压是否正常，正常值是 1.8</p>
+<pre><code class="lang-shell">ls /dev/video*
+</code></pre>
+<p>{0}. 测测 i2c 电压是否正常，正常值是 1.8</p>
 <p>{0}. 拿 i2c tools 看看能扫到 ID 不</p>
-<pre><code> ```shell
- sudo apt-get install i2c-tools
- i2cdetect -y 0
- ```
-</code></pre><p>{0}. <code>lsmod</code> 查看都加载了哪些模块</p>
+<pre><code class="lang-shell">sudo apt-get install i2c-tools
+i2cdetect -y 0
+</code></pre>
+<p>{0}. <code>lsmod</code> 查看都加载了哪些模块</p>
 <p>{0}. 重启 TK1 然后以 root 身份执行</p>
-<pre><code> ```shell
- su
- echo 20 &gt; /proc/sys/kernel/printk 
- modprobe tegra_camera
- gst-launch-0.10 -v v4l2src queue-size=1 ! &#39;video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080&#39; ! xvimagesink
- ```
-</code></pre><p>注意事项：Ubuntu 下设定 root 密码 <code>sudo passwd root</code></p>
+<pre><code class="lang-shell">su
+echo 20 &gt; /proc/sys/kernel/printk 
+modprobe tegra_camera
+gst-launch-0.10 -v v4l2src queue-size=1 ! &#39;video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080&#39; ! xvimagesink
+</code></pre>
+<p>注意事项：Ubuntu 下设定 root 密码 <code>sudo passwd root</code></p>
 
       </div>
       <div class="col-md-3">
