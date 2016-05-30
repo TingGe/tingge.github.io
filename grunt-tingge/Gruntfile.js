@@ -18,7 +18,8 @@ module.exports = grunt => {
           src: [
             'bootstrap/dist/**',
             'font-awesome/**',
-            'jquery/dist/jquery.min.js'
+            'jquery/dist/jquery.min.js',
+            'autocjs/build/**'
           ],
           dest: '../lib/'
         }]

@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../lib/autocjs/build/autoc.min.css" media="screen">
   <style>
     body {
       padding-top: 60px;
       padding-bottom: 60px;
     }
+
+    .navbar-inverse {
+      background-color: "#f8f8f8";
+      border-color: "#e7e7e7"
+    }
   </style>
+  <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../lib/autocjs/build/autoc.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +37,7 @@
   </div>
   <div id="main" class="container">
     <div class="row">
-      <div class="col-md-9 content-container">
+      <div id="article" class="col-md-9 content-container">
         <blockquote>
 <p>整理自：我司 林夕 大X 的总结</p>
 </blockquote>
@@ -61,7 +69,16 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    // 最基础的方法，只需要指定文章内容的 DOM 节点的　id
+    autoc({
+      article: '#article'
+    });
 
+    AutocJS.init({
+      article: '#article'
+    });
+  </script>
 </body>
 
 </html>

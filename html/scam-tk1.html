@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../lib/autocjs/build/autoc.min.css" media="screen">
   <style>
     body {
       padding-top: 60px;
       padding-bottom: 60px;
     }
+
+    .navbar-inverse {
+      background-color: "#f8f8f8";
+      border-color: "#e7e7e7"
+    }
   </style>
+  <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../lib/autocjs/build/autoc.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +37,7 @@
   </div>
   <div id="main" class="container">
     <div class="row">
-      <div class="col-md-9 content-container">
+      <div id="article" class="col-md-9 content-container">
         <h1 id="jetson-tk1-tegra-k1-mipi-csi-2-ov5640">Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640</h1>
 <p>模块购买，建议淘宝 <a href="https://item.taobao.com/item.htm?id=522097991891">梦琪游戏资源店</a>。“卖家不光卖东西，还非常耐心细致的回答好多问题”。</p>
 <p>TK1 Camera MIPI CSI-2 模块实物图</p>
@@ -149,7 +157,16 @@ gst-launch-0.10 -v v4l2src queue-size=1 ! &#39;video/x-raw-yuv,format=(fourcc)UY
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    // 最基础的方法，只需要指定文章内容的 DOM 节点的　id
+    autoc({
+      article: '#article'
+    });
 
+    AutocJS.init({
+      article: '#article'
+    });
+  </script>
 </body>
 
 </html>
