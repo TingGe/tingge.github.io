@@ -44,6 +44,7 @@
 1. [NVIDIA  Jetson TK1 学习与开发](http://blog.csdn.net/frd2009041510/article/details/41901239)
 2. [Jetson TK1的一些事项](jetson-tk1.html)
 3. [Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640](scam-tk1.html)
+4. [Jetson TK1 挂载 SD 卡](sd-tk1.html)
 
 ### Jetson TX1
 

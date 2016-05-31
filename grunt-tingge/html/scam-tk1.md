@@ -62,12 +62,12 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项（这里选 M）
 
-        Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
+         Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
 
 2.  **关闭**下面 2 项
 
-        Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-        Device Drivers > Graphics support > Tegra video input host1x client driver
+         Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+         Device Drivers > Graphics support > Tegra video input host1x client driver
 
 3.  然后保存退出
 
@@ -126,41 +126,41 @@ gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,w
 
 ## 参考
 
+- [Nvidia Embedded Download Center](https://developer.nvidia.com/embedded/downloads)
 - [Gstreamer cheat sheet](http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture)
 - [Linux系统中 ‘dmesg’ 命令处理故障和收集系统信息的7种用法](https://linux.cn/article-3587-1.html)
-- [LinuxTV](https://linuxtv.org)：Multimedia and Television Support on Linux
 - [Ubuntu Video4Linux2 (v4l2) 开发库安装](http://www.mr-wu.cn/ubuntu-video4linux2-v4l2-development-library/)
 
 
 ## 常用调试
 
-{0}. 确认是否内核编译过且刷成功
+1. 确认是否内核编译过且刷成功
 
-{0}. 查看 dev 下面有几个 video 开头的设备
+2. 查看 dev 下面有几个 video 开头的设备 
 
-```shell
-ls /dev/video*
-```
+   ```shell
+   ls /dev/video*
+   ```
 
-{0}. 测测 i2c 电压是否正常，正常值是 1.8
+3. 测测 i2c 电压是否正常，正常值是 1.8
 
-{0}. 拿 i2c tools 看看能扫到 ID 不
+4. 拿 i2c tools 看看能扫到 ID 不 
 
-```shell
-sudo apt-get install i2c-tools
-i2cdetect -y 0
-```
+   ```shell
+   sudo apt-get install i2c-tools
+   i2cdetect -y 0
+   ```
 
-{0}. `lsmod` 查看都加载了哪些模块
+5. `lsmod` 查看都加载了哪些模块
 
-{0}. 重启 TK1 然后以 root 身份执行
+6. 重启 TK1 然后以 root 身份执行
 
-```shell
-su
-echo 20 > /proc/sys/kernel/printk 
-modprobe tegra_camera
-gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080' ! xvimagesink
-```
+   ```shell
+   su
+   echo 20 > /proc/sys/kernel/printk 
+   modprobe tegra_camera
+   gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,width=1920,height=1080' ! xvimagesink
+   ```
 
 
 注意事项：Ubuntu 下设定 root 密码 `sudo passwd root`
