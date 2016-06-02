@@ -62,12 +62,12 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项（这里选 M）
 
-         Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
+            Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
 
 2.  **关闭**下面 2 项
 
-         Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-         Device Drivers > Graphics support > Tegra video input host1x client driver
+            Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+            Device Drivers > Graphics support > Tegra video input host1x client driver
 
 3.  然后保存退出
 
@@ -130,6 +130,7 @@ gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,w
 - [Gstreamer cheat sheet](http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture)
 - [Linux系统中 ‘dmesg’ 命令处理故障和收集系统信息的7种用法](https://linux.cn/article-3587-1.html)
 - [Ubuntu Video4Linux2 (v4l2) 开发库安装](http://www.mr-wu.cn/ubuntu-video4linux2-v4l2-development-library/)
+- [How to install i2c-tools on Ubuntu 14.04 (Trusty Tahr)](https://www.howtoinstall.co/en/ubuntu/trusty/i2c-tools)
 
 
 ## 常用调试
@@ -147,6 +148,7 @@ gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,w
 4. 拿 i2c tools 看看能扫到 ID 不 
 
    ```shell
+   sudo apt-get update
    sudo apt-get install i2c-tools
    i2cdetect -y 0
    ```

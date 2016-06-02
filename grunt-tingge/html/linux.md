@@ -70,3 +70,4 @@ Linux 内核中增加程序需要完成以下3项工作：
 7. [Linux Weather Forecast](http://www.linuxfoundation.org/news-media/lwf)：Linux 近期热点和走向
 8. [Linux 内核](./linux_kernel.html)
 9. [硬件基础](./hardware.html)
+10. [Ubuntu 中文](http://wiki.ubuntu.org.cn/)

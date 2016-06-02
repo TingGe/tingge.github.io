@@ -40,3 +40,6 @@
 
 同时官方似乎给了一个 [JetPack TK1](https://developer.nvidia.com/jetpack-tk1) ，可以按照上面的步骤一步一步走。还没有尝试过，也不知道行不行。
 
+## 参考
+
+- [MIPI CSI-2 sensors known to be working](http://elinux.org/Jetson/Cameras#MIPI_CSI-2_sensors_known_to_be_working)
