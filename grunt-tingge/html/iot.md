@@ -2,6 +2,14 @@
 
 ## ruff.io
 
+Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。它包含了Ruff SDK、Ruff OS，Rap Registry等。
+
+- Ruff SDK 是一个完整的工具集，拥有包括 Rap、Debugger、Console、Simulator 等多种开发工具，它让开发者的开发变得更简单。
+- Ruff OS 是一个兼容多个平台的运行环境，它不仅支持嵌入式 Linux ，还支持 MCU 单片机领域等。它让您的开发不用关心底层的硬件类型，只要集中注意力在应用逻辑上，根据您的应用需要消耗的资源选取相应的硬件平台。
+- Rap Registry 是一个让大家寻找、使用、提交驱动、库，框架等代码的代码共享平台。它可以让开发者大量重复使用已有的代码，避免重复开发的浪费，提升开发效率。
+
+### 参考
+
 1. [Ruff官网](https://ruff.io/zh-cn/)
 2. [ruff-issues](https://github.com/ruffjs)
 3. [RuffHelper](https://github.com/runinspring/ruffhelper)
