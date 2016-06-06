@@ -19,7 +19,8 @@ module.exports = grunt => {
             'bootstrap/dist/**',
             'font-awesome/**',
             'jquery/dist/jquery.min.js',
-            'autocjs/build/**'
+            'autocjs/build/**',
+            'octocard/bin/octocard.js'
           ],
           dest: '../lib/'
         }]
