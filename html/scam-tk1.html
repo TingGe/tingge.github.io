@@ -39,7 +39,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand topnav" href="https://tingge.github.io/">
+        <a class="navbar-brand topnav" href="http://tingge.github.io/">
           <i class="fa fa-flask icon-3x" aria-hidden="true"></i> 听歌实验室
         </a>
       </div>
@@ -73,30 +73,33 @@
 <p><img src="../img/scam-tk1.png" alt="TK1 Camera MIPI CSI-2 模块实物图"></p>
 <h2 id="-">安装过程</h2>
 <h3 id="-0">准备 0</h3>
+<ol>
+<li>获取 <a href="http://pan.baidu.com/s/1nvdB7a5">nkernel.tar.gz</a>：内核（建议联系我 或 从卖家获取），存到  <code>~/tegra</code> 目录</li>
+<li>下载 L4T 驱动</li>
+</ol>
 <pre><code class="lang-shell">cd ~ &amp;&amp; mkdir tegra &amp;&amp; cd ~/tegra
 wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra124_Linux_R21.4.0_armhf.tbz2
 wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 </code></pre>
-<p><a href="http://pan.baidu.com/s/1nvdB7a5">nkernel.tar.gz</a>：内核（建议联系我 或 从卖家获取），存到  <code>~/tegra</code> 目录</p>
-<h3 id="-1">步骤 1</h3>
+<h3 id="-1-release-linux_for_tegra">步骤 1 解压 release 包，组合 Linux_for_Tegra</h3>
 <pre><code class="lang-shell">sudo tar -xif Tegra124_Linux_R21.4.0_armhf.tbz2
 cd Linux_for_Tegra/rootfs
 sudo tar -xipf /home/ubuntu/tegra/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 </code></pre>
-<h3 id="-2">步骤 2</h3>
+<h3 id="-2-">步骤 2 执行安装脚本</h3>
 <pre><code class="lang-shell">cd ..
 export LDK_ROOTFS_DIR=/home/ubuntu/tegra/Linux_for_Tegra/rootfs
 sudo ./apply_binaries.sh
 </code></pre>
-<h3 id="-3">步骤 3</h3>
+<h3 id="-3-arm-">步骤 3 获取 ARM 交叉编译工具和依赖包</h3>
 <pre><code class="lang-shell">sudo apt-get install gcc-arm-linux-gnueabihf build-essential
 </code></pre>
-<h3 id="-4">步骤 4</h3>
+<h3 id="-4-kernel">步骤 4 解压 kernel</h3>
 <pre><code class="lang-shell">cd ~/tegra
 tar -xif /home/ubuntu/tegra/nkernel.tar.gz
 cd nkernel/
 </code></pre>
-<h3 id="-5">步骤 5</h3>
+<h3 id="-5-config">步骤 5 配置 .config</h3>
 <pre><code class="lang-shell">ARCH=arm make tegra12_defconfig
 ARCH=arm make menuconfig
 </code></pre>
@@ -106,21 +109,20 @@ ARCH=arm make menuconfig
 <p>然后进行配置：</p>
 <ol>
 <li><p><strong>开启</strong> 下面 1 项（这里选 M）</p>
-<pre><code>    Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
+<pre><code> Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
 </code></pre></li>
 <li><p><strong>关闭</strong>下面 2 项</p>
-<pre><code>    Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
-    Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
+<pre><code> Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
+ Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
 </code></pre></li>
 <li><p>然后保存退出</p>
 </li>
 </ol>
-<h3 id="-6">步骤 6</h3>
-<p>设置环境变量</p>
+<h3 id="-6-">步骤 6 设置环境变量</h3>
 <pre><code class="lang-shell">export LDK_ROOTFS_DIR=/home/ubuntu/tegra/Linux_for_Tegra/rootfs/
 export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
 </code></pre>
-<h3 id="-7">步骤 7</h3>
+<h3 id="-7-">步骤 7 交叉编译</h3>
 <p><code>ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/arch/arm/boot/dts/include</code></p>
 <p>执行下列命令</p>
 <pre><code class="lang-shell">ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage -j4
@@ -132,7 +134,7 @@ sudo cp arch/arm/boot/zImage $LDK_DIR/kernel/zImage
 sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_DIR/kernel/dtb/
 sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_ROOTFS_DIR/boot/
 </code></pre>
-<h3 id="-8">步骤 8</h3>
+<h3 id="-8-l4t-">步骤 8 烧写L4T系统</h3>
 <ol>
 <li>装上 SCam-TK1 模块，usb 连接 开发机和 TK1。</li>
 <li>按住开发板上头的 FROC ERECOVERY 同时按下 Reset 键 进入恢复模式...</li>
@@ -143,7 +145,7 @@ sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_ROOTFS_D
 sudo ./flash.sh jetson-tk1 mmcblk0p1
 </code></pre>
 <p><strong>注意事项：</strong>注意开发机磁盘空间是否够用。预防因磁盘空间不足中断。</p>
-<h3 id="-9">步骤 9</h3>
+<h3 id="-9-tegra_camera-">步骤 9 验证 tegra_camera 驱动</h3>
 <ol>
 <li>刷完以后，登录 TK1 机器，进入开发板桌面系统</li>
 <li>执行 <code>sudo modprobe tegra_camera</code></li>

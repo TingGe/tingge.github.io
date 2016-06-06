@@ -10,15 +10,16 @@ TK1 Camera MIPI CSI-2 模块实物图
 
 ### 准备 0
 
+1. 获取 [nkernel.tar.gz](http://pan.baidu.com/s/1nvdB7a5)：内核（建议联系我 或 从卖家获取），存到  `~/tegra` 目录
+2. 下载 L4T 驱动
+
 ```shell
 cd ~ && mkdir tegra && cd ~/tegra
 wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra124_Linux_R21.4.0_armhf.tbz2
 wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 ```
 
-[nkernel.tar.gz](http://pan.baidu.com/s/1nvdB7a5)：内核（建议联系我 或 从卖家获取），存到  `~/tegra` 目录
-
-### 步骤 1 
+### 步骤 1 解压 release 包，组合 Linux_for_Tegra 
 
 ```shell
 sudo tar -xif Tegra124_Linux_R21.4.0_armhf.tbz2
@@ -26,7 +27,7 @@ cd Linux_for_Tegra/rootfs
 sudo tar -xipf /home/ubuntu/tegra/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 ```
 
-### 步骤 2
+### 步骤 2 执行安装脚本
 
 ```shell
 cd ..
@@ -34,13 +35,13 @@ export LDK_ROOTFS_DIR=/home/ubuntu/tegra/Linux_for_Tegra/rootfs
 sudo ./apply_binaries.sh
 ```
 
-### 步骤 3
+### 步骤 3 获取 ARM 交叉编译工具和依赖包
 
 ```shell
 sudo apt-get install gcc-arm-linux-gnueabihf build-essential
 ```
 
-### 步骤 4
+### 步骤 4 解压 kernel
 
 ```shell
 cd ~/tegra
@@ -48,7 +49,7 @@ tar -xif /home/ubuntu/tegra/nkernel.tar.gz
 cd nkernel/
 ```
 
-### 步骤 5
+### 步骤 5 配置 .config
 
 ```shell
 ARCH=arm make tegra12_defconfig
@@ -62,25 +63,23 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项（这里选 M）
 
-            Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
+         Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
 
 2.  **关闭**下面 2 项
 
-            Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-            Device Drivers > Graphics support > Tegra video input host1x client driver
+         Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+         Device Drivers > Graphics support > Tegra video input host1x client driver
 
 3.  然后保存退出
 
-### 步骤 6
-
-设置环境变量
+### 步骤 6 设置环境变量
 
 ```shell
 export LDK_ROOTFS_DIR=/home/ubuntu/tegra/Linux_for_Tegra/rootfs/
 export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
 ```
 
-### 步骤 7
+### 步骤 7 交叉编译
 
 `ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/arch/arm/boot/dts/include`
 
@@ -97,7 +96,7 @@ sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_DIR/kern
 sudo cp arch/arm/boot/dts/tegra124-jetson_tk1-pm375-000-c00-00.dtb $LDK_ROOTFS_DIR/boot/
 ```
 
-### 步骤 8
+### 步骤 8 烧写L4T系统
 
 1. 装上 SCam-TK1 模块，usb 连接 开发机和 TK1。
 2. 按住开发板上头的 FROC ERECOVERY 同时按下 Reset 键 进入恢复模式...
@@ -111,7 +110,7 @@ sudo ./flash.sh jetson-tk1 mmcblk0p1
 
 **注意事项：**注意开发机磁盘空间是否够用。预防因磁盘空间不足中断。
 
-### 步骤 9
+### 步骤 9 验证 tegra_camera 驱动
 
 1. 刷完以后，登录 TK1 机器，进入开发板桌面系统
 2. 执行 `sudo modprobe tegra_camera`
