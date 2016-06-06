@@ -2,39 +2,68 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TingGe Blog Agile agile JavaScript NodeJS">
+  <meta name="author" content="TingGe<505253293@163.com>">
   <title>听歌实验室</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
   <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../lib/autocjs/build/autoc.min.css" media="screen">
-  <style>
-    body {
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-
-    .navbar-inverse {
-      background-color: "#f8f8f8";
-      border-color: "#e7e7e7"
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/landing-page.css" rel="stylesheet">
+  <style media="screen">
+    #main {
+      padding-top: 55px;
     }
   </style>
   <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="../lib/autocjs/build/autoc.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="http://tingge.github.io/">听歌实验室</a>
+        <a class="navbar-brand topnav" href="#">
+          <i class="fa fa-flask icon-3x" aria-hidden="true"></i> 听歌实验室
+        </a>
       </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="../html/js.html">JavaScript/NodeJS</a>
+          </li>
+          <li>
+            <a href="../index.html#agile">敏捷/项目管理</a>
+          </li>
+          <li>
+            <a href="../html/iot.html">智能硬件</a>
+          </li>
+          <li>
+            <a href="../html/me.html">关于我</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-  </div>
+    <!-- /.container -->
+  </nav>
   <div id="main" class="container">
     <div class="row">
       <div id="article" class="col-md-9 content-container">
@@ -67,6 +96,7 @@
         </script>
       </div>
     </div>
+  </div>
   </div>
   <script type="text/javascript">
     // 最基础的方法，只需要指定文章内容的 DOM 节点的　id
