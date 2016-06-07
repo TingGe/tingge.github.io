@@ -52,7 +52,8 @@ Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。
 1. [NVIDIA  Jetson TK1 学习与开发](http://blog.csdn.net/frd2009041510/article/details/41901239)
 2. [Jetson TK1的一些事项](jetson-tk1.html)
 3. [Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640](scam-tk1.html)
-4. [Jetson TK1 挂载 SD 卡](sd-tk1.html)
+4. [Jetson TK1 挂载 SanDisk 128G SD 卡](sd-tk1.html)
+5. [Jetson TK1 麦克风 SONY ECM-DS70P 模块](microphone-tk1.html)
 
 ### Jetson TX1
 

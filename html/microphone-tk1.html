@@ -68,15 +68,34 @@
   <div id="main" class="container">
     <div class="row">
       <div id="article" class="col-md-9 content-container">
-        <h1 id="jetson-tk1-sony-ecm-ds70p-">Jetson TK1 话筒 SONY ECM-DS70P 模块</h1>
+        <h1 id="jetson-tk1-sony-ecm-ds70p-">Jetson TK1 麦克风 SONY ECM-DS70P 模块</h1>
 <p>TK1 MicroPhone SONY ECM-DS70P 模块实物图</p>
-<p><img src="" alt=""></p>
-<h2 id="-">安装过程</h2>
-<h3 id="-0">准备 0</h3>
-<h3 id="-1">步骤 1</h3>
+<p><img src="../img/sony-ecm-ds70p.png" alt="TK1 MicroPhone SONY ECM-DS70P 模块实物图"></p>
+<h2 id="-">安装</h2>
+<p>在Jetson TK1硬件上音频处，上面的粉色是话筒，下面的绿色是听筒。</p>
+<p><img src="../img/microphone-tk1.png" alt="Jetson TK1 上的音频接口"></p>
+<p>若Jetson TK1的音频不能用，在终端输入以下命令即可：</p>
+<pre><code class="lang-shell">amixer cset name=&quot;Stereo ADC MIXL ADC2 Switch&quot; 0
+amixer cset name=&quot;Stereo ADC MIXR ADC2 Switch&quot; 0
+amixer cset name=&quot;Int Mic Switch&quot; 0
+amixer cset name=&quot;ADC Capture Switch&quot; 1
+amixer cset name=&quot;RECMIXL BST1 Switch&quot; 0
+amixer cset name=&quot;RECMIXR BST1 Switch&quot; 0
+amixer cset name=&quot;RECMIXL BST2 Switch&quot; 1
+amixer cset name=&quot;RECMIXR BST2 Switch&quot; 1
+amixer cset name=&quot;Stereo ADC L1 Mux&quot; &quot;ADC&quot;
+amixer cset name=&quot;Stereo ADC R1 Mux&quot; &quot;ADC&quot;
+amixer cset name=&quot;Stereo ADC MIXL ADC1 Switch&quot; 1
+amixer cset name=&quot;Stereo ADC MIXR ADC1 Switch&quot; 1
+amixer cset name=&quot;Stereo ADC MIXL ADC2 Switch&quot; 0
+amixer cset name=&quot;Stereo ADC MIXR ADC2 Switch&quot; 0
+amixer cset name=&quot;IN1 Mode Control&quot; &quot;Single ended&quot;
+amixer cset name=&quot;IN2 Mode Control&quot; &quot;Single ended&quot;
+amixer cset name=&quot;Mic Jack Switch&quot; 1
+</code></pre>
 <h2 id="-">参考</h2>
 <ul>
-<li>​</li>
+<li><a href="https://devtalk.nvidia.com/default/topic/772401/audio-input-on-jetson-tk1/">Audio Input on Jetson TK1</a></li>
 </ul>
 
       </div>

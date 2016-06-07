@@ -1,4 +1,4 @@
-# Jetson TK1 挂载 SD 卡
+# Jetson TK1 挂载 SanDisk 128G SD 卡
 
 ![128 G 闪迪实物](../img/sandisk.png)
 
