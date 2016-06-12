@@ -1,20 +1,16 @@
 # Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640
 
-模块购买，建议淘宝 [梦琪游戏资源店](https://item.taobao.com/item.htm?id=522097991891)。“卖家不光卖东西，还非常耐心细致的回答好多问题”。
-
 TK1 Camera MIPI CSI-2 模块实物图
 
 ![TK1 Camera MIPI CSI-2 模块实物图](../img/scam-tk1.png)
 
 ## 安装过程
 
-### 准备 0
-
-1. 获取 [nkernel.tar.gz](http://pan.baidu.com/s/1nvdB7a5)：内核（建议联系我 或 从卖家获取），存到  `~/tegra` 目录
-2. 下载 L4T 驱动
+### 准备 0 下载 Kernel 和 驱动资源
 
 ```shell
 cd ~ && mkdir tegra && cd ~/tegra
+wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/source/kernel_src.tbz2
 wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra124_Linux_R21.4.0_armhf.tbz2
 wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 ```
@@ -22,9 +18,9 @@ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra_Li
 ### 步骤 1 解压 release 包，组合 Linux_for_Tegra 
 
 ```shell
-sudo tar -xif Tegra124_Linux_R21.4.0_armhf.tbz2
+sudo tar -xjf Tegra124_Linux_R21.4.0_armhf.tbz2
 cd Linux_for_Tegra/rootfs
-sudo tar -xipf /home/ubuntu/tegra/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
+sudo tar -xjf /home/ubuntu/tegra/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 ```
 
 ### 步骤 2 执行安装脚本
@@ -45,8 +41,8 @@ sudo apt-get install gcc-arm-linux-gnueabihf build-essential
 
 ```shell
 cd ~/tegra
-tar -xif /home/ubuntu/tegra/nkernel.tar.gz
-cd nkernel/
+tar -xjf kernel_src.tbz2
+cd kernel/
 ```
 
 ### 步骤 5 配置 .config
@@ -63,12 +59,12 @@ ARCH=arm make menuconfig
 
 1.  **开启** 下面 1 项（这里选 M）
 
-         Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
+        Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
 
 2.  **关闭**下面 2 项
 
-         Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
-         Device Drivers > Graphics support > Tegra video input host1x client driver
+        Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
+        Device Drivers > Graphics support > Tegra video input host1x client driver
 
 3.  然后保存退出
 
@@ -125,6 +121,7 @@ gst-launch-0.10 -v v4l2src queue-size=1 ! 'video/x-raw-yuv,format=(fourcc)UYVY,w
 
 ## 参考
 
+- [Linux For Tegra R21.4](https://developer.nvidia.com/linux-tegra-r214)
 - [Nvidia Embedded Download Center](https://developer.nvidia.com/embedded/downloads)
 - [Gstreamer cheat sheet](http://wiki.oz9aec.net/index.php/Gstreamer_cheat_sheet#Webcam_Capture)
 - [Linux系统中 ‘dmesg’ 命令处理故障和收集系统信息的7种用法](https://linux.cn/article-3587-1.html)
