@@ -120,7 +120,7 @@ Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
 export LDK_DIR=/home/ubuntu/tegra/Linux_for_Tegra/
 </code></pre>
 <h3 id="-7-">步骤 7 交叉编译</h3>
-<p><code>ln -s ~/tegra/nkernel/include/dt-bindings ~/tegra/nkernel/arch/arm/boot/dts/include</code></p>
+<p><code>ln -s ~/tegra/kernel/include/dt-bindings ~/tegra/kernel/arch/arm/boot/dts/include</code></p>
 <p>执行下列命令</p>
 <pre><code class="lang-shell">ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage -j4
 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make modules -j4
