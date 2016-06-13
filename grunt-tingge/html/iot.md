@@ -14,6 +14,7 @@ Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。
 2. [ruff-issues](https://github.com/ruffjs)
 3. [RuffHelper](https://github.com/runinspring/ruffhelper)
 4. [RuffApps](https://github.com/RuffApps/Apps)
+5. [Ruff 和 Raspberry Pi 的区别是什么？](https://mp.weixin.qq.com/s?__biz=MzI4NjA2MTQwNQ==&mid=2247483716&idx=1&sn=95fb8869e7107677b294a410aeb9fa92)
 
 ## Jetson TX1 and Jetson TK1 
 
