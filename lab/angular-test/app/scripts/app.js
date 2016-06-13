@@ -3,7 +3,7 @@ var myApp = angular.module('myApp', []);
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
     'name': 'The Web platform: Browser technologies',
-    'author': '',
+    'author': 'whatwg',
     'url': 'https://platform.html5.org/'
   }, {
     'name': 'Make 命令教程',

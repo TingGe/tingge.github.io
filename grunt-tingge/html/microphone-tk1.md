@@ -32,6 +32,25 @@ amixer cset name="IN2 Mode Control" "Single ended"
 amixer cset name="Mic Jack Switch" 1
 ```
 
+## 验证
+
+1. 录音
+
+   ```shell
+   arecord demo.wav
+   ```
+
+2. 按 `Ctrl+C` 终止录音
+
+3. 播放
+
+   ```shell
+   aplay demo.wav
+   ```
+
+另外，使用 sox 可同时录制麦克风和系统声音。
+
 ## 参考
 
 - [Audio Input on Jetson TK1](https://devtalk.nvidia.com/default/topic/772401/audio-input-on-jetson-tk1/)
+- [eGuideDog Linux 常见问题](http://www.eguidedog.net/linux-tutorial/faq.php)

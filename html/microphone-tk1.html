@@ -93,9 +93,24 @@ amixer cset name=&quot;IN1 Mode Control&quot; &quot;Single ended&quot;
 amixer cset name=&quot;IN2 Mode Control&quot; &quot;Single ended&quot;
 amixer cset name=&quot;Mic Jack Switch&quot; 1
 </code></pre>
+<h2 id="-">验证</h2>
+<ol>
+<li><p>录音</p>
+<pre><code class="lang-shell">arecord demo.wav
+</code></pre>
+</li>
+<li><p>按 <code>Ctrl+C</code> 终止录音</p>
+</li>
+<li><p>播放</p>
+<pre><code class="lang-shell">aplay demo.wav
+</code></pre>
+</li>
+</ol>
+<p>另外，使用 sox 可同时录制麦克风和系统声音。</p>
 <h2 id="-">参考</h2>
 <ul>
 <li><a href="https://devtalk.nvidia.com/default/topic/772401/audio-input-on-jetson-tk1/">Audio Input on Jetson TK1</a></li>
+<li><a href="http://www.eguidedog.net/linux-tutorial/faq.php">eGuideDog Linux 常见问题</a></li>
 </ul>
 
       </div>
