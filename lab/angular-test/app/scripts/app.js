@@ -26,6 +26,19 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'author': 'Jonathan Corbet, Alessandro Rubini 和 Greg Kroah-Hartman',
     'url': 'http://www.deansys.com/doc/ldd3/index.html'
   }, {
+    'name': 'LinuxCommand.org',
+    'author': 'William Shotts',
+    'url': 'http://www.linuxcommand.org/index.php'
+  }, {
+    'name': 'The Linux Command Line 中文版',
+    'author': '流年',
+    'url': 'http://www.kancloud.cn/thinkphp/linux-command-line'
+  }, {
+    'name': 'Linux中文man在线手册',
+    'author': '51CTO',
+    'url': 'http://os.51cto.com/linuxman/'
+  },
+  {
     'name': '《JavaScript Patterns》 examples in ECMAScript6',
     'author': 'DavidCai1993',
     'url': 'https://github.com/DavidCai1993/JsPatterns-ES6'
