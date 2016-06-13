@@ -65,5 +65,6 @@ Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。
 2. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
 3. [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
 4. [Linux](./linux.html)
-5. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
-6. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
+5. [Ubuntu armhf 源](ubuntu-armhf-sources.html)
+6. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
+7. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
