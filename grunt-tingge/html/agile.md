@@ -8,4 +8,5 @@
 
 ## Agile
 
+- [敏捷需求管理与发布规划](agile-aura-20160428.html)
 - [创新时代下的敏捷项目管理](agile-aura-20160605.html)
