@@ -18,6 +18,8 @@ Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。
 
 ## Jetson TX1 and Jetson TK1 
 
+NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级计算机，其上一代产品Jetson TK1于NVIDIA GTC 2014上亮相。
+
 1. [NVIDIA 中国官网](http://www.nvidia.cn/page/home.html)
 2. [NVIDIA 嵌入式计算教程(OpenCV101/VisionWorks/Developer Tools)](https://developer.nvidia.com/embedded/learn/tutorials)
 3. [Linux For Tegra](https://developer.nvidia.com/embedded/develop/software)
@@ -60,12 +62,13 @@ Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。
 
 1. [JetsonHacks](http://jetsonhacks.com/)
 
-## 附录
+### 附录
 
-1. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
-2. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
-3. [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
-4. [Linux](./linux.html)
-5. [Ubuntu armhf 源](ubuntu-armhf-sources.html)
-6. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
-7. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
+1. [关于高级辅助驾驶系统 ADAS](adas.html)
+2. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
+3. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
+4. [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
+5. [Linux](./linux.html)
+6. [Ubuntu armhf 源](ubuntu-armhf-sources.html)
+7. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
+8. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
