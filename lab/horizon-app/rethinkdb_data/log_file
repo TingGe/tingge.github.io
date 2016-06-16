@@ -1,0 +1,33 @@
+2016-06-16T14:42:40.494725000 0.019395s notice: Recursively removing directory /Users/Ting/github/tingge.github.io/lab/horizon-app/rethinkdb_data/tmp
+2016-06-16T14:42:40.496897000 0.021572s notice: Initializing directory /Users/Ting/github/tingge.github.io/lab/horizon-app/rethinkdb_data
+2016-06-16T14:42:40.498241000 0.022911s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/Ting/github/tingge.github.io/lab/horizon-app/rethinkdb_data' did not already exist or is empty.)
+2016-06-16T14:42:40.498291000 0.022960s notice: Running rethinkdb 2.3.4 (CLANG 7.3.0 (clang-703.0.31))...
+2016-06-16T14:42:40.505566000 0.030237s notice: Running on Darwin 15.5.0 x86_64
+2016-06-16T14:42:40.505624000 0.030293s notice: Loading data from directory /Users/Ting/github/tingge.github.io/lab/horizon-app/rethinkdb_data
+2016-06-16T14:42:40.689277000 0.213947s info: Cache size is set to 200 MB
+2016-06-16T14:42:40.689320000 0.213989s warn: Cache size does not leave much memory for server and query overhead (available memory: 669 MB).
+2016-06-16T14:42:40.693381000 0.218051s notice: Listening for intracluster connections on port 52414
+2016-06-16T14:42:40.700087000 0.224756s notice: Listening for client driver connections on port 52415
+2016-06-16T14:42:40.700550000 0.225220s notice: Listening for administrative HTTP connections on port 52416
+2016-06-16T14:42:40.700625000 0.225294s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2016-06-16T14:42:40.700670000 0.225339s notice: Listening on driver addresses: 127.0.0.1, ::1
+2016-06-16T14:42:40.700674000 0.225343s notice: Listening on http addresses: 127.0.0.1, ::1
+2016-06-16T14:42:40.700686000 0.225355s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-06-16T14:42:40.700692000 0.225361s notice: Server ready, "bogon_tz7" 04ce4673-4d74-4774-bc6d-0bf8c127222e
+2016-06-16T14:42:41.043986000 0.568642s info: Table c57a8825-c08c-4b0b-a340-68e6f6ae5608: Starting a new Raft election for term 1.
+2016-06-16T14:42:41.044638000 0.569294s info: Table c57a8825-c08c-4b0b-a340-68e6f6ae5608: Added replica on this server.
+2016-06-16T14:42:41.072150000 0.596807s info: Table c57a8825-c08c-4b0b-a340-68e6f6ae5608: This server is Raft leader for term 1. Latest log index is 0.
+2016-06-16T14:42:41.854302000 1.378959s info: Table 739108bc-4c32-4b0c-a6b2-1117a9c3573d: Starting a new Raft election for term 1.
+2016-06-16T14:42:41.854674000 1.379330s info: Table 739108bc-4c32-4b0c-a6b2-1117a9c3573d: Added replica on this server.
+2016-06-16T14:42:41.880286000 1.404942s info: Table 739108bc-4c32-4b0c-a6b2-1117a9c3573d: This server is Raft leader for term 1. Latest log index is 0.
+2016-06-16T14:42:42.615457000 2.140101s info: Table 8f1a826c-e41d-4d4b-ab4f-c1a942cc2121: Starting a new Raft election for term 1.
+2016-06-16T14:42:42.615888000 2.140531s info: Table 8f1a826c-e41d-4d4b-ab4f-c1a942cc2121: Added replica on this server.
+2016-06-16T14:42:42.639678000 2.164322s info: Table 8f1a826c-e41d-4d4b-ab4f-c1a942cc2121: This server is Raft leader for term 1. Latest log index is 0.
+2016-06-16T14:42:43.380927000 2.905571s info: Table 1f09f8b8-5191-401d-927d-181ff7cff7bc: Starting a new Raft election for term 1.
+2016-06-16T14:42:43.381177000 2.905821s info: Table 1f09f8b8-5191-401d-927d-181ff7cff7bc: Added replica on this server.
+2016-06-16T14:42:43.410235000 2.934879s info: Table 1f09f8b8-5191-401d-927d-181ff7cff7bc: This server is Raft leader for term 1. Latest log index is 0.
+2016-06-16T14:45:38.033075000 177.555647s notice: Server got SIGINT from pid 350, uid 501; shutting down...
+2016-06-16T14:45:38.033347000 177.555919s notice: Shutting down client connections...
+2016-06-16T14:45:38.039376000 177.561947s notice: All client connections closed.
+2016-06-16T14:45:38.039406000 177.561977s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-06-16T14:45:38.059670000 177.582242s notice: Storage engine shut down.

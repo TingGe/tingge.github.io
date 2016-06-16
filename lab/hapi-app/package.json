@@ -1,0 +1,29 @@
+{
+  "name": "hapi-app",
+  "version": "1.0.0",
+  "description": "hapi example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TingGe/tingge.github.io.git"
+  },
+  "keywords": [
+    "hapi"
+  ],
+  "author": "TingGe <505253293@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TingGe/tingge.github.io/issues"
+  },
+  "homepage": "https://github.com/TingGe/tingge.github.io#readme",
+  "dependencies": {
+    "good": "^7.0.1",
+    "good-console": "^6.1.2",
+    "good-squeeze": "^4.0.0",
+    "hapi": "^13.4.1",
+    "inert": "^4.0.0"
+  }
+}
