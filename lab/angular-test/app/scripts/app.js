@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '一起学koa',
+    'author': '17koa',
+    'url': 'http://17koa.com/koa-generator-examples/'
+  }, {
     'name': 'The Web platform: Browser technologies',
     'author': 'whatwg',
     'url': 'https://platform.html5.org/'
@@ -37,8 +41,7 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'name': 'Linux中文man在线手册',
     'author': '51CTO',
     'url': 'http://os.51cto.com/linuxman/'
-  },
-  {
+  }, {
     'name': '《JavaScript Patterns》 examples in ECMAScript6',
     'author': 'DavidCai1993',
     'url': 'https://github.com/DavidCai1993/JsPatterns-ES6'
