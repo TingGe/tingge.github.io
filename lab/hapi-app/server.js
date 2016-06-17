@@ -13,7 +13,9 @@ server.route({
   path: '/',
   handler: function(request, reply) {
     // 响应 ‘hello’，并设置 Cookie 键 data、值 test
-    reply('Get all').state('data', 'test', { encoding: 'none' });
+    reply('Get all').state('data', 'test', {
+      encoding: 'none'
+    });
   }
 });
 

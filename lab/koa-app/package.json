@@ -1,0 +1,28 @@
+{
+  "name": "koa2-app",
+  "version": "1.0.0",
+  "description": "koa example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TingGe/tingge.github.io.git"
+  },
+  "keywords": [
+    "koa",
+    "example"
+  ],
+  "author": "TingGe <505253293@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TingGe/tingge.github.io/issues"
+  },
+  "homepage": "https://github.com/TingGe/tingge.github.io#readme",
+  "dependencies": {
+    "keygrip": "^1.0.1",
+    "koa": "^1.2.0"
+  }
+}

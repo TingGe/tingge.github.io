@@ -22,7 +22,10 @@ Web MV*
 
 Web 服务
 
-1. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)
+1. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
+2. [koa2-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app)：借 babel 通过 async/await 来支持 ES6+
+3. [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app)：通过 co 生成器支持 ES6
+4. express-app：
 
 实时服务
 
@@ -31,5 +34,5 @@ Web 服务
 
 ## 附录
 
-- [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。个人总结大致思路是：flexible.js 或 metahandler.js
+- [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。大致思路是：[flexible.js](https://github.com/amfe/lib-flexible) 或 [metahandler.js](https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js?utm_source=tuicool&utm_medium=referral)
 - [Houdini：CSS 领域最令人振奋的革新](http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&mid=2651424725&idx=1&sn=c19801bf880556470bb21f8af0cb0225)
