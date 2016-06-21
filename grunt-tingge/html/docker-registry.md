@@ -101,64 +101,24 @@
 
 #### 将 TLS 加入配置
 
-1. 参照 [docker/distribution/cmd/registry](https://github.com/docker/distribution/tree/master/cmd/registry)创建 `config.yml`， 各项参数含义见 [Registry Configuration Reference](https://github.com/docker/distribution/blob/master/docs/configuration.md)：
+1. 编辑 `./cmd/registry/config-dev.yml` 文件，参数含义见 [Registry Configuration Reference](https://github.com/docker/distribution/blob/master/docs/configuration.md)：
 
-   ```
-   vi ./cmd/registry/config.yml
+   ```shell
+   vi ./cmd/registry/config-dev.yml
    ```
 
-   内容如下：
+2. 定位到 `http`区块，给服务器自签名证书新增一个 `tls` 区块：
 
    ```yaml
-   version: 0.1
-   log:
-     level: debug
-     fields:
-       service: registry
-       environment: development
-   storage:
-     cache:
-         layerinfo: inmemory
-     filesystem:
-         rootdirectory: /tmp/registry-dev
    http:
-     addr: :5000
-     secret: asecretforlocaldevelopment
-     debug:
-         addr: localhost:5001
-     tls:
-         certificate: /home/ubuntu/docker/distribution/certs/domain.crt
-         key: /home/docker/distribution/certs/domain.key
-   redis:
-     addr: localhost:6379
-     pool:
-       maxidle: 16
-       maxactive: 64
-       idletimeout: 300s
-     dialtimeout: 10ms
-     readtimeout: 10ms
-     writetimeout: 10ms
-   notifications:
-     endpoints:
-         - name: local-8082
-           url: http://localhost:5003/callback
-           headers:
-              Authorization: [Bearer <an example token>]
-           timeout: 1s
-           threshold: 10
-           backoff: 1s
-           disabled: true
-         - name: local-8083
-           url: http://localhost:8083/callback
-           timeout: 1s
-           threshold: 10
-           backoff: 1s
-           disabled: true
+       addr: :5000
+       secret: asecretforlocaldevelopment
+       debug:
+           addr: localhost:5001
+       tls:
+       	certificate: /home/ubuntu/docker/distribution/certs/domain.crt
+   		key: /home/ubuntu/docker/distribution/certs/domain.key
    ```
-
-   如跨 Layer 使用两步认证，可以增加一个`clientcas` 区块选项。
-
-2. 答
 
 3. f
 
