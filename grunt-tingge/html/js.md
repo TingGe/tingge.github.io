@@ -1,6 +1,5 @@
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
-2. [Speaker Deck by TingGe ](https://speakerdeck.com/tingge/)
-3. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
+2. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
 
 Web MV* 
 
@@ -31,6 +30,10 @@ Web 服务
 
 1. [horizon-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/horizon-app)
 2. [meteor-test](http://tingge.github.io/lab/meteor-test/index.html)
+
+研发基础平台
+
+1. [部署私有 Docker Registry 服务](docker-registry.html)
 
 ## 附录
 
