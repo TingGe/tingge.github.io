@@ -76,7 +76,7 @@
 <ul>
 <li>对于生产环境，应以 <a href="https://github.com/docker/docker/tree/master/distribution">docker/distribution</a> 为基础，自行配置并构建自定义 Registry 镜像。</li>
 </ul>
-<p>以 Ubuntu Trusty 14.04 (LTS)  部署为例。</p>
+<p>以 Ubuntu Trusty 14.04 (LTS)  部署为例，建议 sudo 或 root 下执行。</p>
 <h2 id="docker-registry-">Docker 官方 Registry 镜像</h2>
 <ol>
 <li><p><a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">安装 Docker</a>。</p>
@@ -119,42 +119,15 @@
 </li>
 </ol>
 <h2 id="-">生产环境部署</h2>
-<p>生产环境，可以用一个 Registry 配置文件来配置如下因素：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>BACKEND STORAGE</td>
-<td>何处存储镜像</td>
-</tr>
-<tr>
-<td>ACCESS AND/OR AUTHENTICATION</td>
-<td>用户是否应全部或受控的访问权限</td>
-</tr>
-<tr>
-<td>DEBUGGING</td>
-<td>当问题或状况发生时，是否有解决它们的方法。日志可看到问题动向，因此很有用</td>
-</tr>
-<tr>
-<td>CACHING</td>
-<td>快速提取镜像可能至关重要，如果依赖镜像进行测试、构建，或其他自动化系统</td>
-</tr>
-</tbody>
-</table>
-<h2 id="-registry-tls">在 Registry 服务器上配置 TLS</h2>
-<h3 id="-">下载源码并生成证书</h3>
+<h3 id="-registry-tls">在 Registry 服务器上配置 TLS</h3>
+<h4 id="-">下载源码并生成证书</h4>
 <ol>
-<li><p>下载 Registry 源码：</p>
-<pre><code class="lang-shell">cd ~ &amp;&amp; git clone https://github.com/docker/docker.git
+<li><p>下载 Registry <a href="https://github.com/docker/distribution/">docker/distribution</a> 源码：</p>
+<pre><code class="lang-shell">mkdir docker &amp;&amp; cd docker &amp;&amp; git clone https://github.com/docker/distribution.git
 </code></pre>
 </li>
 <li><p>进入 <code>distribution</code> 目录，并新建 <code>certs</code>子目录：</p>
-<pre><code class="lang-shell">cd docker/distribution/ &amp;&amp; mkdir certs
+<pre><code class="lang-shell">cd distribution &amp;&amp; mkdir certs
 </code></pre>
 </li>
 <li><p>使用 SSL 生成自签名证书：</p>
@@ -168,7 +141,7 @@
 </code></pre>
 </li>
 </ol>
-<h3 id="-tls-">将 TLS 加入配置</h3>
+<h4 id="-tls-">将 TLS 加入配置</h4>
 <ol>
 <li><p>参照 <a href="https://github.com/docker/distribution/tree/master/cmd/registry">docker/distribution/cmd/registry</a>创建 <code>config.yml</code>， 各项参数含义见 <a href="https://github.com/docker/distribution/blob/master/docs/configuration.md">Registry Configuration Reference</a>：</p>
 <pre><code>vi ./cmd/registry/config.yml

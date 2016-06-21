@@ -7,7 +7,7 @@
 
 - 对于生产环境，应以 [docker/distribution](https://github.com/docker/docker/tree/master/distribution) 为基础，自行配置并构建自定义 Registry 镜像。
 
-以 Ubuntu Trusty 14.04 (LTS)  部署为例。
+以 Ubuntu Trusty 14.04 (LTS)  部署为例，建议 sudo 或 root 下执行。
 
 ## Docker 官方 Registry 镜像
 
@@ -69,29 +69,20 @@
 
 ## 生产环境部署
 
-生产环境，可以用一个 Registry 配置文件来配置如下因素：
+### 在 Registry 服务器上配置 TLS
 
-|                              |                                      |
-| ---------------------------- | ------------------------------------ |
-| BACKEND STORAGE              | 何处存储镜像                               |
-| ACCESS AND/OR AUTHENTICATION | 用户是否应全部或受控的访问权限                      |
-| DEBUGGING                    | 当问题或状况发生时，是否有解决它们的方法。日志可看到问题动向，因此很有用 |
-| CACHING                      | 快速提取镜像可能至关重要，如果依赖镜像进行测试、构建，或其他自动化系统  |
+#### 下载源码并生成证书
 
-## 在 Registry 服务器上配置 TLS
-
-### 下载源码并生成证书
-
-1. 下载 Registry 源码：
+1. 下载 Registry [docker/distribution](https://github.com/docker/distribution/) 源码：
 
    ```shell
-   cd ~ && git clone https://github.com/docker/docker.git
+   mkdir docker && cd docker && git clone https://github.com/docker/distribution.git
    ```
 
 2. 进入 `distribution` 目录，并新建 `certs`子目录：
 
    ```shell
-   cd docker/distribution/ && mkdir certs
+   cd distribution && mkdir certs
    ```
 
 3. 使用 SSL 生成自签名证书：
@@ -108,7 +99,7 @@
    ls certs
    ```
 
-### 将 TLS 加入配置
+#### 将 TLS 加入配置
 
 1. 参照 [docker/distribution/cmd/registry](https://github.com/docker/distribution/tree/master/cmd/registry)创建 `config.yml`， 各项参数含义见 [Registry Configuration Reference](https://github.com/docker/distribution/blob/master/docs/configuration.md)：
 
