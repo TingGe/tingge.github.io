@@ -36,4 +36,5 @@ docker-compose up
 
 ## 附录
 
+- [Zero to GitLab CI in 5 seconds or less*](https://www.damagehead.com/docker-gitlab-ci/)
 - [gitlab多人协同工作](http://herry2013git.blog.163.com/blog/static/219568011201341111240751)
