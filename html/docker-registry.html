@@ -75,8 +75,9 @@
 </ul>
 <ul>
 <li>对于生产环境，应以 <a href="https://github.com/docker/docker/tree/master/distribution">docker/distribution</a> 为基础，自行配置并构建自定义 Registry 镜像。</li>
+<li>配置 “Registry ＋ Nginx” 的方式，适合 v1 及 v2 版本并存。不再冗述。 </li>
 </ul>
-<p>以 Ubuntu Trusty 14.04 (LTS)  部署为例，建议 sudo 或 root 下执行。</p>
+<p>以 Ubuntu Trusty 14.04 (LTS)  部署为例，建议 <strong>sudo</strong> 或 <strong>root</strong> 下执行。</p>
 <h2 id="docker-registry-">Docker 官方 Registry 镜像</h2>
 <ol>
 <li><p><a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">安装 Docker</a>。</p>
@@ -115,12 +116,11 @@
 <pre><code class="lang-shell">docker run localhost:5000/hello-mine
 </code></pre>
 </li>
-<li><p>之后运行 <code>docker images</code>， 你会发现里面多了一个 <code>hello-mine</code> 实例。fds</p>
+<li><p>之后运行 <code>docker images</code>， 你会发现里面多了一个 <code>hello-mine</code> 实例。</p>
 </li>
 </ol>
 <h2 id="-">生产环境部署</h2>
-<h3 id="-registry-tls">在 Registry 服务器上配置 TLS</h3>
-<h4 id="-">下载源码并生成证书</h4>
+<h3 id="-registry-">下载 Registry 源码并生成证书</h3>
 <ol>
 <li><p>下载 Registry <a href="https://github.com/docker/distribution/">docker/distribution</a> 源码：</p>
 <pre><code class="lang-shell">mkdir docker &amp;&amp; cd docker &amp;&amp; git clone https://github.com/docker/distribution.git
@@ -141,41 +141,33 @@
 </code></pre>
 </li>
 </ol>
-<h4 id="-tls-">将 TLS 加入配置</h4>
+<h4 id="-registry-">构建并运行 Registry 镜像</h4>
 <ol>
-<li><p>编辑 <code>./cmd/registry/config-dev.yml</code> 文件，参数含义见 <a href="https://github.com/docker/distribution/blob/master/docs/configuration.md">Registry Configuration Reference</a>：</p>
-<pre><code class="lang-shell">vi ./cmd/registry/config-dev.yml
+<li><p>构建：</p>
+<pre><code class="lang-shell">docker build -t secure_registry
 </code></pre>
 </li>
-<li><p>定位到 <code>http</code>区块，给服务器自签名证书新增一个 <code>tls</code> 区块：</p>
-<pre><code class="lang-yaml">http:
-    addr: :5000
-    secret: asecretforlocaldevelopment
-    debug:
-        addr: localhost:5001
-    tls:
-        certificate: /home/ubuntu/docker/distribution/certs/domain.crt
-        key: /home/ubuntu/docker/distribution/certs/domain.key
+<li><p>运行新镜像：</p>
+<pre><code class="lang-shell">docker run -d -p 5000:5000 --restart=always --name registry \
+  -v `pwd`/certs:/certs \
+  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \
+  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
+  secure_registry
 </code></pre>
 </li>
-<li><p>f</p>
-</li>
-<li><p>方</p>
-</li>
-<li><p>粉</p>
-</li>
-<li><p>是</p>
+<li><p>使用 <code>curl</code> 验证 <code>https</code> 连接：</p>
+<pre><code class="lang-shell">curl -v --insecure https://localhost:5000/v2/_catalog
+</code></pre>
 </li>
 </ol>
 <h2 id="-">参考</h2>
 <ol>
-<li><a href="https://github.com/docker/docker">Docker GitHub</a></li>
 <li><a href="https://docs.docker.com/registry/spec/api/#detail">Docker Registry HTTP API V2</a></li>
 <li><a href="https://hub.docker.com/explore/">Docker Hub</a></li>
+<li><a href="https://github.com/docker/distribution/blob/master/docs/insecure.md">Insecure Registry</a></li>
 <li><a href="http://livedig.com/686#comment-352">部署 Docker Registry 服务</a></li>
-<li><a href="https://github.com/docker/distribution/blob/master/docs/insecure.md">https://github.com/docker/distribution/blob/master/docs/insecure.md</a></li>
-<li><a href="http://www.dockone.io/article/684">http://www.dockone.io/article/684</a></li>
-<li><a href="https://docs.docker.com/registry/nginx/">https://docs.docker.com/registry/nginx/</a></li>
+<li><a href="http://unixman.blog.51cto.com/10163040/1707423">Docker Registry V2(distribution) &amp; Proxy(nginx) 的搭建经历</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04">How To Set Up a Private Docker Registry on Ubuntu 14.04</a></li>
 </ol>
 
       </div>
