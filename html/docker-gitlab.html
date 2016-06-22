@@ -68,49 +68,34 @@
   <div id="main" class="container">
     <div class="row">
       <div id="article" class="col-md-9 content-container">
-        <ol>
-<li><a href="https://github.com/TingGe/develop-tools/">匠心之路</a></li>
-<li><a href="http://tingge.github.io/grunt-tingge/img/frontend.png">我的前端技能路线图</a></li>
-</ol>
-<p>Web MV* </p>
+        <h1 id="docker-gitlab-">Docker 中搭建 GitLab服务器</h1>
+<h2 id="-sameersbn-gitlab-https-hub-docker-com-r-sameersbn-gitlab-"><a href="https://hub.docker.com/r/sameersbn/gitlab/">sameersbn/gitlab</a> 一键部署方案</h2>
+<h3 id="-">前置条件</h3>
+<p>须已安装 <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">docker</a>。</p>
+<p>在 Ubuntu Trusty 14.04 (LTS)  环境，建议 <strong>sudo</strong> 或 <strong>root</strong> 下执行。</p>
+<h3 id="docker-compose-">docker-compose 安装</h3>
 <ol>
-<li><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a></li>
-<li><a href="http://tingge.github.io/lab/angular-test/index.html">我的书柜（angular-test）</a></li>
-<li><a href="http://tingge.github.io/lab/vue-test/index.html">Hacker news(vue-test)</a></li>
+<li><p>安装 <code>pip</code> 包管理器</p>
+<pre><code class="lang-shell">apt-get install pip
+</code></pre>
+</li>
+<li><p>安装 <code>docker-compose</code></p>
+<pre><code class="lang-shell">pip install docker-compose
+</code></pre>
+</li>
 </ol>
-<p>可视化</p>
+<h3 id="-gitlab">一键部署 GitLab</h3>
+<pre><code class="lang-shell">wget https://raw.githubusercontent.com/sameersbn/docker-gitlab/master/docker-compose.yml 
+docker-compose up
+</code></pre>
+<h3 id="-">验证</h3>
 <ol>
-<li><a href="http://tingge.github.io/lab/d3-test/index.html">JavaScript应用领域（d3-test）</a></li>
-</ol>
-<p>构建</p>
-<ol>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test">rollup-test</a></li>
-<li><a href="https://tingge.github.io/lab/broccoli-babel-test/dist/index.html">broccoli-babel-test</a></li>
-<li><a href="https://tingge.github.io/lab/grunt-babel-test/dist/index.html">grunt-babel-test</a></li>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test">phantomjs-test</a></li>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test">nightmare-test</a></li>
-</ol>
-<p>Web 服务</p>
-<ol>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app">hapi-app</a>：配置优于编码，业务逻辑必须和传输层进行分离</li>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app">koa2-app</a>：借 babel 通过 async/await 来支持 ES6+</li>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app">koa-app</a>：通过 co 生成器支持 ES6</li>
-<li>express-app：</li>
-</ol>
-<p>实时服务</p>
-<ol>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/horizon-app">horizon-app</a></li>
-<li><a href="http://tingge.github.io/lab/meteor-test/index.html">meteor-test</a></li>
-</ol>
-<p>研发基础平台</p>
-<ol>
-<li><a href="docker-registry.html">部署私有 Docker Registry 服务</a></li>
-<li><a href="docker-gitlab.html">Docker 中搭建 GitLab服务器</a></li>
+<li>如启动成功，浏览器登陆  <a href="http://localhost:10080/">http://localhost:10080</a>，设置 root 初始密码。</li>
+<li>登陆后，即可创建项目、添加用户等操作。</li>
 </ol>
 <h2 id="-">附录</h2>
 <ul>
-<li><a href="http://ybshare.coding.io/share/flexible.htm">移动端适配方案</a>。大致思路是：<a href="https://github.com/amfe/lib-flexible">flexible.js</a> 或 <a href="https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js?utm_source=tuicool&amp;utm_medium=referral">metahandler.js</a></li>
-<li><a href="http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&amp;mid=2651424725&amp;idx=1&amp;sn=c19801bf880556470bb21f8af0cb0225">Houdini：CSS 领域最令人振奋的革新</a></li>
+<li><a href="http://herry2013git.blog.163.com/blog/static/219568011201341111240751">gitlab多人协同工作</a></li>
 </ul>
 
       </div>

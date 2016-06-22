@@ -34,6 +34,7 @@ Web 服务
 研发基础平台
 
 1. [部署私有 Docker Registry 服务](docker-registry.html)
+2. [Docker 中搭建 GitLab服务器](docker-gitlab.html)
 
 ## 附录
 
