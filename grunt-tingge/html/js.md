@@ -4,22 +4,30 @@
 Web MV* 
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
-2. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
-3. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
+2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
+3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
 
 可视化
 
 1. [JavaScript应用领域（d3-test）](http://tingge.github.io/lab/d3-test/index.html)
 
+预编译
+
+1. 模版引擎
+2. CSS预处理器
+3. JavaScript友好语言
+
 构建
 
-1. [rollup-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test)
-2. [broccoli-babel-test](https://tingge.github.io/lab/broccoli-babel-test/dist/index.html)
-3. [grunt-babel-test](https://tingge.github.io/lab/grunt-babel-test/dist/index.html)
-4. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
-5. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
+1. NPM Scripts
+2. Webpack
+3. [rollup-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test)
+4. [broccoli-babel-test](https://tingge.github.io/lab/broccoli-babel-test/dist/index.html)
+5. [grunt-babel-test](https://tingge.github.io/lab/grunt-babel-test/dist/index.html)
+6. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
+7. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
 
-Web 服务
+Web 服务 && RESTful API
 
 1. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
 2. [koa2-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app)：借 babel 通过 async/await 来支持 ES6+
@@ -31,10 +39,18 @@ Web 服务
 1. [horizon-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/horizon-app)
 2. [meteor-test](http://tingge.github.io/lab/meteor-test/index.html)
 
+数据库的 Node ORM 框架
+
+1. Sequelize：提供对 MySQL，MariaDB，SQLite ，PostgreSQL 和 MSSQL 数据库的简单访问
+2. nodejs-mysql：一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序
+3. node-postgres：一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序
+4. Mongoose：MongoDB ODM（对象模型工具），即将 MongoDB 中数据转换为 JavaScript 对象以供在应用中使用
+
 研发基础平台
 
 1. [部署私有 Docker Registry 服务](docker-registry.html)
 2. [Docker 中搭建 GitLab服务器](docker-gitlab.html)
+3. Nginx
 
 ## 附录
 

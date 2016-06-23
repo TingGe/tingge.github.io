@@ -62,13 +62,17 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 
 1. [JetsonHacks](http://jetsonhacks.com/)
 
-### 附录
+### 参考
 
-1. [关于高级辅助驾驶系统 ADAS](adas.html)
-2. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
-3. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
-4. [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
-5. [Linux](./linux.html)
-6. [Ubuntu armhf 源](ubuntu-armhf-sources.html)
-7. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
-8. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
+1. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
+2. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
+3. [Linux](./linux.html)
+4. [Ubuntu armhf 源](ubuntu-armhf-sources.html)
+5. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
+6. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
+
+## 附录
+
+- [互联网与物联网](../html/int-iot.html)
+- [关于高级辅助驾驶系统 ADAS](adas.html)
+- [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
