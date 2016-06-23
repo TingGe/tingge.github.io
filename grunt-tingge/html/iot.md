@@ -10,11 +10,28 @@ Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。
 
 ### 参考
 
+官方
+
 1. [Ruff官网](https://ruff.io/zh-cn/)
-2. [ruff-issues](https://github.com/ruffjs)
-3. [RuffHelper](https://github.com/runinspring/ruffhelper)
-4. [RuffApps](https://github.com/RuffApps/Apps)
+2. [ruff-drivers](https://github.com/ruff-drivers)：官方驱动
+3. [ruff-standard](https://github.com/ruffjs/ruff-standard)：Ruff 代码风格
+4. [ruff-issues](https://github.com/ruffjs)：Ruff Issues is a issue collector for Ruff
 5. [Ruff 和 Raspberry Pi 的区别是什么？](https://mp.weixin.qq.com/s?__biz=MzI4NjA2MTQwNQ==&mid=2247483716&idx=1&sn=95fb8869e7107677b294a410aeb9fa92)
+
+工具
+
+1. [RuffHelper](https://github.com/runinspring/ruffhelper)：Ruff 开发辅助工具，把常用的 rap 命令可视化操作
+2. [ruff-t](https://github.com/vilic/ruff-t)：T (Testing Framework) for Ruff
+3. [rvm](https://github.com/vilic/rvm)：Ruff Version Manager
+4. [ruff-fetch](https://github.com/vilic/ruff-fetch)：A simplified version of `window.fetch` written for Ruff
+5. [ruff-promise](https://github.com/vilic/ruff-promise)：ES6 Promise for Ruff ([https://ruff.io](https://ruff.io/)) based on ThenFail v0.4 ([https://github.com/vilic/thenfail](https://github.com/vilic/thenfail)).
+
+应用
+
+1. [ruff-menu](https://github.com/vilic/ruff-menu)：Awesome Menu for Ruff LCD (lcd1602)
+2. [ruff-home](https://github.com/vilic/ruff-home)：Home (Web Framework) for Ruff
+3. [RuffApps](https://github.com/RuffApps/Apps)：一些 Ruff 应用
+4. [devices.ruff](https://github.com/lerencao/devices.ruff)：Testing devices like button, buzzer, temperature sensor, and lcd
 
 ## Jetson TX1 and Jetson TK1 
 
