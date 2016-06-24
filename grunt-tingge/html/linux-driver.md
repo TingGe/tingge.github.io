@@ -25,17 +25,52 @@ Linux 用户空间的文件编程有两种方法，即通过 Linux API 和 通�
 
 ## 驱动开发
 
+### 流程
+
 Linux 内核中增加程序需要完成以下3项工作：
 
 1. 将编写的源代码复制到 Linux 内核源代码的相应目录
 2. 在目录的 Kconfig 文件中增加关于新源代码对应项目的编译配置选项
 3. 在目录的 Makefile 文件中增加对新源代码的编译条目
 
+### 工具
+
+#### Shell
+
+Shell是系统的用户界面，提供了用户与内核进行交互操作的一种接口。它接收用户输入的命令并把它送入内核去执行。
+
+#### GCC
+
+GCC（GNU Compiler Collection，GNU编译器套装），是一套由GNU开发的编程语言编译器。通过它可将源码编译成二进制文件。
+
+#### 启动引导程序
+
+引导程序（bootloader），使系统启动、引导进内核。通常在一个 GNU/Linux 系统中选用 GNUGRUB 做为引导程序，如 Ubuntu 用 GRUB2 。
+
+### 包管理
+
+`apt-get`是debian，ubuntu发行版的包管理工具。`apt-get update`可以确保软件包列表最新。
+
+#### 相关概念
+
+1. Linux 发行版 ＝ packages ＋ 应用程序管理工具
+2. 软件包（package）＝ 程序 ＋ 共享库 ＋开发包 ＋ 使用说明 ＋ 元数据 ＋ 依赖关系 等
+3. 元数据（metadata）：用于软件包检索
+4. 依赖关系（dependencies）：描述软对可执行环境（对其他程序、库等）的依赖文件
+
+#### 常见包格式
+
+- tgz：
+- deb：标准 Debian 软件包格式
+- rpm：
+
 ## 编程风格
 
 - [Documents/CodingStyle](http://lxr.free-electrons.com/)
 - [scripts/checkpatch.pl](scripts/checkpatch.pl)：检查代码风格是否符合 CodingStyle
 - 工程阶段，一般可以在 SCM 软件的服务器端用 pre-commit hook，自动检查工程师提交的代码是否符合 Linux 的编码风格，如果不符合，则自动拦截
+
+
 
 ### 字符设备驱动
 

@@ -83,7 +83,7 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 
 1. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
 2. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
-3. [Linux](./linux.html)
+3. [Linux 内核](./linux-kernel.html)
 4. [Ubuntu armhf 源](ubuntu-armhf-sources.html)
 5. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
 6. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)

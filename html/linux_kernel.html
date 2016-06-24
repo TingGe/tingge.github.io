@@ -69,6 +69,19 @@
     <div class="row">
       <div id="article" class="col-md-9 content-container">
         <h1 id="linux-">Linux  内核</h1>
+<h2 id="linux-">Linux 架构图</h2>
+<p><img src="../img/linux_kernel.jpg" alt="Linux 架构图"></p>
+<h3 id="-">用户模式</h3>
+<p>应用程序（sh、vi、Text Editor等）</p>
+<p>复杂库（KDE、glib等）简单库（opendbm、sin等）</p>
+<p>C 库（open、open、socket、exec、calloc等）</p>
+<h3 id="-">内核模式</h3>
+<ul>
+<li>系统中断、调用、错误等软硬件消息</li>
+<li>内核（驱动程序、进程、网络、内存管理等）</li>
+<li>硬件（处理器、内存、各种设备）</li>
+</ul>
+<p>Linux Kernel＋Shell ＝ OS</p>
 <h2 id="-">内核划分</h2>
 <p><img src="../img/linux-kernel.png" alt="Linux 内核划分"></p>
 <h2 id="-">内核的组成部分</h2>
@@ -301,6 +314,7 @@
 </table>
 <h2 id="-">附录</h2>
 <ol>
+<li><a href="linux-driver.html">Linux 驱动开发</a></li>
 <li><a href="https://gcc.gnu.org/">GCC 编译</a></li>
 <li><a href="http://blog.jobbole.com/54425/">每个Linux用户都应该知道的命令行技巧</a></li>
 </ol>

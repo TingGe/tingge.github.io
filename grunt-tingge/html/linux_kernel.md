@@ -1,5 +1,25 @@
 # Linux  内核
 
+## Linux 架构图
+
+![Linux 架构图](../img/linux_kernel.jpg)
+
+### 用户模式
+
+应用程序（sh、vi、Text Editor等）
+
+复杂库（KDE、glib等）简单库（opendbm、sin等）
+
+C 库（open、open、socket、exec、calloc等）
+
+### 内核模式
+
+- 系统中断、调用、错误等软硬件消息
+- 内核（驱动程序、进程、网络、内存管理等）
+- 硬件（处理器、内存、各种设备）
+
+Linux Kernel＋Shell ＝ OS
+
 ## 内核划分
 
 ![Linux 内核划分](../img/linux-kernel.png)
@@ -88,5 +108,6 @@ Linux 根目录（即 “/”）
 
 ## 附录
 
-1. [GCC 编译](https://gcc.gnu.org/)
-2. [每个Linux用户都应该知道的命令行技巧](http://blog.jobbole.com/54425/)
+1. [Linux 驱动开发](linux-driver.html)
+2. [GCC 编译](https://gcc.gnu.org/)
+3. [每个Linux用户都应该知道的命令行技巧](http://blog.jobbole.com/54425/)
