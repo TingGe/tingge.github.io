@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '一步步搭建物联网系统',
+    'author': '黄峰达',
+    'url': 'http://www.ituring.com.cn/book/1580'
+  },{
     'name': '一起学koa',
     'author': '17koa',
     'url': 'http://17koa.com/koa-generator-examples/'
