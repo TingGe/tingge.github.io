@@ -87,6 +87,7 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 4. [Ubuntu armhf 源](ubuntu-armhf-sources.html)
 5. [Elinux Jetson TK1](http://elinux.org/Jetson_TK1)
 6. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
+7. [Jetson TK1 介绍与配置](http://ziyangli.github.io/2014/12/20/jetsontk1/)
 
 ## 附录
 

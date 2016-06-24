@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '微信硬件平台解决方案',
+    'author': '吴跃前',
+    'url': 'http://www.kancloud.cn/yueqian_scut/iot-wechat/107380'
+  },{
     'name': '一步步搭建物联网系统',
     'author': '黄峰达',
     'url': 'http://www.ituring.com.cn/book/1580'
