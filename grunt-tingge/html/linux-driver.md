@@ -45,7 +45,7 @@ GCC（GNU Compiler Collection，GNU编译器套装），是一套由GNU开发的
 
 #### 启动引导程序
 
-引导程序（bootloader），使系统启动、引导进内核。通常在一个 GNU/Linux 系统中选用 GNUGRUB 做为引导程序，如 Ubuntu 用 GRUB2 。
+引导程序（bootloader），使系统启动、引导进内核。通常在一个 GNU/Linux 系统中选用 GNUGRUB 做为引导程序，如 Nvidia 的 [Linux For Tegra R21.4](https://developer.nvidia.com/linux-tegra-r214) 引导程序 [U-boot](http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/source/u-boot_src.tbz2)。
 
 ### 包管理
 
