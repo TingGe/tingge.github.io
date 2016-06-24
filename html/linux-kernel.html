@@ -1,0 +1,350 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TingGe Blog Agile agile JavaScript NodeJS">
+  <meta name="author" content="TingGe<505253293@163.com>">
+  <title>听歌实验室</title>
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../lib/autocjs/build/autoc.min.css" media="screen">
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="../css/landing-page.css" rel="stylesheet">
+  <style media="screen">
+    #main {
+      padding-top: 55px;
+    }
+  </style>
+  <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../lib/autocjs/build/autoc.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand topnav" href="http://tingge.github.io/">
+          <i class="fa fa-flask icon-3x" aria-hidden="true"></i> 听歌实验室
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="../html/js.html">JavaScript/NodeJS</a>
+          </li>
+          <li>
+            <a href="../index.html#agile">敏捷/项目管理</a>
+          </li>
+          <li>
+            <a href="../html/iot.html">智能硬件</a>
+          </li>
+          <li>
+            <a href="../html/me.html">关于我</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div id="main" class="container">
+    <div class="row">
+      <div id="article" class="col-md-9 content-container">
+        <h1 id="linux-">Linux  内核</h1>
+<h2 id="linux-">Linux 架构图</h2>
+<p><img src="../img/linux_kernel.jpg" alt="Linux 架构图"></p>
+<h3 id="-">用户模式</h3>
+<p>应用程序（sh、vi、Text Editor等）</p>
+<p>复杂库（KDE、glib等）简单库（opendbm、sin等）</p>
+<p>C 库（open、open、socket、exec、calloc等）</p>
+<h3 id="-">内核模式</h3>
+<ul>
+<li>系统中断、调用、错误等软硬件消息</li>
+<li>内核（驱动程序、进程、网络、内存管理等）</li>
+<li>硬件（处理器、内存、各种设备）</li>
+</ul>
+<p>Linux Kernel＋Shell ＝ OS</p>
+<h2 id="-">内核划分</h2>
+<p><img src="../img/linux-kernel.png" alt="Linux 内核划分"></p>
+<h2 id="-">内核的组成部分</h2>
+<p><img src="../img/linux-kernel-core.png" alt="Linux 内核组成部分"></p>
+<h2 id="-">内核源代码目录结构</h2>
+<table>
+<thead>
+<tr>
+<th>目录、文件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Documentation/</td>
+<td>内核各部分的通用解释和注释</td>
+</tr>
+<tr>
+<td>arch/</td>
+<td>和硬件体系结构相关</td>
+</tr>
+<tr>
+<td>block/</td>
+<td>块设备驱动程序 I/O 调度</td>
+</tr>
+<tr>
+<td>certs/</td>
+<td></td>
+</tr>
+<tr>
+<td>crypto/</td>
+<td>常用加密和散列算法（如 AES 、 SHA 等），还有一些压缩和 CRC 校验算法</td>
+</tr>
+<tr>
+<td>drivers/</td>
+<td>设备驱动程序</td>
+</tr>
+<tr>
+<td>firmware/</td>
+<td></td>
+</tr>
+<tr>
+<td>fs/</td>
+<td>支持的各种文件系统</td>
+</tr>
+<tr>
+<td>include/</td>
+<td>头文件</td>
+</tr>
+<tr>
+<td>init/</td>
+<td>内核初始化代码</td>
+</tr>
+<tr>
+<td>ipc/</td>
+<td>进程间通信代码</td>
+</tr>
+<tr>
+<td>kernel/</td>
+<td>内核部分，包括进程调度、定时器等，而和平台相关的部分在 arch/*/kernel/</td>
+</tr>
+<tr>
+<td>lib/</td>
+<td>库文件</td>
+</tr>
+<tr>
+<td>mm/</td>
+<td>内存管理，和平台相关部分在 arch/*/mm/</td>
+</tr>
+<tr>
+<td>net/</td>
+<td>网络相关，实现各种网络协议</td>
+</tr>
+<tr>
+<td>samples/</td>
+<td></td>
+</tr>
+<tr>
+<td>scripts/</td>
+<td>用于配置内核的脚本文件</td>
+</tr>
+<tr>
+<td>security/</td>
+<td>主要是 SELinx 模块</td>
+</tr>
+<tr>
+<td>sound/</td>
+<td>ALSA 、OSS 音频设备驱动核心代码和常用设备驱动</td>
+</tr>
+<tr>
+<td>tools/</td>
+<td></td>
+</tr>
+<tr>
+<td>usr/</td>
+<td>实现用于打包和压缩的 cpio 等</td>
+</tr>
+<tr>
+<td>virt/</td>
+<td></td>
+</tr>
+<tr>
+<td>COPYING</td>
+<td></td>
+</tr>
+<tr>
+<td>CREDITS</td>
+<td></td>
+</tr>
+<tr>
+<td>Kbuild</td>
+<td>内核的编译系统</td>
+</tr>
+<tr>
+<td>Kconfig</td>
+<td>给用户提供配置选择的功能</td>
+</tr>
+<tr>
+<td>MAINTAINERS</td>
+<td></td>
+</tr>
+<tr>
+<td>Makefile</td>
+<td>定义 Linux 内核编译规则</td>
+</tr>
+<tr>
+<td>README</td>
+<td></td>
+</tr>
+<tr>
+<td>REPORTING-BUGS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">内核的编译</h2>
+<p>推荐 <code>make menuconfig</code></p>
+<ul>
+<li>Makefile</li>
+<li>配置文件（Kconfig）</li>
+<li>配置工具</li>
+</ul>
+<h2 id="-">文件系统目录结构</h2>
+<p>Linux 根目录（即 “/”）</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/bin</td>
+<td>基本明命令， ls、cp、mkdir 等</td>
+</tr>
+<tr>
+<td>/sbin</td>
+<td>系统命令，mod probe、hwclock、ifconfig 等</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>设备文件存储目录</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>系统配置文件</td>
+</tr>
+<tr>
+<td>/lib</td>
+<td>系统库文件存放</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>挂载存储设备等挂载目录</td>
+</tr>
+<tr>
+<td>/opt</td>
+<td>有些软件包安装位置</td>
+</tr>
+<tr>
+<td>/proc</td>
+<td>操作系统运行时，进程及内核信息存放。伪文件系统 proc 挂载目录，存在于内存</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td>临时文件</td>
+</tr>
+<tr>
+<td>/usr</td>
+<td>存放程序目录，如用户命令、用户库等</td>
+</tr>
+<tr>
+<td>/var</td>
+<td>存放系统日志等</td>
+</tr>
+<tr>
+<td>/sys</td>
+<td>sysfs 文件系统映射目录</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">文件系统与设备驱动</h2>
+<p><img src="../img/fs-driver.png" alt="文件系统与设备驱动"></p>
+<h3 id="udev-">udev 用户空间设备管理</h3>
+<ul>
+<li>设备和驱动分离，并通过总线进行匹配。</li>
+<li>udev 利用内核通过 netlink 发出的 uevent 信息动态创建设备文件节点</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>设备管理</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>udev</td>
+<td></td>
+</tr>
+<tr>
+<td>mdev</td>
+<td>udev 轻量级版本，集成于 busybox 中</td>
+</tr>
+<tr>
+<td>vold</td>
+<td>Android 采用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">附录</h2>
+<ol>
+<li><a href="linux-driver.html">Linux 驱动开发</a></li>
+<li><a href="https://gcc.gnu.org/">GCC 编译</a></li>
+<li><a href="http://blog.jobbole.com/54425/">每个Linux用户都应该知道的命令行技巧</a></li>
+</ol>
+
+      </div>
+      <div class="col-md-3">
+        <script data-name="TingGe" src="../lib/octocard/bin/octocard.js"></script>
+        <script>
+          OCTOCARD = {
+            name: 'TingGe',
+            reposNum: 3,
+            noIsolated: true,
+            theme: 'night'
+          };
+        </script>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+    // 最基础的方法，只需要指定文章内容的 DOM 节点的　id
+    autoc({
+      article: '#article'
+    });
+
+    AutocJS.init({
+      article: '#article'
+    });
+  </script>
+</body>
+
+</html>
