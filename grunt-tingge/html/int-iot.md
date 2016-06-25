@@ -72,3 +72,4 @@
 - 野狗的 “面向资源架构设计”
 - [phodal/lan](https://github.com/phodal/lan)：一个开源的物联网平台
 - [html5 时代](../html/html5.html)
+- [RESTful 的 CoAP 协议](http://www.ituring.com.cn/tupubarticle/3795)
