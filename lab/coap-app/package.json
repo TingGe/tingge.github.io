@@ -1,0 +1,28 @@
+{
+  "name": "coap-app",
+  "version": "1.0.0",
+  "description": "IoT CoAP RESTful",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TingGe/tingge.github.io.git"
+  },
+  "keywords": [
+    "\u001b[A\u001b[BIoT",
+    "CoAP",
+    "RESTful"
+  ],
+  "author": "TingGe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TingGe/tingge.github.io/issues"
+  },
+  "homepage": "https://github.com/TingGe/tingge.github.io#readme",
+  "dependencies": {
+    "coap": "^0.17.0"
+  }
+}
