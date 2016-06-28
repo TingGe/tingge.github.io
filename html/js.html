@@ -72,23 +72,23 @@
 <li><a href="https://github.com/TingGe/develop-tools/">匠心之路</a></li>
 <li><a href="http://tingge.github.io/grunt-tingge/img/frontend.png">我的前端技能路线图</a></li>
 </ol>
-<p>Web MV* </p>
+<h2 id="web-mv-">Web MV*</h2>
 <ol>
 <li><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a></li>
 <li><a href="http://tingge.github.io/lab/vue-test/index.html">Hacker news(vue-test)</a></li>
 <li><a href="http://tingge.github.io/lab/angular-test/index.html">我的书柜（angular-test）</a></li>
 </ol>
-<p>可视化</p>
+<h2 id="-">可视化</h2>
 <ol>
 <li><a href="http://tingge.github.io/lab/d3-test/index.html">JavaScript应用领域（d3-test）</a></li>
 </ol>
-<p>预编译</p>
+<h2 id="-">预编译</h2>
 <ol>
-<li>模版引擎</li>
-<li>CSS预处理器</li>
-<li>JavaScript友好语言</li>
+<li>模版引擎：pug、Handlebars</li>
+<li>CSS预处理器：PostCSS、Stylus、SaaS、Less</li>
+<li>JavaScript友好语言：TypeScript、CoffeeScript</li>
 </ol>
-<p>构建</p>
+<h2 id="-">构建</h2>
 <ol>
 <li>NPM Scripts</li>
 <li>Webpack</li>
@@ -98,26 +98,121 @@
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test">phantomjs-test</a></li>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test">nightmare-test</a></li>
 </ol>
-<p>Web 服务 &amp;&amp; RESTful API</p>
+<h2 id="web-restful-api">Web 服务 &amp;&amp; RESTful API</h2>
 <ol>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app">hapi-app</a>：配置优于编码，业务逻辑必须和传输层进行分离</li>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app">koa2-app</a>：借 babel 通过 async/await 来支持 ES6+</li>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app">koa-app</a>：通过 co 生成器支持 ES6</li>
-<li>express-app：</li>
+<li>express5-app：</li>
 </ol>
-<p>实时服务</p>
+<h2 id="-">实时服务</h2>
 <ol>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/horizon-app">horizon-app</a></li>
 <li><a href="http://tingge.github.io/lab/meteor-test/index.html">meteor-test</a></li>
 </ol>
-<p>数据库的 Node ORM 框架</p>
+<h2 id="-node-">数据库的 Node 框架</h2>
+<blockquote>
+<p>&quot;&quot;</p>
+</blockquote>
+<h3 id="orm">ORM</h3>
 <ol>
 <li>Sequelize：提供对 MySQL，MariaDB，SQLite ，PostgreSQL 和 MSSQL 数据库的简单访问</li>
-<li>nodejs-mysql：一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序</li>
-<li>node-postgres：一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序</li>
-<li>Mongoose：MongoDB ODM（对象模型工具），即将 MongoDB 中数据转换为 JavaScript 对象以供在应用中使用</li>
 </ol>
-<p>研发基础平台</p>
+<h3 id="sql">SQL</h3>
+<ol>
+<li><a href="https://github.com/mysqljs/mysql">mysql</a>：一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序。MySQL 引擎比较好</li>
+<li><a href="https://github.com/brianc/node-postgres">node-postgres</a>：一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序。个人感觉这个更好用点。</li>
+<li><a href="https://github.com/vitaly-t/pg-promise">pg-promise</a>：PostgreSQL 支持 JSON 相关</li>
+<li>sqlite3：SQLite  小、应用于移动端</li>
+</ol>
+<h3 id="nosql">NoSQL</h3>
+<ol>
+<li><a href="https://github.com/datastax/nodejs-driver">cassandra-driver</a>：Cassandra 便于扩张</li>
+<li><a href="https://github.com/NodeRedis/node_redis">redis</a>：Redis 一般缓存、读写快</li>
+<li><a href="https://github.com/LearnBoost/mongoose">Mongoose</a>：MongoDB ODM（对象模型工具），即将 MongoDB 中数据转换为 JavaScript 对象以供在应用中使用</li>
+<li><a href="https://github.com/mongodb/node-mongodb-native">mongodb</a>：Mongo DB  原生的 NodeJS 驱动</li>
+<li><a href="https://github.com/dscape/nano">nano</a>：最简约的 CouchDB 客户端</li>
+<li>level、<a href="https://github.com/rvagg/node-levelup">levelup</a> 和 leveldown：LevelDB</li>
+<li><a href="https://github.com/hacksparrow/apoc">apoc</a>：Neo4j</li>
+</ol>
+<h3 id="-restful-">开源,分布式,RESTful 搜索引擎</h3>
+<ol>
+<li>elasticsearch：ElasticSearch 搜索引擎</li>
+</ol>
+<h3 id="-">数据库</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL</td>
+<td><a href="http://dev.mysql.com/downloads/mysql/">MySQL</a></td>
+<td></td>
+<td>分析</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.postgresql.org/download/">PostgreSQL</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>SQLite</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NoSQL</td>
+<td><a href="http://cassandra.apache.org/">Cassandra</a></td>
+<td>列存储（Wide Column Store/Column-Family）数据库</td>
+<td>日志；博客平台</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://redis.io/download">Redis</a></td>
+<td>键值（Key-Value）数据库</td>
+<td>储存用户信息</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.mongodb.com/download-center">MongoDB</a></td>
+<td>面向文档（Document-Oriented）数据库</td>
+<td>日志；分析</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://couchdb.apache.org/">CouchDB</a></td>
+<td>同 MongoDB</td>
+<td>同 MongoDB</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://leveldb.org/">LevelDB</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://neo4j.com/download/">Neo4j</a></td>
+<td>图（Graph-Oriented）数据库</td>
+<td>关系性强的数据； 推荐引擎</td>
+</tr>
+<tr>
+<td>搜索引擎</td>
+<td>ElasticSearch</td>
+<td></td>
+<td>？</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">研发基础平台</h2>
 <ol>
 <li><a href="docker-registry.html">部署私有 Docker Registry 服务</a></li>
 <li><a href="docker-gitlab.html">Docker 中搭建 GitLab服务器</a></li>

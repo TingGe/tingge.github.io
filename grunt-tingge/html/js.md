@@ -1,23 +1,23 @@
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
 2. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
 
-Web MV* 
+## Web MV* 
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
 3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
 
-可视化
+## 可视化
 
 1. [JavaScript应用领域（d3-test）](http://tingge.github.io/lab/d3-test/index.html)
 
-预编译
+## 预编译
 
-1. 模版引擎
-2. CSS预处理器
-3. JavaScript友好语言
+1. 模版引擎：pug、Handlebars
+2. CSS预处理器：PostCSS、Stylus、SaaS、Less
+3. JavaScript友好语言：TypeScript、CoffeeScript
 
-构建
+## 构建
 
 1. NPM Scripts
 2. Webpack
@@ -27,26 +27,63 @@ Web MV*
 6. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
 7. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
 
-Web 服务 && RESTful API
+## Web 服务 && RESTful API
 
 1. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
 2. [koa2-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app)：借 babel 通过 async/await 来支持 ES6+
 3. [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app)：通过 co 生成器支持 ES6
-4. express-app：
+4. express5-app：
 
-实时服务
+## 实时服务
 
 1. [horizon-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/horizon-app)
 2. [meteor-test](http://tingge.github.io/lab/meteor-test/index.html)
 
-数据库的 Node ORM 框架
+## 数据库的 Node 框架
+
+> ""
+
+### ORM
 
 1. Sequelize：提供对 MySQL，MariaDB，SQLite ，PostgreSQL 和 MSSQL 数据库的简单访问
-2. nodejs-mysql：一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序
-3. node-postgres：一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序
-4. Mongoose：MongoDB ODM（对象模型工具），即将 MongoDB 中数据转换为 JavaScript 对象以供在应用中使用
 
-研发基础平台
+### SQL
+
+1. [mysql](https://github.com/mysqljs/mysql)：一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序。MySQL 引擎比较好
+2. [node-postgres](https://github.com/brianc/node-postgres)：一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序。个人感觉这个更好用点。
+3. [pg-promise](https://github.com/vitaly-t/pg-promise)：PostgreSQL 支持 JSON 相关
+4. sqlite3：SQLite  小、应用于移动端
+
+### NoSQL
+
+1. [cassandra-driver](https://github.com/datastax/nodejs-driver)：Cassandra 便于扩张
+2. [redis](https://github.com/NodeRedis/node_redis)：Redis 一般缓存、读写快
+3. [Mongoose](https://github.com/LearnBoost/mongoose)：MongoDB ODM（对象模型工具），即将 MongoDB 中数据转换为 JavaScript 对象以供在应用中使用
+4. [mongodb](https://github.com/mongodb/node-mongodb-native)：Mongo DB  原生的 NodeJS 驱动
+5. [nano](https://github.com/dscape/nano)：最简约的 CouchDB 客户端
+6. level、[levelup](https://github.com/rvagg/node-levelup) 和 leveldown：LevelDB
+7. [apoc](https://github.com/hacksparrow/apoc)：Neo4j
+
+### 开源,分布式,RESTful 搜索引擎
+
+1. elasticsearch：ElasticSearch 搜索引擎
+
+### 数据库
+
+|       |                                          |                                         | 应用场景          |
+| ----- | ---------------------------------------- | --------------------------------------- | ------------- |
+| SQL   | [MySQL](http://dev.mysql.com/downloads/mysql/) |                                         | 分析            |
+|       | [PostgreSQL](https://www.postgresql.org/download/) |                                         |               |
+|       | SQLite                                   |                                         |               |
+| NoSQL | [Cassandra](http://cassandra.apache.org/) | 列存储（Wide Column Store/Column-Family）数据库 | 日志；博客平台       |
+|       | [Redis](http://redis.io/download)        | 键值（Key-Value）数据库                        | 储存用户信息        |
+|       | [MongoDB](https://www.mongodb.com/download-center) | 面向文档（Document-Oriented）数据库              | 日志；分析         |
+|       | [CouchDB](http://couchdb.apache.org/)    | 同 MongoDB                               | 同 MongoDB     |
+|       | [LevelDB](http://leveldb.org/)           |                                         |               |
+|       | [Neo4j](https://neo4j.com/download/)     | 图（Graph-Oriented）数据库                    | 关系性强的数据； 推荐引擎 |
+| 搜索引擎  | ElasticSearch                            |                                         | ？             |
+
+## 研发基础平台
 
 1. [部署私有 Docker Registry 服务](docker-registry.html)
 2. [Docker 中搭建 GitLab服务器](docker-gitlab.html)

@@ -1,0 +1,74 @@
+extends layout
+
+block content
+  h1= title
+
+  h2= "中间件"
+  ul
+    li
+      a(href="http://expressjs.com/en/guide/using-middleware.html#middleware.application").
+        Application-level middleware
+    li
+      a(href="http://expressjs.com/en/guide/using-middleware.html#middleware.router").
+        Router-level middleware
+    li
+      a(href="http://expressjs.com/en/guide/using-middleware.html#middleware.error-handling").
+        Error-handling middleware
+    li
+      a(href="http://expressjs.com/en/guide/using-middleware.html#middleware.built-in").
+        Built-in middleware
+    li
+      a(href="http://expressjs.com/en/guide/using-middleware.html#middleware.third-party").
+        Third-party middleware
+  h2= "路由"
+  p.
+    Users
+  ul
+    li
+      a(href="/users/").
+        /users/
+    li
+      a(href="/users/user/0").
+        /users/user/0
+    li
+      a(href="/users/user/1").
+        /users/user/1
+  p.
+    Examples
+  ul
+    li
+      a(href="/examples/about").
+        /examples/about
+    li
+      a(href="/examples/random.text").
+        /examples/random.text
+    li
+      a(href="/examples/acd").
+        /examples/ab?cd 匹配 acd 和 abcd
+    li
+      a(href="/examples/abbcd").
+        /examples/ab+cd 匹配 abcd, abbcd, abbbcd 等
+    li
+      a(href="/examples/abxcd").
+        /examples/ab*cd 匹配 abcd, abxcd, abRANDOMcd, ab123cd 等
+    li
+      a(href="/examples/abe").
+        /examples/ab(cd)?e 匹配 /abe， /abcde 等
+    li
+      a(href="/examples/a/").
+        /examples/a/ 匹配 /a/
+    li
+      a(href="/examples/butterfly").
+        /examples/.*fly$/ 匹配 butterfly， dragonfly， 不匹配 butterflyman，dragonfly man 等
+    li
+      a(href="/examples/d/").
+        /examples/d/ 匹配 /d/
+  p.
+    Birds
+  ul
+    li
+      a(href="/birds/").
+        /birds/
+    li
+      a(href="/birds/about").
+        /birds/about
