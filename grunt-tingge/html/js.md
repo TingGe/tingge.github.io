@@ -79,7 +79,7 @@
 |       | [CouchDB](http://couchdb.apache.org/)    | 同 MongoDB                               | 同 MongoDB     |
 |       | [LevelDB](http://leveldb.org/)           |                                         |               |
 |       | [Neo4j](https://neo4j.com/download/)     | 图（Graph-Oriented）数据库                    | 关系性强的数据； 推荐引擎 |
-| 搜索引擎  | [ElasticSearch](https://www.elastic.co/downloads) |                                         | ？             |
+| 分布式系统 | [ElasticSearch](https://www.elastic.co/downloads) | 面向文档的数据库                                | 大数据；实时监控      |
 
 ## 研发基础平台
 
