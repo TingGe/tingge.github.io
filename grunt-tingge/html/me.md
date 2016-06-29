@@ -16,5 +16,6 @@
 - [Speaker Deck](https://speakerdeck.com/tingge)
 - [SlideShare](http://www.slideshare.net/RuitingXing)
 - [Twitter](https://twitter.com/Ge168)
+- [segmentfault](https://segmentfault.com/u/tingge)
 
 
