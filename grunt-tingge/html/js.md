@@ -32,7 +32,7 @@
 1. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
 2. [koa2-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app)：借 babel 通过 async/await 来支持 ES6+
 3. [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app)：通过 co 生成器支持 ES6
-4. [express5-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/express5-app)：社区生态完善。[Express.js 黑历史](http://clonn.blogspot.com/2016/04/expressjs-express.html)后，IBM 干预过度，使 [Douglas Wilson](https://github.com/dougwilson) 在16年3月退出 5，建议转其它
+4. [expressjs5-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/expressjs5-app)：社区生态完善。[Express.js 黑历史](http://clonn.blogspot.com/2016/04/expressjs-express.html)后，IBM 干预过度，使 [Douglas Wilson](https://github.com/dougwilson) 在16年3月退出 5，建议转其它
 
 ## 实时服务
 
