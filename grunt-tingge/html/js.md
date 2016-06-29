@@ -68,18 +68,18 @@
 
 ### 数据库
 
-|       |                                          |                                         | 应用场景          |
-| ----- | ---------------------------------------- | --------------------------------------- | ------------- |
-| SQL   | [MySQL](http://dev.mysql.com/downloads/mysql/) |                                         | 分析            |
-|       | [PostgreSQL](https://www.postgresql.org/download/) |                                         |               |
-|       | [SQLite](https://www.sqlite.org/download.html) |                                         |               |
-| NoSQL | [Cassandra](http://cassandra.apache.org/) | 列存储（Wide Column Store/Column-Family）数据库 | 日志；博客平台       |
-|       | [Redis](http://redis.io/download)        | 键值（Key-Value）数据库                        | 储存用户信息        |
-|       | [MongoDB](https://www.mongodb.com/download-center) | 面向文档（Document-Oriented）数据库              | 日志；分析         |
-|       | [CouchDB](http://couchdb.apache.org/)    | 同 MongoDB                               | 同 MongoDB     |
-|       | [LevelDB](http://leveldb.org/)           |                                         |               |
-|       | [Neo4j](https://neo4j.com/download/)     | 图（Graph-Oriented）数据库                    | 关系性强的数据； 推荐引擎 |
-| 分布式系统 | [ElasticSearch](https://www.elastic.co/downloads) | 面向文档的数据库                                | 大数据；实时监控      |
+|               |                                          |                                         | 应用场景          |
+| ------------- | ---------------------------------------- | --------------------------------------- | ------------- |
+| SQL           | [MySQL](http://dev.mysql.com/downloads/mysql/) |                                         | 分析            |
+|               | [PostgreSQL](https://www.postgresql.org/download/) |                                         |               |
+|               | [SQLite](https://www.sqlite.org/download.html) |                                         |               |
+| NoSQL         | [Cassandra](http://cassandra.apache.org/) | 列存储（Wide Column Store/Column-Family）数据库 | 日志；博客平台       |
+|               | [Redis](http://redis.io/download)        | 键值（Key-Value）数据库                        | 储存用户信息        |
+|               | [MongoDB](https://www.mongodb.com/download-center) | 面向文档（Document-Oriented）数据库              | 日志；分析         |
+|               | [CouchDB](http://couchdb.apache.org/)    | 同 MongoDB                               | 同 MongoDB     |
+|               | [LevelDB](http://leveldb.org/)           |                                         |               |
+|               | [Neo4j](https://neo4j.com/download/)     | 图（Graph-Oriented）数据库                    | 关系性强的数据； 推荐引擎 |
+| 实时的分布式搜索和分析引擎 | [ElasticSearch](https://www.elastic.co/downloads) | 面向文档的数据库                                | 大数据；实时监控      |
 
 ## 研发基础平台
 
