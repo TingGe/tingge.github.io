@@ -32,7 +32,7 @@
 1. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
 2. [koa2-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app)：借 babel 通过 async/await 来支持 ES6+
 3. [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app)：通过 co 生成器支持 ES6
-4. express5-app：
+4. [express5-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/express5-app)：社区生态完善。[Express.js 黑历史](http://clonn.blogspot.com/2016/04/expressjs-express.html)后，IBM 干预过度，使 [Douglas Wilson](https://github.com/dougwilson) 在16年3月退出 5，建议转其它
 
 ## 实时服务
 
@@ -40,8 +40,6 @@
 2. [meteor-test](http://tingge.github.io/lab/meteor-test/index.html)
 
 ## 数据库的 Node 框架
-
-> ""
 
 ### ORM
 
@@ -51,8 +49,8 @@
 
 1. [mysql](https://github.com/mysqljs/mysql)：一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序。MySQL 引擎比较好
 2. [node-postgres](https://github.com/brianc/node-postgres)：一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序。个人感觉这个更好用点。
-3. [pg-promise](https://github.com/vitaly-t/pg-promise)：PostgreSQL 支持 JSON 相关
-4. sqlite3：SQLite  小、应用于移动端
+3. [pg-promise](https://github.com/vitaly-t/pg-promise)：PostgreSQL 的 Promises/A+ 接口
+4. [sqlite3](https://github.com/mapbox/node-sqlite3)：SQLite  小、应用于移动端
 
 ### NoSQL
 
@@ -66,7 +64,7 @@
 
 ### 开源,分布式,RESTful 搜索引擎
 
-1. elasticsearch：ElasticSearch 搜索引擎
+1. [elasticsearch](https://github.com/elastic/elasticsearch-js)：ElasticSearch 官方的 Node.js 和 浏览器客户端库
 
 ### 数据库
 
@@ -74,14 +72,14 @@
 | ----- | ---------------------------------------- | --------------------------------------- | ------------- |
 | SQL   | [MySQL](http://dev.mysql.com/downloads/mysql/) |                                         | 分析            |
 |       | [PostgreSQL](https://www.postgresql.org/download/) |                                         |               |
-|       | SQLite                                   |                                         |               |
+|       | [SQLite](https://www.sqlite.org/download.html) |                                         |               |
 | NoSQL | [Cassandra](http://cassandra.apache.org/) | 列存储（Wide Column Store/Column-Family）数据库 | 日志；博客平台       |
 |       | [Redis](http://redis.io/download)        | 键值（Key-Value）数据库                        | 储存用户信息        |
 |       | [MongoDB](https://www.mongodb.com/download-center) | 面向文档（Document-Oriented）数据库              | 日志；分析         |
 |       | [CouchDB](http://couchdb.apache.org/)    | 同 MongoDB                               | 同 MongoDB     |
 |       | [LevelDB](http://leveldb.org/)           |                                         |               |
 |       | [Neo4j](https://neo4j.com/download/)     | 图（Graph-Oriented）数据库                    | 关系性强的数据； 推荐引擎 |
-| 搜索引擎  | ElasticSearch                            |                                         | ？             |
+| 搜索引擎  | [ElasticSearch](https://www.elastic.co/downloads) |                                         | ？             |
 
 ## 研发基础平台
 

@@ -11,6 +11,7 @@
     "cassandra-driver": "^3.0.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
+    "elasticsearch": "^11.0.1",
     "express": "^5.0.0-alpha.2",
     "level": "^1.4.0",
     "leveldown": "^1.4.6",
@@ -23,6 +24,7 @@
     "pg-promise": "^5.0.3",
     "pug": "^2.0.0-beta3",
     "redis": "^2.6.2",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "sqlite3": "^3.1.4"
   }
 }
