@@ -1,23 +1,36 @@
+> 工程实践 + 标准化 => JavaScript 生态
+
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
 2. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
 
-## Web MV* 
+## 模块化
+
+### Web MV* 
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
 3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
 
-## 可视化
+### Virtual DOM
+
+1. React-Native
+
+### 可视
 
 1. [JavaScript应用领域（d3-test）](http://tingge.github.io/lab/d3-test/index.html)
 
-## 预编译
+## 工程化
+
+> 工程化的实践：预编译、合并、压缩、打包和包管理。
+>
+
+### 预编译
 
 1. 模版引擎：pug、Handlebars
 2. CSS预处理器：PostCSS、Stylus、SaaS、Less
-3. JavaScript友好语言：TypeScript、CoffeeScript
+3. JavaScript 友好语言：TypeScript、CoffeeScript
 
-## 构建
+### 构建
 
 1. NPM Scripts
 2. Webpack
@@ -32,7 +45,7 @@
 1. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
 2. [koa2-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app)：借 babel 通过 async/await 来支持 ES6+
 3. [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app)：通过 co 生成器支持 ES6
-4. [expressjs5-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/expressjs5-app)：社区生态完善。[Express.js 黑历史](http://clonn.blogspot.com/2016/04/expressjs-express.html)后，IBM 干预过度，使 [Douglas Wilson](https://github.com/dougwilson) 在16年3月退出 5，建议转其它
+4. [expressjs5-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/expressjs5-app)：社区生态完善。[Express.js 黑历史](http://clonn.blogspot.com/2016/04/expressjs-express.html)后，IBM 过度干预，使 [Douglas Wilson](https://github.com/dougwilson) 在16年3月退出 5，建议转其它
 
 ## 实时服务
 
@@ -43,7 +56,7 @@
 
 ### ORM
 
-1. Sequelize：提供对 MySQL，MariaDB，SQLite ，PostgreSQL 和 MSSQL 数据库的简单访问
+1. [Sequelize](https://github.com/sequelize/sequelize)：提供对 MySQL，MariaDB，SQLite ，PostgreSQL 和 MSSQL 数据库的简单访问
 
 ### SQL
 
@@ -68,7 +81,7 @@
 
 ### 数据库
 
-|               |                                          |                                         | 应用场景          |
+| 类别            | 数据库                                      | 特点                                      | 应用场景          |
 | ------------- | ---------------------------------------- | --------------------------------------- | ------------- |
 | SQL           | [MySQL](http://dev.mysql.com/downloads/mysql/) |                                         | 分析            |
 |               | [PostgreSQL](https://www.postgresql.org/download/) |                                         |               |
@@ -86,8 +99,11 @@
 1. [部署私有 Docker Registry 服务](docker-registry.html)
 2. [Docker 中搭建 GitLab服务器](docker-gitlab.html)
 3. Nginx
+4. LDAP
 
 ## 附录
 
 - [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。大致思路是：[flexible.js](https://github.com/amfe/lib-flexible) 或 [metahandler.js](https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js?utm_source=tuicool&utm_medium=referral)
 - [Houdini：CSS 领域最令人振奋的革新](http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&mid=2651424725&idx=1&sn=c19801bf880556470bb21f8af0cb0225)
+- [在高并发的情况下，使用Node.js怎么生成像陌陌里面每个用户都有的数字账号呢，如何才会不重复呢？ 数据库是mongodb](https://mp.weixin.qq.com/s?__biz=MzAxMTU0NTc4Nw==&mid=2661157244&idx=1&sn=ee991dac6c044064b5452ff329b3af2f)
+- [HTML 5](html5.html)

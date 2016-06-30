@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>webRTC 应用</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WebRTC HTML5 JavaScript IM">
+  <meta name="author" content="TingGe<505253293@163.com>">
+  <title>听歌实验室</title>
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
 </head>
+
 <body>
-  <video id="webcam" src=""></video>
-  <script src="./webcam.js"></script>
+  <h1>点击屏幕截屏</h1>
+  <!-- poster 用户点击播放按钮前显示的图像 -->
+  <video src="" autoplay id="video"></video>
+  <img src="" alt="" id="img">
+  <canvas style="display:none;" id="capture"></canvas>
+  <script src="./webcam.js" charset="utf-8"></script>
 </body>
+
 </html>

@@ -1,15 +1,36 @@
-function onSuccess(stream){
-  const video = document.getElementById('webcam');
-  if(window.URL){
-    video.src = window.URL.createObjectURL(stream);
-  } else {
-    video.src = stream;
-  }
-  video.autoplay = true;
-}
+const getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+const video = document.getElementById('video');
+const capture = document.getElementById('capture');
+const img = document.getElementById('img');
 
-if (navigator.getUserMedia){
-  navigator.getUserMedia({video: true}, onSuccess);
+// 截屏
+const snapCapture = function() {
+  const videoWidth = video.videoWidth,
+    videoHeight = video.videoHeight;
+  if (videoWidth && videoHeight) {
+    capture.width = videoWidth;
+    capture.height = videoHeight;
+    capture.getContext('2d').drawImage(
+      video, 0, 0, videoWidth, videoHeight
+    );
+    img.src = capture.toDataURL('image/png');
+  } else {
+    setTimeout(snapCapture, 200);
+  }
+}
+video.addEventListener('click', snapCapture, false);
+
+// 调用摄像头
+if (getUserMedia) {
+  getUserMedia.call(navigator, {
+    video: true,
+    audio: true
+  }, function(stream) {
+    video.src = window.URL ? window.URL.createObjectURL(stream) : stream;
+  }, function(ex) {
+    console.log('Rejected!', ex);
+  });
 } else {
-  document.getElementById('webcam').src = 'small.mp4';
+  video.src = './res/small.mp4';
+  console.log('浏览器不支持 getUserMedia， 播放默认视频');
 }
