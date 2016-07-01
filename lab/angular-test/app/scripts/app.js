@@ -2,14 +2,54 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '超算平台相关文档',
+    'author': '中国科学院青岛生物能源与过程研究所',
+    'url': 'http://scc.qibebt.cas.cn/docs/'
+  }, {
+    'name': '各种 vim Cheat Sheet for Programmers',
+    'author': 'Michael',
+    'url': 'http://michael.peopleofhonoronly.com/vim/'
+  },{
+    'name': 'VI 快捷键全图',
+    'author': '',
+    'url': 'https://tingge.github.io/img/vi_tutorial.png'
+  }, {
+    'name': 'vi/vim使用进阶',
+    'author': '易水博客',
+    'url': 'http://easwy.com/blog/archives/advanced-vim-skills-catalog/'
+  }, {
+    'name': 'Git pretty',
+    'author': 'Justin Hileman',
+    'url': 'http://justinhileman.info/article/git-pretty/'
+  }, {
+    'name': 'git - 简易指南',
+    'author': '罗杰·杜德勒',
+    'url': 'http://www.bootcss.com/p/git-guide/'
+  }, {
+    'name': 'Git Pocket Guide',
+    'author': 'Richard E. Silverman',
+    'url': 'http://chimera.labs.oreilly.com/books/1230000000561'
+  }, {
+    'name': 'Git Community Book 中文版',
+    'author': 'liuhui998.com/',
+    'url': 'http://gitbook.liuhui998.com/index.html'
+  }, {
+    'name': 'Pro GIt 2nd Edition(2014)',
+    'author': 'git',
+    'url': 'https://git-scm.com/book/zh/v2'
+  }, {
+    'name': 'git-flow 备忘清单',
+    'author': 'Daniel Kummer (Tweet) ',
+    'url': 'http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html'
+  }, {
     'name': '微信硬件平台解决方案',
     'author': '吴跃前',
     'url': 'http://www.kancloud.cn/yueqian_scut/iot-wechat/107380'
-  },{
+  }, {
     'name': '一步步搭建物联网系统',
     'author': '黄峰达',
     'url': 'http://www.ituring.com.cn/book/1580'
-  },{
+  }, {
     'name': '一起学koa',
     'author': '17koa',
     'url': 'http://17koa.com/koa-generator-examples/'

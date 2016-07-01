@@ -28,7 +28,7 @@
 
 1. 模版引擎：pug、Handlebars
 2. CSS预处理器：PostCSS、Stylus、SaaS、Less
-3. JavaScript 友好语言：TypeScript、CoffeeScript
+3. JavaScript 友好语言：TypeScript、[CoffeeScript](http://coffeescript.org/)
 
 ### 构建
 
@@ -46,6 +46,7 @@
 2. [koa2-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa2-app)：借 babel 通过 async/await 来支持 ES6+
 3. [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app)：通过 co 生成器支持 ES6
 4. [expressjs5-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/expressjs5-app)：社区生态完善。[Express.js 黑历史](http://clonn.blogspot.com/2016/04/expressjs-express.html)后，IBM 过度干预，使 [Douglas Wilson](https://github.com/dougwilson) 在16年3月退出 5，建议转其它
+5. [Restify](http://restify.com/)：仅是 API 服务，可观测 Http 应用的延迟、特征等
 
 ## 实时服务
 
