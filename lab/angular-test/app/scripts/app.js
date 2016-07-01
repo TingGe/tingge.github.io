@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
-    'name': '超算平台相关文档',
+    'name': '超算平台 Linux 等相关文档',
     'author': '中国科学院青岛生物能源与过程研究所',
     'url': 'http://scc.qibebt.cas.cn/docs/'
   }, {
