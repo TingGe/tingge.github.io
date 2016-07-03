@@ -15,7 +15,7 @@
 - [网易博客](http://505253293.blog.163.com/)
 - [Speaker Deck](https://speakerdeck.com/tingge)
 - [SlideShare](http://www.slideshare.net/RuitingXing)
+- [Google+](https://plus.google.com/u/0/102081580957836818709/)
 - [Twitter](https://twitter.com/Ge168)
 - [segmentfault](https://segmentfault.com/u/tingge)
-
 

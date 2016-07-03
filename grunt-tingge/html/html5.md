@@ -18,4 +18,4 @@
 
 ## Device Access
 
-- [WebRTC](http://tingge.github.io/lab/webrtc-app/index.html)
+- [WebRTC](https://tingge.github.io/lab/webrtc-app/index.html)
