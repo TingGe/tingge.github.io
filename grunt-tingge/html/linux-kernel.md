@@ -111,3 +111,4 @@ Linux 根目录（即 “/”）
 1. [Linux 驱动开发](linux-driver.html)
 2. [GCC 编译](https://gcc.gnu.org/)
 3. [每个Linux用户都应该知道的命令行技巧](http://blog.jobbole.com/54425/)
+4. [Linux 压力测试 stress](linux-stress.html)
