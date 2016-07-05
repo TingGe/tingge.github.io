@@ -112,3 +112,5 @@ Linux 根目录（即 “/”）
 2. [GCC 编译](https://gcc.gnu.org/)
 3. [每个Linux用户都应该知道的命令行技巧](http://blog.jobbole.com/54425/)
 4. [Linux 压力测试 stress](linux-stress.html)
+5. [如何监控GPU卡的使用率（Linux）](http://www.rthpc.com/View?id=418)
+6. [20个命令行工具监控 Linux 系统性能](https://linuxstory.org/command-line-tools-to-monitor-linux-performance/)
