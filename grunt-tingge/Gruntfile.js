@@ -69,7 +69,8 @@ module.exports = grunt => {
         },
         files: [
           'doc/*.md',
-          'css/*.css'
+          'css/*.css',
+          'templates/*.html'
         ]
       }
     }

@@ -94,6 +94,7 @@
 |               | [LevelDB](http://leveldb.org/)           |                                         |               |
 |               | [Neo4j](https://neo4j.com/download/)     | 图（Graph-Oriented）数据库                    | 关系性强的数据； 推荐引擎 |
 | 实时的分布式搜索和分析引擎 | [ElasticSearch](https://www.elastic.co/downloads) | 面向文档的数据库                                | 大数据；实时监控      |
+| 分布式实时处理系统     | [Druid](http://druid.io/)                | 列存储，分布式                                 |               |
 
 ## 研发基础平台
 
