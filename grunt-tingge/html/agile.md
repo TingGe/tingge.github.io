@@ -10,6 +10,6 @@
 
 ## Agile
 
-- [敏捷需求管理与发布规划](agile-aura-20160428.html)
-- [创新时代下的敏捷项目管理](agile-aura-20160605.html)
-- [如何拯救你的产品？产品规划VS敏捷创新](https://mp.weixin.qq.com/s?__biz=MzIyMDQzODIyNA==&mid=2247483778&idx=1&sn=5ee9a409761f33a886643caae5dd9e33)
+- [敏捷需求管理与发布规划(20160428)](agile-aura-20160428.html)
+- [创新时代下的敏捷项目管理(20160605)](agile-aura-20160605.html)
+- [如何拯救你的产品？产品规划VS敏捷创新(20160630)](https://mp.weixin.qq.com/s?__biz=MzIyMDQzODIyNA==&mid=2247483778&idx=1&sn=5ee9a409761f33a886643caae5dd9e33)
