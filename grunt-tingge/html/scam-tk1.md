@@ -1,5 +1,7 @@
 # Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640
 
+[TOC]
+
 TK1 Camera MIPI CSI-2 模块实物图
 
 ![TK1 Camera MIPI CSI-2 模块实物图](../img/scam-tk1.png)
@@ -57,16 +59,16 @@ ARCH=arm make menuconfig
 
 然后进行配置：
 
-1.  **开启** 下面 1 项（这里选 M）
+1. **开启** 下面 1 项（这里选 M）
 
         Device Drivers > Multimedia support > Sensors used on soc_camera driver > ov5640 camera support
 
-2.  **关闭**下面 2 项
+2. **关闭**下面 2 项
 
         Device Drivers > Multimedia support > V4L platform devices > OV5640 camera sensor support
         Device Drivers > Graphics support > Tegra video input host1x client driver
 
-3.  然后保存退出
+3. 然后保存退出
 
 ### 步骤 6 设置环境变量
 

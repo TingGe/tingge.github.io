@@ -1,5 +1,7 @@
 # Linux  内核
 
+[TOC]
+
 ## Linux 架构图
 
 ![Linux 架构图](../img/linux_kernel.jpg)

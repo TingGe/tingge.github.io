@@ -1,5 +1,7 @@
 # Ubuntu armhf 源
 
+[TOC]
+
 ## 问题
 
 在 TK1 上安装 Ubuntu 14.04 后，自带源 http://ports.ubuntu.com 更新一直报  `Failed to fetch binary-armhf/Packages`。

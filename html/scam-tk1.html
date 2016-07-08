@@ -69,6 +69,7 @@
     <div class="row">
       <div id="article" class="col-md-9 content-container">
         <h1 id="jetson-tk1-tegra-k1-mipi-csi-2-ov5640">Jetson TK1 Tegra K1 摄像头 MIPI CSI-2 模块 OV5640</h1>
+<p>[TOC]</p>
 <p>TK1 Camera MIPI CSI-2 模块实物图</p>
 <p><img src="../img/scam-tk1.png" alt="TK1 Camera MIPI CSI-2 模块实物图"></p>
 <h2 id="-">安装过程</h2>
@@ -106,11 +107,11 @@ ARCH=arm make menuconfig
 <p>然后进行配置：</p>
 <ol>
 <li><p><strong>开启</strong> 下面 1 项（这里选 M）</p>
-<pre><code>Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
+<pre><code> Device Drivers &gt; Multimedia support &gt; Sensors used on soc_camera driver &gt; ov5640 camera support
 </code></pre></li>
 <li><p><strong>关闭</strong>下面 2 项</p>
-<pre><code>Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
-Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
+<pre><code> Device Drivers &gt; Multimedia support &gt; V4L platform devices &gt; OV5640 camera sensor support
+ Device Drivers &gt; Graphics support &gt; Tegra video input host1x client driver
 </code></pre></li>
 <li><p>然后保存退出</p>
 </li>

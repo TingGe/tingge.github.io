@@ -1,5 +1,7 @@
 # Cassandra 安装
 
+[TOC]
+
 环境 Linux\Unix 。以 apache-cassandra-3.7 为例。
 
 1. 从 [Apache Cassandra](http://cassandra.apache.org/download/) 的 [apache-cassandra-3.7-bin.tar.gz](http://www.apache.org/dyn/closer.lua/cassandra/3.7/apache-cassandra-3.7-bin.tar.gz) 列表中选择下载即可。

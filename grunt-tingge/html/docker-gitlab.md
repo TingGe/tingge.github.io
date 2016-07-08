@@ -1,5 +1,7 @@
 # Docker 中搭建 GitLab服务器
 
+[TOC]
+
 ## [sameersbn/gitlab](https://hub.docker.com/r/sameersbn/gitlab/) 一键部署方案
 
 ### 前置条件

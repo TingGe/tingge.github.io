@@ -68,10 +68,11 @@
   <div id="main" class="container">
     <div class="row">
       <div id="article" class="col-md-9 content-container">
-        <blockquote>
-<p>整理自：我司 林夕 大X 的总结</p>
+        <h1 id="jetson-tk1-">Jetson TK1的一些事项</h1>
+<p>[TOC]</p>
+<blockquote>
+<p>自林夕整理总结</p>
 </blockquote>
-<h1 id="jetson-tk1-">Jetson TK1的一些事项</h1>
 <p>系统一开始预装的精简版的 Ubuntu 14.04，按照普通 linux 的使用方法使用就好了。好多东西可以参考 elinux.org 上的 <a href="http://elinux.org/Jetson_TK1">Jetson TK1</a> 页面的资料。</p>
 <h2 id="0-">0. 前期的一些处理</h2>
 <p>由于是精简版的 Ubuntu , <code>libglx.so</code> 和官方库的不一样, 不能直接用官方库覆盖. 于是需要保护这个库，可以运行 <code>sudo apt-mark hold xserver-xorg-core</code> 来实现. 之后更新的时候也没有什么问题了。</p>

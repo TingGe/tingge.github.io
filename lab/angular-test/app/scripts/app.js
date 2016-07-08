@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '程序员必须知道的8大排序和3大查找',
+    'author': 'shan9liang',
+    'url': 'http://www.cr173.com/html/15301_all.html'
+  }, {
     'name': '超算平台 Linux 等相关文档',
     'author': '中国科学院青岛生物能源与过程研究所',
     'url': 'http://scc.qibebt.cas.cn/docs/'
@@ -9,7 +13,7 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'name': '各种 vim Cheat Sheet for Programmers',
     'author': 'Michael',
     'url': 'http://michael.peopleofhonoronly.com/vim/'
-  },{
+  }, {
     'name': 'VI 快捷键全图',
     'author': '',
     'url': 'https://tingge.github.io/img/vi_tutorial.png'

@@ -1,5 +1,7 @@
 # 部署私有 Docker Registry 服务
 
+[TOC]
+
 三种部署方式：
 
 - Docker Registry 里有一个 [registry 镜像](https://hub.docker.com/_/registry/)可协助部署私有Docker Registry 服务。该 Registry 镜像对本地测试足矣，但不能用于生产环境。

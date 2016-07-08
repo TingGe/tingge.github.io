@@ -1,5 +1,7 @@
 # Linux 压力测试 stress
 
+[TOC]
+
 Stress是一个Posix系统下 Cpu/Menory/IO/Disk 压测工具。
 
 以 Nvidia Jetson TK1、Ubuntu 14.04、[**stress-1.0.4.tar.gz**](http://people.seas.harvard.edu/~apw/stress/stress-1.0.4.tar.gz) 环境为例，检测开发板 CPU 在 100% 情况下的温度。
@@ -147,7 +149,7 @@ stress -d 1
    cat /sys/devices/system/cpu/cpu3/cpufreq/cpuinfo_max_freq
    ```
 
-3.  `:x` 保存后，更改  cpu_freq.sh 权限
+3. `:x` 保存后，更改  cpu_freq.sh 权限
 
    ```shell
    sudo chmod +x cpu_freq.sh

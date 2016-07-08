@@ -1,5 +1,7 @@
 # html5时代
 
+[TOC]
+
 从标记语言到 Web Application
 
 - Semantics

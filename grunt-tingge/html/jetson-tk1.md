@@ -1,6 +1,8 @@
-> 整理自：我司 林夕 大X 的总结
-
 # Jetson TK1的一些事项
+
+[TOC]
+
+> 自林夕整理总结
 
 系统一开始预装的精简版的 Ubuntu 14.04，按照普通 linux 的使用方法使用就好了。好多东西可以参考 elinux.org 上的 [Jetson TK1](http://elinux.org/Jetson_TK1) 页面的资料。
 
