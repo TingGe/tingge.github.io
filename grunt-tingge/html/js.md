@@ -7,15 +7,14 @@
 
 ## 模块化
 
-### Web MV* 
+### Web MV*/Virtual DOM 
+
+> MVVM 双向绑定、Virtual DOM，都是解决直接操作DOM的“性能墙”； 而 React-Native 属于另类。
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
 3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
-
-### Virtual DOM
-
-1. React-Native
+4. React-Native：仅适用业务型场景
 
 ### 可视
 
