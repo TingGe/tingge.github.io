@@ -2,6 +2,10 @@
 
 [TOC]
 
+> 2015年，PMI-ACP 认证引入中国；2016年，精益创业火了……
+>
+> Todo：先收集些学习资料，以后再补充个人思考的东西吧。
+
 ## PMP
 
 - [几近满分的项目管理课程！内部30页PPT曝光](http://mp.weixin.qq.com/s?__biz=MzA5NDk4NDM0OA==&mid=405307453&idx=2&sn=64f6d0b0ea2b5f6022d05492884dcc1e)

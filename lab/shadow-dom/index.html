@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow Dom 演示</title>
+</head>
+
+<body>
+  <div class="serious">
+    <p class="serious-widget">
+      大家好我十分的严肃
+    </p>
+  </div>
+
+  <div class="playful">
+    <p class="playful-widget">
+      漂亮的小云彩效果……
+    </p>
+  </div>
+
+  <button>我的按钮</button>
+
+  <template class="widget-template">
+    <style>
+      /* 定义影子宿主样式 */
+
+      :host-context(.serious) {
+        width: 250px;
+        height: 50px;
+        padding: 50px;
+        font-family: '微软雅黑';
+        font-weight: bold;
+        font-size: 24px;
+        color: black;
+        background: tomato;
+      }
+
+      :host-context(.playful) {
+        width: 250px;
+        height: 50px;
+        padding: 50px;
+        font-family: '华文行楷';
+        font-size: 24px;
+        color: white;
+        background: deepskyblue;
+      }
+    </style>
+    <content></content>
+  </template>
+
+  <template class="button-template">
+    <style>
+      /* 定义影子根元素样式 */
+
+      :host {
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      :host(:hover) {
+        border: 2px solid green;
+      }
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    // div
+    var root1 = document.querySelector('.serious-widget').createShadowRoot();
+    var root2 = document.querySelector('.playful-widget').createShadowRoot();
+    var template = document.querySelector('.widget-template');
+    root1.appendChild(document.importNode(template.content, true));
+    root2.appendChild(document.importNode(template.content, true));
+
+    // button
+    var host = document.querySelector('button');
+    var root = host.createShadowRoot();
+    var template = document.querySelector('.button-template');
+    root.appendChild(template.content.cloneNode(true));
+  </script>
+</body>
+
+</html>

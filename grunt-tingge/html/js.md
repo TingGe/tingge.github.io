@@ -16,6 +16,15 @@
 3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
 4. React-Native：仅适用业务型场景
 
+### Web Components
+
+> [模板](http://robdodson.me/html5-template-tag-introduction/)、[HTML引入](http://robdodson.me/exploring-html-imports/)和 [Shadow DOM](http://www.html5rocks.com/zh/tutorials/webcomponents/shadowdom-201/)（[简介](http://www.ituring.com.cn/article/177453)、[基础](http://www.ituring.com.cn/article/177461)、[样式](http://www.ituring.com.cn/article/177570)、[样式续](http://www.ituring.com.cn/article/177653)），所有这些技术的终极目标就是**自定义元素（custom elements）**。
+>
+> 使用 shadow DOM 的时候应该确保内容和表现的分离。
+
+1. [webcomponentsjs](http://webcomponents.org/)
+2. [Polymer](https://www.polymer-project.org/)
+
 ### 可视
 
 1. [JavaScript应用领域（d3-test）](http://tingge.github.io/lab/d3-test/index.html)
@@ -110,3 +119,9 @@
 - [Houdini：CSS 领域最令人振奋的革新](http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&mid=2651424725&idx=1&sn=c19801bf880556470bb21f8af0cb0225)
 - [在高并发的情况下，使用Node.js怎么生成像陌陌里面每个用户都有的数字账号呢，如何才会不重复呢？ 数据库是mongodb](https://mp.weixin.qq.com/s?__biz=MzAxMTU0NTc4Nw==&mid=2661157244&idx=1&sn=ee991dac6c044064b5452ff329b3af2f)
 - [HTML 5](html5.html)
+- [ShadowDOM Visualizer](http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
+- [HTML's New Template Tag](http://www.html5rocks.com/zh/tutorials/webcomponents/template/)
+- [HTML5 Template Tag: Introduction](http://robdodson.me/html5-template-tag-introduction/)
+- [Exploring HTML Imports](http://robdodson.me/exploring-html-imports/)
+- [Shadow DOM CSS Cheat Sheet](http://robdodson.me/shadow-dom-css-cheat-sheet/)
+

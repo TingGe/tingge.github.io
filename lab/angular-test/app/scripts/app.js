@@ -2,10 +2,14 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'HTML5 Rocks',
+    'author': 'Google',
+    'url': 'http://www.html5rocks.com/zh/'
+  }, {
     'name': 'JS函数式编程指南',
     'author': 'Linghao Li',
     'url': 'https://www.gitbook.com/book/llh911001/mostly-adequate-guide-chinese/details'
-  },{
+  }, {
     'name': '程序员必须知道的8大排序和3大查找',
     'author': 'shan9liang',
     'url': 'http://www.cr173.com/html/15301_all.html'
