@@ -1,6 +1,8 @@
-# 智能硬件
+# WoT 与 IoT
 
 [TOC]
+
+> 大多 WOT 架构从 Web服务/ SOA 视角或无线传感器网/ IoT 视角。
 
 ## ruff.io
 
