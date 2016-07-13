@@ -2,11 +2,11 @@
 
 [TOC]
 
-> 大多 WOT 架构从 Web服务/ SOA 视角或无线传感器网/ IoT 视角。
+> 目前，物联网系统架构主要有传统的垂直化 “无线传感器网/IoT” 和基于 Web 技术 “Web Service/SOA” 的 WOT 两种。WoT 优势在于开放、成本，因此适用于有成本压力、业务丰富的场景；而传统 “无线传感器网/IoT” 适合高安全性、高实时的场景。
 
 ## ruff.io
 
-Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。它包含了Ruff SDK、Ruff OS，Rap Registry等。
+Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。它包含了 Ruff SDK、Ruff OS，Rap Registry 等。
 
 - Ruff SDK 是一个完整的工具集，拥有包括 Rap、Debugger、Console、Simulator 等多种开发工具，它让开发者的开发变得更简单。
 - Ruff OS 是一个兼容多个平台的运行环境，它不仅支持嵌入式 Linux ，还支持 MCU 单片机领域等。它让您的开发不用关心底层的硬件类型，只要集中注意力在应用逻辑上，根据您的应用需要消耗的资源选取相应的硬件平台。
@@ -37,7 +37,7 @@ Ruff 是一个可以让开发者实现敏捷开发智能硬件的系统平台。
 3. [RuffApps](https://github.com/RuffApps/Apps)：一些 Ruff 应用
 4. [devices.ruff](https://github.com/lerencao/devices.ruff)：Testing devices like button, buzzer, temperature sensor, and lcd
 
-## Jetson TX1 and Jetson TK1 
+## Jetson TX1 and Jetson TK1
 
 NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级计算机，其上一代产品Jetson TK1于NVIDIA GTC 2014上亮相。
 

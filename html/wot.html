@@ -54,7 +54,7 @@
             <a href="../index.html#agile">敏捷/项目管理</a>
           </li>
           <li>
-            <a href="../html/iot.html">智能硬件</a>
+            <a href="../html/iot.html">WoT/IoT</a>
           </li>
           <li>
             <a href="../html/me.html">关于我</a>
@@ -70,34 +70,115 @@
       <div id="article" class="col-md-9 content-container">
         <h1 id="web-of-things-wot-">Web of Things (WoT)</h1>
 <blockquote>
-<p>IoT意味着所有设备能够相互连结，进而形成物联网。而设备沟通能够通过各种方式如Bluetooth, ZigBee 和 WIFI等等。IoT的最后阶段WoT则是将这些沟通方式最后都通过统一 Web 标准的方式来达成。这也是以往所有新技术最终能得到蓬勃发展的重要因素之一：统一的标准和规范。——摘自《IoT第四階段 : Web of Things (WoT)》</p>
+<p>IoT 意味着所有设备能够相互连结，进而形成物联网。而设备沟通能够通过各种方式如 Bluetooth, ZigBee 和 WIFI 等等。IoT 的最后阶段 WoT 则是将这些沟通方式最后都通过统一 Web 标准的方式来达成。这也是以往所有新技术最终能得到蓬勃发展的重要因素之一：统一的标准和规范。——摘自《 IoT 第四階段 : Web of Things (WoT) 》</p>
 </blockquote>
-<p>URI／IRI</p>
-<p>当前的大多数物联网产品往往来自某一类垂直行业，都基于封闭生态系统发展各自的解决方案。</p>
-<p>Google 的 Physical Web 计划</p>
-<p>Apple 的 iBeacon</p>
-<p>开放的 类Node.js</p>
+<h2 id="-">现状</h2>
+<p>当前，大多物联网产品往往来自某一类垂直行业，基于封闭生态系统发展各自的解决方案。</p>
 <ul>
-<li>IOT Device端Node.js用shoe包实现websocket，用dnode包做RPC。进一步Node.js还可以用Mosca支持MQTT</li>
+<li>Google 的 <a href="https://github.com/google/physical-web">Physical Web</a> </li>
+<li>Apple 的 <a href="https://developer.apple.com/ibeacon/">iBeacon</a></li>
+<li>类 Node.js 方案。如：</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>物联网 JS 框架</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ruff.io/">Ruff</a></td>
+<td>基于 <a href="http://duktape.org/">Duktape</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Samsung/iotjs">IoT.js</a> 和 <a href="https://github.com/Samsung/jerryscript">JerryScript</a></td>
+<td>IoT.js 平台使用 JerryScript 引擎来运行 JavaScript 代码，使用 <a href="https://github.com/Samsung/libuv">libuv</a> 库来实现异步I/O。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/cesanta/mongoose-iot">Mongoose IoT Platform</a></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>noduino 一个简单、灵活的基于JavaScript和Node.js的框架，能实现通过HTML5、Socket.IO 和 Node.js 等Web应用实现对Arduino板的控制</li>
+<li>Node.js 方案。如：</li>
 </ul>
-<ul>
-<li>Cylon.js  <a href="http://cylonjs.com/">http://cylonjs.com/</a>   智能机器人和IOT的JavaScript开发框架，号称支持不下35种平台，使得开发人员可以使用同样的API来操纵不同的设备，包括Leap Motion，Pebble手表，Arduinos和Raspberry Pi等等。</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>物联网 JS 框架</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/hollobit/wot.js">WoT.js</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://cylonjs.com/">Cylon.js</a></td>
+<td>智能机器人和 IOT 的 JavaScript 开发框架，号称支持不下35种平台，使得开发人员可以使用同样的API来操纵不同的设备，包括 Leap Motion，Pebble 手表，Arduinos 和 Raspberry Pi 等。</td>
+</tr>
+<tr>
+<td><a href="http://www.noduino.org/">noduino</a></td>
+<td>一个简单、灵活的基于 JavaScript 和 Node.js 的框架，能实现通过HTML5、Socket.IO 和 Node.js 等 Web 应用实现对 Arduino 板的控制</td>
+</tr>
+<tr>
+<td><a href="https://github.com/substack/shoe">shoe</a></td>
+<td>实现 websocket</td>
+</tr>
+<tr>
+<td><a href="https://github.com/substack/dnode">dnode</a></td>
+<td>实现 RPC</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mcollina/mosca">Mosca</a></td>
+<td>MQTT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">组成</h2>
+<p>最简版 WoT 涉及 6 类设备、5类接口。</p>
+<h3 id="6-">6 类设备：</h3>
+<ol>
+<li>UA</li>
+<li>WoT Server</li>
+<li>Service Resources</li>
+<li>WoT Device</li>
+<li>Sensors</li>
+<li>Event Trigger</li>
+</ol>
+<h3 id="5-">5 类接口：</h3>
+<ol>
+<li>UA－WoT Server：HTTPS, RESTful，JSON；数据采集与上报、远程控制操作、多应用数据采集与传出、管理多个WoT Devices。用到的协议如 WebRTC、SSE 和 Web notification</li>
+<li>WoT Server－Service Resources：与外置服务集成，数据交换、同步状态和信息。外置服务如服务器、云、开放 API 和 Web 资源</li>
+<li>WoT Server－Sensors／硬件：内置／外置连结。如 I2C、SPI、UART、蓝牙 等</li>
+<li>WoT Server－WoT Device：多 WoT Device 识别、协作。如 HTTP、Web Socket 和 CoAP 等</li>
+<li>Event Trigger－WoT Server：向 WoT Server 推送消息。如 MQTT 等基于订阅的协议</li>
+</ol>
+<h3 id="-">安全要求</h3>
+<ol>
+<li>WoT Device / WoT Server 授权</li>
+<li>WoT Service / WoT 应用认证</li>
+<li>WoT应用支持数据交互保密性</li>
+<li>WoT 终端 应可以验证数据完整性</li>
+<li>防止网络连接滥用</li>
+<li>WoT 系统应能保护隐私</li>
+</ol>
 <h2 id="-">参考</h2>
 <ol>
-<li><a href="http://www.educity.cn/wulianwang/433792.html">WoT简介</a></li>
+<li><a href="http://www.educity.cn/wulianwang/433792.html"> WoT简介</a></li>
 <li><a href="http://hollobit.github.io/swot-model/">Simple Web of Things (SWoT) Architecture Model</a></li>
 <li><a href="http://iotforum.advantech.com/discussion/104/iot%E7%AC%AC%E5%9B%9B%E9%9A%8E%E6%AE%B5-web-of-things-wot">IoT第四階段 : Web of Things (WoT)</a></li>
 <li><a href="https://w3c.github.io/wot/architecture/wot-architecture.html">Web of Things (WoT) Architecture</a></li>
 <li><a href="http://www.slideshare.net/jollen/iot-and-maker-corssover-imco-conference-taipei-taiwan">IoT and Maker Crossover (IMCO) Conference 2015</a></li>
 <li><a href="http://slideplayer.com/slide/9366734/">WoT Outreach: joint slide set Outreach slide set aims to increase the awareness of W3C’s WoT work</a></li>
-<li><a href="http://wotjs.io/">WoT.js</a></li>
 <li><a href="http://webofthings.org/wot-book-links/">WOT BOOK LINKS</a></li>
 <li><a href="https://dzone.com/articles/the-limitations-of-the-iot-and-how-the-web-of-thin">The Limitations of the IoT and How the Web of Things Can Help</a></li>
 <li><a href="https://www.w3.org/WoT/IG/">W3C WEB OF THINGS INTEREST GROUP</a></li>
+<li><a href="http://blog.yuansc.com/2015/01/09/MQTT-Nodejs%E5%AE%9E%E7%8E%B0-Mosca%E7%AE%80%E4%BB%8B/">MQTT-Node.js实现-Mosca简介</a></li>
+<li><a href="http://www.slideshare.net/hollobit/wotjs">WoT.js - WoT App. Framework for Open Source Hardware</a></li>
+<li><a href="http://www.cs.wustl.edu/~jain/cse570-15/ftp/iot_prot/index.html">Internet of Things Protocols and Standards</a></li>
 </ol>
 
       </div>
