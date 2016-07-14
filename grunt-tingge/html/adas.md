@@ -8,7 +8,9 @@
 
 技术研究公司 [VSI（Vision Systems Intelligence）](https://visionsystemsintelligence.com/)发布的自动驾驶产业布局图。
 
-[![](../img/adas-ecosystem-sm.jpg)](![](../img/adas-ecosystem.jpg))
+![](../img/adas-ecosystem-sm.jpg)
+
+[查看大图](../img/adas-ecosystem.jpg)
 
 ## 厂商
 

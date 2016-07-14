@@ -12,21 +12,66 @@ body, h1, h2, h3, h4, h5, h6 {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
 }
-.topnav {
-    font-size: 14px;
+
+/* CSS3 Object-fit和Object-position 示例 */
+img {
+  /*width: 300px;
+  height: 300px;
+  border: 1px solid black;*/
+  /*background-color: #ccc;*/
+  object-fit:contain;
+  object-position: 0 0;
 }
-.lead {
-    font-size: 18px;
-    font-weight: 400;
+
+/* 表格行和列高亮显示、 列等宽 示例 */
+table {
+    overflow: hidden;
+    table-layout: fixed;
+    border: 1px solid #ccc;
 }
-.intro-header {
-    /*padding-top: 50px;*/
-    /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    /*padding-bottom: 50px;*/
-    text-align: center;
-    color: #f8f8f8;
-    /*background: url(../img/intro-bg.jpg) no-repeat center center;*/
-    background-size: cover;
+td, th {
+    padding: 10px;
+    position: relative;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+body:not(.nohover) tbody tr:hover {
+    background-color: #ACD8E7;
+}
+td:hover::after, thead th:not(:empty):hover::after, td:focus::after, thead th:not(:empty):focus::after {
+    content: '';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+}
+td:hover::after, th:hover::after {
+    background-color: #ACD8E7;
+}
+td:focus::after, th:focus::after {
+    background-color: lightblue;
+}
+
+/* Focus stuff for mobile */
+
+td:focus::before, tbody th:focus::before {
+    background-color: lightblue;
+    content: '';
+    height: 100%;
+    top: 0;
+    left: -5000px;
+    position: absolute;
+    width: 10000px;
+    z-index: -1;
+}
+
+/* 长单词处理 */
+.hyphenate {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 /*.intro-message {
