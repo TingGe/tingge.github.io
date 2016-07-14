@@ -95,6 +95,7 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 
 ## 附录
 
-- [互联网与物联网](../html/int-iot.html)
 - [关于高级辅助驾驶系统 ADAS](adas.html)
 - [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
+- [Web of Things (WoT)](../html/wot.html)
+- [互联网与物联网](../html/int-iot.html)

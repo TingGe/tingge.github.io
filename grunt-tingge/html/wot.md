@@ -73,3 +73,6 @@
 10. [MQTT-Node.js实现-Mosca简介](http://blog.yuansc.com/2015/01/09/MQTT-Nodejs%E5%AE%9E%E7%8E%B0-Mosca%E7%AE%80%E4%BB%8B/)
 11. [WoT.js - WoT App. Framework for Open Source Hardware](http://www.slideshare.net/hollobit/wotjs)
 12. [Internet of Things Protocols and Standards](http://www.cs.wustl.edu/~jain/cse570-15/ftp/iot_prot/index.html)
+13. [WoT 与 IoT](../html/iot.html)
+14. [互联网与物联网](../html/int-iot.html)
+15. [关于高级辅助驾驶系统 ADAS](adas.html)

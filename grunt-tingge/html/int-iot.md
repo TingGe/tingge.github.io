@@ -80,21 +80,13 @@ IoT 意味着所有设备能够相互连结，进而形成物联网。而设备�
 ## 参考
 
 - 野狗的 “面向资源架构设计”
-
 - [phodal/lan](https://github.com/phodal/lan)：一个开源的物联网平台
-
 - [html5 时代](../html/html5.html)
-
 - [RESTful 的 CoAP 协议](http://www.ituring.com.cn/tupubarticle/3795)
-
 - [coap-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/coap-app)：CoAP 小实例
-
 - [CoAP-cli](https://github.com/mcollina/coap-cli)：一个基于NodeJS的CoAP命令行工具，其核心是基于Node-CoAP库
-
 - [CoAP CLI 命令行工具](https://www.phodal.com/blog/coap-command-line-tools-set/)
-
 - [node-coap](https://github.com/mcollina/node-coap)：Nodejs的扩展Node-CoAP
-
 - [TinyOS CoAP](http://tinyos.stanford.edu/tinyos-wiki/index.php/CoAP)
-
-  ​
+- [WoT 与 IoT](../html/iot.html)
+- [Web of Things (WoT)](../html/wot.html)
