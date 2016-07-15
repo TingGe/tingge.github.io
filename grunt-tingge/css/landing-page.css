@@ -14,16 +14,18 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 /* CSS3 Object-fit 和 Object-position 示例 */
+
 img {
-  /*width: 300px;
+    /*width: 300px;
   height: 300px;
   border: 1px solid black;*/
-  /*background-color: #ccc;*/
-  object-fit:contain;
-  object-position: 0 0;
+    /*background-color: #ccc;*/
+    object-fit: contain;
+    object-position: 0 0;
 }
 
 /* 表格行和列高亮显示、 列等宽 示例 */
+
 table {
     overflow: hidden;
     table-layout: fixed;
@@ -68,52 +70,12 @@ td:focus::before, tbody th:focus::before {
 }
 
 /* 长单词处理 */
+
 .hyphenate {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
 }
-
-/*.intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-.intro-message> h1 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-    font-size: 5em;
-}
-.intro-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.intro-message> h3 {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-}*/
-
-
-/*@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-    .intro-message> h1 {
-        font-size: 3em;
-    }
-    ul.intro-social-buttons> li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-    ul.intro-social-buttons> li:last-child {
-        margin-bottom: 0;
-    }
-    .intro-divider {
-        width: 100%;
-    }
-}*/
-
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
@@ -141,7 +103,7 @@ td:focus::before, tbody th:focus::before {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(https://unsplash.it/1900/840/?random) no-repeat center center;
     background-size: cover;
 }
 .banner h2 {

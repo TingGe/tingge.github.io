@@ -116,10 +116,11 @@
 ## 附录
 
 - [Node.js 解析](nodejs.html)
+- [HTML 5](html5.html)
+- [Web 性能](web-performance.html)
 - [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。大致思路是：[flexible.js](https://github.com/amfe/lib-flexible) 或 [metahandler.js](https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js?utm_source=tuicool&utm_medium=referral)
 - [Houdini：CSS 领域最令人振奋的革新](http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&mid=2651424725&idx=1&sn=c19801bf880556470bb21f8af0cb0225)
-- [在高并发的情况下，使用Node.js怎么生成像陌陌里面每个用户都有的数字账号呢，如何才会不重复呢？ 数据库是mongodb](https://mp.weixin.qq.com/s?__biz=MzAxMTU0NTc4Nw==&mid=2661157244&idx=1&sn=ee991dac6c044064b5452ff329b3af2f)
-- [HTML 5](html5.html)
+- [前端开发中的一些黑魔法Pt2](http://www.w3cplus.com/css/dirty-tricks-dark-corners-front-end-pt2.html)
 - [ShadowDOM Visualizer](http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
 - [HTML's New Template Tag](http://www.html5rocks.com/zh/tutorials/webcomponents/template/)
 - [HTML5 Template Tag: Introduction](http://robdodson.me/html5-template-tag-introduction/)

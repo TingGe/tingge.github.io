@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>媒体对象(Media Object)</title>
+  <style media="screen">
+    /* Sticky Footer */
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      margin: auto;
+    }
+
+    .content {
+      flex: 1;
+    }
+    /* 响应式等高区块 */
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .list-item {
+      display: flex;
+      width: 30%;
+      padding: 1em;
+    }
+    /* Media Object */
+
+    .media {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .media-figure {
+      justify-content: center;
+      margin-right: 1em;
+    }
+
+    .media-body {
+      flex: 1;
+    }
+
+    .media-body h3,
+    .media-body p {
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Sticky Footer 特效</h1>
+  </header>
+  <main class="content">
+
+    <ul class="list">
+      <li class="list-item" style="background-color: #fcc;">
+        <p>Nemo aliquam laboriosam voluptatibus minima quidem laudantium, quae necessitatibus assumenda debitis similique expedita inventore amet explicabo, voluptate, ipsam ea voluptas, quia.</p>
+      </li>
+      <!-- other items -->
+      <li class="list-item" style="background-color: #cfc;height: 150px">
+        <div class="media">
+          <img class="media-figure" src="https://unsplash.it/70/70/?random" alt="" />
+          <div class="media-body">
+            <h3>Stand Media Object</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="list-item" style="background-color: #ccf;">
+        <p>Neque nisi quis rem voluptas asperiores excepturi fugiat facilis ea, earum ipsa dolorem obcaecati odit voluptates. Hic odio amet neque blanditiis.</p>
+      </li>
+      <li class="list-item" style="background-color: #fcc;">
+        <p>Nemo aliquam laboriosam voluptatibus minima quidem laudantium, quae necessitatibus assumenda debitis similique expedita inventore amet explicabo, voluptate, ipsam ea voluptas, quia.</p>
+      </li>
+      <!-- other items -->
+      <li class="list-item" style="background-color: #cfc;height: 150px">
+        <div class="media">
+          <img class="media-figure" src="https://unsplash.it/70/70/?random" alt="" />
+          <div class="media-body">
+            <h3>Stand Media Object</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="list-item" style="background-color: #ccf;">
+        <p>Neque nisi quis rem voluptas asperiores excepturi fugiat facilis ea, earum ipsa dolorem obcaecati odit voluptates. Hic odio amet neque blanditiis.</p>
+      </li>
+    </ul>
+  </main>
+  <footer>Sticky Footer</footer>
+</body>
+
+</html>

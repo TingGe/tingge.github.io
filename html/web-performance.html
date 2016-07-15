@@ -1,0 +1,158 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TingGe Blog Agile agile JavaScript NodeJS">
+  <meta name="author" content="TingGe<505253293@163.com>">
+  <title>听歌实验室</title>
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../lib/autocjs/build/autoc.min.css" media="screen">
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="../css/landing-page.css" rel="stylesheet">
+  <style media="screen">
+    #main {
+      padding-top: 55px;
+    }
+  </style>
+  <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../lib/autocjs/build/autoc.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand topnav" href="http://tingge.github.io/">
+          <i class="fa fa-flask icon-3x" aria-hidden="true"></i> 听歌实验室
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="../html/js.html">JavaScript/NodeJS</a>
+          </li>
+          <li>
+            <a href="../index.html#agile">敏捷/项目管理</a>
+          </li>
+          <li>
+            <a href="../html/iot.html">WoT/IoT</a>
+          </li>
+          <li>
+            <a href="../html/me.html">关于我</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div id="main" class="container">
+    <div class="row">
+      <div id="article" class="col-md-9 content-container">
+        <h1 id="web-">Web 性能</h1>
+<blockquote>
+<p>从工程的角度来讲，过度优化有时会造成很高昂的代价. 所以，一个好的工程师，不仅仅知道该怎么优化，更重要的是知道这里该不该优化。——摘自《<a href="https://segmentfault.com/a/1190000005873431">切图崽的自我修养－提高项目加载速度</a>》</p>
+</blockquote>
+<h2 id="-latency-thoughput-">响应时间（latency ）与吞吐量（Thoughput）关系</h2>
+<p><img src="../img/BenchmarkOptimalRate.png" alt=""></p>
+<p>说明，建议采用中位数（Mean）评估系统的响应时间（latency）。 </p>
+<h2 id="-">性能评估：</h2>
+<ol>
+<li><p>定义一个系统的响应时间 latency ，建议是 TP99，以及成功率。汤森路透的定义：99.9%的响应时间必需在1ms之内，平均响应时间在1ms以内，100%的请求成功。</p>
+</li>
+<li><p>在这个响应时间的限制下，找到最高吞吐量。测试用的数据，需要有大中小各种尺寸的数据，并可以混合。最好使用生产线上的测试数据。</p>
+</li>
+<li><p>在这个吞吐量做 Soak Test 。使用第二步测试得到的吞吐量连续7天的不间断的压测系统。然后收集CPU，内存，硬盘/网络IO，等指标，查看系统是否稳定，如 CPU 平稳、内存使用平稳。那么，这个值就是系统的性能。</p>
+</li>
+<li><p>找到系统的极限值。比如：在成功率 100% 情况下（不考虑响应时间长短），系统能坚持10分钟的吞吐量。</p>
+</li>
+<li><p>做 Burst Test 。用第二步得到的吞吐量执行5分钟，然后在第四步得到的极限值执行1分钟，再回到第二步的吞吐量执行5钟，再到第四步的权限值执行1分钟，如此往复个一段时间，比如2天。收集系统数据：CPU、内存、硬盘/网络IO等，观察他们的曲线，以及相应的响应时间，确保系统是稳定的。</p>
+</li>
+<li><p>低吞吐量和网络小包的测试。有时候，在低吞吐量的时候，可能会导致latency上升，比如TCP_NODELAY的参数没有开启会导致latency上升（详见TCP的那些事），而网络小包会导致带宽用不满也会导致性能上不去，所以，性能测试还需要根据实际情况有选择的测试一下这两咱场景。</p>
+</li>
+</ol>
+<p>（注：汤森路透会用第二步得到的吞吐量乘以66.7%来做为系统的软报警线，80%做为系统的硬报警线，而极限值仅仅用来扛突发的peak）</p>
+<h2 id="-">措施</h2>
+<ol>
+<li>首屏所需要的 JS 与 CSS ，编译内联至 HTML 中</li>
+<li>对引入的资源排定优先次序</li>
+<li><p>应用JS缓存来存储。写入 local 的时候，同时在 Cookie 中种下当前所有要缓存内容的版本( MD5 戳)就行。 因为 cookie 是会在同步访问的时候，传送到服务端的，而 local 不会，所以，我们在服务端决定要传送内容，还是传送读取 local 代码。就靠我们种下的 cookie 了</p>
+</li>
+<li><p>DOM缓存（模板和数据）</p>
+</li>
+<li>外链。将所有的JS/CSS等静态文件，通过一个接口全部返回。达到合并外链请求的目的，我们又将这静态文件，也一一缓存到localstorage中。每个文件以自己文件内容生成的版本号为戳，标识自己的唯一性。每次服务端返回页面时，会把当前在服务器上的所有静态文件版本号，返给前端。前端首屏加载完成后，会用这些版本号与local中进行一一对比，发现不一致的 JS/CSS ，会一起发送一个合并请求。这样可以保证每个文件的缓存与版本迭代。同时，也避免了过多的外链。</li>
+<li>使用 iconfont</li>
+<li>不在首屏的就要异步化按需加载</li>
+<li>少量静态文件的域名</li>
+<li>对于小于1k的图片，我们将其变为Base64编码，并融入到CSS中，一起缓存到localstorage中</li>
+<li>AJAX接口最优调用</li>
+<li>DNS 预解析（）</li>
+<li>减少HTTP重定向</li>
+<li>使用CDN（内容分发网络）</li>
+<li>传输压缩过的内容（Gzip压缩）</li>
+<li>去掉不必要的资源</li>
+<li>在客户端缓存资源</li>
+<li>无状态域名</li>
+<li>并行处理请求和响应</li>
+<li>拼合和连接</li>
+<li>服务端写相关信息到 header</li>
+<li>域名分区。页面中非常多请求都是一个域名下资源时，由于浏览器同时只能打开6个连接池，而且每个链接池是对不同域名起作用，所以很多请求一个域名会出现排队现象。如果把这些请求域名分区，让请求并行，从而加快资源下载。</li>
+</ol>
+<h2 id="-">参考</h2>
+<ol>
+<li><a href="http://coolshell.cn/articles/17381.html">性能测试应该怎么做？</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&amp;mid=2247483922&amp;idx=1&amp;sn=0f887e42a4edaf05fa5ca73ea9c792b1">京东前端：三级列表页持续架构优化</a></li>
+<li><a href="https://segmentfault.com/a/1190000005904337">切图崽的自我修养－优化图片加载流程</a></li>
+<li><a href="http://dubbo.io/User+Guide-zh.htm">Dubbo 用户指南</a></li>
+<li><a href="https://segmentfault.com/blog/frontenddriver">前端小站[聊一聊系列]</a></li>
+</ol>
+
+      </div>
+      <div class="col-md-3">
+        <script data-name="TingGe" src="../lib/octocard/bin/octocard.js"></script>
+        <script>
+          OCTOCARD = {
+            name: 'TingGe',
+            reposNum: 3,
+            noIsolated: true,
+            theme: 'night'
+          };
+        </script>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    // 最基础的方法，只需要指定文章内容的 DOM 节点的　id
+    autoc({
+      article: '#article'
+    });
+
+    AutocJS.init({
+      article: '#article'
+    });
+  </script>
+</body>
+
+</html>
