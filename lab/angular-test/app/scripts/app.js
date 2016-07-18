@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Mokoversity',
+    'author': 'Mokoversity Inc',
+    'url': 'https://www.mokoversity.com/'
+  },{
     'name': 'Simple Web of Things (SWoT) Architecture Model',
     'author': 'W3C: Web of Things Interest Group',
     'url': 'http://hollobit.github.io/swot-model/'

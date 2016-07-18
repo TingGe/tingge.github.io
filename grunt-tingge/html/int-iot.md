@@ -10,6 +10,8 @@
 
 ## 演变
 
+![](../img/wot.png)
+
 ### Web 1.0 时代
 
 - WWW 由三部分组成：URL、HTTP、HTML。
@@ -90,3 +92,4 @@ IoT 意味着所有设备能够相互连结，进而形成物联网。而设备�
 - [TinyOS CoAP](http://tinyos.stanford.edu/tinyos-wiki/index.php/CoAP)
 - [WoT 与 IoT](../html/iot.html)
 - [Web of Things (WoT)](../html/wot.html)
+- [The Internet of Things : beyond the hype](https://recherche.orange.com/en/the-internet-of-things-beyond-the-hype/)

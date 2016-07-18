@@ -4,6 +4,10 @@
 
 > 目前，物联网系统主要有两种架构：传统垂直领域 “无线传感器网/IoT” 和基于 Web 技术 “Web Service/SOA” 的 WOT 。WoT 优势在于开放、成本，适用于有成本压力、业务丰富的场景；而传统 “无线传感器网/IoT” 适合高安全性、高实时的场景。
 
+## 物联网连接方案
+
+![](../img/iot-connectivity-solutions.png)
+
 ## ruff.io
 
 Ruff 是一个敏捷开发智能硬件的系统平台。它包含 Ruff SDK、Ruff OS，Rap Registry 等。
@@ -99,3 +103,4 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 - [VRSE](http://vrse.com)：一家虚拟现实（VR）app 的公司
 - [Web of Things (WoT)](../html/wot.html)
 - [互联网与物联网](../html/int-iot.html)
+- [The Internet of Things : beyond the hype](https://recherche.orange.com/en/the-internet-of-things-beyond-the-hype/)

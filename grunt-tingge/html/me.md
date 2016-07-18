@@ -2,6 +2,12 @@
 
 # 关于我
 
+### 标签
+
+前端开发、TCP/IP、Node.js、CSS、浏览器兼容性、Chrome 扩展程序、
+
+### 阅历
+
 - 2009～2011，初涉 Web 开发，混迹于天朝帝都
 
 - 2012～2015，专业型，受教于[@周培公](https://github.com/peigong)，擅互联网广告、JavaScript
