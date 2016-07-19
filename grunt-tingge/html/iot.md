@@ -104,3 +104,4 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 - [Web of Things (WoT)](../html/wot.html)
 - [互联网与物联网](../html/int-iot.html)
 - [The Internet of Things : beyond the hype](https://recherche.orange.com/en/the-internet-of-things-beyond-the-hype/)
+- [物联网世界的前端开发](http://www.zcfy.cc/article/front-end-development-in-an-internet-of-things-world-843.html)
