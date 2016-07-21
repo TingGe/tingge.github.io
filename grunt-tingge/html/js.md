@@ -9,14 +9,16 @@
 
 ### Web MV*/Virtual DOM 
 
-> MVVM 双向绑定、Virtual DOM，都是解决直接操作DOM的“性能墙”； 而 React-Native 属于另类。
+> 基于组件（component-based）的构建方式。
+>
+> MVVM 双向绑定、Virtual DOM，都是解决直接操作DOM的“性能墙”。
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
 3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
 4. React-Native：仅适用业务型场景
 
-### Web Components
+### Web Components/Shadow DOM
 
 > [模板](http://robdodson.me/html5-template-tag-introduction/)、[HTML引入](http://robdodson.me/exploring-html-imports/)和 [Shadow DOM](http://www.html5rocks.com/zh/tutorials/webcomponents/shadowdom-201/)（[简介](http://www.ituring.com.cn/article/177453)、[基础](http://www.ituring.com.cn/article/177461)、[样式](http://www.ituring.com.cn/article/177570)、[样式续](http://www.ituring.com.cn/article/177653)），所有这些技术的终极目标就是**自定义元素（custom elements）**。
 >
@@ -121,6 +123,9 @@
 - [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。大致思路是：[flexible.js](https://github.com/amfe/lib-flexible) 或 [metahandler.js](https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js?utm_source=tuicool&utm_medium=referral)
 - [Houdini：CSS 领域最令人振奋的革新](http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&mid=2651424725&idx=1&sn=c19801bf880556470bb21f8af0cb0225)
 - [前端开发中的一些黑魔法Pt2](http://www.w3cplus.com/css/dirty-tricks-dark-corners-front-end-pt2.html)
+- [christianalfoni - Why we are doing MVC and FLUX wrong](http://www.christianalfoni.com/articles/2015_08_02_Why-we-are-doing-MVC-and-FLUX-wrong)
+- [Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
+- [深入理解React、Redux](http://www.jianshu.com/p/0e42799be566)
 - [ShadowDOM Visualizer](http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
 - [HTML's New Template Tag](http://www.html5rocks.com/zh/tutorials/webcomponents/template/)
 - [HTML5 Template Tag: Introduction](http://robdodson.me/html5-template-tag-introduction/)

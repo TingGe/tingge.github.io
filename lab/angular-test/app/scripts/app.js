@@ -2,14 +2,26 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Angularity',
+    'author': 'Dave Ceddia',
+    'url': 'https://daveceddia.com/'
+  }, {
+    'name': '[译] 为你定制的 React 学习路线',
+    'author': 'DAVE CEDDIA',
+    'url': 'https://gold.xitu.io/entry/578375b85bbb5000610cc247'
+  }, {
+    'name': '如何做到 jQuery-free？',
+    'author': '阮一峰',
+    'url': 'http://www.ruanyifeng.com/blog/2013/05/jquery-free.html'
+  }, {
     'name': 'Mokoversity',
     'author': 'Mokoversity Inc',
     'url': 'https://www.mokoversity.com/'
-  },{
+  }, {
     'name': 'Simple Web of Things (SWoT) Architecture Model',
     'author': 'W3C: Web of Things Interest Group',
     'url': 'http://hollobit.github.io/swot-model/'
-  },{
+  }, {
     'name': 'HTML5 Rocks',
     'author': 'Google',
     'url': 'http://www.html5rocks.com/zh/'
