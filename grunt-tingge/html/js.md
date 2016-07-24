@@ -54,6 +54,8 @@
 
 ## Web 服务 && RESTful API
 
+> Node.js 一类的反应堆模式，不太适合做复杂的事务性业务。
+
 1. [koa2-spider](https://github.com/TingGe/web-spiders)：借 babel 通过 async/await 来支持 ES6+
 2. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
 3. [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app)：通过 co 生成器支持 ES6
