@@ -27,14 +27,14 @@
 
 #### 科技型公司
 
-**特斯拉**、**谷歌**、苹果、BAT、**Uber**
+**特斯拉**、阿里（ yunOS for Car）、**谷歌**、苹果、BAT、**Uber**
 
 #### 传统车企（OEM）
 
 - **奥迪**、**宝马**、奔驰、沃尔沃、**丰田**、马自达、福特等
 - 通用、菲亚特克莱斯勒、本田、日产、三菱、富士重工业、现代、起亚、戴姆勒、大众、保时捷、玛莎拉蒂、捷豹路虎、特斯拉
 
-- 长安 智能互联 SUV CS95，上汽 智能互联 SUV RX5、智能驾驶汽车 MG iGS
+- 上汽 智能互联 [SUV RX5](http://www.roewe.com.cn/roewerx5/)、智能驾驶汽车 MG iGS，长安 智能互联 SUV CS95
 
 
 #### ADAS供应商
@@ -158,6 +158,10 @@ ADAS技术基础是计算机视觉。
 
 ## 参考
 
-1. [深度2016－2025 ADAS 技术及市场趋势报告](http://toutiao.com/i6297598292993769985/)
-2. [报告│48张PPT看懂驾驶辅助系统（ADAS）市场现状](http://m.gzhphb.com/article/17/170084.html)
-3. [【智驾深谈】Mobileye，用单目视觉点亮自动驾驶](http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651983140&idx=2&sn=54aee5f26fb4bdaad673dda9217672fb)
+1. [抢食互联网汽车螃蟹，阿里YunOS向左，安卓向右](http://www.zizhuauto.com/32438.html)
+2. [什么是互联网汽车?](https://wximg.qq.com/wxp/moment/V1WUJ5TIb/html/index.html)：上汽荣威 RX5 微信广告
+3. [无人驾驶国标框架已制定完成：尽量避免对具体技术方案设限](http://www.thepaper.cn/newsDetail_forward_1502432)
+
+4. [深度2016－2025 ADAS 技术及市场趋势报告](http://toutiao.com/i6297598292993769985/)
+5. [报告│48张PPT看懂驾驶辅助系统（ADAS）市场现状](http://m.gzhphb.com/article/17/170084.html)
+6. [【智驾深谈】Mobileye，用单目视觉点亮自动驾驶](http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651983140&idx=2&sn=54aee5f26fb4bdaad673dda9217672fb)
