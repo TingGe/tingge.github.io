@@ -1,6 +1,8 @@
 [TOC]
 
-> 工程实践 + 标准化 => JavaScript 生态
+> “一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 progresive web app 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 [携程-工业聚](https://github.com/Lucifier129)
+>
+> 工程实践 + 标准化 => JavaScript 生态。
 
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
 2. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
@@ -17,6 +19,7 @@
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
 3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
 4. React-Native：仅适用业务型场景
+5. [Redux](http://redux.js.org/)：解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展
 
 ### Web Components/Shadow DOM
 
@@ -54,7 +57,7 @@
 
 ## Web 服务 && RESTful API
 
-> Node.js 一类的反应堆模式，不太适合做复杂的事务性业务。
+> Node.js 一类的反应堆模式，不太适合做复杂的事务型业务。
 
 1. [koa2-spider](https://github.com/TingGe/web-spiders)：借 babel 通过 async/await 来支持 ES6+
 2. [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app)：配置优于编码，业务逻辑必须和传输层进行分离
