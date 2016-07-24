@@ -20,6 +20,7 @@
 ## 找到我
 
 - [新浪微博](http://weibo.com/u/1667946592)
+- [chinatimes 中時電子報微博](http://weibo.chinatimes.com/user/1667946592)
 - [知乎](https://www.zhihu.com/people/xing-rui-ting)
 - [简书](http://www.jianshu.com/users/18aa7bdaf600/timeline)
 - [新浪博客](http://blog.sina.com.cn/tinggebar)
@@ -29,4 +30,5 @@
 - [Google+](https://plus.google.com/u/0/102081580957836818709/)
 - [Twitter](https://twitter.com/Ge168)
 - [SegmentFault](https://segmentfault.com/u/tingge)
+
 
