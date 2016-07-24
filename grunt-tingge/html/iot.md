@@ -8,7 +8,11 @@
 
 ![](../img/iot-connectivity-solutions.png)
 
-## ruff.io
+## 物联网的研发
+
+> 值得注意的是，机制和策略分离。它们看似相近的领域，实则不同。
+
+### ruff.io
 
 Ruff 是一个敏捷开发智能硬件的系统平台。它包含 Ruff SDK、Ruff OS，Rap Registry 等。
 
@@ -16,7 +20,7 @@ Ruff 是一个敏捷开发智能硬件的系统平台。它包含 Ruff SDK、Ruf
 - Ruff OS 兼容多个平台的运行环境，它支持嵌入式 Linux， MCU 单片机领域等。它让您不用关心底层硬件类型，只集中注意力在应用逻辑上，根据您的应用需要消耗的资源选取相应硬件平台。
 - Rap Registry 一个寻找、使用、提交驱动、库，框架等代码的代码共享平台。它可以让开发者大量重复使用已有的代码，避免重复开发的浪费，提升开发效率。
 
-### 参考
+#### 参考
 
 官方
 
@@ -41,7 +45,7 @@ Ruff 是一个敏捷开发智能硬件的系统平台。它包含 Ruff SDK、Ruf
 3. [RuffApps](https://github.com/RuffApps/Apps)：一些 Ruff 应用
 4. [devices.ruff](https://github.com/lerencao/devices.ruff)：Testing devices like button, buzzer, temperature sensor, and lcd
 
-## Jetson TX1 and Jetson TK1
+### Jetson TX1 and Jetson TK1
 
 NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级计算机，其上一代产品Jetson TK1于NVIDIA GTC 2014上亮相。
 
@@ -50,32 +54,32 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 3. [Linux For Tegra](https://developer.nvidia.com/embedded/develop/software)
 4. [JetPack for L4T](https://developer.nvidia.com/embedded/jetpack)
 
-### 库
+#### 库
 
-#### CUDA
+##### CUDA
 
 1. [CUDA TOOLKIT DOCUMENTATION](http://docs.nvidia.com/cuda/)
 2. [CUDA Zone 中国](https://cudazone.nvidia.cn/)
 3. [CUDA Toolkit 下载](https://developer.nvidia.com/cuda-toolkit)
 
-#### VisionWorks
+##### VisionWorks
 
 1. [VisionWorks](https://developer.nvidia.com/embedded/visionworks)：计算机视觉（CV）和图像处理的软件开发包
 2. [workshop 视频：introduction](https://www.brainshark.com/nvidia/vwa-introduction)
 3. [workshop 视频：simple CV tasks with Vision Works](https://www.brainshark.com/nvidia/vwb-simplecv)
 4. [OpenVX](https://www.khronos.org/openvx/)
 
-#### OpenCV
+##### OpenCV
 
 1. [OpenCV](http://opencv.org/)：开源计算机视觉库
 
-### 开发工具
+##### 开发工具
 
 - [Tegra Graphics Debugger](https://developer.nvidia.com/tegra-graphics-debugger)：控制台级调试工具
 - [Tegra System Profiler](https://developer.nvidia.com/tegra-system-profiler)：多核 CPU 采样分析器
 - [PerfKit](https://developer.nvidia.com/nvidia-perfkit)：帮助调试和配置 OpenGL 和 Direct3D 应用程序的性能工具
 
-### Jetson TK1
+#### Jetson TK1
 
 1. [NVIDIA  Jetson TK1 学习与开发](http://blog.csdn.net/frd2009041510/article/details/41901239)
 2. [Jetson TK1的一些事项](jetson-tk1.html)
@@ -83,11 +87,11 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 4. [Jetson TK1 挂载 SanDisk 128G SD 卡](sd-tk1.html)
 5. [Jetson TK1 麦克风 SONY ECM-DS70P 模块](microphone-tk1.html)
 
-### Jetson TX1
+#### Jetson TX1
 
 1. [JetsonHacks](http://jetsonhacks.com/)
 
-### 参考
+#### 参考
 
 1. [Midnight Commander (MC)](https://github.com/MidnightCommander/mc)：文件管理
 2. [CMake](https://github.com/Kitware/CMake)：跨平台的安装（编译）工具
