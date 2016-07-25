@@ -14,6 +14,8 @@
 
 ### ruff.io
 
+Ruff 开发有三个层次：应用开发（不用了解硬件）、驱动开发（能够阅读外设的数据手册）、板卡开发（能够根据数据手册，编写板卡配置）。
+
 Ruff 是一个敏捷开发智能硬件的系统平台。它包含 Ruff SDK、Ruff OS，Rap Registry 等。
 
 - Ruff SDK 工具集，拥有 Rap、Debugger、Console、Simulator 等多种开发工具。
