@@ -5,7 +5,11 @@ myApp.controller('BookCtrl', function BookCtrl($scope) {
     'name': 'Linux就该这么学',
     'author': '刘遄',
     'url': 'http://www.linuxprobe.com/'
-  },{
+  }, {
+    'name': 'HASKELL 趣学指南',
+    'author': 'MnO2',
+    'url': 'http://learnyoua.haskell.sg/content/zh-cn/index.html'
+  }, {
     'name': 'Angularity',
     'author': 'Dave Ceddia',
     'url': 'https://daveceddia.com/'

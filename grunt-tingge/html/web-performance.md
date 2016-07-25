@@ -58,3 +58,4 @@
 3. [切图崽的自我修养－优化图片加载流程](https://segmentfault.com/a/1190000005904337)
 4. [Dubbo 用户指南](http://dubbo.io/User+Guide-zh.htm)
 5. [前端小站[聊一聊系列]](https://segmentfault.com/blog/frontenddriver)
+6. [性能不好怎么办？对着清单撸一遍](http://mp.weixin.qq.com/s?__biz=MzAwNjY4NTQ4MA==&mid=2651174290&idx=1&sn=288518f030801f4d90878e806546487c)
