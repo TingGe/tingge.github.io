@@ -29,7 +29,7 @@
 
 ## libuv 设计图
 
-libuv 时间循环
+libuv 事件循环
 
 ![](../img/libuv-eventloop.png)
 
