@@ -70,15 +70,77 @@
       <div id="article" class="col-md-9 content-container">
         <p>[TOC]</p>
 <blockquote>
-<p>“一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 <a href="https://www.w3.org/2016/Talks/xq-0709-10th/">progresive web app</a> 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 <a href="https://github.com/Lucifier129">携程-工业聚</a></p>
+<p>“一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 <a href="https://www.w3.org/2016/Talks/xq-0709-10th/">progresive web app</a> 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 @<a href="https://github.com/Lucifier129">携程-工业聚</a></p>
 <p>工程实践 + 标准化 =&gt; JavaScript 生态。</p>
 </blockquote>
 <ol>
 <li><a href="https://github.com/TingGe/develop-tools/">匠心之路</a></li>
 <li><a href="http://tingge.github.io/grunt-tingge/img/frontend.png">我的前端技能路线图</a></li>
 </ol>
-<h2 id="-">模块化</h2>
-<h3 id="web-mv-virtual-dom">Web MV*/Virtual DOM</h3>
+<h2 id="web-">Web 前端</h2>
+<blockquote>
+<p>至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>技术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JS 预处理</td>
+<td>Babel + ES6、TypeScript、CoffeeScript</td>
+</tr>
+<tr>
+<td>CSS 预处理</td>
+<td><a href="http://sass-lang.com">Scss/Sass</a>、<a href="http://lesscss.org">Less</a>、<a href="http://learnboost.github.com/stylus">Stylus</a>、<a href="http://postcss.org/">PostCSS</a></td>
+</tr>
+<tr>
+<td>web UI</td>
+<td><a href="http://getbootstrap.com/">Bootstrap</a>、<a href="http://goratchet.com/">Ratchet</a>、<a href="http://ant.design/">Ant Design</a>、<a href="http://foundation.zurb.com/">Foundation</a>、<a href="http://www.materialscss.com/">Materialize</a>、<a href="http://www.material-ui.com/">Material-UI</a>、<a href="https://material.angularjs.org/latest/">Angular Material</a></td>
+</tr>
+<tr>
+<td>DOM库</td>
+<td>zepto、jQuery</td>
+</tr>
+<tr>
+<td>工具库</td>
+<td>lodash、underscore</td>
+</tr>
+<tr>
+<td>模版引擎</td>
+<td>pug、Handlebars、Mustache</td>
+</tr>
+<tr>
+<td>异步编程</td>
+<td>Async、Q、</td>
+</tr>
+<tr>
+<td>模块化</td>
+<td>ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）</td>
+</tr>
+<tr>
+<td>MV* 框架</td>
+<td>React、Vue、Angular、Avalon</td>
+</tr>
+<tr>
+<td>数据层框架</td>
+<td>Redux（redux-thunk/redux-promise）、Relay/graphQL</td>
+</tr>
+<tr>
+<td>Node.js 框架</td>
+<td><a href="https://github.com/expressjs/express">Express</a>、<a href="https://github.com/koajs/koa/tree/v2.x">Koa2</a>、<a href="http://hapijs.com/">Hapi</a></td>
+</tr>
+<tr>
+<td>Node.js ORM 框架</td>
+<td><a href="https://github.com/sequelize/sequelize">Sequelize.js</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">模块化</h3>
+<h4 id="web-mv-virtual-dom">Web MV*/Virtual DOM</h4>
 <blockquote>
 <p>基于组件（component-based）的构建方式。</p>
 <p>MVVM 双向绑定、Virtual DOM，都是解决直接操作DOM的“性能墙”。</p>
@@ -90,7 +152,7 @@
 <li>React-Native：仅适用业务型场景</li>
 <li><a href="http://redux.js.org/">Redux</a>：解决 component -&gt; action -&gt; reducer -&gt; state 单向数据流转问题。特点可预测、可扩展</li>
 </ol>
-<h3 id="web-components-shadow-dom">Web Components/Shadow DOM</h3>
+<h4 id="web-components-shadow-dom">Web Components/Shadow DOM</h4>
 <blockquote>
 <p><a href="http://robdodson.me/html5-template-tag-introduction/">模板</a>、<a href="http://robdodson.me/exploring-html-imports/">HTML引入</a>和 <a href="http://www.html5rocks.com/zh/tutorials/webcomponents/shadowdom-201/">Shadow DOM</a>（<a href="http://www.ituring.com.cn/article/177453">简介</a>、<a href="http://www.ituring.com.cn/article/177461">基础</a>、<a href="http://www.ituring.com.cn/article/177570">样式</a>、<a href="http://www.ituring.com.cn/article/177653">样式续</a>），所有这些技术的终极目标就是<strong>自定义元素（custom elements）</strong>。</p>
 <p>使用 shadow DOM 的时候应该确保内容和表现的分离。</p>
@@ -99,21 +161,21 @@
 <li><a href="http://webcomponents.org/">webcomponentsjs</a></li>
 <li><a href="https://www.polymer-project.org/">Polymer</a></li>
 </ol>
-<h3 id="-">可视</h3>
+<h4 id="-">可视</h4>
 <ol>
 <li><a href="http://tingge.github.io/lab/d3-test/index.html">JavaScript应用领域（d3-test）</a></li>
 </ol>
-<h2 id="-">工程化</h2>
+<h3 id="-">工程化</h3>
 <blockquote>
 <p>工程化的实践：预编译、合并、压缩、打包和包管理。</p>
 </blockquote>
-<h3 id="-">预编译</h3>
+<h4 id="-">预编译</h4>
 <ol>
 <li>模版引擎：pug、Handlebars</li>
 <li>CSS预处理器：PostCSS、Stylus、SaaS、Less</li>
 <li>JavaScript 友好语言：TypeScript、<a href="http://coffeescript.org/">CoffeeScript</a></li>
 </ol>
-<h3 id="-">构建</h3>
+<h4 id="-">构建</h4>
 <ol>
 <li>NPM Scripts</li>
 <li>Webpack</li>
@@ -165,7 +227,7 @@
 <ol>
 <li><a href="https://github.com/elastic/elasticsearch-js">elasticsearch</a>：ElasticSearch 官方的 Node.js 和 浏览器客户端库</li>
 </ol>
-<h3 id="-">数据库</h3>
+<h2 id="-">数据库</h2>
 <table>
 <thead>
 <tr>
@@ -264,6 +326,7 @@
 <li><a href="http://www.christianalfoni.com/articles/2015_08_02_Why-we-are-doing-MVC-and-FLUX-wrong">christianalfoni - Why we are doing MVC and FLUX wrong</a></li>
 <li><a href="https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9">Webpack — The Confusing Parts</a></li>
 <li><a href="http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/">手把手教你基于ES6架构自己的React Boilerplate项目</a></li>
+<li><a href="https://www.npmjs.com/package/react-scripts">Create React App</a>：一个 Facebook 的React Boilerplate项目</li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&amp;mid=2247483973&amp;idx=1&amp;sn=01bcd0a60e8cfa0b93f4e82c7d21a677">让React组件变得可响应</a></li>
 <li><a href="http://www.jianshu.com/p/0e42799be566">深入理解React、Redux</a></li>
 <li><a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html">ShadowDOM Visualizer</a></li>

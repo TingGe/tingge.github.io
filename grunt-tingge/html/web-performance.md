@@ -6,7 +6,7 @@
 
 ![](../img/BenchmarkOptimalRate.png)
 
-说明，建议采用中位数（Mean）评估系统的响应时间（latency）。 
+说明，建议采用中位数（Mean）评估系统的响应时间（latency）。
 
 ## 性能评估：
 
@@ -50,7 +50,6 @@
 20. 服务端写相关信息到 header
 21. 域名分区。页面中非常多请求都是一个域名下资源时，由于浏览器同时只能打开6个连接池，而且每个链接池是对不同域名起作用，所以很多请求一个域名会出现排队现象。如果把这些请求域名分区，让请求并行，从而加快资源下载。
 
-
 ## 参考
 
 1. [性能测试应该怎么做？](http://coolshell.cn/articles/17381.html)
@@ -59,3 +58,5 @@
 4. [Dubbo 用户指南](http://dubbo.io/User+Guide-zh.htm)
 5. [前端小站[聊一聊系列]](https://segmentfault.com/blog/frontenddriver)
 6. [性能不好怎么办？对着清单撸一遍](http://mp.weixin.qq.com/s?__biz=MzAwNjY4NTQ4MA==&mid=2651174290&idx=1&sn=288518f030801f4d90878e806546487c)
+7. [极快的node.js：来自领英（LinkedIn）移动的10个性能技巧](http://ourjs.com/detail/53410e63b189a25b71000001)
+8. [为高负载网络优化 Nginx 和 Node.js](http://www.oschina.net/translate/optimising-nginx-node-js-and-networking-for-heavy-workloads)

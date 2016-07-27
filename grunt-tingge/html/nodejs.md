@@ -41,7 +41,8 @@ libuv 事件循环
 
 ## 参考
 
-1. [[[译\] Node.js 架构概览](https://segmentfault.com/a/1190000005892501)](https://segmentfault.com/a/1190000005892501)
-2. [[Which is correct Node.js architecture?](http://stackoverflow.com/questions/36766696/which-is-correct-node-js-architecture)](http://stackoverflow.com/questions/36766696/which-is-correct-node-js-architecture/37512766#37512766)
-3. [libuv docs](http://docs.libuv.org/)
-4. [libuv 初窥](http://blog.codingnow.com/2012/01/libuv.html)
+1. [[译\] Node.js 架构概览](https://segmentfault.com/a/1190000005892501)
+2. [NodeSchool](http://nodeschool.io/zh-cn)
+3. [Which is correct Node.js architecture?](http://stackoverflow.com/questions/36766696/which-is-correct-node-js-architecture)
+4. [libuv docs](http://docs.libuv.org/)
+5. [libuv 初窥](http://blog.codingnow.com/2012/01/libuv.html)

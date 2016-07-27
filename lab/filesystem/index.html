@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 5 FileSystem API</title>
+  <script src="./filesystem.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <h1>离线存储 HTML 5 FileSystem API </h1>
+  <ul id="filelist"></ul>
+  <script type="text/javascript">
+    var listResults = function(entries) {
+        // Document fragments can improve performance since they're only appended
+        // to the DOM once. Only one browser reflow occurs.
+        var fragment = document.createDocumentFragment();
+
+        entries.forEach(function(entry, i) {
+          var img = entry.isDirectory ? '<img src="icons/folder.png">' :
+            '<img src="icons/File.png">';
+          var li = document.createElement('li');
+          li.innerHTML = [img, '<span>', entry.name, '</span>', ''].join(' ');
+          fragment.appendChild(li);
+        });
+        document.querySelector('#filelist').appendChild(fragment);
+      },
+      onInitFs = function(fs) {
+        /* 文件 log.txt 的增改查删
+          Note: 异步会造成回调陷阱，需采用其它方式解决
+          */
+        var File = FileSystem.File,
+          Directory = FileSystem.Directory;
+        var file = new File(fs, 'log.txt');
+        file.create({
+          create: true
+        }, function() {
+          file.update(["Hello Kevin!", "This is the content of log.txt"], function() {
+            file.review(function() {
+              var txtArea = document.createElement('textarea');
+              txtArea.value = this.result;
+              document.body.appendChild(txtArea);
+              //file.delete();
+            });
+          });
+        });
+
+        // 创建多个目录
+        var dirArr = ["aaa", "aac", "bbb", "ccc"];
+        dirArr.map(function(dirname) {
+          var dirname = new Directory(fs, dirname);
+          dirname.create();
+          //dirname.delete();
+        });
+
+        // 列出当前目录中文件
+        var currentDir = new Directory(fs, "./");
+        currentDir.list(listResults);
+      };
+
+    // 探测离线文件系统剩余存储空间
+    navigator.webkitPersistentStorage.queryUsageAndQuota(function(usage, quota) {
+      console.log('PERSISTENT: ' + usage + '/' + quota + ' - ' + usage / quota + '%');
+    });
+
+    navigator.webkitPersistentStorage.requestQuota(1024 * 1024, function(grantedBytes) {
+      window.requestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
+    }, errorHandler);
+  </script>
+</body>
+
+</html>

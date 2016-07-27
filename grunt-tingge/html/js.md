@@ -1,15 +1,36 @@
 [TOC]
 
-> “一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 [progresive web app](https://www.w3.org/2016/Talks/xq-0709-10th/) 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 [携程-工业聚](https://github.com/Lucifier129)
+> “一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 [progresive web app](https://www.w3.org/2016/Talks/xq-0709-10th/) 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 @[携程-工业聚](https://github.com/Lucifier129)
 >
 > 工程实践 + 标准化 => JavaScript 生态。
 
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
 2. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
 
-## 模块化
 
-### Web MV*/Virtual DOM 
+## Web 前端
+
+> 至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
+
+|                | 技术                                       |
+| -------------- | ---------------------------------------- |
+| JS 预处理         | Babel + ES6、TypeScript、CoffeeScript      |
+| CSS 预处理        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus)、[PostCSS](http://postcss.org/) |
+| web UI         | [Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Ant Design](http://ant.design/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/) |
+| DOM库           | zepto、jQuery                             |
+| 工具库            | lodash、underscore                        |
+| 模版引擎           | pug、Handlebars、Mustache                  |
+| 异步编程           | Async、Q、                                 |
+| 模块化            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |
+| MV* 框架         | React、Vue、Angular、Avalon                 |
+| 数据层框架          | Redux（redux-thunk/redux-promise）、Relay/graphQL |
+| Node.js 框架     | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |
+| Node.js ORM 框架 | [Sequelize.js](https://github.com/sequelize/sequelize) |
+
+
+### 模块化
+
+#### Web MV*/Virtual DOM 
 
 > 基于组件（component-based）的构建方式。
 >
@@ -21,7 +42,7 @@
 4. React-Native：仅适用业务型场景
 5. [Redux](http://redux.js.org/)：解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展
 
-### Web Components/Shadow DOM
+#### Web Components/Shadow DOM
 
 > [模板](http://robdodson.me/html5-template-tag-introduction/)、[HTML引入](http://robdodson.me/exploring-html-imports/)和 [Shadow DOM](http://www.html5rocks.com/zh/tutorials/webcomponents/shadowdom-201/)（[简介](http://www.ituring.com.cn/article/177453)、[基础](http://www.ituring.com.cn/article/177461)、[样式](http://www.ituring.com.cn/article/177570)、[样式续](http://www.ituring.com.cn/article/177653)），所有这些技术的终极目标就是**自定义元素（custom elements）**。
 >
@@ -30,22 +51,22 @@
 1. [webcomponentsjs](http://webcomponents.org/)
 2. [Polymer](https://www.polymer-project.org/)
 
-### 可视
+#### 可视
 
 1. [JavaScript应用领域（d3-test）](http://tingge.github.io/lab/d3-test/index.html)
 
-## 工程化
+### 工程化
 
 > 工程化的实践：预编译、合并、压缩、打包和包管理。
 >
 
-### 预编译
+#### 预编译
 
 1. 模版引擎：pug、Handlebars
 2. CSS预处理器：PostCSS、Stylus、SaaS、Less
 3. JavaScript 友好语言：TypeScript、[CoffeeScript](http://coffeescript.org/)
 
-### 构建
+#### 构建
 
 1. NPM Scripts
 2. Webpack
@@ -97,7 +118,7 @@
 
 1. [elasticsearch](https://github.com/elastic/elasticsearch-js)：ElasticSearch 官方的 Node.js 和 浏览器客户端库
 
-### 数据库
+## 数据库
 
 | 类别            | 数据库                                      | 特点                                      | 应用场景          |
 | ------------- | ---------------------------------------- | --------------------------------------- | ------------- |
@@ -134,6 +155,7 @@
 - [christianalfoni - Why we are doing MVC and FLUX wrong](http://www.christianalfoni.com/articles/2015_08_02_Why-we-are-doing-MVC-and-FLUX-wrong)
 - [Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
 - [手把手教你基于ES6架构自己的React Boilerplate项目](http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/)
+- [Create React App](https://www.npmjs.com/package/react-scripts)：一个 Facebook 的React Boilerplate项目
 - [让React组件变得可响应](http://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247483973&idx=1&sn=01bcd0a60e8cfa0b93f4e82c7d21a677)
 - [深入理解React、Redux](http://www.jianshu.com/p/0e42799be566)
 - [ShadowDOM Visualizer](http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
