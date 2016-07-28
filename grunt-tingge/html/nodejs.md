@@ -4,7 +4,7 @@
 
 ## Node.js
 
-![](../img/nodejs-libuv-libev-libeio.png)
+![](../img/nodejs-libuv-libev-libeio.PNG)
 
 ### 内部顶层组件架构概览
 
@@ -31,7 +31,7 @@
 
 libuv 事件循环
 
-![](../img/libuv-eventloop.png)
+![](../img/libuv-eventloop.PNG)
 
 默认由 4 个线程来处理不同的 I/O 。
 
