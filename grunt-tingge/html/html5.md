@@ -10,10 +10,15 @@
 - Connectivity
 - Graphics，3D & Effects
 - Performance & Integration
-- CSS3 ／ Styling
 - Multimedia
 - Web Socket
 - Web worker
+
+### CSS3 ／ Styling
+
+- [translation](/lab/fullpage.html)
+- transform: rotate | scale | skew | translate |matrix
+- animation
 
 ### Device Access
 
