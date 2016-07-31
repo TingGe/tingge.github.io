@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': '学习CSS布局',
+    'author': '由敏明君和sunnylost翻译',
+    'url': 'http://zh.learnlayout.com/'
+  }, {
     'name': 'Linux就该这么学',
     'author': '刘遄',
     'url': 'http://www.linuxprobe.com/'
