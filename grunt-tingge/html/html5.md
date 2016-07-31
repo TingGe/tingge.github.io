@@ -6,7 +6,7 @@
 
 从标记语言到 Web Application
 
-- Semantics​
+- Semantics
 - Connectivity
 - Graphics，3D & Effects
 - Performance & Integration
@@ -22,6 +22,10 @@
 ### Offline & Storage
 
 - [FileSystem API](/lab/filesystem/index.html)
+- Manifest
+- localStorage & sessionStorage（注意与 cookie 的区别）
+- indexDB
+- webSQL
 
 ## 参考
 

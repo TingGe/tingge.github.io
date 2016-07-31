@@ -3,6 +3,8 @@ CACHE MANIFEST
 
 CACHE:
 
+https://avatars3.githubusercontent.com/u/4074517?v=3&s=40
+http://fonts.googleapis.com/css
 lib/jquery/dist/jquery.min.js
 lib/bootstrap/dist/js/bootstrap.min.js
 lib/bootstrap/dist/css/bootstrap.min.css
@@ -10,7 +12,10 @@ css/carousel.css
 css/dfn.css
 css/landing-page.css
 lib/font-awesome/css/font-awesome.min.css
-
+img/js.png
+img/certification.png
+img/ting-wechat.png
+img/board.svg
 
 NETWORK:
 lab/webrtc-app/index.html
