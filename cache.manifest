@@ -1,0 +1,13 @@
+CACHE MANIFEST
+#v0.11
+
+CACHE:
+
+lib/*.js
+css/*.css
+
+NETWORK:
+lab/*
+
+FALLBACK:
+/ /offline.html
