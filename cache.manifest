@@ -3,11 +3,17 @@ CACHE MANIFEST
 
 CACHE:
 
-lib/*.js
-css/*.css
+lib/jquery/dist/jquery.min.js
+lib/bootstrap/dist/js/bootstrap.min.js
+lib/bootstrap/dist/css/bootstrap.min.css
+css/carousel.css
+css/dfn.css
+css/landing-page.css
+lib/font-awesome/css/font-awesome.min.css
+
 
 NETWORK:
-lab/*
+lab/webrtc-app/index.html
 
 FALLBACK:
 / /offline.html
