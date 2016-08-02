@@ -2,6 +2,14 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'NEC:CSS 方案',
+    'author': '网易（杭州）前端CSS开源项目',
+    'url': 'http://nec.netease.com/'
+  }, {
+    'name': 'NEJ: 跨平台web前端开发框架',
+    'author': '网易前端组工程师',
+    'url': 'http://nej.netease.com/'
+  }, {
     'name': '学习CSS布局',
     'author': '由敏明君和sunnylost翻译',
     'url': 'http://zh.learnlayout.com/'
