@@ -2,6 +2,14 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Flask-Script',
+    'author': 'smurfix',
+    'url': 'https://flask-script.readthedocs.io/en/latest/'
+  }, {
+    'name': '欢迎使用 Flask',
+    'author': '译者 亦念、云尔、atupal',
+    'url': 'http://docs.jinkan.org/docs/flask/index.html'
+  }, {
     'name': 'NEC:CSS 方案',
     'author': '网易（杭州）前端CSS开源项目',
     'url': 'http://nec.netease.com/'
