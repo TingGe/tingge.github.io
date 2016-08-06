@@ -19,6 +19,7 @@
 
 ## 找到我
 
+- [NPM](https://www.npmjs.com/~tingge)
 - [新浪微博](http://weibo.com/u/1667946592)
 - [chinatimes 中時電子報微博](http://weibo.chinatimes.com/user/1667946592)
 - [知乎](https://www.zhihu.com/people/xing-rui-ting)
