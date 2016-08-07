@@ -8,9 +8,9 @@
 
 - Connectivity
 - Performance & Integration
-- Multimedia
-- Web Socket
+- Web Socket/SharedWorker
 - Web worker
+- Geolocation
 
 ### Semantics
 
@@ -21,8 +21,30 @@ header\nav\article\section\aside\footer
 #### 表单
 
 - datalist
-- input 类型 color\date\Datetime-local\Email\Time\Url\Range\Telephone\Number\Search
-- output 
+- input 类型 color\calendar\date\Datetime-local\Email\Time\Url\Range\Telephone\Number\Search
+- input 属性 autocomplete
+- output
+- command
+
+- keygen
+
+#### 文本排版
+
+wbr
+
+### Multimedia
+
+- audio
+- video
+
+```html
+<video width="320" height="240" controls="controls">
+  <source src="forrest_gump.mp4" type="video/mp4" />
+  <source src="forrest_gump.ogg" type="video/ogg" />
+  <track kind="subtitles" src="subs_chi.srt" srclang="zh" label="Chinese">
+  <track kind="subtitles" src="subs_eng.srt" srclang="en" label="English">
+</video>
+```
 
 ### Graphics，3D & Effects
 
@@ -40,9 +62,27 @@ SVG 与 Canvas 区别
 
 ### CSS3 ／ Styling
 
+- CSS选择器（: not(.input)：所有 class 不是“input”的节点）
+
+- 圆角（border-radius:8px）
+
+- 多列布局（multi-column layout）
+
+- 阴影和反射（Shadow\Reflect）
+
+- 文字特效（text-shadow）
+
+- 文字渲染（Text-decoration）
+
+- 线性渐变（gradient）
+
+- 旋转（transform）
+
+- 增加了旋转,缩放,定位,倾斜,动画，多背景（transform: rotate | scale | skew | translate |matrix）
+
+  `transform:\scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation`
+
 - [translation](/lab/fullpage.html)
-- transform: rotate | scale | skew | translate |matrix
-- animation
 
 ### Device Access
 
@@ -50,9 +90,10 @@ SVG 与 Canvas 区别
 
 ### Offline & Storage
 
+- Manifest：缓存机制，而不是离线存储。
+
 - [FileSystem API](/lab/filesystem/index.html)
-- Manifest
-- localStorage & sessionStorage（注意与 cookie 的区别）
+- localStorage & sessionStorage（注意与 cookie 的区别、基于storage事件的页面通信）
 - indexDB
 - webSQL
 

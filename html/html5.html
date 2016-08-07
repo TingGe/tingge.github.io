@@ -75,9 +75,9 @@
 <ul>
 <li>Connectivity</li>
 <li>Performance &amp; Integration</li>
-<li>Multimedia</li>
-<li>Web Socket</li>
+<li>Web Socket/SharedWorker</li>
 <li>Web worker</li>
+<li>Geolocation</li>
 </ul>
 <h3 id="semantics">Semantics</h3>
 <h4 id="-">布局</h4>
@@ -85,9 +85,28 @@
 <h4 id="-">表单</h4>
 <ul>
 <li>datalist</li>
-<li>input 类型 color\date\Datetime-local\Email\Time\Url\Range\Telephone\Number\Search</li>
-<li>output </li>
+<li>input 类型 color\calendar\date\Datetime-local\Email\Time\Url\Range\Telephone\Number\Search</li>
+<li>input 属性 autocomplete</li>
+<li>output</li>
+<li><p>command</p>
+</li>
+<li><p>keygen</p>
+</li>
 </ul>
+<h4 id="-">文本排版</h4>
+<p>wbr</p>
+<h3 id="multimedia">Multimedia</h3>
+<ul>
+<li>audio</li>
+<li>video</li>
+</ul>
+<pre><code class="lang-html">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;forrest_gump.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;forrest_gump.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+  &lt;track kind=&quot;subtitles&quot; src=&quot;subs_chi.srt&quot; srclang=&quot;zh&quot; label=&quot;Chinese&quot;&gt;
+  &lt;track kind=&quot;subtitles&quot; src=&quot;subs_eng.srt&quot; srclang=&quot;en&quot; label=&quot;English&quot;&gt;
+&lt;/video&gt;
+</code></pre>
 <h3 id="graphics-3d-effects">Graphics，3D &amp; Effects</h3>
 <ul>
 <li>Canvas</li>
@@ -125,9 +144,27 @@
 </table>
 <h3 id="css3-styling">CSS3 ／ Styling</h3>
 <ul>
-<li><a href="/lab/fullpage.html">translation</a></li>
-<li>transform: rotate | scale | skew | translate |matrix</li>
-<li>animation</li>
+<li><p>CSS选择器（: not(.input)：所有 class 不是“input”的节点）</p>
+</li>
+<li><p>圆角（border-radius:8px）</p>
+</li>
+<li><p>多列布局（multi-column layout）</p>
+</li>
+<li><p>阴影和反射（Shadow\Reflect）</p>
+</li>
+<li><p>文字特效（text-shadow）</p>
+</li>
+<li><p>文字渲染（Text-decoration）</p>
+</li>
+<li><p>线性渐变（gradient）</p>
+</li>
+<li><p>旋转（transform）</p>
+</li>
+<li><p>增加了旋转,缩放,定位,倾斜,动画，多背景（transform: rotate | scale | skew | translate |matrix）</p>
+<p><code>transform:\scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation</code></p>
+</li>
+<li><p><a href="/lab/fullpage.html">translation</a></p>
+</li>
 </ul>
 <h3 id="device-access">Device Access</h3>
 <ul>
@@ -135,9 +172,11 @@
 </ul>
 <h3 id="offline-storage">Offline &amp; Storage</h3>
 <ul>
-<li><a href="/lab/filesystem/index.html">FileSystem API</a></li>
-<li>Manifest</li>
-<li>localStorage &amp; sessionStorage（注意与 cookie 的区别）</li>
+<li><p>Manifest：缓存机制，而不是离线存储。</p>
+</li>
+<li><p><a href="/lab/filesystem/index.html">FileSystem API</a></p>
+</li>
+<li>localStorage &amp; sessionStorage（注意与 cookie 的区别、基于storage事件的页面通信）</li>
 <li>indexDB</li>
 <li>webSQL</li>
 </ul>

@@ -30,7 +30,7 @@
 
 ### 模块化
 
-#### Web MV*/Virtual DOM 
+#### Web MV*/Virtual DOM
 
 > 基于组件（component-based）的构建方式。
 >
@@ -38,7 +38,7 @@
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
-3. [我的书柜（angular-test）](http://tingge.github.io/lab/angular-test/index.html)
+3. [我的书柜（angular-book）](http://tingge.github.io/lab/angular-book/index.html)
 4. React-Native：仅适用业务型场景
 5. [Redux](http://redux.js.org/)：解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展
 
@@ -165,4 +165,3 @@
 - [HTML5 Template Tag: Introduction](http://robdodson.me/html5-template-tag-introduction/)
 - [Exploring HTML Imports](http://robdodson.me/exploring-html-imports/)
 - [Shadow DOM CSS Cheat Sheet](http://robdodson.me/shadow-dom-css-cheat-sheet/)
-
