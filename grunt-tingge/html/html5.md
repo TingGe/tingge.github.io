@@ -28,9 +28,9 @@ header\nav\article\section\aside\footer
 
 - keygen
 
-#### 文本排版
+#### 文本
 
-wbr
+wbr、ruby
 
 ### Multimedia
 
@@ -64,7 +64,7 @@ SVG 与 Canvas 区别
 
 - CSS选择器（: not(.input)：所有 class 不是“input”的节点）
 
-- 圆角（border-radius:8px）
+- 圆角（border-radius）
 
 - 多列布局（multi-column layout）
 
@@ -72,7 +72,7 @@ SVG 与 Canvas 区别
 
 - 文字特效（text-shadow）
 
-- 文字渲染（Text-decoration）
+- 文字渲染（text-decoration\text-overflow）`text-overflow:ellipsis;`
 
 - 线性渐变（gradient）
 
