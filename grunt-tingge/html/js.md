@@ -15,14 +15,16 @@
 |                | 技术                                       |
 | -------------- | ---------------------------------------- |
 | JS 预处理         | Babel + ES6、TypeScript、CoffeeScript      |
-| CSS 预处理        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus)、[PostCSS](http://postcss.org/) |
+| CSS 预处理        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) |
+| CSS 后处理        | [PostCSS](http://postcss.org/)           |
 | web UI         | [Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Ant Design](http://ant.design/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/) |
 | DOM库           | zepto、jQuery                             |
+| 多点触摸手势库        | [Hammerjs](http://hammerjs.github.io/)、  |
 | 工具库            | lodash、underscore                        |
 | 模版引擎           | pug、Handlebars、Mustache                  |
-| 异步编程           | Async、Q、                                 |
+| 异步编程           | Async、Q                                  |
 | 模块化            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |
-| MV* 框架         | React、Vue、Angular、Avalon                 |
+| MV* 框架         | React、Vue、Angular、[Aurelia](http://aurelia.io/)、Avalon |
 | 数据层框架          | Redux（redux-thunk/redux-promise）、Relay/graphQL |
 | Node.js 框架     | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |
 | Node.js ORM 框架 | [Sequelize.js](https://github.com/sequelize/sequelize) |
@@ -34,13 +36,23 @@
 
 > 基于组件（component-based）的构建方式。
 >
-> MVVM 双向绑定、Virtual DOM，都是解决直接操作DOM的“性能墙”。
+> MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
+
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
+
 3. [我的书柜（angular-book）](http://tingge.github.io/lab/angular-book/index.html)
-4. React-Native：仅适用业务型场景
-5. [Redux](http://redux.js.org/)：解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展
+
+4. Aurelia
+
+5. React-Native：仅适用业务型场景
+
+6. [Redux](http://redux.js.org/)：解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展。
+
+   domain-state 领域模型，比如user，order
+   ui-state 纯 UI 状态，比如一个弹窗的开闭，tab 是否 active
+   aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer上有个“routing”结点，redux-form 也需要自己的结点
 
 #### Web Components/Shadow DOM
 
@@ -63,7 +75,7 @@
 #### 预编译
 
 1. 模版引擎：pug、Handlebars
-2. CSS预处理器：PostCSS、Stylus、SaaS、Less
+2. CSS 处理：
 3. JavaScript 友好语言：TypeScript、[CoffeeScript](http://coffeescript.org/)
 
 #### 构建

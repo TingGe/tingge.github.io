@@ -95,7 +95,11 @@
 </tr>
 <tr>
 <td>CSS 预处理</td>
-<td><a href="http://sass-lang.com">Scss/Sass</a>、<a href="http://lesscss.org">Less</a>、<a href="http://learnboost.github.com/stylus">Stylus</a>、<a href="http://postcss.org/">PostCSS</a></td>
+<td><a href="http://sass-lang.com">Scss/Sass</a>、<a href="http://lesscss.org">Less</a>、<a href="http://learnboost.github.com/stylus">Stylus</a></td>
+</tr>
+<tr>
+<td>CSS 后处理</td>
+<td><a href="http://postcss.org/">PostCSS</a></td>
 </tr>
 <tr>
 <td>web UI</td>
@@ -104,6 +108,10 @@
 <tr>
 <td>DOM库</td>
 <td>zepto、jQuery</td>
+</tr>
+<tr>
+<td>多点触摸手势库</td>
+<td><a href="http://hammerjs.github.io/">Hammerjs</a>、</td>
 </tr>
 <tr>
 <td>工具库</td>
@@ -115,7 +123,7 @@
 </tr>
 <tr>
 <td>异步编程</td>
-<td>Async、Q、</td>
+<td>Async、Q</td>
 </tr>
 <tr>
 <td>模块化</td>
@@ -123,7 +131,7 @@
 </tr>
 <tr>
 <td>MV* 框架</td>
-<td>React、Vue、Angular、Avalon</td>
+<td>React、Vue、Angular、<a href="http://aurelia.io/">Aurelia</a>、Avalon</td>
 </tr>
 <tr>
 <td>数据层框架</td>
@@ -143,14 +151,24 @@
 <h4 id="web-mv-virtual-dom">Web MV*/Virtual DOM</h4>
 <blockquote>
 <p>基于组件（component-based）的构建方式。</p>
-<p>MVVM 双向绑定、Virtual DOM，都是解决直接操作DOM的“性能墙”。</p>
+<p>MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。</p>
 </blockquote>
 <ol>
-<li><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a></li>
-<li><a href="http://tingge.github.io/lab/vue-test/index.html">Hacker news(vue-test)</a></li>
-<li><a href="http://tingge.github.io/lab/angular-book/index.html">我的书柜（angular-book）</a></li>
-<li>React-Native：仅适用业务型场景</li>
-<li><a href="http://redux.js.org/">Redux</a>：解决 component -&gt; action -&gt; reducer -&gt; state 单向数据流转问题。特点可预测、可扩展</li>
+<li><p><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a></p>
+</li>
+<li><p><a href="http://tingge.github.io/lab/vue-test/index.html">Hacker news(vue-test)</a></p>
+</li>
+<li><p><a href="http://tingge.github.io/lab/angular-book/index.html">我的书柜（angular-book）</a></p>
+</li>
+<li><p>Aurelia</p>
+</li>
+<li><p>React-Native：仅适用业务型场景</p>
+</li>
+<li><p><a href="http://redux.js.org/">Redux</a>：解决 component -&gt; action -&gt; reducer -&gt; state 单向数据流转问题。特点可预测、可扩展。</p>
+<p>domain-state 领域模型，比如user，order
+ui-state 纯 UI 状态，比如一个弹窗的开闭，tab 是否 active
+aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer上有个“routing”结点，redux-form 也需要自己的结点</p>
+</li>
 </ol>
 <h4 id="web-components-shadow-dom">Web Components/Shadow DOM</h4>
 <blockquote>
@@ -172,7 +190,7 @@
 <h4 id="-">预编译</h4>
 <ol>
 <li>模版引擎：pug、Handlebars</li>
-<li>CSS预处理器：PostCSS、Stylus、SaaS、Less</li>
+<li>CSS 处理：</li>
 <li>JavaScript 友好语言：TypeScript、<a href="http://coffeescript.org/">CoffeeScript</a></li>
 </ol>
 <h4 id="-">构建</h4>
