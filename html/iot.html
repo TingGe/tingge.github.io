@@ -8,18 +8,20 @@
   <meta name="author" content="TingGe<505253293@163.com>">
   <title>听歌实验室</title>
   <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
-  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="../lib/autocjs/build/autoc.min.css" media="screen">
-  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/lib/autocjs/build/autoc.min.css" media="screen">
+  <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  <link href="../css/landing-page.css" rel="stylesheet">
+  <link href="/css/landing-page.css" rel="stylesheet">
+  <link href="/css/screenshots.css" rel="stylesheet">
   <style media="screen">
     #main {
       padding-top: 55px;
     }
   </style>
-  <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="../lib/autocjs/build/autoc.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/autocjs/build/autoc.min.js"></script>
+  <script type="text/javascript" src="/lib/html2canvas/dist/html2canvas.min.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -48,16 +50,16 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="../html/js.html">JavaScript/NodeJS</a>
+            <a href="/html/js.html">JavaScript/NodeJS</a>
           </li>
           <li>
-            <a href="../index.html#agile">敏捷/项目管理</a>
+            <a href="/index.html#agile">敏捷/项目管理</a>
           </li>
           <li>
-            <a href="../html/iot.html">WoT/IoT</a>
+            <a href="/html/iot.html">WoT/IoT</a>
           </li>
           <li>
-            <a href="../html/me.html">关于我</a>
+            <a href="/html/me.html">关于我</a>
           </li>
         </ul>
       </div>
@@ -178,7 +180,7 @@
 
       </div>
       <div class="col-md-3">
-        <script data-name="TingGe" src="../lib/octocard/bin/octocard.js"></script>
+        <script data-name="TingGe" src="/lib/octocard/bin/octocard.js"></script>
         <script>
           OCTOCARD = {
             name: 'TingGe',
@@ -187,22 +189,12 @@
             theme: 'night'
           };
         </script>
-
       </div>
     </div>
   </div>
-  </div>
-  <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    // 最基础的方法，只需要指定文章内容的 DOM 节点的　id
-    autoc({
-      article: '#article'
-    });
-
-    AutocJS.init({
-      article: '#article'
-    });
-  </script>
+  <a href="javascript:downloadScreenshots()" id="html2canvas" title="截图下载-快照">&nbsp;</a>
+  <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/js/article.js" charset="utf-8"></script>
 </body>
 
 </html>

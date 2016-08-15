@@ -6,7 +6,7 @@ module.exports = grunt => {
     copy: {
       main: {
         files: [{
-          src: ['css/**', 'img/**'],
+          src: ['css/**', 'img/**', 'js/**'],
           dest: '../'
         }, {
           src: ['templates/index.html'],
@@ -20,7 +20,8 @@ module.exports = grunt => {
             'font-awesome/**',
             'jquery/dist/jquery.min.js',
             'autocjs/build/**',
-            'octocard/bin/octocard.js'
+            'octocard/bin/octocard.js',
+            'html2canvas/dist/html2canvas.min.js'
           ],
           dest: '../lib/'
         }]
@@ -70,6 +71,7 @@ module.exports = grunt => {
         files: [
           'doc/*.md',
           'css/*.css',
+          'js/*.js',
           'templates/*.html'
         ]
       }

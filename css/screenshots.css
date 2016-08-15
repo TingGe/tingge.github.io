@@ -1,0 +1,9 @@
+#html2canvas {
+  background: url(/img/screenshots.png) no-repeat center center;
+  width: 55px;
+  height: 44px;
+  position: fixed;
+  bottom: 110px;
+  right: 45px;
+  display: block;
+}
