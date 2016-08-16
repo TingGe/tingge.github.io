@@ -13,8 +13,8 @@
   };
   window.Ting = Ting;
   Ting.Util = {
-    downloadByMetadata: function(data, filename) {
-      var type = filename.toLowerCase().replace(/jpg/i, 'jpeg').match(/png|jpeg|bmp|gif/)[0];
+    downloadByMetadata: function(data, filename, type) {
+      type = type.toLowerCase().replace(/jpg/i, 'jpeg').match(/png|jpeg|bmp|gif/)[0];
       filename = filename + '_' + (new Date()).getTime() + '.' + type;
       data = data.replace('image/' + type, 'image/octet-stream');
       var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
@@ -31,8 +31,9 @@
   // 截屏
   downloadScreenshots = function() {
     html2canvas(document.body).then(function(canvas) {
-      var imgData = canvas.toDataURL('png');
-      Ting.Util.downloadByMetadata(imgData, "tingge.png")
+      var type = 'png',
+        imgData = canvas.toDataURL(type);
+      Ting.Util.downloadByMetadata(imgData, "tingge", type);
     })
   };
   $('#html2canvas').on('click', function() {
