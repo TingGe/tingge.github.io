@@ -60,6 +60,10 @@ SVG 与 Canvas 区别
 | 我们可以用绘制对象的相关事件处理                         | 我们不能使用绘制对象的相关事件处理，因为我们没有他们的参考   |
 | 分辨率无关                                    | 分辨率相关                           |
 
+- Web动画
+
+  requestAnimationFrame
+
 ### CSS3 ／ Styling
 
 - CSS选择器（: not(.input)：所有 class 不是“input”的节点）
@@ -104,5 +108,6 @@ SVG 与 Canvas 区别
 3. [canvas选取图像局部放大](http://www.w3cfuns.com/notes/17770/8da9b817b82e5f1b00555dc6cf79f26e)
 4. [HTML5 手势检测原理和实现](http://qianduan.guru/2016/08/13/gesture_detection_in_html5/)
 5. [H5单页面手势滑屏切换原理](http://www.cnblogs.com/onepixel/p/5300445.html)
-6. [在视屏应用（webcam）中眼球跟踪的JS库 WebGazer.js ](https://webgazer.cs.brown.edu/)
-7. [HTML5中40个最重要的技术点](http://www.techug.com/40-important-html-5-interview-questions-with-answers)
+6.  [HTML5探秘：用requestAnimationFrame优化Web动画](http://www.webhek.com/requestanimationframe/)
+7. [在视屏应用（webcam）中眼球跟踪的JS库 WebGazer.js ](https://webgazer.cs.brown.edu/)
+8. [HTML5中40个最重要的技术点](http://www.techug.com/40-important-html-5-interview-questions-with-answers)
