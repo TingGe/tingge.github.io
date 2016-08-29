@@ -21,7 +21,7 @@
 | DOM库           | zepto、jQuery                             |
 | 多点触摸手势库        | [Hammerjs](http://hammerjs.github.io/)、  |
 | 工具库            | lodash、underscore                        |
-| 模版引擎           | pug、Handlebars、Mustache                  |
+| 模版引擎           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |
 | 异步编程           | Async、Q                                  |
 | 模块化            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |
 | MV* 框架         | React、Vue、Angular、[Aurelia](http://aurelia.io/)、Avalon |
