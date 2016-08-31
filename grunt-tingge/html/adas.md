@@ -158,10 +158,10 @@ ADAS技术基础是计算机视觉。
 
 ## 参考
 
-1. [抢食互联网汽车螃蟹，阿里YunOS向左，安卓向右](http://www.zizhuauto.com/32438.html)
-2. [什么是互联网汽车?](https://wximg.qq.com/wxp/moment/V1WUJ5TIb/html/index.html)：上汽荣威 RX5 微信广告
-3. [无人驾驶国标框架已制定完成：尽量避免对具体技术方案设限](http://www.thepaper.cn/newsDetail_forward_1502432)
-
-4. [深度2016－2025 ADAS 技术及市场趋势报告](http://toutiao.com/i6297598292993769985/)
-5. [报告│48张PPT看懂驾驶辅助系统（ADAS）市场现状](http://m.gzhphb.com/article/17/170084.html)
-6. [【智驾深谈】Mobileye，用单目视觉点亮自动驾驶](http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651983140&idx=2&sn=54aee5f26fb4bdaad673dda9217672fb)
+1. [KITTI](http://www.cvlibs.net/datasets/kitti/)：一个测试交通场景中车辆检测，车辆追踪，语义分割等算法的公开数据集。现在测试自动驾驶等车辆识别算法的，都用这个数据集。
+2. [抢食互联网汽车螃蟹，阿里YunOS向左，安卓向右](http://www.zizhuauto.com/32438.html)
+3. [什么是互联网汽车?](https://wximg.qq.com/wxp/moment/V1WUJ5TIb/html/index.html)：上汽荣威 RX5 微信广告
+4. [无人驾驶国标框架已制定完成：尽量避免对具体技术方案设限](http://www.thepaper.cn/newsDetail_forward_1502432)
+5. [深度2016－2025 ADAS 技术及市场趋势报告](http://toutiao.com/i6297598292993769985/)
+6. [报告│48张PPT看懂驾驶辅助系统（ADAS）市场现状](http://m.gzhphb.com/article/17/170084.html)
+7. [【智驾深谈】Mobileye，用单目视觉点亮自动驾驶](http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651983140&idx=2&sn=54aee5f26fb4bdaad673dda9217672fb)

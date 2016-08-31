@@ -44,11 +44,13 @@
 
 3. [我的书柜（angular-book）](http://tingge.github.io/lab/angular-book/index.html)
 
-4. Aurelia
+4. [Angular 2](../lab/quickstart/)
 
-5. React-Native：仅适用业务型场景
+5. Aurelia
 
-6. [Redux](http://redux.js.org/)：解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展。
+6. React-Native：仅适用业务型场景
+
+7. [Redux](http://redux.js.org/)：解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展。
 
    domain-state 领域模型，比如user，order
    ui-state 纯 UI 状态，比如一个弹窗的开闭，tab 是否 active
