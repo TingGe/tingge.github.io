@@ -1,5 +1,3 @@
-[TOC]
-
 > “一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 [progresive web app](https://www.w3.org/2016/Talks/xq-0709-10th/) 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 @[携程-工业聚](https://github.com/Lucifier129)
 >
 > 工程实践 + 标准化 => JavaScript 生态。
@@ -14,7 +12,7 @@
 
 |                | 技术                                       |
 | -------------- | ---------------------------------------- |
-| JS 预处理         | Babel + ES6、TypeScript、CoffeeScript      |
+| JS 预处理         | Babel + ES6、TypeScript                   |
 | CSS 预处理        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) |
 | CSS 后处理        | [PostCSS](http://postcss.org/)           |
 | web UI         | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Ant Design](http://ant.design/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 |
@@ -24,8 +22,8 @@
 | 模版引擎           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |
 | 异步编程           | Async、Q                                  |
 | 模块化            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |
-| MV* 框架         | React、Vue、Angular、[Aurelia](http://aurelia.io/)、Avalon |
-| 数据层框架          | Redux（redux-thunk/redux-promise）、Relay/graphQL |
+| MV* 框架         | React、Angular、Vue、[Aurelia](http://aurelia.io/)、Avalon |
+| 数据层框架          | Redux（redux-thunk/redux-promise）、Relay/graphQL、[ngrx/store](ngrx/store) |
 | Node.js 框架     | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |
 | Node.js ORM 框架 | [Sequelize.js](https://github.com/sequelize/sequelize) |
 
@@ -157,22 +155,37 @@
 
 ## 附录
 
+### NodeJS
+
 - [Node.js 解析](nodejs.html)
 - [NodeJS 错误处理最佳实践](https://cnodejs.org/topic/55714dfac4e7fbea6e9a2e5d)
 - [10个常见的Node.js面试题](http://www.admin10000.com/document/6715.html)
-- [[浏览器内核的解析和对比](http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html)](http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html)
+
+### 浏览器
+
+- [浏览器内核的解析和对比](http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html)
+
+### HTML & 性能 & CSS
+
 - [HTML 5](html5.html)
 - [Web 性能](web-performance.html)
 - [移动端适配方案](http://ybshare.coding.io/share/flexible.htm)。大致思路是：[flexible.js](https://github.com/amfe/lib-flexible) 或 [metahandler.js](https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js?utm_source=tuicool&utm_medium=referral)
 - [Houdini：CSS 领域最令人振奋的革新](http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&mid=2651424725&idx=1&sn=c19801bf880556470bb21f8af0cb0225)
 - [前端开发中的一些黑魔法Pt2](http://www.w3cplus.com/css/dirty-tricks-dark-corners-front-end-pt2.html)
 - [Sass绘制多边形](http://www.w3cplus.com/preprocessor/creat-css-polygon-wiht-border-and-clip-path-property.html)
-- ​[CSS布局之-水平垂直居中](http://div.io/topic/1155)
+- [CSS布局之-水平垂直居中](http://div.io/topic/1155)
+
+### React & Angular & Vue
+
 - [christianalfoni - Why we are doing MVC and FLUX wrong](http://www.christianalfoni.com/articles/2015_08_02_Why-we-are-doing-MVC-and-FLUX-wrong)
 - [Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
 - [手把手教你基于ES6架构自己的React Boilerplate项目](http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/)
 - [Create React App](https://www.npmjs.com/package/react-scripts)：一个 Facebook 的React Boilerplate项目
 - [让React组件变得可响应](http://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247483973&idx=1&sn=01bcd0a60e8cfa0b93f4e82c7d21a677)
+- [Angular 2 Keynote（September 27，2016）Slider](https://docs.google.com/presentation/d/13cALir2y7UtqrJZLzYPDidsV6OofJmamDqEMKNKz2P0/preview?slide=id.p)
+
+### 原理剖析
+
 - [深入理解React、Redux](http://www.jianshu.com/p/0e42799be566)
 - [ShadowDOM Visualizer](http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
 - [HTML's New Template Tag](http://www.html5rocks.com/zh/tutorials/webcomponents/template/)
