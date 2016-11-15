@@ -1,6 +1,6 @@
-# Angular 
+# Angular 2 
 
-[TOC]
+
 
 
 

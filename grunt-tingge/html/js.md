@@ -10,22 +10,23 @@
 
 > 至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
 
-|                | 技术                                       |
-| -------------- | ---------------------------------------- |
-| JS 预处理         | Babel + ES6、TypeScript                   |
-| CSS 预处理        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) |
-| CSS 后处理        | [PostCSS](http://postcss.org/)           |
-| web UI         | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Ant Design](http://ant.design/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 |
-| DOM库           | zepto、jQuery                             |
-| 多点触摸手势库        | [Hammerjs](http://hammerjs.github.io/)、  |
-| 工具库            | lodash、underscore                        |
-| 模版引擎           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |
-| 异步编程           | Async、Q                                  |
-| 模块化            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |
-| MV* 框架         | React、Angular、Vue、[Aurelia](http://aurelia.io/)、Avalon |
-| 数据层框架          | Redux（redux-thunk/redux-promise）、Relay/graphQL、[ngrx/store](ngrx/store) |
-| Node.js 框架     | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |
-| Node.js ORM 框架 | [Sequelize.js](https://github.com/sequelize/sequelize) |
+|                         | 技术                                       |
+| ----------------------- | ---------------------------------------- |
+| JS 预处理                  | Babel + ES6、TypeScript                   |
+| CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) |
+| CSS 后处理                 | [PostCSS](http://postcss.org/)           |
+| web UI                  | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Ant Design](http://ant.design/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 |
+| DOM库                    | zepto、jQuery                             |
+| 多点触摸手势库                 | [Hammerjs](http://hammerjs.github.io/)、  |
+| 工具库                     | lodash、underscore                        |
+| 模版引擎                    | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |
+| 异步编程                    | Async、Q                                  |
+| 模块化                     | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |
+| MV* 框架                  | React、Angular、Vue、[Aurelia](http://aurelia.io/)、Avalon |
+| 数据层框架                   | Redux（redux-thunk/redux-promise）、Relay/graphQL、[ngrx/store](ngrx/store) |
+| Node.js 框架              | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |
+| Node.js ORM 框架          | [Sequelize.js](https://github.com/sequelize/sequelize) |
+| 通用（Universal）JavaScript | Angular 2有[Universal Angular 2](https://github.com/angular/universal)， Ember有[Fastboot](https://ember-fastboot.com/)， React有[Electrode](http://www.electrode.io/)、[React Server](https://react-server.io/) 和 [Next.js](https://github.com/zeit/next.js) |
 
 
 ### 模块化
@@ -36,7 +37,7 @@
 >
 > MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。
 
-1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)
+1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)：原型项目 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、[express-react-views](https://github.com/reactjs/express-react-views)
 
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
 
@@ -75,7 +76,7 @@
 #### 预编译
 
 1. 模版引擎：pug、Handlebars
-2. CSS 处理：
+2. CSS 处理：[glamor](https://github.com/threepointone/glamor)(inline css for react et al)
 3. JavaScript 友好语言：TypeScript、[CoffeeScript](http://coffeescript.org/)
 
 #### 构建
@@ -182,6 +183,7 @@
 - [手把手教你基于ES6架构自己的React Boilerplate项目](http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/)
 - [Create React App](https://www.npmjs.com/package/react-scripts)：一个 Facebook 的React Boilerplate项目
 - [让React组件变得可响应](http://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247483973&idx=1&sn=01bcd0a60e8cfa0b93f4e82c7d21a677)
+- [Next.js提供了基于React的简单通用JavaScript框架](http://www.infoq.com/cn/news/2016/11/next-js-universal-react-framewor)
 - [Angular 2 Keynote（September 27，2016）Slider](https://docs.google.com/presentation/d/13cALir2y7UtqrJZLzYPDidsV6OofJmamDqEMKNKz2P0/preview?slide=id.p)
 
 ### 原理剖析
