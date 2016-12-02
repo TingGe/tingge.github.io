@@ -12,8 +12,8 @@
 
 |                         | 技术                                       | React系                                   |
 | ----------------------- | ---------------------------------------- | ---------------------------------------- |
-| JS 预处理                  | TypeScript                               | Babel + ES6                              |
-| CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) |                                          |
+| JS 预处理                  | TypeScript、[Flow](https://flowtype.org/) | Babel + ES6                              |
+| CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus)、 [css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components) |                                          |
 | CSS 后处理                 | [PostCSS](http://postcss.org/)           |                                          |
 | web UI                  | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 | [Ant Design](http://ant.design/)、        |
 | DOM库                    | zepto、jQuery                             |                                          |
@@ -175,6 +175,7 @@
 - [前端开发中的一些黑魔法Pt2](http://www.w3cplus.com/css/dirty-tricks-dark-corners-front-end-pt2.html)
 - [Sass绘制多边形](http://www.w3cplus.com/preprocessor/creat-css-polygon-wiht-border-and-clip-path-property.html)
 - [CSS布局之-水平垂直居中](http://div.io/topic/1155)
+- [H5项目常见问题汇总及解决方案](http://www.open-open.com/lib/view/open1449325854077.html)
 
 ### React & Angular & Vue
 
