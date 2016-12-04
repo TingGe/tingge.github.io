@@ -13,9 +13,9 @@
 |                         | 技术                                       | React系                                   |
 | ----------------------- | ---------------------------------------- | ---------------------------------------- |
 | JS 预处理                  | TypeScript、[Flow](https://flowtype.org/) | Babel + ES6                              |
-| CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus)、 [css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components) |                                          |
+| CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) | [css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components) |
 | CSS 后处理                 | [PostCSS](http://postcss.org/)           |                                          |
-| web UI                  | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 | [Ant Design](http://ant.design/)、        |
+| web UI                  | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 | [Ant Design](http://ant.design/)、Fusion（Next/Mext） |
 | DOM库                    | zepto、jQuery                             |                                          |
 | 多点触摸手势库                 | [Hammerjs](http://hammerjs.github.io/)、  |                                          |
 | 工具库                     | lodash、underscore                        |                                          |
@@ -23,6 +23,7 @@
 | 异步编程                    | Async、Q                                  |                                          |
 | 模块化                     | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |                                          |
 | MV* 框架                  | Angular、Vue、[Aurelia](http://aurelia.io/)、Avalon | React                                    |
+| 路由库                     |                                          | [React Router](https://github.com/ReactTraining/react-router) |
 | 数据层框架                   | [ngrx/store](ngrx/store)                 | Redux（redux-thunk/redux-promise）、Relay/graphQL |
 | Node.js 框架              | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |                                          |
 | Node.js ORM 框架          | [Sequelize.js](https://github.com/sequelize/sequelize) |                                          |
