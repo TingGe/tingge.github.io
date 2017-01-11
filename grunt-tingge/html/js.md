@@ -16,17 +16,17 @@
 | CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) | sass-loader、style-loader、css-loader、[css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components)、[cssnano](https://github.com/ben-eb/cssnano) |
 | CSS 后处理                 | [PostCSS](http://postcss.org/)           |                                          |
 | web UI                  | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 | [Ant Design](http://ant.design/)、Fusion（Next/Mext） |
+| UI 组件                   | spectrum(Colorpicker)、                   |                                          |
 | DOM库                    | zepto、jQuery                             | rect-dom                                 |
 | 多点触摸手势库                 | [Hammerjs](http://hammerjs.github.io/)、  |                                          |
-| 工具库                     | lodash、underscore                        | fast-click                               |
+| 工具库                     | lodash、underscore                        | [Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、 |
 | 模版引擎                    | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |
 | 异步编程                    | Async、Q                                  |                                          |
 | 模块化                     | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |                                          |
 | MV* 框架                  | Angular、Vue、[Aurelia](http://aurelia.io/)、Avalon | React                                    |
 | 表单验证                    |                                          |                                          |
-| 路由库                     |                                          | [react-router](https://github.com/ReactTraining/react-router) |
+| 路由库                     |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux |
 | 数据层框架                   | [ngrx/store](ngrx/store)                 | Redux（redux-thunk/redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)）、Relay/graphQL |
-| Fetch（串行、并行）            |                                          |                                          |
 | Node.js 框架              | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |                                          |
 | Node.js ORM 框架          | [Sequelize.js](https://github.com/sequelize/sequelize) |                                          |
 | 通用（Universal）JavaScript | Angular 2有[Universal Angular 2](https://github.com/angular/universal)， Ember有[Fastboot](https://ember-fastboot.com/) | React有[Electrode](http://www.electrode.io/)、[React Server](https://react-server.io/) 和 [Next.js](https://github.com/zeit/next.js) |

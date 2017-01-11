@@ -12,3 +12,4 @@
 1. [react-babel-webpack-boilerplate](https://github.com/ruanyf/react-babel-webpack-boilerplate)
 2. [react-router-redux](https://github.com/reactjs/react-router-redux/tree/master/examples/basic)
 3. [Redux 中文文档](http://github.com/camsong/redux-in-chinese)
+4. [React Router 使用教程](http://www.ruanyifeng.com/blog/2016/05/react_router.html)
