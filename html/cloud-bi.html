@@ -73,33 +73,74 @@
   <div id="main" class="container">
     <div class="row">
       <div id="article" class="col-md-9 content-container">
-        <h1 id="jetson-tk1-">Jetson TK1的一些事项</h1>
-<p>[TOC]</p>
+        <h1 id="-cloud-bi-">云商业智能(Cloud BI)</h1>
 <blockquote>
-<p>自林夕整理总结</p>
+<p>云BI产品和主要前端技术研究。</p>
 </blockquote>
-<p>系统一开始预装的精简版的 Ubuntu 14.04，按照普通 linux 的使用方法使用就好了。好多东西可以参考 elinux.org 上的 <a href="http://elinux.org/Jetson_TK1">Jetson TK1</a> 页面的资料。</p>
-<h2 id="0-">0. 前期的一些处理</h2>
-<p>由于是精简版的 Ubuntu , <code>libglx.so</code> 和官方库的不一样, 不能直接用官方库覆盖. 于是需要保护这个库，可以运行 <code>sudo apt-mark hold xserver-xorg-core</code> 来实现. 之后更新的时候也没有什么问题了。</p>
-<p>据说上述问题只有在 L4T R19.x 才会出现，如果板子上的系统大于这个版本，似乎可以不用管。</p>
-<h2 id="1-">1. 安装显卡驱动</h2>
-<p><code>HOME</code> 目录下有一个安装显卡驱动的文件夹, 用 sudo 权限运行里面的安装脚本就好了. 之后重启就可以使用图形界面了. 似乎板子上的显卡驱动是 L4T R19.2 的, 有需要的话可以从官网下载一个 L4T R21.2 的驱动, 这样就可以运行 CUDA 6.5.</p>
-<h2 id="2-cuda">2. 安装CUDA</h2>
-<p>可以参考 elinux.org 的 <a href="http://elinux.org/Jetson/Installing_CUDA">Installing CUDA</a> 页面, 选择CUDA版本的时候需要和安装的显卡驱动匹配. 大概就是 CUDA 6.0 和 R19.x ，CUDA 6.5 和 RT21.x 吧。</p>
-<p>官网直接下载比较慢，可以在本地PC机上下载完之后, 用U盘拷过去。</p>
-<p>运行<code>nvcc -V</code>查看是否安装成功。</p>
-<h2 id="3-cuda-">3. 运行CUDA的例程</h2>
-<p>安装完 CUDA 之后，运行 <code>cuda-install-samples-6.5.sh /home/ubuntu</code> 来安装 CUDA 例程.</p>
-<p>然后进去 Sample 的目录, 运行 <code>make</code> , 等个很久之后所有例程就都编译好了。</p>
-<p>由于编译速度非常慢, 建议挑需要运行的例程进行 make。 一开始运行例程的时候要用 sudo 权限, 否则可能不能捕捉到显卡驱动（应该会出现错误305）。</p>
-<h2 id="4-opencv">4. 安装OpenCV</h2>
-<p>按照官方给的 <a href="http://developer.download.nvidia.com/embedded/OpenCV/L4T_21.1/README.txt">README</a> 一步一步来之后, 发现会有一些包无法找到, 目前还没有解决, 不知道要怎么搞。</p>
-<h2 id="5-">5. 搭建交叉编译环境</h2>
-<p>由于直接在板子上编译非常慢, 通常做法就是在本地机子搭建一个交叉编译环境. 在2和3部分中也有交叉编译需要的 CUDA 和 OpenCV 安装的教程. </p>
-<p>同时官方似乎给了一个 <a href="https://developer.nvidia.com/jetpack-tk1">JetPack TK1</a> ，可以按照上面的步骤一步一步走。还没有尝试过，也不知道行不行。</p>
+<h2 id="-">定义</h2>
+<p>从应用上来讲，BI（BusinessIntelligence）即商业智能，它是一套完整的解决方案，用来将企业中现有的数据进行有效的整合，快速准确的提供报表并提出决策依据，帮助企业做出明智的业务经营决策。</p>
+<p>云商业智能(Cloud BI)在数据架构中处于前端分析的位置，其核心作用是对获取数据的多维度分析、数据的切片、数据的上钻和下钻、cube等。通过ETL数据抽取、转化形成一个完整的数据仓库、然后对数据仓库的数据进行抽取，而后是商业智能的前端分析和展示。</p>
+<h2 id="-">产品</h2>
+<h3 id="-">商业</h3>
+<table>
+<thead>
+<tr>
+<th>竞品</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.tableau.com/">Tableau</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://global.qlik.com/cn">Qlik</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.bdp.cn/home.html">海致BDP商业数据平台</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://powerbi.microsoft.com/zh-cn/">Power BI</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://zhugeio.com/">诸葛</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">开源</h3>
+<table>
+<thead>
+<tr>
+<th>竞品</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pentaho</td>
+<td>以工作流为核心的、强调面向解决方案而非工具组件的、基于java平台的商业智能(Business Intelligence)套件。包括一个 web server 平台和几个工具软件：报表、分析、图表、数据集成、数据挖掘等，可以说包括了商务智能的方方面面。</td>
+</tr>
+<tr>
+<td>Jaspersoft</td>
+<td>提供了灵活、可嵌入的商业智能工具</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">主要前端技术</h2>
+<h4 id="-">数据可视化</h4>
+<h4 id="-">数字处理</h4>
+<ul>
+<li>数字运算</li>
+<li>数字格式转换</li>
+</ul>
 <h2 id="-">参考</h2>
 <ul>
-<li><a href="http://elinux.org/Jetson/Cameras#MIPI_CSI-2_sensors_known_to_be_working">MIPI CSI-2 sensors known to be working</a></li>
+<li>知乎：<a href="https://www.zhihu.com/question/20540118">大数据、云计算和商业智能这三者的关系到底如何，以后的发展前景有什么看法？</a></li>
+<li><a href="http://mt.sohu.com/20160506/n448010261.shtml">国内经典BI系统架构分析</a></li>
 </ul>
 
       </div>
