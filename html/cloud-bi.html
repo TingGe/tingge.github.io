@@ -74,12 +74,15 @@
     <div class="row">
       <div id="article" class="col-md-9 content-container">
         <h1 id="-cloud-bi-">云商业智能(Cloud BI)</h1>
+<p>本文主要是我个人的一些思考，如需转载请标明<a href="http://tingge.github.io/html/cloud-bi.html">本文引用地址</a>和<a href="http://tingge.github.io/html/me.html">听歌</a>签名。资料采集自互联网，如有侵权，请联系我删除。</p>
 <blockquote>
 <p>云BI产品和主要前端技术研究。</p>
 </blockquote>
 <h2 id="-">定义</h2>
 <p>从应用上来讲，BI（BusinessIntelligence）即商业智能，它是一套完整的解决方案，用来将企业中现有的数据进行有效的整合，快速准确的提供报表并提出决策依据，帮助企业做出明智的业务经营决策。</p>
-<p>云商业智能(Cloud BI)在数据架构中处于前端分析的位置，其核心作用是对获取数据的多维度分析、数据的切片、数据的上钻和下钻、cube等。通过ETL数据抽取、转化形成一个完整的数据仓库、然后对数据仓库的数据进行抽取，而后是商业智能的前端分析和展示。</p>
+<p>云商业智能(Cloud BI)在数据架构中处于前端分析的位置，其核心作用是对获取数据的多维度分析、数据的切片、数据的上钻和下钻、cube等。通过ETL数据抽取、转化形成一个完整的数据仓库、然后对数据仓库的数据进行抽取，而后是商业智能的前端分析和展示。——出自“<a href="https://www.zhihu.com/people/mmiaojjun/answers">miao君</a>”</p>
+<h3 id="-">关键词</h3>
+<p>数据建模、数据源、数据集、OLAP、雪花模型、星型模型、多维分析、维度、度量、上钻、下钻、cube、Dashboard、Report</p>
 <h2 id="-">产品</h2>
 <h3 id="-">商业</h3>
 <table>
@@ -130,8 +133,25 @@
 </tr>
 </tbody>
 </table>
+<p>分析：</p>
+<p>从数据角度来看，主要涵盖<strong>业务数据</strong>和用户使用产品的（脱敏后的）行为数据。一般来讲，对<strong>用户行为数据</strong>利用越充分，产品越智能。</p>
+<p> 从收费和市场占有量的角度来看，免费固然有利于工具型产品的推广，但<strong>产品稀缺性</strong>可决定是否收费。能适应主要目标用户群体的<strong>场景</strong>，是反哺产品成长的关键。</p>
 <h2 id="-">主要前端技术</h2>
+<p>除常规的登录授权、权限管理、消息通知、向导（帮助手册）、数据建模、反馈和第三方集成外，以下几项是商业智能(BI)系统的主要功能：</p>
 <h4 id="-">数据可视化</h4>
+<ul>
+<li>跨屏（PC、Mobile）</li>
+<li>大屏</li>
+</ul>
+<h4 id="-">报表</h4>
+<ul>
+<li>电子表格：<a href="https://jspreadsheets.com/">JSpreadsheets</a></li>
+</ul>
+<h4 id="-">数据分享</h4>
+<ul>
+<li>邮件（newsletter）</li>
+<li>短消息（message）</li>
+</ul>
 <h4 id="-">数字处理</h4>
 <ul>
 <li>数字运算</li>
