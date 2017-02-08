@@ -56,6 +56,7 @@
 
 - 邮件（newsletter）
 - 短消息（message）
+- 二维码
 
 #### 数字处理
 
