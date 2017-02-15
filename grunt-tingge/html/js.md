@@ -10,7 +10,7 @@
 
 > 至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
 
-|                         | 技术                                       | React系                                   | 微信小应用 | *Progressive* *Web* App | 支付宝小程序 |
+|                         | 技术                                       | React系(Webpack+ React + Redux)           | 微信小应用 | *Progressive* *Web* App | 支付宝小程序 |
 | ----------------------- | ---------------------------------------- | ---------------------------------------- | ----- | ----------------------- | ------ |
 | JS 预处理                  | TypeScript、[Flow](https://flowtype.org/) | Babel + ES6                              |       |                         |        |
 | CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) | sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader)、css-loader、[css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components)、[cssnano](https://github.com/ben-eb/cssnano) |       |                         |        |
@@ -25,14 +25,14 @@
 | 异步编程                    | Async、Q                                  |                                          |       |                         |        |
 | 模块化                     | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |                                          |       |                         |        |
 | MV* 框架                  | Angular、Vue、[Aurelia](http://aurelia.io/)、Avalon | React                                    |       |                         |        |
+| Pure Render             |                                          | pure-render-decorator                    |       |                         |        |
 | 表单验证                    |                                          |                                          |       |                         |        |
-| 路由库                     |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux、[junctions](https://github.com/jamesknelson/junctions) |       |                         |        |
-| 数据层框架                   | [ngrx/store](ngrx/store)                 | Redux（redux-thunk/redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)）、Relay/graphQL、[tectonic](https://github.com/tonyhb/tectonic) |       |                         |        |
+| 路由控制                    |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux、[junctions](https://github.com/jamesknelson/junctions) |       |                         |        |
+| 应用状态管理                  | [ngrx/store](ngrx/store)                 | Redux（redux-thunk/redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)）、[redux-immutablejs](https://github.com/indexiatech/redux-immutablejs)、Immutable.js、seamless-immutable、  [mori](https://github.com/swannodette/mori)、[cortex](https://github.com/mquan/cortex) |       |                         |        |
+| 数据层框架                   |                                          | Relay/graphQL、[tectonic](https://github.com/tonyhb/tectonic) |       |                         |        |
 | Node.js 框架              | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |                                          |       |                         |        |
 | Node.js ORM 框架          | [Sequelize.js](https://github.com/sequelize/sequelize) |                                          |       |                         |        |
 | 通用（Universal）JavaScript | Angular 2有[Universal Angular 2](https://github.com/angular/universal)， Ember有[Fastboot](https://ember-fastboot.com/) | React有[Electrode](http://www.electrode.io/)、[React Server](https://react-server.io/) 和 [Next.js](https://github.com/zeit/next.js) |       |                         |        |
-|                         |                                          |                                          |       |                         |        |
-|                         |                                          |                                          |       |                         |        |
 
 
 ### 模块化
