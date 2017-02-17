@@ -84,6 +84,7 @@
 <h2 id="web-">Web 前端</h2>
 <blockquote>
 <p>至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。</p>
+<p>截止17年初，主流的三大框架 React系、Angular 2系、Vue系 相互融合。其他类似框架或局部功能替代类库不足成事。</p>
 </blockquote>
 <table>
 <thead>
@@ -98,8 +99,8 @@
 </thead>
 <tbody>
 <tr>
-<td>JS 预处理</td>
-<td>TypeScript、<a href="https://flowtype.org/">Flow</a></td>
+<td>JS 编译器</td>
+<td>TypeScript、<a href="https://flowtype.org/">Flow</a>、Coffee</td>
 <td>Babel + ES6</td>
 <td></td>
 <td></td>
@@ -124,7 +125,7 @@
 <tr>
 <td>web UI</td>
 <td><a href="http://masonry.desandro.com/">Masonry</a>、<a href="http://getbootstrap.com/">Bootstrap</a>、<a href="http://goratchet.com/">Ratchet</a>、<a href="http://foundation.zurb.com/">Foundation</a>、<a href="http://www.materialscss.com/">Materialize</a>、<a href="http://www.material-ui.com/">Material-UI</a>、<a href="https://material.angularjs.org/latest/">Angular Material</a>、</td>
-<td><a href="http://ant.design/">Ant Design</a>、Fusion（Next/Mext）、<a href="https://github.com/hyperapp/hyperapp">hyperapp</a></td>
+<td><a href="http://ant.design/">Ant Design</a>、Fusion Design（Next/Mext）、<a href="https://github.com/hyperapp/hyperapp">hyperapp</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -164,7 +165,7 @@
 <tr>
 <td>工具库</td>
 <td>lodash、underscore、<a href="https://github.com/nmrugg/LZMA-JS/">LZMA-JS</a>、<a href="https://github.com/brix/crypto-js">crypto-js</a></td>
-<td><a href="http://nosir.github.io/cleave.js/">Cleave.js</a>（格式化）、Moment、<a href="https://github.com/adamwdraper/Numeral-js">Numeral</a>、<a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a></td>
+<td><a href="http://nosir.github.io/cleave.js/">Cleave.js</a>（格式化）、Moment、<a href="https://github.com/adamwdraper/Numeral-js">Numeral</a>、<a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a>、<a href="https://github.com/JedWatson/classnames">classnames</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -194,9 +195,17 @@
 <td></td>
 </tr>
 <tr>
-<td>MV* 框架</td>
-<td>Angular、Vue、<a href="http://aurelia.io/">Aurelia</a>、Avalon</td>
+<td>UI 层轻量级解决方案</td>
+<td>Vue、Inferno、Preact</td>
 <td>React</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MV* 框架(路由、数据获取、状态管理)</td>
+<td>Angular、<a href="http://aurelia.io/">Aurelia</a>、Avalon、Ember</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -236,14 +245,14 @@
 <tr>
 <td>数据层框架</td>
 <td></td>
-<td>Relay/graphQL、<a href="https://github.com/tonyhb/tectonic">tectonic</a></td>
+<td>Relay/GraphQL、<a href="https://github.com/tonyhb/tectonic">tectonic</a></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>Node.js 框架</td>
-<td><a href="https://github.com/expressjs/express">Express</a>、<a href="https://github.com/koajs/koa/tree/v2.x">Koa2</a>、<a href="http://hapijs.com/">Hapi</a></td>
+<td><a href="https://github.com/expressjs/express">Express</a>、<a href="https://github.com/koajs/koa/tree/v2.x">Koa2</a>、<a href="http://hapijs.com/">Hapi</a>、 Feathers、 Now(“微服务”)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -251,7 +260,7 @@
 </tr>
 <tr>
 <td>Node.js ORM 框架</td>
-<td><a href="https://github.com/sequelize/sequelize">Sequelize.js</a></td>
+<td><a href="https://github.com/sequelize/sequelize">Sequelize.js</a>、 Nodal（PostgreSQL）、 Keystone（MongoDB）、 Loopback</td>
 <td></td>
 <td></td>
 <td></td>
@@ -260,7 +269,15 @@
 <tr>
 <td>通用（Universal）JavaScript</td>
 <td>Angular 2有<a href="https://github.com/angular/universal">Universal Angular 2</a>， Ember有<a href="https://ember-fastboot.com/">Fastboot</a></td>
-<td>React有<a href="http://www.electrode.io/">Electrode</a>、<a href="https://react-server.io/">React Server</a> 和 <a href="https://github.com/zeit/next.js">Next.js</a></td>
+<td><a href="http://www.electrode.io/">Electrode</a>、<a href="https://react-server.io/">React Server</a> 和 <a href="https://github.com/zeit/next.js">Next.js</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>静态网页生成器（SSG）</td>
+<td>Gitlab pages、 Netlify、 Surge、 Now static、 Hexo</td>
+<td>Gatsby</td>
 <td></td>
 <td></td>
 </tr>
@@ -273,7 +290,7 @@
 <p>MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。</p>
 </blockquote>
 <ol>
-<li><p><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a>：原型项目 <a href="https://www.infoq.com/news/2016/07/create-react-app-cli-tool">create-react-app</a>、<a href="https://github.com/reactjs/express-react-views">express-react-views</a></p>
+<li><p><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a>：模板生成器 <a href="https://www.infoq.com/news/2016/07/create-react-app-cli-tool">create-react-app</a>、React boilerplate、<a href="https://github.com/reactjs/express-react-views">express-react-views</a>、</p>
 </li>
 <li><p><a href="http://tingge.github.io/lab/vue-test/index.html">Hacker news(vue-test)</a></p>
 </li>

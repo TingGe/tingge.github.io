@@ -9,30 +9,34 @@
 ## Web 前端
 
 > 至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
+>
+> 截止17年初，主流的三大框架 React系、Angular 2系、Vue系 相互融合。其他类似框架或局部功能替代类库不足成事。
 
 |                         | 技术                                       | React系(Webpack+ React + Redux)           | 微信小应用 | *Progressive* *Web* App | 支付宝小程序 |
 | ----------------------- | ---------------------------------------- | ---------------------------------------- | ----- | ----------------------- | ------ |
-| JS 预处理                  | TypeScript、[Flow](https://flowtype.org/) | Babel + ES6                              |       |                         |        |
+| JS 编译器                  | TypeScript、[Flow](https://flowtype.org/)、Coffee | Babel + ES6                              |       |                         |        |
 | CSS 预处理                 | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) | sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader)、css-loader、[css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components)、[cssnano](https://github.com/ben-eb/cssnano) |       |                         |        |
 | CSS 后处理                 | [PostCSS](http://postcss.org/)           |                                          |       |                         |        |
-| web UI                  | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 | [Ant Design](http://ant.design/)、Fusion（Next/Mext）、[hyperapp](https://github.com/hyperapp/hyperapp) |       |                         |        |
+| web UI                  | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 | [Ant Design](http://ant.design/)、Fusion Design（Next/Mext）、[hyperapp](https://github.com/hyperapp/hyperapp) |       |                         |        |
 | UI 组件                   | [spectrum](https://github.com/bgrins/spectrum)(Colorpicker)、[jquery-qrcode](https://github.com/jeromeetienne/jquery-qrcode)、[chosen](https://github.com/harvesthq/chosen/)、[CodeMirror](https://github.com/codemirror/codemirror)、 [jPicker](http://johndyer.name/photoshop-like-javascript-color-picker/)、[paginationjs](https://github.com/superRaytin/paginationjs)、[lz-string](https://github.com/pieroxy/lz-string/)、[PapaParse](https://github.com/mholt/PapaParse)、[particles.js](https://github.com/VincentGarreau/particles.js) | [handsontable](https://github.com/handsontable) |       |                         |        |
 | DOM库                    | zepto、jQuery                             | rect-dom                                 |       |                         |        |
 | HTML 5兼容旧浏览器            | [html5shiv](https://github.com/aFarkas/html5shiv)、[object-observe](https://github.com/MaxArt2501/object-observe)（Object.observe polyfill）、 |                                          |       |                         |        |
 | 多点触摸手势库                 | [Hammerjs](http://hammerjs.github.io/)、[jGestures](http://jgestures.codeplex.com/)、 |                                          |       |                         |        |
-| 工具库                     | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js) | [Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart) |       |                         |        |
+| 工具库                     | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js) | [Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames) |       |                         |        |
 | 模版引擎                    | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |       |                         |        |
 | 异步编程                    | Async、Q                                  |                                          |       |                         |        |
 | 模块化                     | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD） |                                          |       |                         |        |
-| MV* 框架                  | Angular、Vue、[Aurelia](http://aurelia.io/)、Avalon | React                                    |       |                         |        |
+| UI 层轻量级解决方案             | Vue、Inferno、Preact                       | React                                    |       |                         |        |
+| MV* 框架(路由、数据获取、状态管理)    | Angular、[Aurelia](http://aurelia.io/)、Avalon、Ember |                                          |       |                         |        |
 | Pure Render             |                                          | pure-render-decorator                    |       |                         |        |
 | 表单验证                    |                                          |                                          |       |                         |        |
 | 路由控制                    |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux、[junctions](https://github.com/jamesknelson/junctions) |       |                         |        |
 | 应用状态管理                  | [ngrx/store](ngrx/store)                 | Redux（redux-thunk/redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)）、[redux-immutablejs](https://github.com/indexiatech/redux-immutablejs)、Immutable.js、seamless-immutable、  [mori](https://github.com/swannodette/mori)、[cortex](https://github.com/mquan/cortex) |       |                         |        |
-| 数据层框架                   |                                          | Relay/graphQL、[tectonic](https://github.com/tonyhb/tectonic) |       |                         |        |
-| Node.js 框架              | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/) |                                          |       |                         |        |
-| Node.js ORM 框架          | [Sequelize.js](https://github.com/sequelize/sequelize) |                                          |       |                         |        |
-| 通用（Universal）JavaScript | Angular 2有[Universal Angular 2](https://github.com/angular/universal)， Ember有[Fastboot](https://ember-fastboot.com/) | React有[Electrode](http://www.electrode.io/)、[React Server](https://react-server.io/) 和 [Next.js](https://github.com/zeit/next.js) |       |                         |        |
+| 数据层框架                   |                                          | Relay/GraphQL、[tectonic](https://github.com/tonyhb/tectonic) |       |                         |        |
+| Node.js 框架              | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/)、 Feathers、 Now(“微服务”) |                                          |       |                         |        |
+| Node.js ORM 框架          | [Sequelize.js](https://github.com/sequelize/sequelize)、 Nodal（PostgreSQL）、 Keystone（MongoDB）、 Loopback |                                          |       |                         |        |
+| 通用（Universal）JavaScript | Angular 2有[Universal Angular 2](https://github.com/angular/universal)， Ember有[Fastboot](https://ember-fastboot.com/) | [Electrode](http://www.electrode.io/)、[React Server](https://react-server.io/) 和 [Next.js](https://github.com/zeit/next.js) |       |                         |        |
+| 静态网页生成器（SSG）            | Gitlab pages、 Netlify、 Surge、 Now static、 Hexo | Gatsby                                   |       |                         |        |
 
 
 ### 模块化
@@ -43,7 +47,7 @@
 >
 > MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。
 
-1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)：原型项目 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、[express-react-views](https://github.com/reactjs/express-react-views)
+1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)：模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views)、
 
 2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
 
