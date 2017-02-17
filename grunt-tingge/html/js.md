@@ -36,7 +36,7 @@
 | Node.js 框架              | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/)、 Feathers、 Now(“微服务”) |                                          |       |                         |        |
 | Node.js ORM 框架          | [Sequelize.js](https://github.com/sequelize/sequelize)、 Nodal（PostgreSQL）、 Keystone（MongoDB）、 Loopback |                                          |       |                         |        |
 | 通用（Universal）JavaScript | Angular 2有[Universal Angular 2](https://github.com/angular/universal)， Ember有[Fastboot](https://ember-fastboot.com/) | [Electrode](http://www.electrode.io/)、[React Server](https://react-server.io/) 和 [Next.js](https://github.com/zeit/next.js) |       |                         |        |
-| 静态网页生成器（SSG）            | Gitlab pages、 Netlify、 Surge、 Now static、 Hexo | Gatsby                                   |       |                         |        |
+| 静态网页生成器（SSG）            | Gitlab pages、 Netlify、 Surge、 Now static、 Hexo、[Docsify](https://docsify.js.org/) | Gatsby                                   |       |                         |        |
 
 
 ### 模块化
