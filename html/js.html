@@ -288,6 +288,7 @@
 <blockquote>
 <p>基于组件（component-based）的构建方式。</p>
 <p>MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。</p>
+<p>传统的 DOM 操作是直接在 DOM 上操作的，当需要修改一系列元素中的值时，就会直接对 DOM 进行操作。而采用 Virtual DOM 则会对需要修改的 DOM 进行比较（DIFF），从而只选择需要修改的部分。也因此对于不需要大量修改 DOM 的应用来说，采用 Virtual DOM 并不会有优势。开发者就可以创建出可交互的 UI。</p>
 </blockquote>
 <ol>
 <li><p><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a>：模板生成器 <a href="https://www.infoq.com/news/2016/07/create-react-app-cli-tool">create-react-app</a>、React boilerplate、<a href="https://github.com/reactjs/express-react-views">express-react-views</a>、</p>
@@ -296,7 +297,7 @@
 </li>
 <li><p><a href="http://tingge.github.io/lab/angular-book/index.html">我的书柜（angular-book）</a></p>
 </li>
-<li><p><a href="../lab/quickstart/">Angular 2</a></p>
+<li><p><a href="../lab/quickstart/">Angular 2</a>：其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑</p>
 </li>
 <li><p>Aurelia</p>
 </li>
@@ -429,6 +430,12 @@ aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer�
 <td><a href="https://www.mongodb.com/download-center">MongoDB</a></td>
 <td>面向文档（Document-Oriented）数据库</td>
 <td>日志；分析</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://docs.microsoft.com/zh-cn/azure/documentdb/">Azure DocumentDB</a></td>
+<td>一个完全托管的 NoSQL 数据库服务</td>
+<td></td>
 </tr>
 <tr>
 <td></td>

@@ -46,6 +46,8 @@
 > 基于组件（component-based）的构建方式。
 >
 > MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。
+>
+> 传统的 DOM 操作是直接在 DOM 上操作的，当需要修改一系列元素中的值时，就会直接对 DOM 进行操作。而采用 Virtual DOM 则会对需要修改的 DOM 进行比较（DIFF），从而只选择需要修改的部分。也因此对于不需要大量修改 DOM 的应用来说，采用 Virtual DOM 并不会有优势。开发者就可以创建出可交互的 UI。
 
 1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)：模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views)、
 
@@ -53,7 +55,7 @@
 
 3. [我的书柜（angular-book）](http://tingge.github.io/lab/angular-book/index.html)
 
-4. [Angular 2](../lab/quickstart/)
+4. [Angular 2](../lab/quickstart/)：其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑
 
 5. Aurelia
 
@@ -151,6 +153,7 @@
 | NoSQL         | [Cassandra](http://cassandra.apache.org/) | 列存储（Wide Column Store/Column-Family）数据库 | 日志；博客平台       |
 |               | [Redis](http://redis.io/download)        | 键值（Key-Value）数据库                        | 储存用户信息        |
 |               | [MongoDB](https://www.mongodb.com/download-center) | 面向文档（Document-Oriented）数据库              | 日志；分析         |
+|               | [Azure DocumentDB](https://docs.microsoft.com/zh-cn/azure/documentdb/) | 一个完全托管的 NoSQL 数据库服务                     |               |
 |               | [CouchDB](http://couchdb.apache.org/)    | 同 MongoDB                               | 同 MongoDB     |
 |               | [LevelDB](http://leveldb.org/)           |                                         |               |
 |               | [Neo4j](https://neo4j.com/download/)     | 图（Graph-Oriented）数据库                    | 关系性强的数据； 推荐引擎 |

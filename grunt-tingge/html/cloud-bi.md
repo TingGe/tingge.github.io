@@ -37,7 +37,7 @@
 
 从数据角度来看，主要涵盖**业务数据**和用户使用产品的（脱敏后的）行为数据。一般来讲，对**用户行为数据**利用越充分，产品越智能。
 
- 从收费和市场占有量的角度来看，免费固然有利于工具型产品的推广，但**产品稀缺性**可决定是否收费。能适应主要目标用户群体的**场景**，是反哺产品成长的关键。
+ 从收费和市场占有量的角度来看，免费固然有利于工具型产品的推广，但**产品稀缺性**决定是否收费。能适应主要目标用户群体的**场景**，是反哺产品成长的关键。
 
 ## 主要前端技术
 
@@ -47,10 +47,11 @@
 
 - 跨屏（PC、Mobile）
 - 大屏
+- 图表组件：Echarts
 
 #### 报表
 
-- 电子表格：[JSpreadsheets](https://jspreadsheets.com/)
+- 电子表格：[JSpreadsheets](https://jspreadsheets.com/)、[socialcalc](https://github.com/DanBricklin/socialcalc)、[EtherCalc](https://ethercalc.net/)
 
 #### 数据分享
 
@@ -63,6 +64,11 @@
 - 数字运算
 - 数字格式转换：[d3-format](https://github.com/d3/d3-format)
 
+
+## 前端方案
+
+- 组件化/模块化方案
+- 视场景的，同构方案
 
 ## 参考
 
