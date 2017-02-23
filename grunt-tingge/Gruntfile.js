@@ -20,7 +20,6 @@ module.exports = grunt => {
             'font-awesome/**',
             'jquery/dist/jquery.min.js',
             'autocjs/build/**',
-            'octocard/bin/octocard.js',
             'html2canvas/dist/html2canvas.min.js'
           ],
           dest: '../lib/'
