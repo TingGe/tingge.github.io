@@ -1,0 +1,78 @@
+<!--  -->
+
+<!doctype html>
+
+
+<html ng-app="janusHangouts">
+
+<head>
+  <meta charset="utf-8">
+  <title>Alimeeting</title>
+  <meta name="description" content="Alimeeting">
+  <meta name="viewport" content="width=device-width">
+  <!-- <link rel="shortcut icon" href="../resources/images/favicon.ico">
+  <link rel="stylesheet" href="//g.alicdn.com/platform/video_it/0.1.17/styles/vendor.css?1">
+  <link rel="stylesheet" href="//g.alicdn.com/platform/video_it/0.1.17/styles/app.css?1"> -->
+  <link rel="shortcut icon" href="../resources/images/favicon.ico">
+  <link rel="stylesheet" href="./g.alicdn.com/platform/video_it/0.1.17/styles/vendor.css?1">
+  <link rel="stylesheet" href="./g.alicdn.com/platform/video_it/0.1.17/styles/app.css?1">
+</head>
+
+<body>
+  <script>
+    with(document) with(body) with(insertBefore(createElement("script"), firstChild)) setAttribute("exparams", "category=&userid=&aplus&yunid=&&trid=0a93644d14706347838927398e&asid=AQAAAAAfG6hXk5ZSNQAAAAB06mATYfV+uQ==", id = "tb-beacon-aplus", src =
+      (location > "https" ? "//g" : "//g") + ".alicdn.com/alilog/mlog/aplus_v2.js")
+  </script>
+  <!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="//browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+  <div ui-view="" class="container-fluid container-no-padding"></div>
+</body>
+<!-- <script src="//g.alicdn.com/platform/video_it/0.1.17/scripts/vendor.js?1"></script>
+<script src="//g.alicdn.com/platform/video_it/0.1.17/scripts/app.js?1"></script> -->
+<script src="./g.alicdn.com/platform/video_it/0.1.17/scripts/vendor.js?1"></script>
+<script src="./g.alicdn.com/platform/video_it/0.1.17/scripts/app.js?1"></script>
+<script type="text/javascript">
+  window.localStorage.lang = "zh-cn"; //"zh-cn"
+  function urlSearch(str) {
+    var parms = {};
+    var name, value;
+    var num = str.indexOf("?")
+    str = str.substr(num + 1); //取得所有参数   stringvar.substr(start [, length ]
+
+    var arr = str.split("&"); //各个参数放到数组里
+    for (var i = 0; i < arr.length; i++) {
+      num = arr[i].indexOf("=");
+      if (num > 0) {
+        name = arr[i].substring(0, num).trim();
+        value = arr[i].substr(num + 1);
+        parms[name] = value;
+      }
+    }
+    return parms;
+  }
+
+  var isDebug = urlSearch(location.search).debug;
+  var islocal = urlSearch(location.search).local;
+
+  if (islocal) {
+    window.staticprefix = "";
+    window.AJAXURLPRE = "ajax-data"
+  } else {
+    var _scripts = document.getElementsByTagName("script");
+    for (var i = 0; i < _scripts.length; i++) {
+      var _script = _scripts[i];
+      if (_script.src.indexOf("g.alicdn.com/platform/video_it/") != -1) {
+        var _routine_prefix = _script.src.split("/").slice(0, -2).join("/");
+        break;
+      }
+    }
+    window.staticprefix = _routine_prefix;
+
+    window.AJAXURLPRE = "/alimeeting/web" //后端服务地址
+      // //alimeeting.alibaba-inc.com:9443
+  }
+</script>
+
+</html>
