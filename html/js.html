@@ -179,14 +179,6 @@
 <td></td>
 </tr>
 <tr>
-<td>异步编程</td>
-<td>Async、Q</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>模块化</td>
 <td>ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）</td>
 <td></td>
@@ -221,13 +213,13 @@
 <tr>
 <td>表单验证</td>
 <td></td>
-<td></td>
+<td>React 内置的 propTypes</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>路由控制</td>
+<td>路由控制，可选</td>
 <td></td>
 <td><a href="https://github.com/ReactTraining/react-router">react-router</a>、react-router-redux、<a href="https://github.com/jamesknelson/junctions">junctions</a></td>
 <td></td>
@@ -235,9 +227,33 @@
 <td></td>
 </tr>
 <tr>
+<td>连接<em>React</em> 组件与 <em>Redux</em> store，可选</td>
+<td></td>
+<td><a href="https://github.com/reactjs/react-redux">React-Redux</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>中间件与异步操作</td>
+<td>Async、Q</td>
+<td><a href="https://github.com/gaearon/redux-thunk">redux-thunk</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>日志输出中间件，可选</td>
+<td></td>
+<td><a href="https://github.com/evgenyrodionov/redux-logger">redux-logger</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>应用状态管理</td>
 <td><a href="ngrx/store">ngrx/store</a></td>
-<td>Redux（redux-thunk/redux-promise/<a href="https://github.com/jasonslyvia/redux-sequence-action">redux-sequence-action</a>）、<a href="https://github.com/indexiatech/redux-immutablejs">redux-immutablejs</a>、Immutable.js、seamless-immutable、  <a href="https://github.com/swannodette/mori">mori</a>、<a href="https://github.com/mquan/cortex">cortex</a></td>
+<td>Redux（redux-promise/<a href="https://github.com/jasonslyvia/redux-sequence-action">redux-sequence-action</a>）、<a href="https://github.com/indexiatech/redux-immutablejs">redux-immutablejs</a>、Immutable.js、seamless-immutable、  <a href="https://github.com/swannodette/mori">mori</a>、<a href="https://github.com/mquan/cortex">cortex</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -511,6 +527,7 @@ aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer�
 <h3 id="-">原理剖析</h3>
 <ul>
 <li><a href="http://www.jianshu.com/p/0e42799be566">深入理解React、Redux</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/21391101">理解 redux 中间件</a></li>
 <li><a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html">ShadowDOM Visualizer</a></li>
 <li><a href="http://www.html5rocks.com/zh/tutorials/webcomponents/template/">HTML&#39;s New Template Tag</a></li>
 <li><a href="http://robdodson.me/html5-template-tag-introduction/">HTML5 Template Tag: Introduction</a></li>
