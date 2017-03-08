@@ -9,9 +9,9 @@
   <title>听歌实验室</title>
   <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
   <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="/lib/autocjs/build/autoc.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.css" media="screen">
   <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="/css/landing-page.css" rel="stylesheet">
   <link href="/css/screenshots.css" rel="stylesheet">
   <style media="screen">
@@ -20,7 +20,7 @@
     }
   </style>
   <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/lib/autocjs/build/autoc.min.js"></script>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.js"></script>
   <script type="text/javascript" src="/lib/html2canvas/dist/html2canvas.min.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,8 +83,8 @@
 </ol>
 <h2 id="web-">Web 前端</h2>
 <blockquote>
-<p>至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。</p>
-<p>截止17年初，主流的三大框架 React系、Angular 2系、Vue系 相互融合。其他类似框架或局部功能替代类库不足成事。</p>
+<p>至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
+截止17年初，主流的三大框架 React系、Angular 2系、Vue系 相互融合。其他类似框架或局部功能替代类库不足成事。</p>
 </blockquote>
 <table>
 <thead>
@@ -100,7 +100,7 @@
 <tbody>
 <tr>
 <td>JS 编译器</td>
-<td>TypeScript、<a href="https://flowtype.org/">Flow</a>、Coffee</td>
+<td>TypeScript、<a href="https://flowtype.org/">Flow</a>、CoffeeScript</td>
 <td>Babel + ES6</td>
 <td></td>
 <td></td>
@@ -116,7 +116,7 @@
 </tr>
 <tr>
 <td>CSS 后处理</td>
-<td><a href="http://postcss.org/">PostCSS</a></td>
+<td><a href="http://postcss.org/">PostCSS</a>、<a href="https://github.com/giakki/uncss">uncss</a>、<a href="https://github.com/addyosmani/critical">Critical</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -133,7 +133,23 @@
 <tr>
 <td>UI 组件</td>
 <td><a href="https://github.com/bgrins/spectrum">spectrum</a>(Colorpicker)、<a href="https://github.com/jeromeetienne/jquery-qrcode">jquery-qrcode</a>、<a href="https://github.com/harvesthq/chosen/">chosen</a>、<a href="https://github.com/codemirror/codemirror">CodeMirror</a>、 <a href="http://johndyer.name/photoshop-like-javascript-color-picker/">jPicker</a>、<a href="https://github.com/superRaytin/paginationjs">paginationjs</a>、<a href="https://github.com/pieroxy/lz-string/">lz-string</a>、<a href="https://github.com/mholt/PapaParse">PapaParse</a>、<a href="https://github.com/VincentGarreau/particles.js">particles.js</a></td>
-<td><a href="https://github.com/handsontable">handsontable</a>、<a href="https://github.com/casesandberg/react-color">react-color</a>、<a href="https://github.com/STRML/react-grid-layout">React-Grid-Layout</a></td>
+<td><a href="https://github.com/handsontable">handsontable</a>、<a href="https://github.com/casesandberg/react-color">react-color</a>、<a href="https://github.com/STRML/react-grid-layout">React-Grid-Layout</a>、<a href="https://github.com/facebook/fixed-data-table">fixed-data-table</a>、<a href="https://github.com/bvaughn/react-virtualized">react-virtualized</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Shim</td>
+<td><a href="https://github.com/paulmillr/es6-shim">es6-shim</a>、<a href="https://github.com/es-shims/es5-shim/">es5-shim.js</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Polyfill</td>
+<td><a href="https://github.com/rbuckton/ReflectDecorators">reflect-metadata</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -165,7 +181,7 @@
 <tr>
 <td>工具库</td>
 <td>lodash、underscore、<a href="https://github.com/nmrugg/LZMA-JS/">LZMA-JS</a>、<a href="https://github.com/brix/crypto-js">crypto-js</a></td>
-<td><a href="http://nosir.github.io/cleave.js/">Cleave.js</a>（格式化）、Moment、<a href="https://github.com/adamwdraper/Numeral-js">Numeral</a>、<a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a>、<a href="https://github.com/JedWatson/classnames">classnames</a></td>
+<td><a href="http://nosir.github.io/cleave.js/">Cleave.js</a>（格式化）、Moment、<a href="https://github.com/adamwdraper/Numeral-js">Numeral</a>、<a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a>、<a href="https://github.com/JedWatson/classnames">classnames</a>、<a href="https://github.com/localForage/localForage">localForage</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -179,8 +195,16 @@
 <td></td>
 </tr>
 <tr>
+<td>异步Task跟踪，分析，错误记录、开发调试跟踪等</td>
+<td><a href="https://github.com/angular/zone.js">zone.js</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>模块化</td>
-<td>ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）</td>
+<td>ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、<a href="https://github.com/systemjs/systemjs">systemjs</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -189,7 +213,7 @@
 <tr>
 <td>UI 层轻量级解决方案</td>
 <td>Vue、Inferno、Preact</td>
-<td>React</td>
+<td>React、<a href="https://facebookincubator.github.io/react-vr/">React VR</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -500,13 +524,16 @@ aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer�
 </ul>
 <h3 id="-">浏览器</h3>
 <ul>
+<li><a href="http://mp.weixin.qq.com/s/EqRfLbuta7RU5jePJCCWAg">Chrome 开发者控制台中，你可能意想不到的功能</a></li>
+<li><a href="https://github.com/facebook/yoga">Facebook Yoga 跨平台的前端布局引擎</a></li>
 <li><a href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html">浏览器内核的解析和对比</a></li>
 </ul>
 <h3 id="html-css">HTML &amp; 性能 &amp; CSS</h3>
 <ul>
+<li><a href="web-performance.html">Web 性能</a></li>
+<li><a href="http://mp.weixin.qq.com/s/E_f0MzFFFAgtgISExBbp5w">JavaScript 启动性能瓶颈分析与解决方案</a></li>
 <li><a href="http://geek.csdn.net/news/detail/135595">下一代 Web 应用模型 —— Progressive Web App</a></li>
 <li><a href="html5.html">HTML 5</a></li>
-<li><a href="web-performance.html">Web 性能</a></li>
 <li><a href="http://ybshare.coding.io/share/flexible.htm">移动端适配方案</a>。大致思路是：<a href="https://github.com/amfe/lib-flexible">flexible.js</a> 或 <a href="https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js?utm_source=tuicool&amp;utm_medium=referral">metahandler.js</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzAwNTAzMjcxNg==&amp;mid=2651424725&amp;idx=1&amp;sn=c19801bf880556470bb21f8af0cb0225">Houdini：CSS 领域最令人振奋的革新</a></li>
 <li><a href="http://www.w3cplus.com/css/dirty-tricks-dark-corners-front-end-pt2.html">前端开发中的一些黑魔法Pt2</a></li>
@@ -516,11 +543,12 @@ aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer�
 </ul>
 <h3 id="react-angular-vue">React &amp; Angular &amp; Vue</h3>
 <ul>
-<li><a href="http://www.christianalfoni.com/articles/2015_08_02_Why-we-are-doing-MVC-and-FLUX-wrong">christianalfoni - Why we are doing MVC and FLUX wrong</a></li>
-<li><a href="https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9">Webpack — The Confusing Parts</a></li>
 <li><a href="http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/">手把手教你基于ES6架构自己的React Boilerplate项目</a></li>
 <li><a href="https://www.npmjs.com/package/react-scripts">Create React App</a>：一个 Facebook 的React Boilerplate项目</li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&amp;mid=2247483973&amp;idx=1&amp;sn=01bcd0a60e8cfa0b93f4e82c7d21a677">让React组件变得可响应</a></li>
+<li><a href="http://mp.weixin.qq.com/s/P9pZDvu7Zp8SkXvbWIHoHw">复杂单页应用的数据层设计</a></li>
+<li><a href="http://www.christianalfoni.com/articles/2015_08_02_Why-we-are-doing-MVC-and-FLUX-wrong">christianalfoni - Why we are doing MVC and FLUX wrong</a></li>
+<li><a href="https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9">Webpack — The Confusing Parts</a></li>
 <li><a href="http://www.infoq.com/cn/news/2016/11/next-js-universal-react-framewor">Next.js提供了基于React的简单通用JavaScript框架</a></li>
 <li><a href="https://docs.google.com/presentation/d/13cALir2y7UtqrJZLzYPDidsV6OofJmamDqEMKNKz2P0/preview?slide=id.p">Angular 2 Keynote（September 27，2016）Slider</a></li>
 </ul>
