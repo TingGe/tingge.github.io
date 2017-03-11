@@ -129,7 +129,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 #### 数字处理&可读性
 
-- 数字运算：
+- 数字运算：[Math.js](https://github.com/josdejong/mathjs)
 - 数据格式化：[d3-format](https://github.com/d3/d3-format)
 
 
