@@ -127,10 +127,10 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 - 支持BI功能模块嵌入业务系统
 
-#### 数字处理
+#### 数字处理&可读性
 
-- 数字运算
-- 数字格式转换：[d3-format](https://github.com/d3/d3-format)
+- 数字运算：
+- 数据格式化：[d3-format](https://github.com/d3/d3-format)
 
 
 ## 前端方案

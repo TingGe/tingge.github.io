@@ -53,12 +53,14 @@ HTTPS 正式启用之前还有很多问题要解决。
 
 ## 参考
 
-1. [性能测试应该怎么做？](http://coolshell.cn/articles/17381.html)
-2. [京东前端：三级列表页持续架构优化](https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247483922&idx=1&sn=0f887e42a4edaf05fa5ca73ea9c792b1)
-3. [切图崽的自我修养－优化图片加载流程](https://segmentfault.com/a/1190000005904337)
-4. [Dubbo 用户指南](http://dubbo.io/User+Guide-zh.htm)
-5. [前端小站[聊一聊系列]](https://segmentfault.com/blog/frontenddriver)
-6. [性能不好怎么办？对着清单撸一遍](http://mp.weixin.qq.com/s?__biz=MzAwNjY4NTQ4MA==&mid=2651174290&idx=1&sn=288518f030801f4d90878e806546487c)
-7. [极快的node.js：来自领英（LinkedIn）移动的10个性能技巧](http://ourjs.com/detail/53410e63b189a25b71000001)
-8. [为高负载网络优化 Nginx 和 Node.js](http://www.oschina.net/translate/optimising-nginx-node-js-and-networking-for-heavy-workloads)
-9. [未来已到——HTTP/2](https://segmentfault.com/a/1190000007637735)
+1. [前端性能优化 - 资源预加载](http://bubkoo.com/2015/11/19/prefetching-preloading-prebrowsing/)：`DNS-prefetch`、`subresource` 和标准的 `prefetch`、`preconnect`、`prerender`
+2. [性能测试应该怎么做？](http://coolshell.cn/articles/17381.html)
+
+1. [京东前端：三级列表页持续架构优化](https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247483922&idx=1&sn=0f887e42a4edaf05fa5ca73ea9c792b1)
+2. [切图崽的自我修养－优化图片加载流程](https://segmentfault.com/a/1190000005904337)
+3. [Dubbo 用户指南](http://dubbo.io/User+Guide-zh.htm)
+4. [前端小站[聊一聊系列]](https://segmentfault.com/blog/frontenddriver)
+5. [性能不好怎么办？对着清单撸一遍](http://mp.weixin.qq.com/s?__biz=MzAwNjY4NTQ4MA==&mid=2651174290&idx=1&sn=288518f030801f4d90878e806546487c)
+6. [极快的node.js：来自领英（LinkedIn）移动的10个性能技巧](http://ourjs.com/detail/53410e63b189a25b71000001)
+7. [为高负载网络优化 Nginx 和 Node.js](http://www.oschina.net/translate/optimising-nginx-node-js-and-networking-for-heavy-workloads)
+8. [未来已到——HTTP/2](https://segmentfault.com/a/1190000007637735)

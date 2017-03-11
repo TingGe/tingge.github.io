@@ -15,15 +15,15 @@
 | ------------------------------ | ---------------------------------------- | ---------------------------------------- | ----- | ----------------------- | ------ |
 | JS 编译器                         | TypeScript、[Flow](https://flowtype.org/)、CoffeeScript | Babel + ES6                              |       |                         |        |
 | CSS 预处理                        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) | sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader)、css-loader、[css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components)、[cssnano](https://github.com/ben-eb/cssnano) |       |                         |        |
-| CSS 后处理                        | [PostCSS](http://postcss.org/)、[uncss](https://github.com/giakki/uncss)、[Critical](https://github.com/addyosmani/critical) |                                          |       |                         |        |
+| CSS 后处理                        | [PostCSS](http://postcss.org/)、[uncss](https://github.com/giakki/uncss)、[Critical](https://github.com/addyosmani/critical)、[CSSO](https://github.com/css/csso) |                                          |       |                         |        |
 | web UI                         | [Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/)、 | [Ant Design](http://ant.design/)、Fusion Design（Next/Mext）、[hyperapp](https://github.com/hyperapp/hyperapp) |       |                         |        |
 | UI 组件                          | [spectrum](https://github.com/bgrins/spectrum)(Colorpicker)、[jquery-qrcode](https://github.com/jeromeetienne/jquery-qrcode)、[chosen](https://github.com/harvesthq/chosen/)、[CodeMirror](https://github.com/codemirror/codemirror)、 [jPicker](http://johndyer.name/photoshop-like-javascript-color-picker/)、[paginationjs](https://github.com/superRaytin/paginationjs)、[lz-string](https://github.com/pieroxy/lz-string/)、[PapaParse](https://github.com/mholt/PapaParse)、[particles.js](https://github.com/VincentGarreau/particles.js)、[handsontable](https://github.com/handsontable) | [react-color](https://github.com/casesandberg/react-color)、[React-Grid-Layout](https://github.com/STRML/react-grid-layout)、[fixed-data-table](https://github.com/facebook/fixed-data-table)、[react-virtualized](https://github.com/bvaughn/react-virtualized) |       |                         |        |
 | Shim                           | [es6-shim](https://github.com/paulmillr/es6-shim)、[es5-shim.js](https://github.com/es-shims/es5-shim/) |                                          |       |                         |        |
 | Polyfill                       | [reflect-metadata](https://github.com/rbuckton/ReflectDecorators) |                                          |       |                         |        |
-| DOM库                           | zepto、jQuery                             | rect-dom                                 |       |                         |        |
+| DOM库                           | zepto、jQuery、                            | rect-dom                                 |       |                         |        |
 | HTML 5兼容旧浏览器                   | [html5shiv](https://github.com/aFarkas/html5shiv)、[object-observe](https://github.com/MaxArt2501/object-observe)（Object.observe polyfill）、 |                                          |       |                         |        |
 | 多点触摸手势库                        | [Hammerjs](http://hammerjs.github.io/)、[jGestures](http://jgestures.codeplex.com/)、 |                                          |       |                         |        |
-| 工具库                            | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js) | [Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[localForage](https://github.com/localForage/localForage) |       |                         |        |
+| 工具库                            | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化） | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[localForage](https://github.com/localForage/localForage)、d3-format |       |                         |        |
 | 模版引擎                           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |       |                         |        |
 | 异步Task跟踪，分析，错误记录、开发调试跟踪等       | [zone.js](https://github.com/angular/zone.js) |                                          |       |                         |        |
 | 模块化                            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、[systemjs](https://github.com/systemjs/systemjs) |                                          |       |                         |        |
@@ -37,6 +37,7 @@
 | 日志输出中间件，可选                     |                                          | [redux-logger](https://github.com/evgenyrodionov/redux-logger) |       |                         |        |
 | 应用状态管理                         | [ngrx/store](ngrx/store)                 | Redux（redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)）、[redux-immutablejs](https://github.com/indexiatech/redux-immutablejs)、Immutable.js、seamless-immutable、  [mori](https://github.com/swannodette/mori)、[cortex](https://github.com/mquan/cortex) |       |                         |        |
 | 数据层框架                          |                                          | Relay/GraphQL、[tectonic](https://github.com/tonyhb/tectonic) |       |                         |        |
+| Node.js 模块                     | [vm2](https://github.com/patriksimek/vm2)（虚拟模块）、[Hello.js](https://adodson.com/hello.js/)（基于 OAuth 的浏览器端用户认证 SDK）、[Sharp](https://github.com/lovell/sharp)（图像调整模块） |                                          |       |                         |        |
 | Node.js 框架                     | [Express](https://github.com/expressjs/express)、[Koa2](https://github.com/koajs/koa/tree/v2.x)、[Hapi](http://hapijs.com/)、 Feathers、 Now(“微服务”) |                                          |       |                         |        |
 | Node.js ORM 框架                 | [Sequelize.js](https://github.com/sequelize/sequelize)、 Nodal（PostgreSQL）、 Keystone（MongoDB）、 Loopback |                                          |       |                         |        |
 | 通用（Universal）JavaScript        | Angular 2有[Universal Angular 2](https://github.com/angular/universal)， Ember有[Fastboot](https://ember-fastboot.com/) | [Electrode](http://www.electrode.io/)、[React Server](https://react-server.io/) 和 [Next.js](https://github.com/zeit/next.js) |       |                         |        |
@@ -171,6 +172,14 @@
 4. LDAP
 
 ## 附录
+
+### 趋势
+
+- [Front-End Developer Handbook 2017](https://frontendmasters.gitbooks.io/front-end-handbook-2017/)
+
+### 计算机视觉库
+
+- [tracking.js](https://github.com/eduardolundgren/tracking.js/)：
 
 ### NodeJS
 
