@@ -1,21 +1,15 @@
 {
   "_args": [
     [
-      {
-        "raw": "font-awesome@^4.6.1",
-        "scope": null,
-        "escapedName": "font-awesome",
-        "name": "font-awesome",
-        "rawSpec": "^4.6.1",
-        "spec": ">=4.6.1 <5.0.0",
-        "type": "range"
-      },
+      "font-awesome@4.6.3",
       "/Users/Ting/github/tingge.github.io/grunt-tingge"
     ]
   ],
-  "_from": "font-awesome@>=4.6.1 <5.0.0",
+  "_cnpm_publish_time": 1464162207581,
+  "_from": "font-awesome@4.6.3",
   "_id": "font-awesome@4.6.3",
   "_inCache": true,
+  "_installable": true,
   "_location": "/font-awesome",
   "_nodeVersion": "5.5.0",
   "_npmOperationalInternal": {
@@ -23,31 +17,30 @@
     "tmp": "tmp/font-awesome-4.6.3.tgz_1464162204853_0.17128069489262998"
   },
   "_npmUser": {
-    "name": "juliankrispel",
-    "email": "julian@goodafternoon.co"
+    "email": "julian@goodafternoon.co",
+    "name": "juliankrispel"
   },
   "_npmVersion": "3.3.12",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "font-awesome@^4.6.1",
-    "scope": null,
-    "escapedName": "font-awesome",
     "name": "font-awesome",
-    "rawSpec": "^4.6.1",
-    "spec": ">=4.6.1 <5.0.0",
-    "type": "range"
+    "raw": "font-awesome@4.6.3",
+    "rawSpec": "4.6.3",
+    "scope": null,
+    "spec": "4.6.3",
+    "type": "version"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.3.tgz",
+  "_resolved": "https://registry.npm.taobao.org/font-awesome/download/font-awesome-4.6.3.tgz",
   "_shasum": "86933651540ee00874c664017f50f2172f6531a2",
   "_shrinkwrap": null,
-  "_spec": "font-awesome@^4.6.1",
+  "_spec": "font-awesome@4.6.3",
   "_where": "/Users/Ting/github/tingge.github.io/grunt-tingge",
   "author": {
-    "name": "Dave Gandy",
     "email": "dave@fontawesome.io",
+    "name": "Dave Gandy",
     "url": "http://twitter.com/davegandy"
   },
   "bugs": {
@@ -76,8 +69,10 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
+    "noattachment": false,
     "shasum": "86933651540ee00874c664017f50f2172f6531a2",
-    "tarball": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.3.tgz"
+    "size": 604819,
+    "tarball": "http://registry.npm.taobao.org/font-awesome/download/font-awesome-4.6.3.tgz"
   },
   "engines": {
     "node": ">=0.10.3"
@@ -95,12 +90,13 @@
   "license": "(OFL-1.1 AND MIT)",
   "maintainers": [
     {
-      "name": "juliankrispel",
-      "email": "julian@goodafternoon.co"
+      "email": "julian@goodafternoon.co",
+      "name": "juliankrispel"
     }
   ],
   "name": "font-awesome",
   "optionalDependencies": {},
+  "publish_time": 1464162207581,
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
