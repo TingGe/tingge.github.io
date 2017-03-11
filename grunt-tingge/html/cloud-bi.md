@@ -1,6 +1,6 @@
 # 云商业智能(Cloud BI)
 
-本文主要是我个人的一些思考，如需转载请标明[本文引用地址](http://tingge.github.io/html/cloud-bi.html)和[听歌](http://tingge.github.io/html/me.html)签名。资料采集自互联网，如有侵权，请联系我删除。
+本文主要是我个人的一些思考，如需转载请标明[本文引用地址](/html/cloud-bi.html)和[听歌](/html/me.html)签名。资料采集自互联网，如有侵权，请联系我删除。
 
 > 云BI产品和主要前端技术研究。
 

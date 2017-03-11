@@ -1,5 +1,5 @@
 var page = require('webpage').create();
-page.open('http://tingge.github.io/', function(){
+page.open('/', function(){
   page.includeJs('http://code.jquery.com/jquery-2.2.3.min.js', function(){
     var title = page.evaluate(function(){
       $("#main ol li a").click();

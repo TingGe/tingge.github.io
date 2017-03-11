@@ -3,7 +3,7 @@
 > 工程实践 + 标准化 => JavaScript 生态。
 
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
-2. [我的前端技能路线图](http://tingge.github.io/grunt-tingge/img/frontend.png)
+2. [我的前端技能路线图](/grunt-tingge/img/frontend.png)
 
 
 ## Web 前端
@@ -52,11 +52,11 @@
 >
 > 传统的 DOM 操作是直接在 DOM 上操作的，当需要修改一系列元素中的值时，就会直接对 DOM 进行操作。而采用 Virtual DOM 则会对需要修改的 DOM 进行比较（DIFF），从而只选择需要修改的部分。也因此对于不需要大量修改 DOM 的应用来说，采用 Virtual DOM 并不会有优势。开发者就可以创建出可交互的 UI。
 
-1. [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html)：模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views)、
+1. [Github 中最流行的 JavaScript 项目（react-test）](/lab/react-test/index.html)：模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views)、
 
-2. [Hacker news(vue-test)](http://tingge.github.io/lab/vue-test/index.html)
+2. [Hacker news(vue-test)](/lab/vue-test/index.html)
 
-3. [我的书柜（angular-book）](http://tingge.github.io/lab/angular-book/index.html)
+3. [我的书柜（angular-book）](/lab/angular-book/index.html)
 
 4. [Angular 2](../lab/quickstart/)：其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑
 
@@ -81,7 +81,7 @@
 
 #### 可视
 
-1. [JavaScript应用领域（d3-test）](http://tingge.github.io/lab/d3-test/index.html)
+1. [JavaScript应用领域（d3-test）](/lab/d3-test/index.html)
 
 ### 工程化
 
@@ -117,7 +117,7 @@
 ## 实时服务
 
 1. [horizon-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/horizon-app)
-2. [meteor-test](http://tingge.github.io/lab/meteor-test/index.html)
+2. [meteor-test](/lab/meteor-test/index.html)
 
 ## 数据库的 Node 框架
 
