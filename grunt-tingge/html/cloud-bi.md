@@ -113,7 +113,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 - 跨屏（PC、Mobile）
 - 大屏
-- 图表组件：Echarts
+- 图表组件：Echarts、ckeditor
 
 #### 报表
 
