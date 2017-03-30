@@ -6,6 +6,10 @@
 >
 > 语言层面，JavaScript 从前端到全栈，从桌面到移动、物联网、智能家居，从应用到游戏；C++适于高性能计算、嵌入式、开发服务器软件、游戏、实时系统等。两者组合不止于 [WoT](html/wot.html)。
 
+## 市场
+
+- [中移物联网开放平台（OneNET）](https://open.iot.10086.cn/)：
+
 ## 物联网连接方案
 
 ![](../img/iot-connectivity-solutions.png)
