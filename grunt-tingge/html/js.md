@@ -13,17 +13,17 @@
 
 |                                | 技术                                       | React系(Webpack+ React + Redux)           | Progressive  Web  App | 微信小应用 | 支付宝小程序 |
 | ------------------------------ | ---------------------------------------- | ---------------------------------------- | --------------------- | ----- | ------ |
-| JS 编译器                         | TypeScript、[Flow](https://flowtype.org/)、CoffeeScript | Babel + ES6                              |                       |       |        |
-| CSS 预处理                        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) | sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader)、css-loader、[css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components)、[cssnano](https://github.com/ben-eb/cssnano) |                       |       |        |
+| JS 编译器                         | TypeScript、[Flow](https://flowtype.org/)、[CoffeeScript](http://coffeescript.org/) | Babel + ES6                              |                       |       |        |
+| CSS 预处理                        | [Scss/Sass](http://sass-lang.com)、[Less](http://lesscss.org)、[Stylus](http://learnboost.github.com/stylus) | sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader)、[css-modules](https://github.com/css-modules/css-modules)、[styled-components](https://github.com/styled-components/styled-components)、[cssnano](https://github.com/ben-eb/cssnano) |                       |       |        |
 | CSS 后处理                        | [PostCSS](http://postcss.org/)、[uncss](https://github.com/giakki/uncss)、[Critical](https://github.com/addyosmani/critical)、[CSSO](https://github.com/css/csso) |                                          |                       |       |        |
 | web UI                         | [Semantic UI](https://semantic-ui.com/)、[Masonry](http://masonry.desandro.com/)、[Bootstrap](http://getbootstrap.com/)、[Fuel UX](http://getfuelux.com/)、[Ratchet](http://goratchet.com/)、[Foundation](http://foundation.zurb.com/)、[Materialize](http://www.materialscss.com/)、[Material-UI](http://www.material-ui.com/)、[Angular Material](https://material.angularjs.org/latest/) | [Ant Design](http://ant.design/)、Fusion Design（Next/Mext）、[hyperapp](https://github.com/hyperapp/hyperapp) |                       |       |        |
-| UI 组件                          | [spectrum](https://github.com/bgrins/spectrum)(Colorpicker)、[jquery-qrcode](https://github.com/jeromeetienne/jquery-qrcode)、[chosen](https://github.com/harvesthq/chosen/)、[CodeMirror](https://github.com/codemirror/codemirror)、 [jPicker](http://johndyer.name/photoshop-like-javascript-color-picker/)、[paginationjs](https://github.com/superRaytin/paginationjs)、[lz-string](https://github.com/pieroxy/lz-string/)、[PapaParse](https://github.com/mholt/PapaParse)、[particles.js](https://github.com/VincentGarreau/particles.js)、[handsontable](https://github.com/handsontable) | [react-color](https://github.com/casesandberg/react-color)、[React-Grid-Layout](https://github.com/STRML/react-grid-layout)、[fixed-data-table](https://github.com/facebook/fixed-data-table)、[react-virtualized](https://github.com/bvaughn/react-virtualized)、react-transitive-number、[React Data Grid](https://github.com/adazzle/react-data-grid)、[Tippy.js](https://github.com/atomiks/tippyjs) |                       |       |        |
+| UI 组件                          | [spectrum](https://github.com/bgrins/spectrum)(Colorpicker)、[jquery-qrcode](https://github.com/jeromeetienne/jquery-qrcode)、[chosen](https://github.com/harvesthq/chosen/)、[CodeMirror](https://github.com/codemirror/codemirror)、 [jPicker](http://johndyer.name/photoshop-like-javascript-color-picker/)、[paginationjs](https://github.com/superRaytin/paginationjs)、[lz-string](https://github.com/pieroxy/lz-string/)、[PapaParse](https://github.com/mholt/PapaParse)、[particles.js](https://github.com/VincentGarreau/particles.js)、[handsontable](https://github.com/handsontable) | [react-color](https://github.com/casesandberg/react-color)、[React-Grid-Layout](https://github.com/STRML/react-grid-layout)、[fixed-data-table](https://github.com/facebook/fixed-data-table)、[fixed-data-table-2](https://github.com/schrodinger/fixed-data-table-2)、[react-virtualized](https://github.com/bvaughn/react-virtualized)、react-transitive-number、 ckeditor、 echarts、 react-list、 sortablejs |                       |       |        |
 | Shim                           | [es6-shim](https://github.com/paulmillr/es6-shim)、[es5-shim.js](https://github.com/es-shims/es5-shim/) |                                          |                       |       |        |
-| Polyfill                       | [reflect-metadata](https://github.com/rbuckton/ReflectDecorators) |                                          |                       |       |        |
-| DOM库                           | zepto、jQuery、                            | rect-dom                                 |                       |       |        |
+| Polyfill                       | [reflect-metadata](https://github.com/rbuckton/ReflectDecorators) | babel-polyfill、 ima.js-babel6-polyfill   |                       |       |        |
+| DOM库                           | zepto、jQuery、                            | react-dom                                |                       |       |        |
 | HTML 5兼容旧浏览器                   | [html5shiv](https://github.com/aFarkas/html5shiv)、[object-observe](https://github.com/MaxArt2501/object-observe)（Object.observe polyfill）、 |                                          |                       |       |        |
 | 多点触摸手势库                        | [Hammerjs](http://hammerjs.github.io/)、[jGestures](http://jgestures.codeplex.com/)、 |                                          |                       |       |        |
-| 工具库                            | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat) | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[localForage](https://github.com/localForage/localForage)、d3-format、[prismjs](https://github.com/PrismJS/prism)、react-sizeme、[clipboard](https://www.npmjs.com/package/clipboard) |                       |       |        |
+| 工具库                            | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat)、setRafTimeout | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[glamor](https://github.com/threepointone/glamor)、[localForage](https://github.com/localForage/localForage)、d3-format、[prismjs](https://github.com/PrismJS/prism)、react-sizeme、[clipboard](https://www.npmjs.com/package/clipboard)、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll |                       |       |        |
 | 模版引擎                           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |                       |       |        |
 | 异步Task跟踪，分析，错误记录、开发调试跟踪等       | [zone.js](https://github.com/angular/zone.js) |                                          |                       |       |        |
 | 模块化                            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、[systemjs](https://github.com/systemjs/systemjs) |                                          |                       |       |        |
@@ -34,8 +34,7 @@
 | 路由控制，可选                        |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux、[junctions](https://github.com/jamesknelson/junctions) |                       |       |        |
 | 连接*React* 组件与 *Redux* store，可选 |                                          | [React-Redux](https://github.com/reactjs/react-redux) |                       |       |        |
 | 中间件与异步操作                       | Async、Q                                  | [redux-thunk](https://github.com/gaearon/redux-thunk) |                       |       |        |
-| 日志输出中间件，可选                     |                                          | [redux-logger](https://github.com/evgenyrodionov/redux-logger) |                       |       |        |
-| 不可变数据结构                        |                                          | [Immutable.js](https://github.com/facebook/immutable-js/)、seamless-immutable、  [mori](https://github.com/swannodette/mori)、[cortex](https://github.com/mquan/cortex) |                       |       |        |
+| 不可变数据结构                        |                                          | [Immutable.js](https://github.com/facebook/immutable-js/)、immutability-helper、seamless-immutable、  [mori](https://github.com/swannodette/mori)、[cortex](https://github.com/mquan/cortex) |                       |       |        |
 | 应用状态管理                         | [ngrx/store](ngrx/store)                 | Redux（redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)）、[redux-immutablejs](https://github.com/indexiatech/redux-immutablejs) |                       |       |        |
 | 数据层框架                          |                                          | Relay/GraphQL、[tectonic](https://github.com/tonyhb/tectonic) |                       |       |        |
 | Node.js 模块                     | [vm2](https://github.com/patriksimek/vm2)（虚拟模块）、[Hello.js](https://adodson.com/hello.js/)（基于 OAuth 的浏览器端用户认证 SDK）、[Sharp](https://github.com/lovell/sharp)（图像调整模块） |                                          |                       |       |        |
@@ -83,28 +82,21 @@
 
 #### 可视
 
+> 专题 [data-visualization](https://github.com/TingGe/data-visualization) 
+
 1. [JavaScript应用领域（d3-test）](/lab/d3-test/index.html)
 
-### 工程化
+### 工程化/工作流
 
-> 工程化的实践：预编译、合并、压缩、打包和包管理。
->
+> 专题 [匠心之路—工具](https://github.com/TingGe/develop-tools#工具)
 
-#### 预编译
+#### 试用
 
-1. 模版引擎：pug、Handlebars
-2. CSS 处理：[glamor](https://github.com/threepointone/glamor)(inline css for react et al)
-3. JavaScript 友好语言：TypeScript、[CoffeeScript](http://coffeescript.org/)
-
-#### 构建
-
-1. NPM Scripts
-2. Webpack
-3. [rollup-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test)
-4. [broccoli-babel-test](https://tingge.github.io/lab/broccoli-babel-test/dist/index.html)
-5. [grunt-babel-test](https://tingge.github.io/lab/grunt-babel-test/dist/index.html)
-6. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
-7. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
+1. [rollup-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test)
+2. [broccoli-babel-test](https://tingge.github.io/lab/broccoli-babel-test/dist/index.html)
+3. [grunt-babel-test](https://tingge.github.io/lab/grunt-babel-test/dist/index.html)
+4. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
+5. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
 
 ## Web 服务 && RESTful API
 
@@ -215,6 +207,7 @@
 - [复杂单页应用的数据层设计](http://mp.weixin.qq.com/s/P9pZDvu7Zp8SkXvbWIHoHw)
 - [christianalfoni - Why we are doing MVC and FLUX wrong](http://www.christianalfoni.com/articles/2015_08_02_Why-we-are-doing-MVC-and-FLUX-wrong)
 - [Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
+- [webpack build可视化统计分析](http://www.iamaddy.net/2016/09/webpack-build-analyzing-statistics/)
 - [Next.js提供了基于React的简单通用JavaScript框架](http://www.infoq.com/cn/news/2016/11/next-js-universal-react-framewor)
 - [Angular 2 Keynote（September 27，2016）Slider](https://docs.google.com/presentation/d/13cALir2y7UtqrJZLzYPDidsV6OofJmamDqEMKNKz2P0/preview?slide=id.p)
 
