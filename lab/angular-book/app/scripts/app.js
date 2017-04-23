@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Redux 中文文档',
+    'author': 'GitBook 共享者合作翻译',
+    'url': 'http://cn.redux.js.org/index.html'
+  }, {
     'name': 'Flask-Script',
     'author': 'smurfix',
     'url': 'https://flask-script.readthedocs.io/en/latest/'
