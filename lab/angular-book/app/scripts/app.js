@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'JavaScript Promise迷你书（中文版）',
+    'author': '原著：azu / 翻译：liubin、kaku、honnkyou',
+    'url': 'http://liubin.org/promises-book/'
+  }, {
     'name': 'Redux 中文文档',
     'author': 'GitBook 共享者合作翻译',
     'url': 'http://cn.redux.js.org/index.html'
