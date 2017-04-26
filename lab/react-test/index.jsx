@@ -16,7 +16,7 @@ var RepoStarsList = React.createClass({
       var repoList = repos.map(function(repo) {
         return (
           <li>
-            <a href={repo.html_url}>
+            <a href={repo.html_url} target="_tingge">
               {repo.full_name}
               <small>
                 ({repo.stargazers_count}
@@ -56,7 +56,7 @@ var RepoForksList = React.createClass({
       var repoList = repos.map(function(repo) {
         return (
           <li>
-            <a href={repo.html_url}>{repo.full_name}
+            <a href={repo.html_url} target="_tingge">{repo.full_name}
               <small>({repo.forks_count}
                 forks, {repo.stargazers_count}
                 stars)</small>
