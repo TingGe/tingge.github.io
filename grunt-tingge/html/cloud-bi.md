@@ -107,22 +107,22 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 ## 主要前端技术
 
-除常规的登录授权、权限管理、消息通知、向导（帮助手册）、数据建模、反馈和第三方集成外，以下几项是商业智能(BI)系统的主要功能：
+除常规的登录授权、权限管理(ACL\RBAC)、消息通知、向导（帮助手册）、数据建模、反馈和第三方集成外，以下几项是商业智能(BI)系统的主要功能：
 
 #### 数据可视化
 
+- 图表组件：[G2](https://github.com/antvis)、Echarts、ckeditor
 - 跨屏（PC、Mobile）
 - 大屏
-- 图表组件：[G2](https://github.com/antvis)、Echarts、ckeditor
 
 #### 报表
 
-- 电子表格：[JSpreadsheets](https://jspreadsheets.com/)、[socialcalc](https://github.com/DanBricklin/socialcalc)、[EtherCalc](https://ethercalc.net/)
+- 电子表格：[JSpreadsheets](https://jspreadsheets.com/)、[socialcalc](https://github.com/DanBricklin/socialcalc)、[EtherCalc](https://ethercalc.net/)、[React datasheet](https://nadbm.github.io/react-datasheet/)
 
 #### 数据分享
 
-- 邮件（newsletter）：邮件HTML模版、截屏
-- 短消息（message）
+- 邮件（newsletter）：截屏、邮件HTML模版
+- 短消息（message）：站内、IM(钉钉、短信、微信)
 - 二维码
 
 - 支持BI功能模块嵌入业务系统
@@ -136,7 +136,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 ## 前端方案
 
 - 组件化/模块化方案
-- 视场景的，同构方案
+- 视场景的，SPA、PWA和同构方案
 - 微服务，[GraphQL](http://graphql.org/)
 
 ## 参考
