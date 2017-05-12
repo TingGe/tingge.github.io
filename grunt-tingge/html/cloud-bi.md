@@ -117,7 +117,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 #### 报表
 
-- 电子表格：[JSpreadsheets](https://jspreadsheets.com/)、[socialcalc](https://github.com/DanBricklin/socialcalc)、[EtherCalc](https://ethercalc.net/)、[React datasheet](https://nadbm.github.io/react-datasheet/)
+- 电子表格：[JSpreadsheets](https://jspreadsheets.com/)、[socialcalc](https://github.com/DanBricklin/socialcalc)、[EtherCalc](https://ethercalc.net/)、[React datasheet](https://nadbm.github.io/react-datasheet/)、[GrapeCity](http://www.gcpowertools.com.cn/)
 
 #### 数据分享
 
