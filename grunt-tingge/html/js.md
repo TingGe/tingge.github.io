@@ -80,7 +80,7 @@
 1. [webcomponentsjs](http://webcomponents.org/)
 2. [Polymer](https://www.polymer-project.org/)
 
-#### 可视
+### 可视化
 
 > 专题 [data-visualization](https://github.com/TingGe/data-visualization) 
 
