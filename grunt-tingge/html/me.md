@@ -14,15 +14,13 @@
 >
 > ——取自国立秀才的《[程序员的道法术器势](http://www.cnblogs.com/guolixiucai/p/4619774.html)》
 
-
-
-> 基于知识体系的预估能力，是专家的价值所在。
-
 ### 标签
 
 前端开发、TCP/IP、Node.js、CSS、浏览器兼容性、[Chrome 扩展程序](https://github.com/TingGe/chrome-extensions)
 
 ### 阅历
+
+> 基于知识体系的预估能力，是专家的价值所在。
 
 - 2009～2011，初涉 Web 开发，混迹于天朝帝都
 - 2012～2015，“广”而“数”缘，受教于[@周培公](https://github.com/peigong)，擅[互联网广告](https://github.com/TingGe/internet-ads)、[数据采集](https://github.com/TingGe/web-analytics)、[JavaScript](https://github.com/TingGe/develop-tools)
