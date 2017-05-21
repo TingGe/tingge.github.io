@@ -1,4 +1,4 @@
-# WoT 与 IoT
+# 物联网（IoT、WoT）
 
 [TOC]
 
