@@ -73,9 +73,10 @@
   <div id="main" class="container">
     <div class="row">
       <div id="article" class="col-md-9 content-container">
-        <blockquote>
+        <p>[TOC]</p>
+<blockquote>
 <p>“一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 <a href="https://www.w3.org/2016/Talks/xq-0709-10th/">progresive web app</a> 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 @<a href="https://github.com/Lucifier129">携程-工业聚</a></p>
-<p>工程实践 + 标准化 =&gt; JavaScript 生态。</p>
+<p>“集市” 和“大教堂”之争，推动着前端这个大生态的繁荣和演进。我把这个过程，总结为 “工程实践 + 标准化 =&gt; JavaScript 生态”。</p>
 </blockquote>
 <ol>
 <li><a href="https://github.com/TingGe/develop-tools/">匠心之路</a></li>
@@ -84,7 +85,7 @@
 <h2 id="web-">Web 前端</h2>
 <blockquote>
 <p>至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
-截止17年初，主流的三大框架 React系、Angular 2系、Vue系 相互融合。其他类似框架或局部功能替代类库不足成事。</p>
+目前，主流的三大框架 React系、Angular 2系、Vue系 在相互融合。其他类似框架或局部功能替代类库不足成事。</p>
 </blockquote>
 <table>
 <thead>
@@ -283,46 +284,6 @@
 <td></td>
 </tr>
 <tr>
-<td>数据层框架</td>
-<td></td>
-<td>Relay/GraphQL、<a href="https://github.com/tonyhb/tectonic">tectonic</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Node.js 模块</td>
-<td><a href="https://github.com/patriksimek/vm2">vm2</a>（虚拟模块）、<a href="https://adodson.com/hello.js/">Hello.js</a>（基于 OAuth 的浏览器端用户认证 SDK）、<a href="https://github.com/lovell/sharp">Sharp</a>（图像调整模块）</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Node.js 框架</td>
-<td><a href="https://github.com/expressjs/express">Express</a>、<a href="https://github.com/koajs/koa/tree/v2.x">Koa2</a>、<a href="http://hapijs.com/">Hapi</a>、 Feathers、 Now(“微服务”)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Node.js ORM 框架</td>
-<td><a href="https://github.com/sequelize/sequelize">Sequelize.js</a>、 Nodal（PostgreSQL）、 Keystone（MongoDB）、 Loopback</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>通用（Universal）JavaScript</td>
-<td>Angular 2有<a href="https://github.com/angular/universal">Universal Angular 2</a>， Ember有<a href="https://ember-fastboot.com/">Fastboot</a></td>
-<td><a href="http://www.electrode.io/">Electrode</a>、<a href="https://react-server.io/">React Server</a> 和 <a href="https://github.com/zeit/next.js">Next.js</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>静态网页生成器（SSG）</td>
 <td>Gitlab pages、 Netlify、 Surge、 Now static、 Hexo、<a href="https://docsify.js.org/">Docsify</a></td>
 <td>Gatsby</td>
@@ -331,32 +292,53 @@
 </tr>
 </tbody>
 </table>
-<h3 id="-">模块化</h3>
+<h3 id="-">模块化/组件化</h3>
 <h4 id="web-mv-virtual-dom">Web MV*/Virtual DOM</h4>
 <blockquote>
 <p>基于组件（component-based）的构建方式。</p>
-<p>MVVM 双向绑定、Virtual DOM，都是解决直接操作 DOM 的“性能墙”。</p>
+<p>MVVM 双向绑定、Virtual DOM，都是为解决直接操作 DOM 的“性能墙”。</p>
 <p>传统的 DOM 操作是直接在 DOM 上操作的，当需要修改一系列元素中的值时，就会直接对 DOM 进行操作。而采用 Virtual DOM 则会对需要修改的 DOM 进行比较（DIFF），从而只选择需要修改的部分。也因此对于不需要大量修改 DOM 的应用来说，采用 Virtual DOM 并不会有优势。开发者就可以创建出可交互的 UI。</p>
 </blockquote>
-<ol>
-<li><p><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a>：模板生成器 <a href="https://www.infoq.com/news/2016/07/create-react-app-cli-tool">create-react-app</a>、React boilerplate、<a href="https://github.com/reactjs/express-react-views">express-react-views</a>、</p>
-</li>
-<li><p><a href="/lab/vue-test/index.html">Hacker news(vue-test)</a></p>
-</li>
-<li><p><a href="/lab/angular-book/index.html">我的书柜（angular-book）</a></p>
-</li>
-<li><p><a href="../lab/quickstart/">Angular 2</a>：其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑</p>
-</li>
-<li><p>Aurelia</p>
-</li>
-<li><p>React-Native：仅适用业务型场景</p>
-</li>
-<li><p><a href="http://redux.js.org/">Redux</a>：解决 component -&gt; action -&gt; reducer -&gt; state 单向数据流转问题。特点可预测、可扩展。</p>
-<p>domain-state 领域模型，比如user，order
-ui-state 纯 UI 状态，比如一个弹窗的开闭，tab 是否 active
-aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer上有个“routing”结点，redux-form 也需要自己的结点</p>
-</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>个人实例或说明</th>
+<th>相关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>React</td>
+<td><a href="http://tingge.github.io/lab/react-test/index.html">Github 中最流行的 JavaScript 项目（react-test）</a></td>
+<td>模板生成器 <a href="https://www.infoq.com/news/2016/07/create-react-app-cli-tool">create-react-app</a>、React boilerplate、<a href="https://github.com/reactjs/express-react-views">express-react-views</a></td>
+</tr>
+<tr>
+<td>Vue</td>
+<td><a href="/lab/vue-test/index.html">Hacker news(vue-test)</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Angular</td>
+<td><a href="/lab/angular-book/index.html">我的书柜（angular-book）</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../lab/quickstart/">Angular 2</a></td>
+<td>其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑</td>
+<td></td>
+</tr>
+<tr>
+<td>Aurelia</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>React-Native</td>
+<td>仅适用业务型场景</td>
+</tr>
+</tbody>
+</table>
 <h4 id="web-components-shadow-dom">Web Components/Shadow DOM</h4>
 <blockquote>
 <p><a href="http://robdodson.me/html5-template-tag-introduction/">模板</a>、<a href="http://robdodson.me/exploring-html-imports/">HTML引入</a>和 <a href="http://www.html5rocks.com/zh/tutorials/webcomponents/shadowdom-201/">Shadow DOM</a>（<a href="http://www.ituring.com.cn/article/177453">简介</a>、<a href="http://www.ituring.com.cn/article/177461">基础</a>、<a href="http://www.ituring.com.cn/article/177570">样式</a>、<a href="http://www.ituring.com.cn/article/177653">样式续</a>），所有这些技术的终极目标就是<strong>自定义元素（custom elements）</strong>。</p>
@@ -377,7 +359,6 @@ aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer�
 <blockquote>
 <p>专题 <a href="https://github.com/TingGe/develop-tools#工具">匠心之路—工具</a></p>
 </blockquote>
-<h4 id="-">试用</h4>
 <ol>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test">rollup-test</a></li>
 <li><a href="https://tingge.github.io/lab/broccoli-babel-test/dist/index.html">broccoli-babel-test</a></li>
@@ -385,49 +366,331 @@ aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer�
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test">phantomjs-test</a></li>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test">nightmare-test</a></li>
 </ol>
-<h2 id="web-restful-api">Web 服务 &amp;&amp; RESTful API</h2>
+<h3 id="-">状态管理</h3>
+<p>数据状态大致分为：</p>
+<ul>
+<li>domain-state 领域模型，比如user，order</li>
+<li>ui-state 纯 UI 状态，比如一个弹窗的开闭，tab 是否 active</li>
+<li>aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer上有个“routing”结点，redux-form 也需要自己的结点</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://redux.js.org/">Redux</a></td>
+<td>解决 component -&gt; action -&gt; reducer -&gt; state 单向数据流转问题。特点可预测、可扩展。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">数据加载器</h3>
+<blockquote>
+<p>GraphQL 与 REST</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>说明</th>
+<th>相关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://facebook.github.io/relay/">Relay</a></td>
+<td>采用 GraphQL，用于构建数据驱动的 React 应用程序的 JavaScript 框架</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/tonyhb/tectonic">tectonic</a></td>
+<td>React 和 Redux 的声明性 REST 数据加载器</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-universal-javascript">通用（Universal）JavaScript</h2>
+<blockquote>
+<p>Nodejs 目前主流的应用场景在于<strong>中间层：</strong>通过node进行模版渲染，处理部分业务逻辑。而真正的后端， 由专业的后端处理。</p>
+<p>个人建议： “Koa2 + Sequelize”的组合是不错的选择。另，Next.js 也值得一试。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>框架</th>
+<th>说明</th>
+<th>相关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/zeit/next.js/">Next.js</a></td>
+<td>通用 JavaScript 应用程序，基于 React，Webpack 和 Babel</td>
+<td>快速创建支持服务端渲染的 React 应用的命令行辅助工具 <a href="https://open.segment.com/create-next-app">create-next-app</a></td>
+</tr>
+<tr>
+<td><a href="http://www.electrode.io/">Electrode</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://react-server.io/">React Server</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/angular/universal">Universal Angular 2</a></td>
+<td>Angular 2</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://ember-fastboot.com/">Fastboot</a></td>
+<td>Ember</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-toolkit-">快速构建应用的工具包(Toolkit)</h3>
+<table>
+<thead>
+<tr>
+<th>工具包</th>
+<th style="text-align:left">组合内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/VulcanJS/Vulcan">VulcanJS</a></td>
+<td style="text-align:left">React, GraphQL &amp; Meteor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="node-js-">Node.js 模块</h3>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/patriksimek/vm2">vm2</a></td>
+<td>虚拟模块</td>
+</tr>
+<tr>
+<td><a href="https://adodson.com/hello.js/">Hello.js</a></td>
+<td>基于 OAuth 的浏览器端用户认证 SDK</td>
+</tr>
+<tr>
+<td><a href="https://github.com/lovell/sharp">Sharp</a></td>
+<td>图像调整模块</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web-restful-api">Web 服务 &amp;&amp; RESTful API</h3>
 <blockquote>
 <p>Node.js 一类的反应堆模式，不太适合做复杂的事务型业务。</p>
 </blockquote>
-<ol>
-<li>Next.js：快速创建支持服务端渲染的 React 应用的命令行辅助工具 <a href="https://open.segment.com/create-next-app">create-next-app</a></li>
-<li><a href="https://github.com/TingGe/web-spiders">koa2-spider</a>：借 babel 通过 async/await 来支持 ES6+</li>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app">hapi-app</a>：「配置大于约定」，业务逻辑必须和传输层进行分离</li>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app">koa-app</a>：通过 co 生成器支持 ES6</li>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/expressjs5-app">expressjs5-app</a>：社区生态完善。<a href="http://clonn.blogspot.com/2016/04/expressjs-express.html">Express.js 黑历史</a>后，IBM 过度干预，使 <a href="https://github.com/dougwilson">Douglas Wilson</a> 在16年3月退出 5，建议转其它</li>
-<li><a href="http://restify.com/">Restify</a>：仅是 API 服务，可观测 Http 应用的延迟、特征等</li>
-</ol>
-<h2 id="-">实时服务</h2>
+<table>
+<thead>
+<tr>
+<th>服务端框架</th>
+<th>说明</th>
+<th>个人小示例</th>
+<th>相关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/koajs/koa/tree/v2.x">Koa2</a></td>
+<td>借 babel 通过 async/await 来支持 ES6+</td>
+<td><a href="https://github.com/TingGe/web-spiders">koa2-spider</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Koa</td>
+<td>通过 co 生成器支持 ES6</td>
+<td><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app">koa-app</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://hapijs.com/">Hapi</a></td>
+<td>「配置大于约定」，业务逻辑必须和传输层进行分离</td>
+<td><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app">hapi-app</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Feathers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Now</td>
+<td>“微服务”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/expressjs5-app">expressjs5-app</a></td>
+<td>社区生态完善。<a href="http://clonn.blogspot.com/2016/04/expressjs-express.html">Express.js 黑历史</a>后，IBM 过度干预，使 <a href="https://github.com/dougwilson">Douglas Wilson</a> 在16年3月退出 5，个人建议转其它</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/expressjs/express">Express</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nodal</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/keystonejs/keystone">Keystone</a></td>
+<td>以 Express 和 MongoDB 为基础搭建的 Node.js CMS 和 web 应用程序平台</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/strongloop/loopback">Loopback</a></td>
+<td>集“Express ＋ ORM ＋ RESTFul API”于一体的后端解决方案。 关联查询有些坑，个人建议转其它</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/facebook/dataloader">DataLoader</a></td>
+<td>一个通用工具。可用作应用程序数据提取层的一部分，为各种后端提供一致 API，并通过批处理和缓存减少对后端的请求。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://restify.com/">Restify</a></td>
+<td>仅是 API 服务，可观测 Http 应用的延迟、特征等</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">实时服务</h3>
 <ol>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/horizon-app">horizon-app</a></li>
-<li><a href="/lab/meteor-test/index.html">meteor-test</a></li>
+<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/meteor-test">meteor-test</a></li>
 </ol>
-<h2 id="-node-">数据库的 Node 框架</h2>
-<h3 id="orm">ORM</h3>
-<ol>
-<li><a href="https://github.com/sequelize/sequelize">Sequelize</a>：提供对 MySQL，MariaDB，SQLite ，PostgreSQL 和 MSSQL 数据库的简单访问</li>
-</ol>
-<h3 id="sql">SQL</h3>
-<ol>
-<li><a href="https://github.com/mysqljs/mysql">mysql</a>：一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序。MySQL 引擎比较好</li>
-<li><a href="https://github.com/brianc/node-postgres">node-postgres</a>：一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序。个人感觉这个更好用点。</li>
-<li><a href="https://github.com/vitaly-t/pg-promise">pg-promise</a>：PostgreSQL 的 Promises/A+ 接口</li>
-<li><a href="https://github.com/mapbox/node-sqlite3">sqlite3</a>：SQLite  小、应用于移动端</li>
-</ol>
-<h3 id="nosql">NoSQL</h3>
-<ol>
-<li><a href="https://github.com/datastax/nodejs-driver">cassandra-driver</a>：Cassandra 便于扩张</li>
-<li><a href="https://github.com/NodeRedis/node_redis">redis</a>：Redis 一般缓存、读写快</li>
-<li><a href="https://github.com/LearnBoost/mongoose">Mongoose</a>：MongoDB ODM（对象模型工具），即将 MongoDB 中数据转换为 JavaScript 对象以供在应用中使用</li>
-<li><a href="https://github.com/mongodb/node-mongodb-native">mongodb</a>：Mongo DB  原生的 NodeJS 驱动</li>
-<li><a href="https://github.com/dscape/nano">nano</a>：最简约的 CouchDB 客户端</li>
-<li>level、<a href="https://github.com/rvagg/node-levelup">levelup</a> 和 leveldown：LevelDB</li>
-<li><a href="https://github.com/hacksparrow/apoc">apoc</a>：Neo4j</li>
-</ol>
-<h3 id="-restful-">开源,分布式,RESTful 搜索引擎</h3>
-<ol>
-<li><a href="https://github.com/elastic/elasticsearch-js">elasticsearch</a>：ElasticSearch 官方的 Node.js 和 浏览器客户端库</li>
-</ol>
+<h3 id="-node-">数据库 Node 框架</h3>
+<blockquote>
+<p>与业务场景对应，数据库分为<strong>事务型</strong>和<strong>分析型</strong>。</p>
+<p>一般 “ORM + SQL” 或 “SQL 客户端 + SQL” 组合，来满足常规规模应用。当流量大到数据库扛不住时，加入 MQ 服务。</p>
+<p>事务是恢复和并发控制的基本单位，保证 <strong>ACID</strong>：原子性、一致性、隔离性、持久性。</p>
+</blockquote>
+<h4 id="orm">ORM</h4>
+<table>
+<thead>
+<tr>
+<th>库</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/sequelize/sequelize">Sequelize</a></td>
+<td>提供对 MySQL，MariaDB，SQLite ，PostgreSQL 和 MSSQL 数据库的简单访问</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sql">SQL</h4>
+<table>
+<thead>
+<tr>
+<th>客户端/驱动</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/mysqljs/mysql">mysql</a></td>
+<td>一个纯 javascript 实现的 nodejs 的 MySQL 客户端程序。MySQL 引擎比较好</td>
+</tr>
+<tr>
+<td><a href="https://github.com/brianc/node-postgres">node-postgres</a></td>
+<td>一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序。个人感觉这个更好用点</td>
+</tr>
+<tr>
+<td><a href="https://github.com/vitaly-t/pg-promise">pg-promise</a></td>
+<td>PostgreSQL 的 Promises/A+ 接口</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mapbox/node-sqlite3">sqlite3</a></td>
+<td>SQLite  小、应用于移动端</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nosql">NoSQL</h4>
+<table>
+<thead>
+<tr>
+<th>客户端/驱动</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/datastax/nodejs-driver">cassandra-driver</a></td>
+<td>Cassandra 便于扩张</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NodeRedis/node_redis">redis</a></td>
+<td>Redis 一般缓存、读写快</td>
+</tr>
+<tr>
+<td><a href="https://github.com/LearnBoost/mongoose">Mongoose</a></td>
+<td>MongoDB ODM（对象模型工具），即将 MongoDB 中数据转换为 JavaScript 对象以供在应用中使用</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mongodb/node-mongodb-native">mongodb</a></td>
+<td>Mongo DB  原生的 NodeJS 驱动</td>
+</tr>
+<tr>
+<td><a href="https://github.com/dscape/nano">nano</a></td>
+<td>最简约的 CouchDB 客户端</td>
+</tr>
+<tr>
+<td>level、<a href="https://github.com/rvagg/node-levelup">levelup</a> 和 leveldown</td>
+<td>LevelDB</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hacksparrow/apoc">apoc</a></td>
+<td>Neo4j</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">分布式</h4>
+<blockquote>
+<p>分布式的 <a href="https://zh.wikipedia.org/wiki/CAP%E5%AE%9A%E7%90%86">CAP</a> 理论，任何一个分布式系统无法同时满足 Consistency (一致性)、Availability (可用性) 和 Partition tolerance (分区容错性)。</p>
+<p>其中， Consistency 是任何一个系统都不能放弃的，<strong>分布式事务</strong>亦是为了保证数据一致性，有时为了妥协另外两个特性，会放弃<strong>强一致性</strong>，来保证<strong>最终一致性</strong>。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Node.js /浏览器 客户端库</th>
+<th>对应的查询引擎</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/tagomoris/presto-client-node">presto-client-node</a></td>
+<td>分布式查询引擎 Presto</td>
+</tr>
+<tr>
+<td><a href="https://github.com/elastic/elasticsearch-js">elasticsearch</a></td>
+<td>RESTful 搜索引擎 ElasticSearch</td>
+</tr>
+</tbody>
+</table>
 <h2 id="-">数据库</h2>
 <table>
 <thead>
@@ -498,6 +761,12 @@ aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer�
 <td><a href="https://neo4j.com/download/">Neo4j</a></td>
 <td>图（Graph-Oriented）数据库</td>
 <td>关系性强的数据； 推荐引擎</td>
+</tr>
+<tr>
+<td>分布式查询引擎</td>
+<td>Presto</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>实时的分布式搜索和分析引擎</td>
