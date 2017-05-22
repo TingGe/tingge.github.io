@@ -31,7 +31,8 @@
 | 模块化                            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、[systemjs](https://github.com/systemjs/systemjs) |                                          |                       |       |        |
 | UI 层轻量级解决方案                    | Vue、Inferno、Preact                       | React、[React VR](https://facebookincubator.github.io/react-vr/) |                       |       |        |
 | MV* 框架(路由、数据获取、状态管理)           | Angular、[Aurelia](http://aurelia.io/)、Avalon、Ember |                                          |                       |       |        |
-| Pure Render                    |                                          | pure-render-decorator                    |                       |       |        |
+| Pure Render                    |                                          | pure-render-decorator（建议废弃 react-addons-pure-render-mixin、 react-mixin） |                       |       |        |
+| 动画                             |                                          | react-transition-group（建议废弃 react-addons-transition-group） |                       |       |        |
 | 表单验证                           |                                          | React 内置的 propTypes                      |                       |       |        |
 | 路由控制，可选                        |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux、[junctions](https://github.com/jamesknelson/junctions) |                       |       |        |
 | 连接*React* 组件与 *Redux* store，可选 |                                          | [React-Redux](https://github.com/reactjs/react-redux) |                       |       |        |
