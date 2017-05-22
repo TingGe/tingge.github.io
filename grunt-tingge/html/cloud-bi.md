@@ -121,11 +121,14 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 #### 数据分享
 
-- 邮件（newsletter）：截屏、邮件HTML模版
-- 短消息（message）：站内、IM(钉钉、短信、微信)
+- 邮件（newsletter）
+  - 截屏：[Headless Chromium](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
+  - 邮件HTML模版
+- 短消息（message）
+  - 站内
+  - [IM](https://github.com/TingGe/develop-tools#mac或linux系)(钉钉、短信、微信)
 - 二维码
-
-- 支持BI功能模块嵌入业务系统
+- 支持BI功能模块嵌入业务系统：安全 iframe 嵌入研究
 
 #### 数字处理&可读性
 
