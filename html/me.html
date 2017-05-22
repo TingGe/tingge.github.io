@@ -20,8 +20,8 @@
     }
   </style>
   <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.js"></script>
   <script type="text/javascript" src="/lib/html2canvas/dist/html2canvas.min.js"></script>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -127,6 +127,20 @@
   <script type="text/javascript">
     Justice.init();
   </script>
+
+  <script src='http://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree.all-3.5.min.js'></script>
+  <script src='http://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree_toc.min.js'></script>
+  <script type="text/javascript" >
+    <!--
+    $(document).ready(function(){
+      $('#tree').ztree_toc({
+        is_auto_number:true,
+        documment_selector:'.markdown-body'
+      });
+    });
+    //-->
+  </script>
+
 </body>
 
 </html>
