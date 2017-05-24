@@ -51,14 +51,14 @@
 >
 > 传统的 DOM 操作是直接在 DOM 上操作的，当需要修改一系列元素中的值时，就会直接对 DOM 进行操作。而采用 Virtual DOM 则会对需要修改的 DOM 进行比较（DIFF），从而只选择需要修改的部分。也因此对于不需要大量修改 DOM 的应用来说，采用 Virtual DOM 并不会有优势。开发者就可以创建出可交互的 UI。
 
-|                                 | 个人实例或说明                                  | 相关                                       |
-| ------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| React                           | [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html) | 模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views) |
-| Vue                             | [Hacker news(vue-test)](/lab/vue-test/index.html) |                                          |
-| Angular                         | [我的书柜（angular-book）](/lab/angular-book/index.html) |                                          |
-| [Angular 2](../lab/quickstart/) | 其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑 |                                          |
-| Aurelia                         |                                          |                                          |
-| React-Native                    | 仅适用业务型场景                                 |                                          |
+|                                 | 说明                                       | 个人实例                                     | 相关                                       | 探讨     |
+| ------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ------ |
+| React                           |                                          | [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html) | 模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views) | 组件和分形？ |
+| Vue                             |                                          | [Hacker news(vue-test)](/lab/vue-test/index.html) |                                          |        |
+| Angular                         |                                          | [我的书柜（angular-book）](/lab/angular-book/index.html) |                                          |        |
+| [Angular 2](../lab/quickstart/) | 其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑 |                                          |                                          |        |
+| Aurelia                         |                                          |                                          |                                          |        |
+| React-Native                    | 仅适用业务型场景                                 |                                          |                                          |        |
 
 #### Web Components/Shadow DOM
 
@@ -87,15 +87,77 @@
 
 ### 状态管理
 
-数据状态大致分为：
+> `不要把应用的逻辑和数据结构耦合在一起`——取自《Clean Architecture》
+
+数据状态可分为：
 
 - domain-state 领域模型，比如user，order
 - ui-state 纯 UI 状态，比如一个弹窗的开闭，tab 是否 active
 - aspect-state 指一些切面，比如 redux-simple-router 需要在根 reducer上有个“routing”结点，redux-form 也需要自己的结点
 
-|                               | 说明                                       |
-| ----------------------------- | ---------------------------------------- |
-| [Redux](http://redux.js.org/) | 解决 component -> action -> reducer -> state 单向数据流转问题。特点可预测、可扩展。 |
+#### MDV（Model Driven View）
+
+公式： `V = f(M)`。
+
+Redux 可表述为 `state := actions.reduce(reducer, initState)`
+
+|                               | 说明                                       | 探讨     |
+| ----------------------------- | ---------------------------------------- | ------ |
+| [Redux](http://redux.js.org/) | 单一store；通过Action 触发、Reducer 中操作数据； 单向数据流（Component -> Action -> Middleware -> Reducer -> State）。特点可预测、可扩展。 | 分组与管理？ |
+|                               |                                          |        |
+
+#### MDI（Model View Intent）
+
+MDI 基于 Reactive 理念。相关：数据管道。解读：
+
+- Intent，负责从外部的输入中，提取出所需信息；
+- Model，负责从Intent生成视图展示所需的数据；
+- View，负责根据视图数据渲染视图。
+
+提取为公式：`App := View(Model(Intent({ DOM, Http, WebSocket })))`
+
+|         | 说明         |
+| ------- | ---------- |
+| RxJS    | 为处理异步操作而设计 |
+| CycleJS |            |
+| xstream |            |
+
+### 数据结构可变&不可变
+
+>  React 系实践中，Pure Render + Immutable.js 搭配。非常适合数据状态为多层嵌套的场景。
+
+#### 可变（Mutable）
+
+可变（Mutable）数据耦合了 Time 和 Value 的概念。
+
+单线程场景： 例如 JavaScript 对象本身可变。通常用 shallowCopy（浅拷贝）或 deepCopy（深拷贝）来规避被修改。缺点是造成了 CPU 和内存的浪费。
+
+并发场景：可用并发锁方式。
+
+|                       | 说明   |      |
+| --------------------- | ---- | ---- |
+| lodash                |      |      |
+| Object.freeze、const 等 |      |      |
+|                       |      |      |
+
+#### 不可变（Imutable）
+
+Immutable 原理是 Persistent Data Structure（持久化数据结构）和 Structural Sharing（结构共享）。
+
+|                                          | 说明                        |      |
+| ---------------------------------------- | ------------------------- | ---- |
+| [Immutable.js](https://github.com/facebook/immutable-js/) |                           |      |
+| immutability-helper                      |                           |      |
+| [redux-immutablejs](https://github.com/indexiatech/redux-immutablejs) |                           |      |
+| seamless-immutable                       | 只支持 Array 和 Object 两种数据类型 |      |
+| [mori](https://github.com/swannodette/mori) |                           |      |
+| [cortex](https://github.com/mquan/cortex) |                           |      |
+
+### 数据范式/扁平化
+
+|           |      |
+| --------- | ---- |
+| normalizr |      |
 
 ### 数据加载器
 

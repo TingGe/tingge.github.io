@@ -111,7 +111,9 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 #### 数据可视化
 
-- 图表组件：[G2](https://github.com/antvis)、Echarts、ckeditor
+- 图表组件
+  - [G2](https://github.com/antvis)、Echarts
+  - 富文本编辑：[draft.js](https://draftjs.org/) + [draft-js-plugins](https://www.draft-js-plugins.com/)、ckeditor
 - 跨屏（PC、Mobile）
 - 大屏
 
