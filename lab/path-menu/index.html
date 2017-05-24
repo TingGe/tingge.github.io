@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Path Flyout Menu</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="http://tingge.github.io/lib/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="flyout-wrap">
+    <a class="flyout-btn" href="#" title="Toggle"><span>Flyout Menu Toggle</span></a>
+    <ul class="flyout flyout-init">
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+    </ul><!-- .flyout -->
+  </div><!-- .flyout-wrap -->
+
+  <script>
+    $(".flyout-btn").click(function () {
+        $(".flyout-btn").toggleClass("btn-rotate");
+        $(".flyout").find("a").removeClass();
+        return $(".flyout").removeClass("flyout-init fade").toggleClass("expand");
+      });
+
+      $(".flyout").find("a").click(function () {
+        $(".flyout-btn").toggleClass("btn-rotate");
+        $(".flyout").removeClass("expand").addClass("fade");
+        return $(this).addClass("clicked");
+      });
+  </script>
+</body>
+
+</html>
