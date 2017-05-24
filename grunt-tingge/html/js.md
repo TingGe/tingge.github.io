@@ -124,7 +124,9 @@ MDI 基于 Reactive 理念。相关：数据管道。解读：
 
 ### 数据结构可变&不可变
 
->  React 系实践中，Pure Render + Immutable.js 搭配。非常适合数据状态为多层嵌套的场景。
+> 可变和不可变是数据结构的属性，而不是语言的。
+
+关于此话题，可以参考《前端精读周刊》的  [Immutable 结构共享是如何实现的？](https://github.com/dt-fe/weekly/issues/14)
 
 #### 可变（Mutable）
 
@@ -132,26 +134,30 @@ MDI 基于 Reactive 理念。相关：数据管道。解读：
 
 单线程场景： 例如 JavaScript 对象本身可变。通常用 shallowCopy（浅拷贝）或 deepCopy（深拷贝）来规避被修改。缺点是造成了 CPU 和内存的浪费。
 
-并发场景：可用并发锁方式。
+并发场景：如 Java 采用并发锁、Immutable Object 模式等方式来实现结构不可变。
 
-|                       | 说明   |      |
-| --------------------- | ---- | ---- |
-| lodash                |      |      |
-| Object.freeze、const 等 |      |      |
-|                       |      |      |
+|                       | 说明       |      |
+| --------------------- | -------- | ---- |
+| lodash                | deepCopy |      |
+| Object.freeze、const 等 |          |      |
 
 #### 不可变（Imutable）
 
-Immutable 原理是 Persistent Data Structure（持久化数据结构）和 Structural Sharing（结构共享）。
+> React 系实践中，Pure Render + Immutable.js 搭配。非常适合数据状态为多层嵌套的场景。
 
-|                                          | 说明                        |      |
-| ---------------------------------------- | ------------------------- | ---- |
-| [Immutable.js](https://github.com/facebook/immutable-js/) |                           |      |
-| immutability-helper                      |                           |      |
-| [redux-immutablejs](https://github.com/indexiatech/redux-immutablejs) |                           |      |
-| seamless-immutable                       | 只支持 Array 和 Object 两种数据类型 |      |
-| [mori](https://github.com/swannodette/mori) |                           |      |
-| [cortex](https://github.com/mquan/cortex) |                           |      |
+另外，也有些语言如 Clojure 则是原子上不可变的。其原理是 Persistent Data Structure（持久化数据结构），并通过 Structural Sharing（结构共享）来优化性能。
+
+- 其内部使用 Trie 数据结构存储，只要两个对象的 `hashCode` 相等，值就是一样的。这样的算法避免了深度遍历比较，性能非常好。
+- 通常，结构共享与不可变数据结构相关联，但它也适用于结构上不可变的对象。
+
+|                                          | 说明                                       |      |
+| ---------------------------------------- | ---------------------------------------- | ---- |
+| [Immutable.js](https://github.com/facebook/immutable-js/) |                                          |      |
+| immutability-helper                      |                                          |      |
+| [redux-immutablejs](https://github.com/indexiatech/redux-immutablejs) |                                          |      |
+| seamless-immutable                       | 只支持 Array 和 Object 两种数据类型                |      |
+| [mori](https://github.com/swannodette/mori) | 把`ClojureScript`里持久化数据结构的API支持带到了`JavaScript`里 |      |
+| [cortex](https://github.com/mquan/cortex) |                                          |      |
 
 ### 数据范式/扁平化
 
@@ -342,6 +348,9 @@ Immutable 原理是 Persistent Data Structure（持久化数据结构）和 Stru
 
 - [深入理解React、Redux](http://www.jianshu.com/p/0e42799be566)
 - [理解 redux 中间件](https://zhuanlan.zhihu.com/p/21391101)
+- [On Structural Immutability](https://clojurefun.wordpress.com/2013/01/21/on-structural-immutability/)
+- [Structural sharingand destructive modification](https://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/structural-sharing/)
+- [js-structural-sharing](https://github.com/mperdikeas/js-structural-sharing) 
 - [ShadowDOM Visualizer](http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
 - [HTML's New Template Tag](http://www.html5rocks.com/zh/tutorials/webcomponents/template/)
 - [HTML5 Template Tag: Introduction](http://robdodson.me/html5-template-tag-introduction/)
