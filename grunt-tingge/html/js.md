@@ -11,7 +11,7 @@
 ## Web 前端
 
 > 至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
-> 目前，主流的三大框架 React系、Angular 2系、Vue系 在相互融合。其他类似框架或局部功能替代类库不足成事。
+> 目前，主流的三大 FRP 框架 React系、Angular 2系、Vue系 在相互融合。其他类似框架或局部功能替代类库不足成事。
 
 |                                | 技术                                       | React系(Webpack+ React + Redux)           | Progressive  Web  App | 微信小应用 | 支付宝小程序 |
 | ------------------------------ | ---------------------------------------- | ---------------------------------------- | --------------------- | ----- | ------ |
@@ -47,7 +47,7 @@
 
 > 基于组件（component-based）的构建方式。
 >
-> MVVM 双向绑定、Virtual DOM，都是为解决直接操作 DOM 的“性能墙”。
+> MVVM 双向绑定、Virtual DOM，都是为解决直接操作 DOM 的“性能墙”。也有人提出了质疑，比如前端框架 Turbine 的开发者直言 《[Why Turbine doesn't use virtual DOM](https://github.com/funkia/turbine/issues/32) 》
 >
 > 传统的 DOM 操作是直接在 DOM 上操作的，当需要修改一系列元素中的值时，就会直接对 DOM 进行操作。而采用 Virtual DOM 则会对需要修改的 DOM 进行比较（DIFF），从而只选择需要修改的部分。也因此对于不需要大量修改 DOM 的应用来说，采用 Virtual DOM 并不会有优势。开发者就可以创建出可交互的 UI。
 
