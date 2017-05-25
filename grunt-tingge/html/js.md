@@ -106,9 +106,9 @@ Redux 可表述为 `state := actions.reduce(reducer, initState)`
 | [Redux](http://redux.js.org/) | 单一store；通过Action 触发、Reducer 中操作数据； 单向数据流（Component -> Action -> Middleware -> Reducer -> State）。特点可预测、可扩展。 | 分组与管理？ |
 |                               |                                          |        |
 
-#### MDI（Model View Intent）
+#### MVI（Model View Intent）
 
-MDI 基于 Reactive 理念。相关：数据管道。解读：
+MVI 基于 Reactive 理念。相关：数据管道。解读：
 
 - Intent，负责从外部的输入中，提取出所需信息；
 - Model，负责从Intent生成视图展示所需的数据；
