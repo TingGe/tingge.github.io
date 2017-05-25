@@ -101,10 +101,10 @@
 
 Redux 可表述为 `state := actions.reduce(reducer, initState)`
 
-|                               | 说明                                       | 探讨     |
-| ----------------------------- | ---------------------------------------- | ------ |
-| [Redux](http://redux.js.org/) | 单一store；通过Action 触发、Reducer 中操作数据； 单向数据流（Component -> Action -> Middleware -> Reducer -> State）。特点可预测、可扩展。 | 分组与管理？ |
-|                               |                                          |        |
+|                                        | 说明                                       | 探讨     |
+| -------------------------------------- | ---------------------------------------- | ------ |
+| [Redux](http://redux.js.org/)          | 单一store；通过Action 触发、Reducer 中操作数据； 单向数据流（Component -> Action -> Middleware -> Reducer -> State）。特点可预测、可扩展。 | 分组与管理？ |
+| [MobX](https://github.com/mobxjs/mobx) | 通过透明的函数响应式编程(transparently applying functional reactive programming - TFRP) 使状态管理简单、可扩展 |        |
 
 #### MVI（Model View Intent）
 
