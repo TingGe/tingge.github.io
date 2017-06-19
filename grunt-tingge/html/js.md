@@ -214,7 +214,7 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 | Feathers                                 |                                          |                                          |      |
 | Now                                      | “微服务”                                    |                                          |      |
 | [expressjs5-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/expressjs5-app) | 社区生态完善。[Express.js 黑历史](http://clonn.blogspot.com/2016/04/expressjs-express.html)后，IBM 过度干预，使 [Douglas Wilson](https://github.com/dougwilson) 在16年3月退出 5，个人建议转其它 |                                          |      |
-| [Express](https://github.com/expressjs/express) |                                          |                                          |      |
+| [Express](https://github.com/expressjs/express) | 一个路由和中间件 Web 框架，其自身只具有最低程度的功能            |                                          |      |
 | Nodal                                    |                                          |                                          |      |
 | [Keystone](https://github.com/keystonejs/keystone) | 以 Express 和 MongoDB 为基础搭建的 Node.js CMS 和 web 应用程序平台 |                                          |      |
 | [Loopback](https://github.com/strongloop/loopback) | 集“Express ＋ ORM ＋ RESTFul API”于一体的后端解决方案。 关联查询有些坑，个人建议转其它 |                                          |      |

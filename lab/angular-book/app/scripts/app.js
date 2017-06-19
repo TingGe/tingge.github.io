@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'TypeScript Handbook（中文版）',
+    'author': 'Patrick Zhong',
+    'url': 'https://zhongsp.gitbooks.io/typescript-handbook/content/'
+  }, {
     'name': 'JavaScript Promise迷你书（中文版）',
     'author': '原著：azu / 翻译：liubin、kaku、honnkyou',
     'url': 'http://liubin.org/promises-book/'
