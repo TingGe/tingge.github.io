@@ -25,7 +25,7 @@
 | DOM库                           | zepto、jQuery、                            | react-dom                                |                       |       |        |
 | HTML 5兼容旧浏览器                   | [html5shiv](https://github.com/aFarkas/html5shiv)、[object-observe](https://github.com/MaxArt2501/object-observe)（Object.observe polyfill）、 |                                          |                       |       |        |
 | 多点触摸手势库                        | [Hammerjs](http://hammerjs.github.io/)、[jGestures](http://jgestures.codeplex.com/)、 | [react-hammerjs](https://github.com/JedWatson/react-hammerjs) |                       |       |        |
-| 工具库                            | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat)、setRafTimeout | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[glamor](https://github.com/threepointone/glamor)、[localForage](https://github.com/localForage/localForage)、d3-format、[prismjs](https://github.com/PrismJS/prism)、[react-sizeme](https://github.com/ctrlplusb/react-sizeme)、[clipboard](https://www.npmjs.com/package/clipboard)、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll |                       |       |        |
+| 工具库                            | lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat)、setRafTimeout | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[glamor](https://github.com/threepointone/glamor)、[localForage](https://github.com/localForage/localForage)、d3-format、[prismjs](https://github.com/PrismJS/prism)、[react-sizeme](https://github.com/ctrlplusb/react-sizeme)、[clipboard](https://www.npmjs.com/package/clipboard)、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、[react-flight](https://github.com/jondot/react-flight) |                       |       |        |
 | 模版引擎                           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |                       |       |        |
 | 异步Task跟踪，分析，错误记录、开发调试跟踪等       | [zone.js](https://github.com/angular/zone.js) |                                          |                       |       |        |
 | 模块化                            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、[systemjs](https://github.com/systemjs/systemjs) |                                          |                       |       |        |
@@ -53,7 +53,7 @@
 
 |                                 | 说明                                       | 个人实例                                     | 相关                                       | 探讨     |
 | ------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ------ |
-| React                           |                                          | [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html) | 模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views) | 组件和分形？ |
+| React                           |                                          | [Github 中最流行的 JavaScript 项目（react-test）](http://tingge.github.io/lab/react-test/index.html) | 模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views)、 [React Express](http://github.com/dabbott/react-express) | 组件和分形？ |
 | Vue                             |                                          | [Hacker news(vue-test)](/lab/vue-test/index.html) |                                          |        |
 | Angular                         |                                          | [我的书柜（angular-book）](/lab/angular-book/index.html) |                                          |        |
 | [Angular 2](../lab/quickstart/) | 其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑 |                                          |                                          |        |
@@ -136,10 +136,10 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 
 并发场景：如 Java 采用并发锁、Immutable Object 模式等方式来实现结构不可变。
 
-|                       | 说明       |      |
-| --------------------- | -------- | ---- |
-| lodash                | deepCopy |      |
-| Object.freeze、const 等 |          |      |
+|                       | 说明                  |      |
+| --------------------- | ------------------- | ---- |
+| lodash                | deepCopy, mergeWith |      |
+| Object.freeze、const 等 |                     |      |
 
 #### 不可变（Imutable）
 
@@ -161,7 +161,7 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 
 ### 数据范式/扁平化
 
-|           |      |
+|           | 说明   |
 | --------- | ---- |
 | normalizr |      |
 
@@ -196,11 +196,16 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 
 ### Node.js 模块
 
-| 模块                                       | 说明                     |
-| ---------------------------------------- | ---------------------- |
-| [vm2](https://github.com/patriksimek/vm2) | 虚拟模块                   |
-| [Hello.js](https://adodson.com/hello.js/) | 基于 OAuth 的浏览器端用户认证 SDK |
-| [Sharp](https://github.com/lovell/sharp) | 图像调整模块                 |
+| 模块                                       | 说明                                    |
+| ---------------------------------------- | ------------------------------------- |
+| [vm2](https://github.com/patriksimek/vm2) | 虚拟模块                                  |
+| [Hello.js](https://adodson.com/hello.js/) | 基于 OAuth 的浏览器端用户认证 SDK                |
+| [Sharp](https://github.com/lovell/sharp) | 图像调整模块                                |
+| [AdonisJS](https://adonisjs.com/)        | **服务端渲染** 的 MVC 框架， Laravel 的NodeJS 版 |
+| csvtojson                                | csv 数据转json                           |
+| prompt                                   | 命令行提醒                                 |
+| commander                                | 提供了用户命令行输入和参数解析强大功能                   |
+| semver                                   | 语义化版本规则                               |
 
 ### Web 服务 && RESTful API
 

@@ -109,13 +109,21 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 除常规的登录授权、权限管理(ACL\RBAC)、消息通知、向导（帮助手册）、数据建模、反馈和第三方集成外，以下几项是商业智能(BI)系统的主要功能：
 
+#### 页面搭建
+
+- 跨屏（PC、Mobile）
+  - [gaea-editor](https://github.com/ascoders/gaea-editor)
+  - [react-grid-layout](https://github.com/STRML/react-grid-layout)
+- 大屏
+  - [golden-layout](https://github.com/deepstreamIO/golden-layout)
+
 #### 数据可视化
 
 - 图表组件
   - [G2](https://github.com/antvis)、Echarts
   - 富文本编辑：[draft.js](https://draftjs.org/) + [draft-js-plugins](https://www.draft-js-plugins.com/)、ckeditor
-- 跨屏（PC、Mobile）
-- 大屏
+- 非图表组件
+  - 表格：
 
 #### 报表
 
@@ -138,10 +146,20 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 - 数据格式化：[d3-format](https://github.com/d3/d3-format)
 
 
+#### 国际化
+
+个人的一点方案。 
+
+1. 使用和设定系统 locale：通过“用户语言配置 ＋  `(navigator.language || navigator.browserLanguage).toLowerCase()` 获取用户浏览器默认语言”
+2. 设置 html lang属性。
+3. 页面中 js 读取lang加载对应语言包（如 [React Intl](https://github.com/yahoo/react-intl)）。
+
+优点：这样既能解决人的可读，又利于搜索引擎的seo。
+
 ## 前端方案
 
 - 组件化/模块化方案
-- 视场景的，SPA、PWA和同构方案
+- 视场景的，SPA、PWA和同构（／[SSR](https://css-tricks.com/server-side-react-rendering/)）方案
 - 微服务，[GraphQL](http://graphql.org/)
 
 ## 参考
