@@ -80,7 +80,7 @@
 </blockquote>
 <h2 id="-">定义</h2>
 <p>从应用上来讲，BI（BusinessIntelligence）即商业智能，它是一套完整的解决方案，用来将企业中现有的数据进行有效的整合，快速准确的提供报表并提出决策依据，帮助企业做出明智的业务经营决策。</p>
-<p>BI的作用一方面是协助业务分析，另一方面提供管理者及时有效的数据支撑，降低决策难度。</p>
+<p>BI的作用一方面是供<strong>数据分析师</strong>／数据管理者做业务分析（数据建模、分析和应用制作），另一方面提供<strong>管理者</strong>及时有效的数据支撑，降低决策难度（应用查看、邮件等）。</p>
 <p>云商业智能(Cloud BI)在数据架构中处于前端分析的位置，其核心作用是对获取数据的多维度分析、数据的切片、数据的上钻和下钻、cube等。通过ETL数据抽取、转化形成一个完整的数据仓库、然后对数据仓库的数据进行抽取，而后是商业智能的前端分析和展示。</p>
 <h3 id="-">关键词</h3>
 <p>数据建模、数据源、数据集、OLAP、雪花模型、星型模型、多维分析、行、列、维度、度量、上钻、下钻、cube、Dashboard、Report</p>
@@ -323,7 +323,7 @@
 <p>从收费和市场占有量的角度来看，免费固然有利于工具型产品的推广，但<strong>产品稀缺性</strong>决定是否收费。能适应主要目标用户群体的<strong>场景</strong>，是反哺产品成长的关键。</p>
 <h3 id="-">趋势</h3>
 <p>关键词： 大数据、智能、自助、移动。</p>
-<p>知名调研机构BARC针对BI重要趋势调研了近2800位用户、顾问和供应商。《2017年BI趋势报告》的结果显示，<strong>数据可视化</strong>、<strong>自助式BI</strong>和<strong>数据质量/主数据管理</strong>被认为是BI工作中最重要的三个部分，也是当下更受关注的BI趋势。</p>
+<p>知名调研机构<a href="http://barc-research.com/research/bi-trend-monitor/">BARC</a>针对BI重要趋势调研了近2800位用户、顾问和供应商。《<a href="http://barc-research.com/wp-content/uploads/2016/11/BARC_2017_BI_Trend_Monitor_web.pdf">2017年BI趋势报告</a>》的结果显示，<strong>数据可视化</strong>、<strong>自助式BI</strong>和<strong>数据质量/主数据管理</strong>被认为是BI工作中最重要的三个部分，也是当下更受关注的BI趋势。</p>
 <p>Gartner 分析师们提出的未来主流BI的标准配置：</p>
 <ol>
 <li>敏捷集中地配置BI：支持IT人员能够分权限分内容掌控管理数据；业务人员可自助取数，可直连数据，也可链接经过ETL处理过的数据仓库，更可自助加工处理一些原本不满足需求的数据</li>
@@ -333,20 +333,10 @@
 <li>外网部署：支持类似于针对外部客户的独立服务器部署，允许用户通过局域网和互联网访问</li>
 </ol>
 <h2 id="-">主要前端技术</h2>
-<p>除常规的登录授权、权限管理(ACL\RBAC)、消息通知、向导（帮助手册）、数据建模、反馈和第三方集成外，以下几项是商业智能(BI)系统的主要功能：</p>
-<h4 id="-">页面搭建</h4>
-<ul>
-<li>跨屏（PC、Mobile）<ul>
-<li><a href="https://github.com/ascoders/gaea-editor">gaea-editor</a></li>
-<li><a href="https://github.com/STRML/react-grid-layout">react-grid-layout</a></li>
-</ul>
-</li>
-<li>大屏<ul>
-<li><a href="https://github.com/deepstreamIO/golden-layout">golden-layout</a></li>
-</ul>
-</li>
-</ul>
-<h4 id="-">数据可视化</h4>
+<p>商业智能(BI)由数据建模（数据源、纬度、数据集）、数据分析（仪表板、报表）和应用（站点、分享）组成。</p>
+<p>具体模块有：登录授权、权限管理(ACL\RBAC)；消息通知、向导（帮助）、反馈和第三方集成等。</p>
+<p>主要功能及技术：</p>
+<h4 id="-create-view-">数据可视化（Create/View）</h4>
 <ul>
 <li>图表组件<ul>
 <li><a href="https://github.com/antvis">G2</a>、Echarts</li>
@@ -357,12 +347,18 @@
 <li>表格：</li>
 </ul>
 </li>
+<li>布局<ul>
+<li>跨屏（PC、H5）：<a href="https://github.com/STRML/react-grid-layout">react-grid-layout</a>、<a href="https://github.com/ascoders/gaea-editor">gaea-editor</a></li>
+<li>大屏：<a href="https://github.com/deepstreamIO/golden-layout">golden-layout</a>、<a href="https://github.com/palantir/react-mosaic">react-mosaic</a></li>
 </ul>
-<h4 id="-">报表</h4>
+</li>
+</ul>
+<h4 id="-create-view-">报表（Create/View）</h4>
 <ul>
 <li>电子表格：<a href="https://jspreadsheets.com/">JSpreadsheets</a>、<a href="https://github.com/DanBricklin/socialcalc">socialcalc</a>、<a href="https://ethercalc.net/">EtherCalc</a>、<a href="https://nadbm.github.io/react-datasheet/">React datasheet</a>、<a href="http://www.gcpowertools.com.cn/">GrapeCity</a></li>
 </ul>
-<h4 id="-">数据分享</h4>
+<h4 id="-create-view-">站点搭建（Create／View）</h4>
+<h4 id="-share-">数据分享（Share）</h4>
 <ul>
 <li>邮件（newsletter）<ul>
 <li>截屏：<a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md">Headless Chromium</a></li>
@@ -393,7 +389,7 @@
 <h2 id="-">前端方案</h2>
 <ul>
 <li>组件化/模块化方案</li>
-<li>视场景的，SPA、PWA和同构（／<a href="https://css-tricks.com/server-side-react-rendering/">SSR</a>）方案</li>
+<li>视场景的，SPA、PWA和同构／<a href="https://css-tricks.com/server-side-react-rendering/">SSR</a>方案</li>
 <li>微服务，<a href="http://graphql.org/">GraphQL</a></li>
 </ul>
 <h2 id="-">参考</h2>

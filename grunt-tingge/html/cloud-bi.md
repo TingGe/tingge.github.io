@@ -8,7 +8,7 @@
 
 从应用上来讲，BI（BusinessIntelligence）即商业智能，它是一套完整的解决方案，用来将企业中现有的数据进行有效的整合，快速准确的提供报表并提出决策依据，帮助企业做出明智的业务经营决策。
 
-BI的作用一方面是协助业务分析，另一方面提供管理者及时有效的数据支撑，降低决策难度。
+BI的作用一方面是供**数据分析师**／数据管理者做业务分析（数据建模、分析和应用制作），另一方面提供**管理者**及时有效的数据支撑，降低决策难度（应用查看、邮件等）。
 
 云商业智能(Cloud BI)在数据架构中处于前端分析的位置，其核心作用是对获取数据的多维度分析、数据的切片、数据的上钻和下钻、cube等。通过ETL数据抽取、转化形成一个完整的数据仓库、然后对数据仓库的数据进行抽取，而后是商业智能的前端分析和展示。
 
@@ -95,7 +95,7 @@ BI的作用一方面是协助业务分析，另一方面提供管理者及时有
 
 关键词： 大数据、智能、自助、移动。
 
-知名调研机构BARC针对BI重要趋势调研了近2800位用户、顾问和供应商。《2017年BI趋势报告》的结果显示，**数据可视化**、**自助式BI**和**数据质量/主数据管理**被认为是BI工作中最重要的三个部分，也是当下更受关注的BI趋势。
+知名调研机构[BARC](http://barc-research.com/research/bi-trend-monitor/)针对BI重要趋势调研了近2800位用户、顾问和供应商。《[2017年BI趋势报告](http://barc-research.com/wp-content/uploads/2016/11/BARC_2017_BI_Trend_Monitor_web.pdf)》的结果显示，**数据可视化**、**自助式BI**和**数据质量/主数据管理**被认为是BI工作中最重要的三个部分，也是当下更受关注的BI趋势。
 
 Gartner 分析师们提出的未来主流BI的标准配置：
 
@@ -107,29 +107,30 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 ## 主要前端技术
 
-除常规的登录授权、权限管理(ACL\RBAC)、消息通知、向导（帮助手册）、数据建模、反馈和第三方集成外，以下几项是商业智能(BI)系统的主要功能：
+商业智能(BI)由数据建模（数据源、纬度、数据集）、数据分析（仪表板、报表）和应用（站点、分享）组成。
 
-#### 页面搭建
+具体模块有：登录授权、权限管理(ACL\RBAC)；消息通知、向导（帮助）、反馈和第三方集成等。
 
-- 跨屏（PC、Mobile）
-  - [gaea-editor](https://github.com/ascoders/gaea-editor)
-  - [react-grid-layout](https://github.com/STRML/react-grid-layout)
-- 大屏
-  - [golden-layout](https://github.com/deepstreamIO/golden-layout)
+主要功能及技术：
 
-#### 数据可视化
+#### 数据可视化（Create/View）
 
 - 图表组件
   - [G2](https://github.com/antvis)、Echarts
   - 富文本编辑：[draft.js](https://draftjs.org/) + [draft-js-plugins](https://www.draft-js-plugins.com/)、ckeditor
 - 非图表组件
   - 表格：
+- 布局
+  - 跨屏（PC、H5）：[react-grid-layout](https://github.com/STRML/react-grid-layout)、[gaea-editor](https://github.com/ascoders/gaea-editor)
+  - 大屏：[golden-layout](https://github.com/deepstreamIO/golden-layout)、[react-mosaic](https://github.com/palantir/react-mosaic)
 
-#### 报表
+#### 报表（Create/View）
 
 - 电子表格：[JSpreadsheets](https://jspreadsheets.com/)、[socialcalc](https://github.com/DanBricklin/socialcalc)、[EtherCalc](https://ethercalc.net/)、[React datasheet](https://nadbm.github.io/react-datasheet/)、[GrapeCity](http://www.gcpowertools.com.cn/)
 
-#### 数据分享
+#### 站点搭建（Create／View）
+
+#### 数据分享（Share）
 
 - 邮件（newsletter）
   - 截屏：[Headless Chromium](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
@@ -159,7 +160,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 ## 前端方案
 
 - 组件化/模块化方案
-- 视场景的，SPA、PWA和同构（／[SSR](https://css-tricks.com/server-side-react-rendering/)）方案
+- 视场景的，SPA、PWA和同构／[SSR](https://css-tricks.com/server-side-react-rendering/)方案
 - 微服务，[GraphQL](http://graphql.org/)
 
 ## 参考
