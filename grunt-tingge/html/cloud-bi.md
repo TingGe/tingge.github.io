@@ -95,7 +95,9 @@ BI的作用一方面是供**数据分析师**／数据管理者做业务分析�
 
 关键词： 大数据、智能、自助、移动。
 
-知名调研机构[BARC](http://barc-research.com/research/bi-trend-monitor/)针对BI重要趋势调研了近2800位用户、顾问和供应商。《[2017年BI趋势报告](http://barc-research.com/wp-content/uploads/2016/11/BARC_2017_BI_Trend_Monitor_web.pdf)》的结果显示，**数据可视化**、**自助式BI**和**数据质量/主数据管理**被认为是BI工作中最重要的三个部分，也是当下更受关注的BI趋势。
+#### 知名调研机构 [BARC](http://barc-research.com/research/bi-trend-monitor/)
+
+针对BI重要趋势调研了近2800位用户、顾问和供应商。《[2017年BI趋势报告](http://barc-research.com/wp-content/uploads/2016/11/BARC_2017_BI_Trend_Monitor_web.pdf)》的结果显示，**数据可视化**、**自助式BI**和**数据质量/主数据管理**被认为是BI工作中最重要的三个部分，也是当下更受关注的BI趋势。
 
 Gartner 分析师们提出的未来主流BI的标准配置：
 
@@ -104,6 +106,10 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 3. 可控的数据的挖掘分析：保证IT平台的安全性、后台可监控用户行为、可监测平台的访问和使用状况等功能。用户处理好的数据和创建好的分析页面可共享和复用
 4. 嵌入式BI：支持将数据转化为可嵌入到其他流程或应用中的BI内容
 5. 外网部署：支持类似于针对外部客户的独立服务器部署，允许用户通过局域网和互联网访问
+
+#### 知名调研机构 [Gartner](http://www.gartner.com/technology/home.jsp)
+
+ [Gartner](http://www.gartner.com/technology/home.jsp)的《[商业智能和分析魔力象限](https://www.gartner.com/doc/reprints?id=1-3TYE0CD&ct=170221&st=sb)》也可以查看BI的趋势。
 
 ## 主要前端技术
 
