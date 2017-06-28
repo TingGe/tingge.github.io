@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'React Bits',
+    'author': 'Vasa 等',
+    'url': 'https://vasanthk.gitbooks.io/react-bits/'
+  }, {
     'name': 'TypeScript Handbook（中文版）',
     'author': 'Patrick Zhong',
     'url': 'https://zhongsp.gitbooks.io/typescript-handbook/content/'
