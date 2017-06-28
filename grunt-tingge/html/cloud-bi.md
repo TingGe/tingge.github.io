@@ -148,13 +148,13 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 #### 国际化
 
-个人的一点方案。 
+国际化需从字符、语言、标识和文本、文本排版方向、风格和布局、导航六个方面来设计，个人的一点方案： 
 
-1. 使用和设定系统 locale：通过“用户语言配置 ＋  `(navigator.language || navigator.browserLanguage).toLowerCase()` 获取用户浏览器默认语言”
+1. 使用和设定系统 locale：通过“用户语言设置导航 ＋  `(navigator.language || navigator.browserLanguage).toLowerCase()` 获取用户浏览器默认语言”，来设定locale
 2. 设置 html lang属性。
 3. 页面中 js 读取lang加载对应语言包（如 [React Intl](https://github.com/yahoo/react-intl)）。
 
-优点：这样既能解决人的可读，又利于搜索引擎的seo。
+优点：这样遵循W3C 的 [Html 语义](https://www.w3.org/International/articles/language-tags/)，既能解决人的可读，又利于对搜索引擎的SEO。更多可参考 [W3C i18n](https://www.w3.org/International/techniques/authoring-html)
 
 ## 前端方案
 

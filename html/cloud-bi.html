@@ -383,13 +383,13 @@
 <li>数据格式化：<a href="https://github.com/d3/d3-format">d3-format</a></li>
 </ul>
 <h4 id="-">国际化</h4>
-<p>个人的一点方案。 </p>
+<p>国际化需从字符、语言、标识和文本、文本排版方向、风格和布局、导航六个方面来设计，个人的一点方案： </p>
 <ol>
-<li>使用和设定系统 locale：通过“用户语言配置 ＋  <code>(navigator.language || navigator.browserLanguage).toLowerCase()</code> 获取用户浏览器默认语言”</li>
+<li>使用和设定系统 locale：通过“用户语言设置导航 ＋  <code>(navigator.language || navigator.browserLanguage).toLowerCase()</code> 获取用户浏览器默认语言”，来设定locale</li>
 <li>设置 html lang属性。</li>
 <li>页面中 js 读取lang加载对应语言包（如 <a href="https://github.com/yahoo/react-intl">React Intl</a>）。</li>
 </ol>
-<p>优点：这样既能解决人的可读，又利于搜索引擎的seo。</p>
+<p>优点：这样遵循W3C 的 <a href="https://www.w3.org/International/articles/language-tags/">Html 语义</a>，既能解决人的可读，又利于对搜索引擎的SEO。更多可参考 <a href="https://www.w3.org/International/techniques/authoring-html">W3C i18n</a></p>
 <h2 id="-">前端方案</h2>
 <ul>
 <li>组件化/模块化方案</li>
