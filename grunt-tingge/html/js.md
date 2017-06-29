@@ -14,6 +14,8 @@
 > 目前，主流的三大 FRP 框架 React系、Angular 2系、Vue系 在相互融合。其他类似框架或局部功能替代类库不足成事。
 >
 > 推荐的React设计模式、技术、技巧和窍门：[React Bits](https://vasanthk.gitbooks.io/react-bits/)
+>
+> 更多： [React.js 资料和教程](https://github.com/thoughtbit/it-note/issues/12)
 
 |                                | 技术                                       | React系(Webpack+ React + Redux)           | Progressive  Web  App | 微信小应用 | 支付宝小程序 |
 | ------------------------------ | ---------------------------------------- | ---------------------------------------- | --------------------- | ----- | ------ |
