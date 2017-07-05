@@ -79,11 +79,17 @@
 <p>云BI产品和主要前端技术研究。</p>
 </blockquote>
 <h2 id="-">定义</h2>
-<p>从应用上来讲，BI（BusinessIntelligence）即商业智能，它是一套完整的解决方案，用来将企业中现有的数据进行有效的整合，快速准确的提供报表并提出决策依据，帮助企业做出明智的业务经营决策。</p>
+<blockquote>
+<p>BI：Info = Fn(Data)</p>
+</blockquote>
+<p>商业智能（Business Intelligence）——业界比较公认的说法是在1996年最早由<a href="http://www.gartner.com/technology/home.jsp">加特纳集团（Gartner Group）</a>提出的一个商业概念，通过应用基于事实的支持系统来辅助商业决策的制定。商业智能技术提供使企业迅速分析数据的技术和方法，包括收集、管理和分析数据，将这些数据转化为有用的信息。——取自《白话大数据与机器学习》</p>
+<p>从应用上来讲，它是一套完整的解决方案，用来将企业中现有的数据进行有效的整合，快速准确的提供报表并提出决策依据，帮助企业做出明智的业务经营决策。</p>
 <p>BI的作用一方面是供<strong>数据分析师</strong>／数据管理者做业务分析（数据建模、分析和应用制作），另一方面提供<strong>管理者</strong>及时有效的数据支撑，降低决策难度（应用查看、邮件等）。</p>
 <p>云商业智能(Cloud BI)在数据架构中处于前端分析的位置，其核心作用是对获取数据的多维度分析、数据的切片、数据的上钻和下钻、cube等。通过ETL数据抽取、转化形成一个完整的数据仓库、然后对数据仓库的数据进行抽取，而后是商业智能的前端分析和展示。</p>
 <h3 id="-">关键词</h3>
 <p>数据建模、数据源、数据集、OLAP、雪花模型、星型模型、多维分析、行、列、维度、度量、上钻、下钻、cube、Dashboard、Report</p>
+<h3 id="-">过程</h3>
+<p>数据分析：关键词<strong>统计和概率</strong>。在平时工作中用的统计大多为计数功能，如在使用Excel时会用到 COUNT、SUM、AVERAGE等统计函数；用SQL语言对数据库的某些字段进行计数（count）、求和（sum）、求平均（avg）等函数。而概率的应用大多则是根据样本的数量以及占比得到“可能性”和“分布比例”等描述数值。</p>
 <h2 id="-">产品</h2>
 <h3 id="-">商业</h3>
 <h4 id="-saas-">基于SaaS模式的商业智能解决方案</h4>
@@ -377,6 +383,9 @@
 <li>支持BI功能模块嵌入业务系统：安全 iframe 嵌入研究</li>
 </ul>
 <h4 id="-">数字处理&amp;可读性</h4>
+<blockquote>
+<p>对统计型数值的运算。计数（count）、求和（sum）、求平均（avg）的取整等</p>
+</blockquote>
 <ul>
 <li>数字运算：<a href="https://github.com/josdejong/mathjs">Math.js</a></li>
 <li>数据格式化：<a href="https://github.com/d3/d3-format">d3-format</a></li>
@@ -386,7 +395,7 @@
 <ol>
 <li>使用和设定系统 locale：通过“用户语言设置导航 ＋  <code>(navigator.language || navigator.browserLanguage).toLowerCase()</code> 获取用户浏览器默认语言”，来设定locale</li>
 <li>设置 html lang属性。</li>
-<li>页面中 js 读取lang加载对应语言包（如 <a href="https://github.com/yahoo/react-intl">React Intl</a>）。</li>
+<li>页面中 js 读取lang加载对应语言包（如 <a href="https://github.com/yahoo/react-intl">React Intl</a>、AntDesign 的<code>&lt;LocalProvier&gt;</code>等）。</li>
 </ol>
 <p>优点：这样遵循W3C 的 <a href="https://www.w3.org/International/articles/language-tags/">Html 语义</a>，既能解决人的可读，又利于对搜索引擎的SEO。更多可参考 <a href="https://www.w3.org/International/techniques/authoring-html">W3C i18n</a></p>
 <h2 id="-">前端方案</h2>
