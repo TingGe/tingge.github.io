@@ -163,6 +163,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 - 数字运算：[Math.js](https://github.com/josdejong/mathjs)
 - 数据格式化：[d3-format](https://github.com/d3/d3-format)
+- 数据导入和导出：[CSV.js](https://github.com/knrz/CSV.js)
 
 
 #### 国际化
@@ -174,6 +175,11 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 3. 页面中 js 读取lang加载对应语言包（如 [React Intl](https://github.com/yahoo/react-intl)、AntDesign 的` <LocalProvier>`等）。
 
 优点：这样遵循W3C 的 [Html 语义](https://www.w3.org/International/articles/language-tags/)，既能解决人的可读，又利于对搜索引擎的SEO。更多可参考 [W3C i18n](https://www.w3.org/International/techniques/authoring-html)
+
+思考：
+
+1. 语言包除map方式外，是否有更好的管理方式？
+2. 如何实现（无人或半人工干预的）智能翻译？
 
 ## 前端方案
 
