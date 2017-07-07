@@ -87,7 +87,7 @@
 <p>BI的作用一方面是供<strong>数据分析师</strong>／数据管理者做业务分析（数据建模、分析和应用制作），另一方面提供<strong>管理者</strong>及时有效的数据支撑，降低决策难度（应用查看、邮件等）。</p>
 <p>云商业智能(Cloud BI)在数据架构中处于前端分析的位置，其核心作用是对获取数据的多维度分析、数据的切片、数据的上钻和下钻、cube等。通过ETL数据抽取、转化形成一个完整的数据仓库、然后对数据仓库的数据进行抽取，而后是商业智能的前端分析和展示。</p>
 <h3 id="-">关键词</h3>
-<p>数据建模、数据源、数据集、OLAP、雪花模型、星型模型、多维分析、行、列、维度、度量、上钻、下钻、cube、Dashboard、Report</p>
+<p>数据建模、数据源、数据集、OLAP、雪花模型、星型模型、多维分析、行、列、维度、度量、上卷、下钻、cube、Dashboard、Report</p>
 <h3 id="-">过程</h3>
 <p>数据分析：关键词<strong>统计和概率</strong>。在平时工作中用的统计大多为计数功能，如在使用Excel时会用到 COUNT、SUM、AVERAGE等统计函数；用SQL语言对数据库的某些字段进行计数（count）、求和（sum）、求平均（avg）等函数。而概率的应用大多则是根据样本的数量以及占比得到“可能性”和“分布比例”等描述数值。</p>
 <h2 id="-">产品</h2>
@@ -298,6 +298,11 @@
 </tr>
 <tr>
 <td><a href="https://data.aliyun.com/product/bi">阿里云 Quick BI  数加平台</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://kyligence.io/">Kyligence</a></td>
+<td>基于Apache Kylin开源项目的通用型企业级产品。 OLAP on Hadoop，主要客户群体集中在金融、电信、互联网等领域。通过SaaS服务的KyBot快速解决运维和应用问题</td>
 </tr>
 </tbody>
 </table>
@@ -327,6 +332,44 @@
 <p>分析：</p>
 <p>从数据角度来看，主要涵盖<strong>业务数据</strong>和用户使用产品的（脱敏后的）行为数据。一般来讲，对<strong>用户行为数据</strong>利用越充分，产品越智能。</p>
 <p>从收费和市场占有量的角度来看，免费固然有利于工具型产品的推广，但<strong>产品稀缺性</strong>决定是否收费。能适应主要目标用户群体的<strong>场景</strong>，是反哺产品成长的关键。</p>
+<h3 id="-">评估角度</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>措施</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>兼容性</td>
+<td>与市场主流供应商、厂商合作，通过产品双向认证</td>
+<td></td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>超大规模数据分析能力，重点布局金融、电信、互联网领域， 提供用户行为分析、用户画像、资产分析管理以及数据服务平台等</td>
+<td></td>
+</tr>
+<tr>
+<td>教育成本／用户体验</td>
+<td>企业客户更喜欢端到端服务</td>
+<td></td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>数据加密、访问控制列表、SSO</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">商业策略</h3>
+<ul>
+<li>开源－商业模式的主流做法（成功案例 红帽）：核心技术是完全开源的，但基于对客户使用开源产品的反馈结果，研发出符合客户需求的企业级产品，帮助客户更好地使用开源技术。</li>
+<li>细分领域：切入细分领域，竞争相对较小，通用型的产品可复制性强，发展依赖开源社区</li>
+<li>行业解决方案和通用型产品：通用型产品优势可减少大量研发成本，快速交付；</li>
+<li>新兴领域布局：云计算</li>
+</ul>
 <h3 id="-">趋势</h3>
 <p>关键词： 大数据、智能、自助、移动。</p>
 <h4 id="-barc-http-barc-research-com-research-bi-trend-monitor-">知名调研机构 <a href="http://barc-research.com/research/bi-trend-monitor/">BARC</a></h4>
@@ -342,7 +385,7 @@
 <h4 id="-gartner-http-www-gartner-com-technology-home-jsp-">知名调研机构 <a href="http://www.gartner.com/technology/home.jsp">Gartner</a></h4>
 <p> <a href="http://www.gartner.com/technology/home.jsp">Gartner</a>的《<a href="https://www.gartner.com/doc/reprints?id=1-3TYE0CD&amp;ct=170221&amp;st=sb">商业智能和分析魔力象限</a>》也可以查看BI的趋势。</p>
 <h2 id="-">主要前端技术</h2>
-<p>商业智能(BI)由数据建模（数据源、纬度、数据集）、数据分析（仪表板、报表）和应用（站点、分享）组成。</p>
+<p>商业智能(BI)由数据建模（数据源、维度、数据集）、数据分析（仪表板、报表）和应用（站点、分享）组成。</p>
 <p>具体模块有：登录授权、权限管理(ACL\RBAC)；消息通知、向导（帮助）、反馈和第三方集成等。</p>
 <p>主要功能及技术：</p>
 <h4 id="-create-view-">数据可视化（Create/View）</h4>
