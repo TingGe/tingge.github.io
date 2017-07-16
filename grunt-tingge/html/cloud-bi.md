@@ -87,6 +87,7 @@ BI的作用一方面是供**数据分析师**／数据管理者做业务分析�
 | [诸葛](https://zhugeio.com/)               |                                          |
 | [阿里云 Quick BI  数加平台](https://data.aliyun.com/product/bi) |                                          |
 | [Kyligence](http://kyligence.io/)        | 基于Apache Kylin开源项目的通用型企业级产品。 OLAP on Hadoop，主要客户群体集中在金融、电信、互联网等领域。通过SaaS服务的KyBot快速解决运维和应用问题 |
+| [xDataInsight](http://www.xdatainsight.com/portal/html/home.html) | [成都数之联科技集团](http://www.unionbigdata.com/)的一站式敏捷大数据商业分析平台 |
 
 ### 开源
 
