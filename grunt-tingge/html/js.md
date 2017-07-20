@@ -30,7 +30,7 @@
 | DOM库                           | zepto、jQuery、                            | react-dom                                |                       |       |        |
 | HTML 5兼容旧浏览器                   | [html5shiv](https://github.com/aFarkas/html5shiv)、[object-observe](https://github.com/MaxArt2501/object-observe)（Object.observe polyfill）、 |                                          |                       |       |        |
 | 多点触摸手势库                        | [Hammerjs](http://hammerjs.github.io/)、[jGestures](http://jgestures.codeplex.com/)、 | [react-hammerjs](https://github.com/JedWatson/react-hammerjs) |                       |       |        |
-| 工具库                            | [ramdajs](http://ramdajs.com/)、lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat)、setRafTimeout | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[glamor](https://github.com/threepointone/glamor)、[localForage](https://github.com/localForage/localForage)、d3-format、[prismjs](https://github.com/PrismJS/prism)、[react-sizeme](https://github.com/ctrlplusb/react-sizeme)、[clipboard](https://www.npmjs.com/package/clipboard)、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、[react-flight](https://github.com/jondot/react-flight) |                       |       |        |
+| 工具库                            | [ramdajs](http://ramdajs.com/)、lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat)、setRafTimeout | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[glamor](https://github.com/threepointone/glamor)、d3-format、[prismjs](https://github.com/PrismJS/prism)、[react-sizeme](https://github.com/ctrlplusb/react-sizeme)、[clipboard](https://www.npmjs.com/package/clipboard)、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、[react-flight](https://github.com/jondot/react-flight) |                       |       |        |
 | 模版引擎                           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |                       |       |        |
 | 异步Task跟踪，分析，错误记录、开发调试跟踪等       | [zone.js](https://github.com/angular/zone.js) |                                          |                       |       |        |
 | 模块化                            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、[systemjs](https://github.com/systemjs/systemjs) |                                          |                       |       |        |
@@ -178,6 +178,36 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 | ---------------------------------------- | ---------------------------------------- | ---- |
 | [Relay](http://facebook.github.io/relay/) | 采用 GraphQL，用于构建数据驱动的 React 应用程序的 JavaScript 框架 |      |
 | [tectonic](https://github.com/tonyhb/tectonic) | React 和 Redux 的声明性 REST 数据加载器            |      |
+
+## 本地存储
+
+> 离线访问是一套优秀 Web App 的必经之路。
+
+### 浏览器提供
+
+#### 本地存储
+
+| 类别        | 技术                           | 相关   |
+| --------- | ---------------------------- | ---- |
+| 键值对 (KVP) | Local Storage、Session Sorage |      |
+| 数据库组织型    | IndexedDB、Web SQL            |      |
+
+#### 应用缓存
+
+> HTML5 使用 [ApplicationCache](http://www.whatwg.org/specs/web-apps/current-work/#applicationcache) 接口解决了由离线带来的部分难题。
+
+| 组成                      | 说明                                       | 示例                                       |
+| ----------------------- | ---------------------------------------- | ---------------------------------------- |
+| `<html>`的`manifest`属性   | 缓存文件清单。必须以`text/cache-manifest MIME`类型提供。注意：需在服务器上配置自定义文件类型。 | 页面中`<html manifest="https://tingge.github.io/cache.mf">`；服务(以Apache为例)中`AddType text/cache-manifest .appcache` |
+| window.applicationCache | 更新缓存                                     |                                          |
+|                         | AppCache 事件                              |                                          |
+
+JS框架的实践
+
+| 框架                                       | 说明                                       | 特点        |
+| ---------------------------------------- | ---------------------------------------- | --------- |
+| [localForage](https://github.com/localForage/localForage) | [Mozilla](https://www.mozilla.org/en-US/) 出品，将本地存储操作 API 封装成了键值对 (KVP)风格 | 简单，拿来即用   |
+| [lovefield](https://github.com/google/lovefield) | 谷歌出品的，为 Web App 提供 SQL-like APIs 服务的本地关系型数据库 | 关联查询等能力较强 |
 
 ## 通用（Universal）JavaScript
 
@@ -341,6 +371,8 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 - [Sass绘制多边形](http://www.w3cplus.com/preprocessor/creat-css-polygon-wiht-border-and-clip-path-property.html)
 - [CSS布局之-水平垂直居中](http://div.io/topic/1155)
 - [H5项目常见问题汇总及解决方案](http://www.open-open.com/lib/view/open1449325854077.html)
+- [应用缓存初级使用指南](https://www.html5rocks.com/zh/tutorials/appcache/beginner/#toc-updating-cache)
+- [检查和管理存储、数据库与缓存](https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage?hl=zh-cn)
 
 ### React & Angular & Vue
 

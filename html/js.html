@@ -192,7 +192,7 @@
 <tr>
 <td>工具库</td>
 <td><a href="http://ramdajs.com/">ramdajs</a>、lodash、underscore、<a href="https://github.com/nmrugg/LZMA-JS/">LZMA-JS</a>、<a href="https://github.com/brix/crypto-js">crypto-js</a>、<a href="http://tether.io/">Tether</a>、<a href="https://github.com/hotoo/pinyin">PinYin</a>、Moment、<a href="https://github.com/adamwdraper/Numeral-js">Numeral</a>、<a href="https://github.com/taijinlee/humanize">humanize</a>、<a href="http://nosir.github.io/cleave.js/">Cleave.js</a>（格式化）、<a href="https://github.com/ccampbell/mousetrap">Mousetrap</a>、<a href="https://github.com/hughsk/flat">flat</a>、setRafTimeout</td>
-<td><a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a>、<a href="https://github.com/JedWatson/classnames">classnames</a>、<a href="https://github.com/paypal/glamorous">glamorous</a>、<a href="https://github.com/threepointone/glamor">glamor</a>、<a href="https://github.com/localForage/localForage">localForage</a>、d3-format、<a href="https://github.com/PrismJS/prism">prismjs</a>、<a href="https://github.com/ctrlplusb/react-sizeme">react-sizeme</a>、<a href="https://www.npmjs.com/package/clipboard">clipboard</a>、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、<a href="https://github.com/jondot/react-flight">react-flight</a></td>
+<td><a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a>、<a href="https://github.com/JedWatson/classnames">classnames</a>、<a href="https://github.com/paypal/glamorous">glamorous</a>、<a href="https://github.com/threepointone/glamor">glamor</a>、d3-format、<a href="https://github.com/PrismJS/prism">prismjs</a>、<a href="https://github.com/ctrlplusb/react-sizeme">react-sizeme</a>、<a href="https://www.npmjs.com/package/clipboard">clipboard</a>、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、<a href="https://github.com/jondot/react-flight">react-flight</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -573,6 +573,83 @@
 <tr>
 <td><a href="https://github.com/tonyhb/tectonic">tectonic</a></td>
 <td>React 和 Redux 的声明性 REST 数据加载器</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">本地存储</h2>
+<blockquote>
+<p>离线访问是一套优秀 Web App 的必经之路。</p>
+</blockquote>
+<h3 id="-">浏览器提供</h3>
+<h4 id="-">本地存储</h4>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>技术</th>
+<th>相关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>键值对 (KVP)</td>
+<td>Local Storage、Session Sorage</td>
+<td></td>
+</tr>
+<tr>
+<td>数据库组织型</td>
+<td>IndexedDB、Web SQL</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">应用缓存</h4>
+<blockquote>
+<p>HTML5 使用 <a href="http://www.whatwg.org/specs/web-apps/current-work/#applicationcache">ApplicationCache</a> 接口解决了由离线带来的部分难题。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>组成</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;html&gt;</code>的<code>manifest</code>属性</td>
+<td>缓存文件清单。必须以<code>text/cache-manifest MIME</code>类型提供。注意：需在服务器上配置自定义文件类型。</td>
+<td>页面中<code>&lt;html manifest=&quot;https://tingge.github.io/cache.mf&quot;&gt;</code>；服务(以Apache为例)中<code>AddType text/cache-manifest .appcache</code></td>
+</tr>
+<tr>
+<td>window.applicationCache</td>
+<td>更新缓存</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>AppCache 事件</td>
+</tr>
+</tbody>
+</table>
+<p>JS框架的实践</p>
+<table>
+<thead>
+<tr>
+<th>框架</th>
+<th>说明</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/localForage/localForage">localForage</a></td>
+<td><a href="https://www.mozilla.org/en-US/">Mozilla</a> 出品，将本地存储操作 API 封装成了键值对 (KVP)风格</td>
+<td>简单，拿来即用</td>
+</tr>
+<tr>
+<td><a href="https://github.com/google/lovefield">lovefield</a></td>
+<td>谷歌出品的，为 Web App 提供 SQL-like APIs 服务的本地关系型数据库</td>
+<td>关联查询等能力较强</td>
 </tr>
 </tbody>
 </table>
@@ -1006,6 +1083,8 @@
 <li><a href="http://www.w3cplus.com/preprocessor/creat-css-polygon-wiht-border-and-clip-path-property.html">Sass绘制多边形</a></li>
 <li><a href="http://div.io/topic/1155">CSS布局之-水平垂直居中</a></li>
 <li><a href="http://www.open-open.com/lib/view/open1449325854077.html">H5项目常见问题汇总及解决方案</a></li>
+<li><a href="https://www.html5rocks.com/zh/tutorials/appcache/beginner/#toc-updating-cache">应用缓存初级使用指南</a></li>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage?hl=zh-cn">检查和管理存储、数据库与缓存</a></li>
 </ul>
 <h3 id="react-angular-vue">React &amp; Angular &amp; Vue</h3>
 <ul>
