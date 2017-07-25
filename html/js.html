@@ -163,7 +163,7 @@
 <tr>
 <td>Polyfill</td>
 <td><a href="https://github.com/rbuckton/ReflectDecorators">reflect-metadata</a></td>
-<td>babel-polyfill、 ima.js-babel6-polyfill</td>
+<td>babel-polyfill、 ima.js-babel6-polyfill、 regenerator-runtime/runtime（async wait 的 polyfill）</td>
 <td></td>
 <td></td>
 <td></td>
@@ -195,7 +195,7 @@
 <tr>
 <td>工具库</td>
 <td><a href="http://ramdajs.com/">ramdajs</a>、lodash、underscore、<a href="https://github.com/nmrugg/LZMA-JS/">LZMA-JS</a>、<a href="https://github.com/brix/crypto-js">crypto-js</a>、<a href="http://tether.io/">Tether</a>、<a href="https://github.com/hotoo/pinyin">PinYin</a>、Moment、<a href="https://github.com/adamwdraper/Numeral-js">Numeral</a>、<a href="https://github.com/taijinlee/humanize">humanize</a>、<a href="http://nosir.github.io/cleave.js/">Cleave.js</a>（格式化）、<a href="https://github.com/ccampbell/mousetrap">Mousetrap</a>、<a href="https://github.com/hughsk/flat">flat</a>、setRafTimeout</td>
-<td><a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a>、<a href="https://github.com/JedWatson/classnames">classnames</a>、<a href="https://github.com/paypal/glamorous">glamorous</a>、<a href="https://github.com/threepointone/glamor">glamor</a>、d3-format、<a href="https://github.com/PrismJS/prism">prismjs</a>、<a href="https://github.com/ctrlplusb/react-sizeme">react-sizeme</a>、<a href="https://www.npmjs.com/package/clipboard">clipboard</a>、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、<a href="https://github.com/jondot/react-flight">react-flight</a></td>
+<td><a href="https://github.com/thereactivestack/react-cookie">react-cookie</a>、<a href="https://github.com/BatuhanK/react-qart">react-qart</a>、<a href="https://github.com/JedWatson/classnames">classnames</a>、<a href="https://github.com/paypal/glamorous">glamorous</a>、<a href="https://github.com/threepointone/glamor">glamor</a>、d3-format、<a href="https://github.com/PrismJS/prism">prismjs</a>、<a href="https://github.com/ctrlplusb/react-sizeme">react-sizeme</a>、<a href="https://www.npmjs.com/package/clipboard">clipboard</a>、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、<a href="https://github.com/jondot/react-flight">react-flight</a>、<a href="https://www.npmjs.com/package/highlight.js">highlight.js</a>、<a href="https://www.npmjs.com/package/react-json-inspector">react-json-inspector</a>、<a href="https://www.npmjs.com/package/source-map">source-map</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -251,7 +251,7 @@
 <tr>
 <td>动画</td>
 <td></td>
-<td>react-transition-group（建议废弃 react-addons-transition-group）</td>
+<td>react-transition-group（建议废弃 react-addons-transition-group）、<a href="https://www.npmjs.com/package/rc-queue-anim">rc-queue-anim</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -389,6 +389,8 @@
 </blockquote>
 <ol>
 <li><a href="/lab/d3-test/index.html">JavaScript应用领域（d3-test）</a></li>
+<li><a href="https://www.npmjs.com/package/heatmap.js">heatmap.js</a>：Web 的动态 JavaScript 热图</li>
+<li>recharts</li>
 </ol>
 <h3 id="-">工程化/工作流</h3>
 <blockquote>
@@ -721,6 +723,46 @@
 </thead>
 <tbody>
 <tr>
+<td>os</td>
+<td>Node.js 工具模块，提供一些基本的系统操作函数</td>
+</tr>
+<tr>
+<td><a href="https://github.com/tj/co">co</a></td>
+<td>用同步写法编写异步代码</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/json-logic-js">json-logic-js</a></td>
+<td>构建复杂的规则，将它们序列化为 JSON，并在 JavaScript 中执行它们</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/mathjs">mathjs</a></td>
+<td>一个数学库</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/ejs">ejs</a></td>
+<td>嵌入式的 JavaScript 引擎</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/enums">enums</a></td>
+<td>兼容 java 的枚举</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/node-schedule">node-schedule</a></td>
+<td>类 Cron 和非类 Cron 的定时任务</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/nodemailer">nodemailer</a></td>
+<td>邮件发送模块</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/request">request</a></td>
+<td>简化的HTTP请求的客户端</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/svg2png">svg2png</a></td>
+<td>转换 svg 为 png</td>
+</tr>
+<tr>
 <td><a href="https://github.com/patriksimek/vm2">vm2</a></td>
 <td>虚拟模块</td>
 </tr>
@@ -734,11 +776,11 @@
 </tr>
 <tr>
 <td><a href="https://adonisjs.com/">AdonisJS</a></td>
-<td><strong>服务端渲染</strong> 的 MVC 框架， Laravel 的NodeJS 版</td>
+<td><strong>服务端渲染</strong> 的 MVC 框架， Laravel 的 NodeJS 版</td>
 </tr>
 <tr>
 <td>csvtojson</td>
-<td>csv 数据转json</td>
+<td>csv 数据转 json</td>
 </tr>
 <tr>
 <td>prompt</td>
@@ -768,6 +810,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="https://eggjs.org/">Egg</a></td>
+<td>基于 Node.js 和 Koa 的企业级框架</td>
+<td></td>
+<td></td>
+</tr>
 <tr>
 <td><a href="https://github.com/koajs/koa/tree/v2.x">Koa2</a></td>
 <td>借 babel 通过 async/await 来支持 ES6+</td>
@@ -892,6 +940,10 @@
 <td><a href="https://github.com/mapbox/node-sqlite3">sqlite3</a></td>
 <td>SQLite  小、应用于移动端</td>
 </tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/hbase-client">hbase-client</a></td>
+<td>Node.js的异步HBase客户端</td>
+</tr>
 </tbody>
 </table>
 <h4 id="nosql">NoSQL</h4>
@@ -954,6 +1006,10 @@
 <td><a href="https://github.com/elastic/elasticsearch-js">elasticsearch</a></td>
 <td>RESTful 搜索引擎 ElasticSearch</td>
 </tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/druid-query">druid-query</a></td>
+<td>分布式实时处理系统 Druid</td>
+</tr>
 </tbody>
 </table>
 <h2 id="-">数据库</h2>
@@ -990,6 +1046,12 @@
 <td><a href="http://cassandra.apache.org/">Cassandra</a></td>
 <td>列存储（Wide Column Store/Column-Family）数据库</td>
 <td>日志；博客平台</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/apache/hbase">HBase</a></td>
+<td>分布式的、面向列的开源数据库</td>
+<td></td>
 </tr>
 <tr>
 <td></td>
