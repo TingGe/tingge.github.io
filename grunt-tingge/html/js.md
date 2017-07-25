@@ -30,14 +30,14 @@
 | DOM库                           | zepto、jQuery、                            | react-dom                                |                       |       |        |
 | HTML 5兼容旧浏览器                   | [html5shiv](https://github.com/aFarkas/html5shiv)、[object-observe](https://github.com/MaxArt2501/object-observe)（Object.observe polyfill）、 |                                          |                       |       |        |
 | 多点触摸手势库                        | [Hammerjs](http://hammerjs.github.io/)、[jGestures](http://jgestures.codeplex.com/)、 | [react-hammerjs](https://github.com/JedWatson/react-hammerjs) |                       |       |        |
-| 工具库                            | [ramdajs](http://ramdajs.com/)、lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat)、setRafTimeout | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[glamor](https://github.com/threepointone/glamor)、d3-format、[prismjs](https://github.com/PrismJS/prism)、[react-sizeme](https://github.com/ctrlplusb/react-sizeme)、[clipboard](https://www.npmjs.com/package/clipboard)、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、[react-flight](https://github.com/jondot/react-flight) |                       |       |        |
+| 工具库                            | [ramdajs](http://ramdajs.com/)、lodash、underscore、[LZMA-JS](https://github.com/nmrugg/LZMA-JS/)、[crypto-js](https://github.com/brix/crypto-js)、[Tether](http://tether.io/)、[PinYin](https://github.com/hotoo/pinyin)、Moment、[Numeral](https://github.com/adamwdraper/Numeral-js)、[humanize](https://github.com/taijinlee/humanize)、[Cleave.js](http://nosir.github.io/cleave.js/)（格式化）、[Mousetrap](https://github.com/ccampbell/mousetrap)、[flat](https://github.com/hughsk/flat)、setRafTimeout | [react-cookie](https://github.com/thereactivestack/react-cookie)、[react-qart](https://github.com/BatuhanK/react-qart)、[classnames](https://github.com/JedWatson/classnames)、[glamorous](https://github.com/paypal/glamorous)、[glamor](https://github.com/threepointone/glamor)、d3-format、[prismjs](https://github.com/PrismJS/prism)、[react-sizeme](https://github.com/ctrlplusb/react-sizeme)、[clipboard](https://www.npmjs.com/package/clipboard)、 detector、 pubsub-js、 query-string、 react-dropzone、 react-motion、 react-scroll、[react-flight](https://github.com/jondot/react-flight)、[highlight.js](https://www.npmjs.com/package/highlight.js)、[react-json-inspector](https://www.npmjs.com/package/react-json-inspector)、[source-map](https://www.npmjs.com/package/source-map) |                       |       |        |
 | 模版引擎                           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |                       |       |        |
 | 异步Task跟踪，分析，错误记录、开发调试跟踪等       | [zone.js](https://github.com/angular/zone.js) |                                          |                       |       |        |
 | 模块化                            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、[systemjs](https://github.com/systemjs/systemjs) |                                          |                       |       |        |
 | UI 层轻量级解决方案                    | Vue、Inferno、Preact                       | React、[React VR](https://facebookincubator.github.io/react-vr/) |                       |       |        |
 | MV* 框架(路由、数据获取、状态管理)           | Angular、[Aurelia](http://aurelia.io/)、Avalon、Ember |                                          |                       |       |        |
 | Pure Render                    |                                          | pure-render-decorator（建议废弃 react-addons-pure-render-mixin、 react-mixin） |                       |       |        |
-| 动画                             |                                          | react-transition-group（建议废弃 react-addons-transition-group） |                       |       |        |
+| 动画                             |                                          | react-transition-group（建议废弃 react-addons-transition-group）、[rc-queue-anim](https://www.npmjs.com/package/rc-queue-anim) |                       |       |        |
 | 表单验证                           |                                          | React 内置的 propTypes                      |                       |       |        |
 | 路由控制，可选                        |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux、[junctions](https://github.com/jamesknelson/junctions) |                       |       |        |
 | 连接*React* 组件与 *Redux* store，可选 |                                          | [React-Redux](https://github.com/reactjs/react-redux) |                       |       |        |
@@ -79,6 +79,8 @@
 > 专题 [data-visualization](https://github.com/TingGe/data-visualization) 
 
 1. [JavaScript应用领域（d3-test）](/lab/d3-test/index.html)
+2. [heatmap.js](https://www.npmjs.com/package/heatmap.js)：Web 的动态 JavaScript 热图
+3. recharts
 
 ### 工程化/工作流
 
@@ -231,16 +233,26 @@ JS框架的实践
 
 ### Node.js 模块
 
-| 模块                                       | 说明                                    |
-| ---------------------------------------- | ------------------------------------- |
-| [vm2](https://github.com/patriksimek/vm2) | 虚拟模块                                  |
-| [Hello.js](https://adodson.com/hello.js/) | 基于 OAuth 的浏览器端用户认证 SDK                |
-| [Sharp](https://github.com/lovell/sharp) | 图像调整模块                                |
-| [AdonisJS](https://adonisjs.com/)        | **服务端渲染** 的 MVC 框架， Laravel 的NodeJS 版 |
-| csvtojson                                | csv 数据转json                           |
-| prompt                                   | 命令行提醒                                 |
-| commander                                | 提供了用户命令行输入和参数解析强大功能                   |
-| semver                                   | 语义化版本规则                               |
+| 模块                                       | 说明                                       |
+| ---------------------------------------- | ---------------------------------------- |
+| os                                       | Node.js 工具模块，提供一些基本的系统操作函数               |
+| [co](https://github.com/tj/co)           | 用同步写法编写异步代码                              |
+| [json-logic-js](https://www.npmjs.com/package/json-logic-js) | 构建复杂的规则，将它们序列化为 JSON，并在 JavaScript 中执行它们 |
+| [mathjs](https://www.npmjs.com/package/mathjs) | 一个数学库                                    |
+| [ejs](https://www.npmjs.com/package/ejs) | 嵌入式的 JavaScript 引擎                       |
+| [enums](https://www.npmjs.com/package/enums) | 兼容 java 的枚举                              |
+| [node-schedule](https://www.npmjs.com/package/node-schedule) | 类 Cron 和非类 Cron 的定时任务                    |
+| [nodemailer](https://www.npmjs.com/package/nodemailer) | 邮件发送模块                                   |
+| [request](https://www.npmjs.com/package/request) | 简化的HTTP请求的客户端                            |
+| [svg2png](https://www.npmjs.com/package/svg2png) | 转换 svg 为 png                             |
+| [vm2](https://github.com/patriksimek/vm2) | 虚拟模块                                     |
+| [Hello.js](https://adodson.com/hello.js/) | 基于 OAuth 的浏览器端用户认证 SDK                   |
+| [Sharp](https://github.com/lovell/sharp) | 图像调整模块                                   |
+| [AdonisJS](https://adonisjs.com/)        | **服务端渲染** 的 MVC 框架， Laravel 的 NodeJS 版   |
+| csvtojson                                | csv 数据转 json                             |
+| prompt                                   | 命令行提醒                                    |
+| commander                                | 提供了用户命令行输入和参数解析强大功能                      |
+| semver                                   | 语义化版本规则                                  |
 
 ### Web 服务 && RESTful API
 
@@ -248,6 +260,7 @@ JS框架的实践
 
 | 服务端框架                                    | 说明                                       | 个人小示例                                    | 相关   |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---- |
+| [Egg](https://eggjs.org/)                | 基于 Node.js 和 Koa 的企业级框架                  |                                          |      |
 | [Koa2](https://github.com/koajs/koa/tree/v2.x) | 借 babel 通过 async/await 来支持 ES6+          | [koa2-spider](https://github.com/TingGe/web-spiders) |      |
 | Koa                                      | 通过 co 生成器支持 ES6                          | [koa-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/koa-app) |      |
 | [Hapi](http://hapijs.com/)               | 「配置大于约定」，业务逻辑必须和传输层进行分离                  | [hapi-app](https://github.com/TingGe/tingge.github.io/tree/master/lab/hapi-app) |      |
@@ -288,6 +301,7 @@ JS框架的实践
 | [node-postgres](https://github.com/brianc/node-postgres) | 一个支持纯 JavaScript 和本地 libpq 库绑定的 nodejs 的 PostgreSQL 客户端程序。个人感觉这个更好用点 |
 | [pg-promise](https://github.com/vitaly-t/pg-promise) | PostgreSQL 的 Promises/A+ 接口              |
 | [sqlite3](https://github.com/mapbox/node-sqlite3) | SQLite  小、应用于移动端                         |
+| [hbase-client](https://www.npmjs.com/package/hbase-client) | Node.js的异步HBase客户端                       |
 
 #### NoSQL
 
@@ -311,6 +325,7 @@ JS框架的实践
 | ---------------------------------------- | -------------------------- |
 | [presto-client-node](https://github.com/tagomoris/presto-client-node) | 分布式查询引擎 Presto             |
 | [elasticsearch](https://github.com/elastic/elasticsearch-js) | RESTful 搜索引擎 ElasticSearch |
+| [druid-query](https://www.npmjs.com/package/druid-query) | 分布式实时处理系统 Druid            |
 
 ## 数据库
 
@@ -320,6 +335,7 @@ JS框架的实践
 |               | [PostgreSQL](https://www.postgresql.org/download/) |                                         |               |
 |               | [SQLite](https://www.sqlite.org/download.html) |                                         |               |
 | NoSQL         | [Cassandra](http://cassandra.apache.org/) | 列存储（Wide Column Store/Column-Family）数据库 | 日志；博客平台       |
+|               | [HBase](https://github.com/apache/hbase) | 分布式的、面向列的开源数据库                          |               |
 |               | [Redis](http://redis.io/download)        | 键值（Key-Value）数据库                        | 储存用户信息        |
 |               | [MongoDB](https://www.mongodb.com/download-center) | 面向文档（Document-Oriented）数据库              | 日志；分析         |
 |               | [Azure DocumentDB](https://docs.microsoft.com/zh-cn/azure/documentdb/) | 一个完全托管的 NoSQL 数据库服务                     |               |
