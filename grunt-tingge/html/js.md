@@ -12,10 +12,11 @@
 
 > 至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
 > 目前，主流的三大 FRP 框架 React系、Angular 2系、Vue系 在相互融合。其他类似框架或局部功能替代类库不足成事。
->
-> 推荐的React设计模式、技术、技巧和窍门：[React Bits](https://vasanthk.gitbooks.io/react-bits/)
->
-> 更多： [React.js 资料和教程](https://github.com/thoughtbit/it-note/issues/12)
+
+推荐的React设计模式、技术、技巧和窍门：[React Bits](https://vasanthk.gitbooks.io/react-bits/)
+
+更多： [React.js 资料和教程](https://github.com/thoughtbit/it-note/issues/12)
+
 
 |                                | 技术                                       | React系(Webpack+ React + Redux)           | Progressive  Web  App | 微信小应用 | 支付宝小程序 |
 | ------------------------------ | ---------------------------------------- | ---------------------------------------- | --------------------- | ----- | ------ |
@@ -128,6 +129,14 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 | RxJS    | 为处理异步操作而设计 |
 | CycleJS |            |
 | xstream |            |
+
+### React 和 Redux 之上的前端Web应用开发架构
+
+> 关于 View 和状态机的最佳实践，是大多前端团队当下的主旋律。当然，选型是不会限于 React 和 Redux 的。
+
+|                                     | 说明                              |
+| ----------------------------------- | ------------------------------- |
+| [Kea](https://github.com/keajs/kea) | 构建 React 和 Redux 之上的前端Web应用开发架构 |
 
 ### 数据结构可变&不可变
 
