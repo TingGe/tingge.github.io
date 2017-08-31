@@ -16,7 +16,7 @@
 
 ### 标签
 
-前端开发、TCP/IP、Node.js、CSS、浏览器兼容性、[Chrome 扩展程序](https://github.com/TingGe/chrome-extensions)
+前端开发、移动端 H5 App 开发、TCP/IP、Node.js、CSS、浏览器兼容性、[Chrome 扩展程序](https://github.com/TingGe/chrome-extensions)
 
 ### 阅历
 
@@ -25,7 +25,7 @@
 - 2009～2011，初涉 Web 开发，混迹于天朝帝都
 - 2012～2015，“广”而“数”缘，受教于[@周培公](https://github.com/peigong)，擅[互联网广告](https://github.com/TingGe/internet-ads)、[数据采集](https://github.com/TingGe/web-analytics)、[JavaScript](https://github.com/TingGe/develop-tools)
 - 2015～2016，“数”业专攻，全栈、[敏捷/项目管理(Agile/PMP)](敏捷/项目管理(Agile/PMP))、[物联网（IoT、WoT）](http://tingge.github.io/html/iot.html)
-- 2016~至今，由“数”入“析”，大数据上层应用，[商业智能（Cloud BI）](http://tingge.github.io/html/cloud-bi.html)、[前端](http://tingge.github.io/html/js.html)
+- 2016~至今，由“数”入“析”，[商业智能（Cloud BI）](http://tingge.github.io/html/cloud-bi.html)、[前端（React系技术战）](http://tingge.github.io/html/js.html)、智能数仓引擎
 
 
 ## 找到我
