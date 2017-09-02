@@ -164,16 +164,38 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 #### 站点搭建（Create／View）
 
+> 站点，是一个直观反映数据分析师个人能力和品牌的地方；一个供决策者从BI获取信息来指明方向的地方。
+
+
+个人建议，参照互联网广告中在线生成 Landing Page 页做法，让用户可通过“点选+拖拽”快速建站。
+
+区别是将组件内容替换为该用户下的仪表或报表。
+
+重点：数据和模版隔离；站点模版包的组织方式。
+
+以下提供几个参考：
+
+- [IM Creator Website Builder](https://www.imcreator.com/themes)
+- [Woobox builder](https://woobox.com/landing-page) 
+- [SnapPages](https://snappages.com/)
+
+可参考模版
+
+- [HTML.am](http://www.html.am/templates/simple-website-templates/)
+
 #### 数据分享（Share）
 
 - 邮件（newsletter）
-  - 截屏：[Headless Chromium](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
+  - 截屏：[Puppeteer](https://github.com/GoogleChrome/puppeteer)、[Chromeless](https://github.com/graphcool/chromeless)、[Headless Chromium](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
   - [邮件HTML模版](http://tingge.github.io/lab/rwd-edm.html)
 - 短消息（message）
   - 站内（公告、审批、消息等）
   - [IM](https://github.com/TingGe/develop-tools#mac或linux系)(钉钉、短信、微信)
+- 支持BI功能模块嵌入业务系统：
+  - 安全 iframe 嵌入研究：[Really Understanding iFrames](https://onlineadview.wordpress.com/2011/11/06/really-understanding-iframes/)、
 - 二维码
-- 支持BI功能模块嵌入业务系统：安全 iframe 嵌入研究
+- PDF
+  - [jsPDF](https://parall.ax/products/jspdf)
 
 #### 数字处理&可读性
 
@@ -186,24 +208,30 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 #### 国际化
 
+> G11N = I18N + L10N + T9N
+
 国际化需从字符、语言、标识和文本、文本排版方向、风格和布局、导航六个方面来设计，个人的一点方案： 
 
 1. 使用和设定系统 locale：通过“用户语言设置导航 ＋  `(navigator.language || navigator.browserLanguage).toLowerCase()` 获取用户浏览器默认语言”，来设定locale
 2. 设置 html lang属性。
-3. 页面中 js 读取lang加载对应语言包（如 [React Intl](https://github.com/yahoo/react-intl)、AntDesign 的` <LocalProvier>`等）。
+3. 页面中 js 读取lang加载对应语言包（如 [React Intl](https://github.com/yahoo/react-intl)、[react-intl-universal](https://github.com/alibaba/react-intl-universal)、AntDesign 的` <LocalProvier>`等）。
 
 优点：这样遵循W3C 的 [Html 语义](https://www.w3.org/International/articles/language-tags/)，既能解决人的可读，又利于对搜索引擎的SEO。更多可参考 [W3C i18n](https://www.w3.org/International/techniques/authoring-html)
 
 思考：
 
-1. 语言包除map方式外，是否有更好的管理方式？
-2. 如何实现（无人或半人工干预的）智能翻译？
+1. 语言包除 map 方式外，是否有更好的管理方式？
+2. 如何实现（无人或半人工干预的）智能语言翻译和文案优化？Todo：自然语言处理（**NPL**) 方案探索？
+3. API 文案：
+   - 根据请求头携带 lang 参数（次要的 IP 地域等）方式，响应对应语言内容
+   - 模仿 HTTP 状态码，根据 code 映射文案
 
 ## 前端方案
 
 - 组件化/模块化方案
 - 视场景的，SPA、PWA和同构／[SSR](https://css-tricks.com/server-side-react-rendering/)方案
 - 微服务，[GraphQL](http://graphql.org/)
+- 利用人工智能和算法，基于用户行为、业务数据分析的，智能仪表板、报表或图表生成和推荐
 
 ## 参考
 

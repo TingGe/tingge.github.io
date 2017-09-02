@@ -417,10 +417,26 @@
 <li>电子表格：<a href="https://jspreadsheets.com/">JSpreadsheets</a>、<a href="https://github.com/DanBricklin/socialcalc">socialcalc</a>、<a href="https://ethercalc.net/">EtherCalc</a>、<a href="https://nadbm.github.io/react-datasheet/">React datasheet</a>、<a href="http://www.gcpowertools.com.cn/">GrapeCity</a></li>
 </ul>
 <h4 id="-create-view-">站点搭建（Create／View）</h4>
+<blockquote>
+<p>站点，是一个直观反映数据分析师个人能力和品牌的地方；一个供决策者从BI获取信息来指明方向的地方。</p>
+</blockquote>
+<p>个人建议，参照互联网广告中在线生成 Landing Page 页做法，让用户可通过“点选+拖拽”快速建站。</p>
+<p>区别是将组件内容替换为该用户下的仪表或报表。</p>
+<p>重点：数据和模版隔离；站点模版包的组织方式。</p>
+<p>以下提供几个参考：</p>
+<ul>
+<li><a href="https://www.imcreator.com/themes">IM Creator Website Builder</a></li>
+<li><a href="https://woobox.com/landing-page">Woobox builder</a> </li>
+<li><a href="https://snappages.com/">SnapPages</a></li>
+</ul>
+<p>可参考模版</p>
+<ul>
+<li><a href="http://www.html.am/templates/simple-website-templates/">HTML.am</a></li>
+</ul>
 <h4 id="-share-">数据分享（Share）</h4>
 <ul>
 <li>邮件（newsletter）<ul>
-<li>截屏：<a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md">Headless Chromium</a></li>
+<li>截屏：<a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a>、<a href="https://github.com/graphcool/chromeless">Chromeless</a>、<a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md">Headless Chromium</a></li>
 <li><a href="http://tingge.github.io/lab/rwd-edm.html">邮件HTML模版</a></li>
 </ul>
 </li>
@@ -429,8 +445,15 @@
 <li><a href="https://github.com/TingGe/develop-tools#mac或linux系">IM</a>(钉钉、短信、微信)</li>
 </ul>
 </li>
+<li>支持BI功能模块嵌入业务系统：<ul>
+<li>安全 iframe 嵌入研究：<a href="https://onlineadview.wordpress.com/2011/11/06/really-understanding-iframes/">Really Understanding iFrames</a>、</li>
+</ul>
+</li>
 <li>二维码</li>
-<li>支持BI功能模块嵌入业务系统：安全 iframe 嵌入研究</li>
+<li>PDF<ul>
+<li><a href="https://parall.ax/products/jspdf">jsPDF</a></li>
+</ul>
+</li>
 </ul>
 <h4 id="-">数字处理&amp;可读性</h4>
 <blockquote>
@@ -442,23 +465,32 @@
 <li>数据导入和导出：<a href="https://github.com/knrz/CSV.js">CSV.js</a></li>
 </ul>
 <h4 id="-">国际化</h4>
+<blockquote>
+<p>G11N = I18N + L10N + T9N</p>
+</blockquote>
 <p>国际化需从字符、语言、标识和文本、文本排版方向、风格和布局、导航六个方面来设计，个人的一点方案： </p>
 <ol>
 <li>使用和设定系统 locale：通过“用户语言设置导航 ＋  <code>(navigator.language || navigator.browserLanguage).toLowerCase()</code> 获取用户浏览器默认语言”，来设定locale</li>
 <li>设置 html lang属性。</li>
-<li>页面中 js 读取lang加载对应语言包（如 <a href="https://github.com/yahoo/react-intl">React Intl</a>、AntDesign 的<code>&lt;LocalProvier&gt;</code>等）。</li>
+<li>页面中 js 读取lang加载对应语言包（如 <a href="https://github.com/yahoo/react-intl">React Intl</a>、<a href="https://github.com/alibaba/react-intl-universal">react-intl-universal</a>、AntDesign 的<code>&lt;LocalProvier&gt;</code>等）。</li>
 </ol>
 <p>优点：这样遵循W3C 的 <a href="https://www.w3.org/International/articles/language-tags/">Html 语义</a>，既能解决人的可读，又利于对搜索引擎的SEO。更多可参考 <a href="https://www.w3.org/International/techniques/authoring-html">W3C i18n</a></p>
 <p>思考：</p>
 <ol>
-<li>语言包除map方式外，是否有更好的管理方式？</li>
-<li>如何实现（无人或半人工干预的）智能翻译？</li>
+<li>语言包除 map 方式外，是否有更好的管理方式？</li>
+<li>如何实现（无人或半人工干预的）智能语言翻译和文案优化？Todo：自然语言处理（<strong>NPL</strong>) 方案探索？</li>
+<li>API 文案：<ul>
+<li>根据请求头携带 lang 参数（次要的 IP 地域等）方式，响应对应语言内容</li>
+<li>模仿 HTTP 状态码，根据 code 映射文案</li>
+</ul>
+</li>
 </ol>
 <h2 id="-">前端方案</h2>
 <ul>
 <li>组件化/模块化方案</li>
 <li>视场景的，SPA、PWA和同构／<a href="https://css-tricks.com/server-side-react-rendering/">SSR</a>方案</li>
 <li>微服务，<a href="http://graphql.org/">GraphQL</a></li>
+<li>利用人工智能和算法，基于用户行为、业务数据分析的，智能仪表板、报表或图表生成和推荐</li>
 </ul>
 <h2 id="-">参考</h2>
 <ul>
