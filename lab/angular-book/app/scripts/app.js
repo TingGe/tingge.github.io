@@ -2,6 +2,14 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'A free guide to HTML',
+    'author': '未知',
+    'url': 'http://htmlreference.io/'
+  }, {
+    'name': 'A free visual guide to CSS',
+    'author': '未知',
+    'url': 'http://cssreference.io/'
+  }, {
     'name': 'React Bits',
     'author': 'Vasa 等',
     'url': 'https://vasanthk.gitbooks.io/react-bits/'

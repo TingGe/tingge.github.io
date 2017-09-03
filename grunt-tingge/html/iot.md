@@ -109,6 +109,11 @@ NVIDIA Jetson TX1是首款针对深度学习神经网络设计的嵌入式超级
 6. [爱奇艺 Jetson TK1 教程](http://so.iqiyi.com/so/q_Jetson%20TK1)
 7. [Jetson TK1 介绍与配置](http://ziyangli.github.io/2014/12/20/jetsontk1/)
 
+## 其他开源项目
+
+1. [howmanypeoplearearound](https://github.com/schollz/howmanypeoplearearound)
+2. [find-lf](https://github.com/schollz/find-lf)
+
 ## 附录
 
 - [关于高级辅助驾驶系统 ADAS](adas.html)

@@ -12,6 +12,14 @@
 
 [查看大图](../img/adas-ecosystem.jpg)
 
+## 开源代码
+
+|                                          | 说明                                       |      |
+| ---------------------------------------- | ---------------------------------------- | ---- |
+| [openpilot](https://github.com/commaai/openpilot) | [comma.ai](https://comma.ai/)开源的汽车辅助驾驶源码 |      |
+|                                          |                                          |      |
+|                                          |                                          |      |
+
 ## 厂商
 
 ![](../img/adas-auto-pattern.jpg)
