@@ -1,0 +1,397 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TingGe Blog Agile agile JavaScript NodeJS">
+  <meta name="author" content="TingGe<505253293@163.com>">
+  <title>听歌实验室</title>
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
+  <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.css" media="screen">
+  <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="/css/landing-page.css" rel="stylesheet">
+  <link href="/css/screenshots.css" rel="stylesheet">
+  <style media="screen">
+    #main {
+      padding-top: 55px;
+    }
+  </style>
+  <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/html2canvas/dist/html2canvas.min.js"></script>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand topnav" href="/">
+          <i class="fa fa-flask icon-3x" aria-hidden="true"></i> 听歌实验室
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/html/js.html">JavaScript/NodeJS</a>
+          </li>
+          <li>
+            <a href="/index.html#agile">敏捷/项目管理(Agile/PMP)</a>
+          </li>
+          <li>
+            <a href="/html/cloud-bi.html">云商业智能(Cloud BI)</a>
+          </li>
+          <li>
+            <a href="/html/iot.html">物联网(WoT/IoT)</a>
+          </li>
+          <li>
+            <a href="/html/me.html">关于我</a>
+          </li>
+          <li>
+            <a href="/html/dt-alibaba.html">阿里数据内推</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div id="main" class="container">
+    <div class="row">
+      <div id="article" class="col-md-9 content-container">
+        <h1 id="-react-">关于 React 系前端技术的思考</h1>
+<h2 id="-">起因</h2>
+<p>最近，我和朋友聊到在用的一些前端技术。一番侃大山后，我感觉不妨将一些思考与各位前端或全栈开发者们分享和交流下。</p>
+<p>所谓“侃”，大抵是面广而点到为止。请各位大牛们本着“历史最久的未必是最好的、宣传最凶的未必是合适的”实用精神，用心点评、多多指教。</p>
+<h2 id="-">背景和现状</h2>
+<p>我最近一年，参与的产品和项目的共同特征：数据型业务、企业级（Web 和 H5）应用。最常用 Table、Form、Chart 等组件。  因此，今天主要探讨这类场景的技术和解决方案。</p>
+<p>技术上大致经历：</p>
+<ul>
+<li><p>从16 年下半年的 React 系技术小试到后来踩过 “React + Redux + React Router ” 全家桶的各种坑；</p>
+</li>
+<li><p>从 Web 产品和钉钉 H5 微应用两种不同场景的研发与性能优化到前后端分离、组件化和SPA；</p>
+</li>
+<li><p>从 Webpack v1 到 v3 的构建工具升级到 Deer、Def、Just 和 Dawn 的探索；</p>
+</li>
+<li><p>从本机 Mock 数据到 RAP、Swagger 等前后端接口约定和接口对比验证的探索；</p>
+</li>
+<li><p>经历了 Fusion 和 Ant 两种不同 UI 解决方案的落地实践；</p>
+</li>
+<li><p>经历了 ECharts 和 G2 的图表可视化方案；</p>
+<p>……</p>
+</li>
+</ul>
+<p>至今，我暂称为一套 React 系的单页面应用的前端技术吧。</p>
+<h3 id="react-">React 系单页面应用的前端技术</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>选型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发语言</td>
+<td>TypeScript</td>
+<td></td>
+</tr>
+<tr>
+<td>格式规范</td>
+<td>prettier、stylelint</td>
+<td>团队规范</td>
+</tr>
+<tr>
+<td>构建</td>
+<td>Webpack 3、ts-node</td>
+<td>只考虑现代浏览器，因此未选用构建效率较低的 babel</td>
+</tr>
+<tr>
+<td>包管理</td>
+<td>yarn</td>
+<td>考虑到 lock version 稳定</td>
+</tr>
+<tr>
+<td>构建依赖包</td>
+<td>node v8.0</td>
+<td></td>
+</tr>
+<tr>
+<td>Git hook</td>
+<td>lint-staged、husky</td>
+<td></td>
+</tr>
+<tr>
+<td>CSS 预处理</td>
+<td><a href="http://sass-lang.com/">Sass</a>、sass-loader、<a href="https://github.com/webpack-contrib/style-loader">style-loader</a></td>
+<td></td>
+</tr>
+<tr>
+<td>web UI</td>
+<td><a href="http://ant.design/">Ant-design</a></td>
+<td></td>
+</tr>
+<tr>
+<td>UI 组件</td>
+<td>部分自研</td>
+<td></td>
+</tr>
+<tr>
+<td>图表</td>
+<td>部分自研</td>
+<td></td>
+</tr>
+<tr>
+<td>工具库</td>
+<td>lodash、<a href="https://github.com/JedWatson/classnames">classnames</a>、moment</td>
+<td></td>
+</tr>
+<tr>
+<td>View 层</td>
+<td>React</td>
+<td></td>
+</tr>
+<tr>
+<td>路由控制</td>
+<td><a href="https://github.com/ReactTraining/react-router">react-router</a>、 react-redux、 react-router-redux</td>
+<td></td>
+</tr>
+<tr>
+<td>异步 Action 和 Reducer 库</td>
+<td>Redux-Thunk</td>
+<td></td>
+</tr>
+<tr>
+<td>应用状态管理</td>
+<td>Redux</td>
+<td></td>
+</tr>
+<tr>
+<td>测试</td>
+<td>暂无</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">优良实践</h3>
+<ol>
+<li>命令式生成常规列表和表单的 generater；</li>
+<li>保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；</li>
+<li>沉淀出一些业务级或通用级的组件和工具库；</li>
+<li>G11N 全球化实现方案。</li>
+</ol>
+<h3 id="-">痛点</h3>
+<ul>
+<li>样板代码较多。有没有更适合的，如 <a href="https://github.com/dvajs/dva">Dva</a> 或其他？</li>
+<li>Mock 方案，造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？</li>
+</ul>
+<h2 id="-">对未来的一些思考</h2>
+<p>在思考这篇中，我将以“如何做开源技术选型”的方法论来做指导。因此，在前端工程化、前端架构、组件化与分形、状态管理和关于 React 替代方案等具体方面会列出可选项，重在论证，不做直接结论。</p>
+<h3 id="-">如何做开源技术选型</h3>
+<blockquote>
+<p>“我们认为，技术/功能在技术选型中的权重，可能只有四分之一”——出自 EAII 企业架构创新研究院宋潇男</p>
+</blockquote>
+<p>在此，在尊重作者主旨的前提下，将《【详解】为什么选择Kubernetes作为云平台的微服务治理框架》中关于“开源技术选型”的内容稍作整理，供大家品鉴：</p>
+<h4 id="-">技术/功能</h4>
+<p>技术/功能只是技术选型过程中需要考量的诸多维度中的一个，只要这些开源产品大体上能满足我们的需求，架构上没有明显的缺陷，开发语言和现有团队比较匹配、Roadmap 比较完善，就没什么大问题。</p>
+<h4 id="-">项目的运作模式</h4>
+<p>开源项目的运作模式中，我们重点关注以下三点：</p>
+<h5 id="1-license">1. 使用哪种开源 License</h5>
+<p>其中最重要的是 License。在很多技术人员的眼中，License 问题依然没有得到足够的重视。（对这个问题感兴趣的同学可以移步 <a href="">http://choosealicense.com/</a> 查看各种开源License的差异。）</p>
+<h5 id="2-">2. 开发模式和测试模式</h5>
+<p>开发模式，值得关注，但是一般知名的开源项目，在开发模式上都不会有太大的问题，更重要的是测试模式。很多开源项目自身不重视测试，把填坑的事情丢给参与厂商，这种项目，如果贵司不是动不动就能派出几十人上百人的大厂，必须慎用。会认真做测试框架、定期发测试报告的项目，必须好评。</p>
+<h5 id="3-">3. 被一家公司掌控还是松散的社区决策？</h5>
+<p>项目运作是被一家公司掌控还是松散的社区决策，以前都说大教堂不如集市，那是因为以前大教堂基本上不搞开源，搞开源的大教堂和集市，就难说哪个好了，参与过 OpenStack 厂商扯皮的同学，应该对这个深有体会。</p>
+<h4 id="-">技术提供者的产业背景</h4>
+<p>在项目技术提供者的产业背景中，我们重点关注以下三点：</p>
+<ol>
+<li>技术提供者的产业经验</li>
+<li>自己有没有大规模使用？</li>
+<li>是从自身需求沉淀出来的产品还是按设想的需求开发的产品？</li>
+</ol>
+<p>现在都讲“吃自己的狗粮”，很多最为成功的产品，都是在自己内部的长期的、大规模的使用中反复锤炼，再发布给公众使用的，最好的例子就是 AWS 。从自身实际需求出发的、给自己做的产品，往往会比按设想需求出发的、给客户做的产品更好。所以我们往往更加青睐大型互联网公司释放出来的开源项目，比如 Netflix 的一系列开源项目。</p>
+<h4 id="-">生态环境</h4>
+<p>在项目所处于的生态环境中，我们重点关注以下三点：</p>
+<ol>
+<li>技术和技术提供者在产业链中的位置</li>
+<li>与友商的合作/竞争关系</li>
+<li>是众望所归还是单打独斗？</li>
+</ol>
+<p>互联网时代，没有生态、就等于没有未来。良好的合作、清晰的分工界面，会让项目得到更好的发展，总想占点上下游的便宜，动别人的奶酪，或者妄图以一己之力对抗全行业，当然也有成功的，但是概率真的很低。</p>
+<h4 id="-">小结</h4>
+<p>以上是宋潇男关于开源技术选型的方法，大致从技术/功能、项目运作模式、技术提供者的产业背景和生态环境四个方面来综合考量。我想，结合加权评分法和德尔菲法或其他群体决策的方式，就可以得出以较严谨、科学的结论。</p>
+<p>另外，此话题还可以引申出“何时自研 vs 选用开源技术”，我想，大概取决于整合资源的能力吧。</p>
+<h3 id="-">前端工程化</h3>
+<p>当下，主流的 React、Angular、Vue 前端框架各自形成了全家桶式开发方式。或许，成也萧何败也萧何吧。</p>
+<p>前端工程化方面，大致还还处于类 creat-react-app 改造、各个群体基于 “commander + prompt + semver” 自研或相互学习、相互融合阶段。</p>
+<h4 id="-">集团</h4>
+<table>
+<thead>
+<tr>
+<th>集团内工具</th>
+<th>个人点评</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Def</td>
+<td>可谓大成，集成工程套件、云构建和插件市场于一体。</td>
+</tr>
+<tr>
+<td>Just</td>
+<td>本地开发工具，提供 CLI 命令行和 WebUI 两种使用形式。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/alibaba/dawn/blob/master/README-zh.md">Dawn</a></td>
+<td>通过 pipeline 和 middleware 抽象固化操作的开发构建工具；支持私有中心服务。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">开源社区</h4>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>个人点评</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://yeoman.io/">Yeamon</a></td>
+<td>开源的老牌工具，不过依赖 generators 也确实有些不错的实践。比如<a href="https://www.zhihu.com/question/58406043/answer/161501084">这里</a>。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/vadimdemedes/ink">Ink</a></td>
+<td>严格来讲，它只是 React 风格写 Cli 罢了。不过作者提供了 <a href="https://github.com/vadimdemedes/generator-ink-cli">generator-ink-cli</a>。我想，可能受 Yeamon 启发吧。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">前端架构</h3>
+<p><a href="https://micahgodbolt.com/">Micah Godbolt</a> 的动物书《<a href="http://www.ituring.com.cn/book/tupubarticle/13637">前端架构设计</a>》中阐述了以下两个点：</p>
+<ol>
+<li>前端架构的核心可概括为：代码、流程、测试、文档；</li>
+<li>前端架构师的主要职责：体系设计（描绘产品和代码最终形态）、工作规划（制定完整开发工作流）和监督跟进（保证项目高效率）。</li>
+</ol>
+<p>那么，实际项目执行中如何实施呢？</p>
+<p>以项目结构为例，在实际项目执行中，怎样的项目结构可以节约文件导航、便于重构和 Bug 修复呢？</p>
+<p>答案很简单，基于特性进行组织。 如 <a href="https://github.com/r-park/todo-react-redux">r-park/todo-react-redux</a> 中结构：</p>
+<p><img src="./todo-react-redux.jpg" alt="r-park 中 todo-react-redux 示例"></p>
+<p>当然，仅此还不够。 <a href="https://github.com/jaysoo">Jack Hsu</a> 在《<a href="https://jaysoo.ca/2016/02/28/organizing-redux-application/">Three Rules For Structuring (Redux) Applications</a>》中说，还要设计严格的模块边界，还要避免循环依赖。</p>
+<p>以上述三个规则为尺，每隔段时间修一修项目中代码的坏味道。如此，便一切安好。</p>
+<h3 id="-redux">组合、分形与 Redux</h3>
+<blockquote>
+<p>如果子组件的结构和框架整体结构是相同的，这个单向架构就被称为是<strong>分形的</strong>。</p>
+<p>—— 摘自 《<a href="http://adoyle.me/blog/unidirectional-user-interface-architectures.html">单向用户接口架构</a>》。原文《<a href="https://staltz.com/unidirectional-user-interface-architectures.html">Unidirectional User Interface Architectures</a>》</p>
+</blockquote>
+<p>彻底的可组合性 (composable) 的需求，引发了 Redux 中对于分形（Fractal）的各类实践。Redux 官方 <a href="https://github.com/reactjs/redux/issues/1528">Issue 1528</a> 中提供了包括 <a href="https://github.com/redux-loop/redux-loop">redux-loop</a>、<a href="https://github.com/salsita/prism">prism</a> 等解决。另外，古老的 <a href="https://github.com/davezuko/">React Redux Starter Kit</a> 项目中在 2017年3月30日也记录了一种不错的 <a href="https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure">Fractal Project Structure</a> 实现方案。</p>
+<h3 id="-">状态管理</h3>
+<p>目前，状态管理大致分为两大类：基于 MDV (Model Driven View) 的 <a href="http://redux.js.org/">Redux</a>、<a href="https://github.com/mobxjs/mobx">MobX</a>、<a href="https://github.com/ascoders/dob">Dob</a>，和基于 MVI (Model View Intent) 的 <a href="https://github.com/ReactiveX/RxJS">RxJS 5</a>、<a href="https://github.com/cyclejs/cyclejs">CycleJS</a> 和 <a href="https://github.com/staltz/xstream">xstream</a> 等。</p>
+<p>或许出于技术延续性和团队习惯的原因，我们主要在用 Redux 和 Dob。不过，说不定哪天会用上可以更灵活地操作数据流的 RxJS 5 一类吧。毕竟， Redux 在做数据关联查询时还是感觉不方便的。</p>
+<h3 id="-react-">关于 React 替代方案</h3>
+<p>2017年9月23日，Adam Wolff 以 <a href="https://code.facebook.com/posts/300798627056246">Relicensing React, Jest, Flow, and Immutable.js</a> 宣告将 React 重新授权为 “MIT” 。</p>
+<p>“BSD + Patents” 风波以称不上皆大欢喜的方式告一段落。或许，在防御专利流氓和帮助开源生态成长我们都有很长的路要走。</p>
+<p>以下是前段时间调研的一些替代品：</p>
+<table>
+<thead>
+<tr>
+<th>类库</th>
+<th>点评</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://preactjs.com/">Preact</a></td>
+<td><a href="https://preactjs.com/guide/switching-to-preact">preact-compat</a> 兼容。缺点是有性能折损、对事件代理支持不足等问题。</td>
+</tr>
+<tr>
+<td><a href="https://www.infernojs.org/">Inferno</a></td>
+<td><a href="https://github.com/infernojs/inferno/tree/master/packages/inferno-compat">inferno-compat</a> 兼容。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/RubyLouvre/anu">anu（又称 qreact）</a></td>
+<td><a href="https://rubylouvre.github.io/anu/install.html">迁移成本低</a>。去哪儿司徒正美主力，基于 preact 改进，待观察。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Lucifier129/react-lite">react-lite</a></td>
+<td>迁移成本低。携程工业聚主力，小有名气，待观察。</td>
+</tr>
+<tr>
+<td><a href="https://alibaba.github.io/rax/">Rax</a></td>
+<td>迁移成本低。阿里的一个跨容器的渲染引擎。</td>
+</tr>
+</tbody>
+</table>
+<p>我个人感受是替代品在兼容性和 “Learn once, write everywhere” 上尚有欠缺。不过，在 H5 站点的场景，这些替代品值得一试。</p>
+<h3 id="-">前端报告</h3>
+<p>前端报告，是一个很容易被前端团队忽略的存在。然而，当我们用 <a href="http://link.zhihu.com/?target=https%3A//testmysite.thinkwithgoogle.com/">Google TestMySite</a> 检测自己的站点时发现加载时间过长或者当我们思考前端未来走向时，你会发现一个可以快速生成且可靠的前端报告还是很有用的。</p>
+<p>我在一些项目中用 <a href="https://github.com/th0r/webpack-bundle-analyzer">Webpack Bundle Analyzer</a> 来做这件事。配合 <em>CommonsChunkPlugin()</em> ，“嘿，兄弟！看我帮你优化掉多少个重复的代码/类库/组件 ！”</p>
+<h2 id="-">总结</h2>
+<p>随着产品或项目的不同阶段，我们在测试方案、分形、状态管理、前端报告等方面也在不断探索和成长。近期，我计划整合一套 <a href="https://github.com/avajs/ava">AVA</a> 、<a href="https://github.com/airbnb/enzyme">Enzyme</a> 和 <a href="https://github.com/alibaba/uirecorder">UIRecorder</a> 的测试方案。后续分享，欢迎跟进。</p>
+<p>期待与各位同学交流学习。</p>
+<h2 id="-">参考</h2>
+<p>此文受以下文章启发，在此表示感谢。如有侵权，请联系我删除。</p>
+<ul>
+<li><a href="http://eaworld.io/post/20">【详解】为什么选择Kubernetes作为云平台的微服务治理框架</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&amp;mid=2652552134&amp;idx=1&amp;sn=4b5f7e25ab0752098755115dde71eedd">基于开源项目搭建属于自己的技术堆栈</a></li>
+<li><a href="https://www.zhihu.com/question/58406043/answers/created">脚手架类的命令行工具用到了哪些技术?</a></li>
+<li><a href="https://www.sitepoint.com/react-alternatives-preact-virtualdom-deku/">3 Lightweight React Alternatives: Preact, VirtualDom &amp; Deku</a></li>
+<li><a href="https://segmentfault.com/a/1190000009659319">高性能迷你 React 框架 anu 发布</a></li>
+<li><a href="https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf">Hot Reloading in React</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&amp;mid=2247485159&amp;idx=1&amp;sn=7ae4b01c51532e37699a7e59b2aa940f">单页应用的数据流方案探索</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&amp;mid=2247485161&amp;idx=1&amp;sn=f32154a71f2a75dcecb3e63abf0b0204">大型高性能 React PWA 如何消除各类性能瓶颈？</a></li>
+<li><a href="http://taobaofed.org/blog/2015/12/18/think-to-def/">DEF 2.0 的想法</a></li>
+<li><a href="https://mp.weixin.qq.com/s/hlutyDi20J6wzVedZ6gSWg">2017 年前端领域有哪些探索和实践?</a></li>
+<li><a href="https://juejin.im/entry/577b85f62e958a00548f1799">【译】Redux + React 应用程序架构的 3 条规范（内附实例）</a></li>
+<li><a href="https://segmentfault.com/a/1190000007248878">Redux 异步方案选型</a></li>
+<li><a href="http://adoyle.me/blog/unidirectional-user-interface-architectures.html">单向用户接口架构</a></li>
+<li><a href="https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure">Fractal Project Structure</a></li>
+</ul>
+
+      </div>
+      <div class="col-md-3" style="padding-top:20px;">
+        <iframe src="http://githubbadge.appspot.com/tingge?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <a id="html2canvas" title="截图下载-快照">&nbsp;</a>
+  <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- instantclick -->
+  <script src="https://raw.githubusercontent.com/dieulot/instantclick/master/src/instantclick.js" charset="utf-8"></script>
+  <script src="/js/article.js" charset="utf-8"></script>
+  <!-- justice.js  -->
+  <script src="https://rawgit.com/okor/justice/master/build/justice.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    Justice.init();
+  </script>
+
+  <script src='http://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree.all-3.5.min.js'></script>
+  <script src='http://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree_toc.min.js'></script>
+  <script type="text/javascript" >
+    $(document).ready(function(){
+      $('#tree').ztree_toc({
+        is_auto_number:true,
+        documment_selector:'.markdown-body'
+      });
+    });
+  </script>
+
+</body>
+
+</html>

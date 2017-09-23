@@ -5,7 +5,8 @@
 > “集市” 和“大教堂”之争，推动着前端这个大生态的繁荣和演进。我把这个过程，总结为 “工程实践 + 标准化 => JavaScript 生态”。
 
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
-2. [我的前端技能路线图](/grunt-tingge/img/frontend.png)
+2. [关于 React 系前端技术的思考](https://tingge.github.io/html/react-redux-reactrouter.html)
+3. [我的前端技能路线图](/grunt-tingge/img/frontend.png)
 
 
 ## Web 前端
@@ -80,7 +81,7 @@
 
 ### 可视化
 
-> 专题 [data-visualization](https://github.com/TingGe/data-visualization) 
+> 专题 [data-visualization](https://github.com/TingGe/data-visualization)
 
 1. [JavaScript应用领域（d3-test）](/lab/d3-test/index.html)
 2. [heatmap.js](https://www.npmjs.com/package/heatmap.js)：Web 的动态 JavaScript 热图
@@ -193,7 +194,7 @@ MVI 基于 Reactive 理念。相关：数据管道。解读：
 | [Relay](http://facebook.github.io/relay/) | 采用 GraphQL，用于构建数据驱动的 React 应用程序的 JavaScript 框架 |      |
 | [tectonic](https://github.com/tonyhb/tectonic) | React 和 Redux 的声明性 REST 数据加载器            |      |
 
-### PWA 
+### PWA
 
 - [UpUp](https://github.com/TalAter/UpUp)
 - ​
@@ -427,7 +428,7 @@ JS框架的实践
 - [理解 redux 中间件](https://zhuanlan.zhihu.com/p/21391101)
 - [On Structural Immutability](https://clojurefun.wordpress.com/2013/01/21/on-structural-immutability/)
 - [Structural sharingand destructive modification](https://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/structural-sharing/)
-- [js-structural-sharing](https://github.com/mperdikeas/js-structural-sharing) 
+- [js-structural-sharing](https://github.com/mperdikeas/js-structural-sharing)
 - [ShadowDOM Visualizer](http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
 - [HTML's New Template Tag](http://www.html5rocks.com/zh/tutorials/webcomponents/template/)
 - [HTML5 Template Tag: Introduction](http://robdodson.me/html5-template-tag-introduction/)

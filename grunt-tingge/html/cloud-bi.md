@@ -188,7 +188,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 - 邮件（newsletter）
   - 截屏：[Puppeteer](https://github.com/GoogleChrome/puppeteer)、[Chromeless](https://github.com/graphcool/chromeless)、[Headless Chromium](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-  - [邮件HTML模版](http://tingge.github.io/lab/rwd-edm.html)
+  - [邮件HTML模版](http://tingge.github.io/lab/rwd-edm.html)：[Ink](http://foundation.zurb.com/emails.html)
 - 短消息（message）
   - 站内（公告、审批、消息等）
   - [IM](https://github.com/TingGe/develop-tools#mac或linux系)(钉钉、短信、微信)
