@@ -45,7 +45,7 @@
 | 工具库                   | lodash、[classnames](https://github.com/JedWatson/classnames)、moment |                             |
 | View 层                | React                                    |                             |
 | 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                             |
-| 异步 Action 和 Reducer 库 | Redux-Thunk                    |                             |
+| 异步 Action 和 Reducer 库 | Redux-Thunk                              |                             |
 | 应用状态管理                | Redux                                    |                             |
 | 测试                    | 暂无                                       |                             |
 
@@ -151,7 +151,7 @@
 
 答案很简单，基于特性进行组织。 如 [r-park/todo-react-redux](https://github.com/r-park/todo-react-redux) 中结构：
 
-![r-park 中 todo-react-redux 示例](./todo-react-redux.jpg)
+![r-park 中 todo-react-redux 示例](https://tingge.github.io/img/todo-react-redux.jpg)
 
 当然，仅此还不够。 [Jack Hsu](https://github.com/jaysoo) 在《[Three Rules For Structuring (Redux) Applications](https://jaysoo.ca/2016/02/28/organizing-redux-application/)》中说，还要设计严格的模块边界，还要避免循环依赖。
 
@@ -218,4 +218,4 @@
 - [【译】Redux + React 应用程序架构的 3 条规范（内附实例）](https://juejin.im/entry/577b85f62e958a00548f1799)
 - [Redux 异步方案选型](https://segmentfault.com/a/1190000007248878)
 - [单向用户接口架构](http://adoyle.me/blog/unidirectional-user-interface-architectures.html)
--  [Fractal Project Structure](https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure)
+- [Fractal Project Structure](https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure)
