@@ -16,19 +16,21 @@
 <body>
   <div id="tabbed_box_1" class="tabbed_box">
     <h1>
-      Github 中最流行的 JavaScript 项目
-      <small>React + D3.js 示例</small>
+      最流行的 JavaScript
     </h1>
     <div class="tabbed_area">
       <ol class="tabs">
         <li>
-          <a title="stars" class="tab active">最多 Stars</a>
+          <a title="echojs" class="tab active">EchoJS</a>
+        </li>
+        <li>
+          <a title="hackernews" class="tab">HackerNews</a>
+        </li>
+        <li>
+          <a title="stars" class="tab">最多 Stars</a>
         </li>
         <li>
           <a title="forks" class="tab">最多 Forks</a>
-        </li>
-        <li>
-          <a title="echojs" class="tab">EchoJS</a>
         </li>
         <li>
           <a title="infoq-feweekly" class="tab">前端每周清单</a>
@@ -50,12 +52,16 @@
         </li>
       </ol>
 
-      <div style="display: block;" id="stars" class="content"></div>
-      <div style="display: none;" id="forks" class="content"></div>
-      <div style="display: none;" id="echojs" class="content">
+      <div style="display: block;" id="echojs" class="content">
         <iframe frameborder="0" src="http://www.echojs.com/" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true"
           allowfullscreen="true"></iframe>
       </div>
+      <div style="display: none;" id="hackernews" class="content">
+        <iframe frameborder="0" src="https://news.ycombinator.com/" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true"
+          allowfullscreen="true"></iframe>
+      </div>
+      <div style="display: none;" id="stars" class="content"></div>
+      <div style="display: none;" id="forks" class="content"></div>
       <div style="display: none;" id="infoq-feweekly" class="content">
         <iframe frameborder="0" src="http://www.infoq.com/cn/FE-Weekly" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true"
           allowfullscreen="true"></iframe>
