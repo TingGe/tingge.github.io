@@ -1,24 +1,16 @@
 # 关于我
 
-> 程序员的道法术器势：
->
-> 道：追求技术的境界（单纯的追求技术、用技术挣钱、技术改变世界、技术改变生活等），验证哲学人生
->
-> 法：技术的根本，如计算机原理、算法原理、网络原理、通讯协议等
->
-> 术：具体的技术，如 C++、linux、排序算法等
->
-> 器：编译环境、编程工具、使用的文本工具等
->
-> 势：当前所处的地位、行业的发展趋势等
->
-> ——取自国立秀才的《[程序员的道法术器势](http://www.cnblogs.com/guolixiucai/p/4619774.html)》
 
-### 标签
+## 标签
 
 前端开发、移动端 H5 App 开发、TCP/IP、Node.js、CSS、浏览器兼容性、[Chrome 扩展程序](https://github.com/TingGe/chrome-extensions)
 
-### 阅历
+## 常用
+
+- [流行的 JavaScript](http://tingge.github.io/lab/popular-javascript/index.html)
+- [我的书柜](http://tingge.github.io/lab/my-books/index.html)
+
+## 阅历
 
 > 基于知识体系的预估能力，是专家的价值所在。
 
