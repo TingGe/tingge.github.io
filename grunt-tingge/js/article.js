@@ -27,7 +27,7 @@
   }
 }(window, document));
 
-(function($, AutocJS, autoc, html2canvas, Ting) {
+(function($, html2canvas, Ting) {
   // 截屏
   downloadScreenshots = function() {
     html2canvas(document.body).then(function(canvas) {
@@ -39,12 +39,4 @@
   $('#html2canvas').on('click', function() {
     downloadScreenshots();
   })
-
-  // 最基础的方法，只需要指定文章内容的 DOM 节点的　id
-  autoc({
-    article: '#article'
-  });
-  AutocJS.init({
-    article: '#article'
-  });
-})(jQuery, AutocJS, autoc, html2canvas, Ting);
+})(jQuery, html2canvas, Ting);

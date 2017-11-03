@@ -9,7 +9,6 @@
   <title>听歌实验室</title>
   <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
   <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.css" media="screen">
   <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="/css/landing-page.css" rel="stylesheet">
@@ -21,7 +20,6 @@
   </style>
   <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/lib/html2canvas/dist/html2canvas.min.js"></script>
-  <script type="text/javascript" src="https://raw.githubusercontent.com/yaohaixiao/AutocJS/master/build/autoc.min.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -65,7 +63,7 @@
             <a href="/html/me.html">关于我</a>
           </li>
           <li>
-            <a href="/html/dt-alibaba.html">阿里数据内推</a>
+            <a href="/html/dt-alibaba.html">阿里数据</a>
           </li>
         </ul>
       </div>
@@ -119,26 +117,14 @@
   </div>
   <a id="html2canvas" title="截图下载-快照">&nbsp;</a>
   <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- instantclick -->
-  <script src="https://raw.githubusercontent.com/dieulot/instantclick/master/src/instantclick.js" charset="utf-8"></script>
   <script src="/js/article.js" charset="utf-8"></script>
-  <!-- justice.js  -->
-  <script src="https://rawgit.com/okor/justice/master/build/justice.min.js" charset="utf-8"></script>
-  <script type="text/javascript">
+  <!-- justice.js https://github.com/okor/justice  -->
+  <script src="lib/justice.min.js" charset="utf-8"></script>
+  <!-- instantclick -->
+  <script src="lib/instantclick.js" charset="utf-8"></script>
+  <script type="text/javascript" data-no-instant>
     Justice.init();
   </script>
-
-  <script src='http://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree.all-3.5.min.js'></script>
-  <script src='http://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree_toc.min.js'></script>
-  <script type="text/javascript" >
-    $(document).ready(function(){
-      $('#tree').ztree_toc({
-        is_auto_number:true,
-        documment_selector:'.markdown-body'
-      });
-    });
-  </script>
-
 </body>
 
 </html>
