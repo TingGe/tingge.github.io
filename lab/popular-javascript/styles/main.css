@@ -33,7 +33,7 @@ body {
 .tabbed_area iframe {
   border: none;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
   min-height: 680px
 }
 ol.tabs {
