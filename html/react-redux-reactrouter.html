@@ -75,6 +75,10 @@
     <div class="row">
       <div id="article" class="col-md-9 content-container">
         <h1 id="-react-">关于 React 系前端技术的思考</h1>
+<blockquote>
+<p>本文会持续更新。</p>
+<p>最初文章地址在ATA社区《<a href="https://www.atatech.org/articles/90786">关于 React 系前端技术的思考（上）</a>》和《<a href="https://www.atatech.org/articles/90787">关于 React 系前端技术的思考（下）</a>》 </p>
+</blockquote>
 <h2 id="-">起因</h2>
 <p>最近，我和朋友聊到在用的一些前端技术。一番侃大山后，我感觉不妨将一些思考与各位前端或全栈开发者们分享和交流下。</p>
 <p>所谓“侃”，大抵是面广而点到为止。请各位大牛们本着“历史最久的未必是最好的、宣传最凶的未必是合适的”实用精神，用心点评、多多指教。</p>
@@ -180,7 +184,7 @@
 <tr>
 <td>应用状态管理</td>
 <td>Redux</td>
-<td></td>
+<td>降低样本代码的优良实践 <a href="https://github.com/dvajs/dva">Dva</a>、<a href="https://github.com/keajs/kea">Kea</a> 等</td>
 </tr>
 <tr>
 <td>测试</td>
@@ -339,7 +343,7 @@
 <p>我个人感受是替代品在兼容性和 “Learn once, write everywhere” 上尚有欠缺。不过，在 H5 站点的场景，这些替代品值得一试。</p>
 <h3 id="-">前端报告</h3>
 <p>前端报告，是一个很容易被前端团队忽略的存在。然而，当我们用 <a href="http://link.zhihu.com/?target=https%3A//testmysite.thinkwithgoogle.com/">Google TestMySite</a> 检测自己的站点时发现加载时间过长或者当我们思考前端未来走向时，你会发现一个可以快速生成且可靠的前端报告还是很有用的。</p>
-<p>我在一些项目中用 <a href="https://github.com/th0r/webpack-bundle-analyzer">Webpack Bundle Analyzer</a> 来做这件事。配合 <em>CommonsChunkPlugin()</em> ，“嘿，兄弟！看我帮你优化掉多少个重复的代码/类库/组件 ！”</p>
+<p>我在一些项目中用 <a href="https://github.com/th0r/webpack-bundle-analyzer">Webpack Bundle Analyzer</a> 来做这件事。配合 Webpack 的 <a href="https://doc.webpack-china.org/plugins/dll-plugin/">DLLPlugin</a> 或 <a href="https://webpack.js.org/plugins/commons-chunk-plugin/">CommonsChunkPlugin</a> ，“嘿，兄弟！看我帮你优化掉多少个重复的代码/类库/组件 ！”</p>
 <h2 id="-">总结</h2>
 <p>随着产品或项目的不同阶段，我们在测试方案、分形、状态管理、前端报告等方面也在不断探索和成长。近期，我计划整合一套 <a href="https://github.com/avajs/ava">AVA</a> 、<a href="https://github.com/airbnb/enzyme">Enzyme</a> 和 <a href="https://github.com/alibaba/uirecorder">UIRecorder</a> 的测试方案。后续分享，欢迎跟进。</p>
 <p>期待与各位同学交流学习。</p>

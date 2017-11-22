@@ -1,5 +1,9 @@
 # 关于 React 系前端技术的思考
 
+> 本文会持续更新。
+>
+> 最初文章地址在ATA社区《[关于 React 系前端技术的思考（上）](https://www.atatech.org/articles/90786)》和《[关于 React 系前端技术的思考（下）](https://www.atatech.org/articles/90787)》 
+
 ## 起因
 
 最近，我和朋友聊到在用的一些前端技术。一番侃大山后，我感觉不妨将一些思考与各位前端或全栈开发者们分享和交流下。
@@ -30,24 +34,24 @@
 
 ### React 系单页面应用的前端技术
 
-|                       | 选型                                       | 说明                          |
-| --------------------- | ---------------------------------------- | --------------------------- |
-| 开发语言                  | TypeScript                               |                             |
-| 格式规范                  | prettier、stylelint                       | 团队规范                        |
-| 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel |
-| 包管理                   | yarn                                     | 考虑到 lock version 稳定         |
-| 构建依赖包                 | node v8.0                                |                             |
-| Git hook              | lint-staged、husky                        |                             |
-| CSS 预处理               | [Sass](http://sass-lang.com/)、sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader) |                             |
-| web UI                | [Ant-design](http://ant.design/)         |                             |
-| UI 组件                 | 部分自研                                     |                             |
-| 图表                    | 部分自研                                     |                             |
-| 工具库                   | lodash、[classnames](https://github.com/JedWatson/classnames)、moment |                             |
-| View 层                | React                                    |                             |
-| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                             |
-| 异步 Action 和 Reducer 库 | Redux-Thunk                              |                             |
-| 应用状态管理                | Redux                                    |                             |
-| 测试                    | 暂无                                       |                             |
+|                       | 选型                                       | 说明                                       |
+| --------------------- | ---------------------------------------- | ---------------------------------------- |
+| 开发语言                  | TypeScript                               |                                          |
+| 格式规范                  | prettier、stylelint                       | 团队规范                                     |
+| 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel              |
+| 包管理                   | yarn                                     | 考虑到 lock version 稳定                      |
+| 构建依赖包                 | node v8.0                                |                                          |
+| Git hook              | lint-staged、husky                        |                                          |
+| CSS 预处理               | [Sass](http://sass-lang.com/)、sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader) |                                          |
+| web UI                | [Ant-design](http://ant.design/)         |                                          |
+| UI 组件                 | 部分自研                                     |                                          |
+| 图表                    | 部分自研                                     |                                          |
+| 工具库                   | lodash、[classnames](https://github.com/JedWatson/classnames)、moment |                                          |
+| View 层                | React                                    |                                          |
+| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                                          |
+| 异步 Action 和 Reducer 库 | Redux-Thunk                              |                                          |
+| 应用状态管理                | Redux                                    | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |
+| 测试                    | 暂无                                       |                                          |
 
 ### 优良实践
 
@@ -193,7 +197,7 @@
 
 前端报告，是一个很容易被前端团队忽略的存在。然而，当我们用 [Google TestMySite](http://link.zhihu.com/?target=https%3A//testmysite.thinkwithgoogle.com/) 检测自己的站点时发现加载时间过长或者当我们思考前端未来走向时，你会发现一个可以快速生成且可靠的前端报告还是很有用的。
 
-我在一些项目中用 [Webpack Bundle Analyzer](https://github.com/th0r/webpack-bundle-analyzer) 来做这件事。配合 *CommonsChunkPlugin()* ，“嘿，兄弟！看我帮你优化掉多少个重复的代码/类库/组件 ！”
+我在一些项目中用 [Webpack Bundle Analyzer](https://github.com/th0r/webpack-bundle-analyzer) 来做这件事。配合 Webpack 的 [DLLPlugin](https://doc.webpack-china.org/plugins/dll-plugin/) 或 [CommonsChunkPlugin](https://webpack.js.org/plugins/commons-chunk-plugin/) ，“嘿，兄弟！看我帮你优化掉多少个重复的代码/类库/组件 ！”
 
 ## 总结
 
