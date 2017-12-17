@@ -38,11 +38,11 @@
 | --------------------- | ---------------------------------------- | ---------------------------------------- |
 | 开发语言                  | TypeScript                               |                                          |
 | 格式规范                  | prettier、stylelint                       | 团队规范                                     |
-| 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel              |
+| 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） |
 | 包管理                   | yarn                                     | 考虑到 lock version 稳定                      |
 | 构建依赖包                 | node v8.0                                |                                          |
 | Git hook              | lint-staged、husky                        |                                          |
-| CSS 预处理               | [Sass](http://sass-lang.com/)、sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader) |                                          |
+| CSS 预处理               | [Sass](http://sass-lang.com/)、sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader) | 有限制的使用层级，变量，函数，宏 ，禁止 extend              |
 | web UI                | [Ant-design](http://ant.design/)         |                                          |
 | UI 组件                 | 部分自研                                     |                                          |
 | 图表                    | 部分自研                                     |                                          |
