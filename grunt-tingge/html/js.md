@@ -61,15 +61,15 @@
 >
 > 传统的 DOM 操作是直接在 DOM 上操作的，当需要修改一系列元素中的值时，就会直接对 DOM 进行操作。而采用 Virtual DOM 则会对需要修改的 DOM 进行比较（DIFF），从而只选择需要修改的部分。也因此对于不需要大量修改 DOM 的应用来说，采用 Virtual DOM 并不会有优势。开发者就可以创建出可交互的 UI。
 
-|                                       | 说明                                       | 个人实例                                     | 相关                                       | 探讨     |
-| ------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ------ |
-| React                                 |                                          | [Github 中最流行的 JavaScript 项目（popular-javascript）](http://tingge.github.io/lab/popular-javascript/index.html) | 模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views)、 [React Express](http://github.com/dabbott/react-express) | 组件和分形？ |
-| Vue                                   |                                          | [Hacker news(vue-test)](/lab/vue-test/index.html) |                                          |        |
-| [Moon](https://github.com/kbrsh/moon) | 类 Vue                                    |                                          |                                          |        |
-| Angular                               |                                          | [我的书柜（my-books）](/lab/my-books/index.html) |                                          |        |
-| [Angular 2](../lab/quickstart/)       | 其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑 |                                          |                                          |        |
-| Aurelia                               |                                          |                                          |                                          |        |
-| React-Native                          | 仅适用业务型场景                                 |                                          |                                          |        |
+|                                       | 说明                                       | 个人实例                                     | 相关                                       | 探讨                                       |
+| ------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| React                                 |                                          | [Github 中最流行的 JavaScript 项目（popular-javascript）](http://tingge.github.io/lab/popular-javascript/index.html) | 模板生成器 [create-react-app](https://www.infoq.com/news/2016/07/create-react-app-cli-tool)、React boilerplate、[express-react-views](https://github.com/reactjs/express-react-views)、 [React Express](http://github.com/dabbott/react-express) | 组件和分形，参考《[关于 React 系前端技术的思考](https://tingge.github.io/html/react-redux-reactrouter.html)》的“组合、分形与 Redux” |
+| Vue                                   |                                          | [Hacker news(vue-test)](/lab/vue-test/index.html) |                                          |                                          |
+| [Moon](https://github.com/kbrsh/moon) | 类 Vue                                    |                                          |                                          |                                          |
+| Angular                               |                                          | [我的书柜（my-books）](/lab/my-books/index.html) |                                          |                                          |
+| [Angular 2](../lab/quickstart/)       | 其创建理念是声明式编程应该用于构建用户界面以及编写软件构建，而命令式编程非常适合来表示业务逻辑 |                                          |                                          |                                          |
+| Aurelia                               |                                          |                                          |                                          |                                          |
+| React-Native                          | 仅适用业务型场景                                 |                                          |                                          |                                          |
 
 #### Web Components/Shadow DOM
 

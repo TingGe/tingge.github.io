@@ -1,6 +1,6 @@
 # 关于 React 系前端技术的思考
 
-> 本文会持续更新。
+> 本文最后更新于 2017年12月28日。
 >
 > 最初文章地址在ATA社区《[关于 React 系前端技术的思考（上）](https://www.atatech.org/articles/90786)》和《[关于 React 系前端技术的思考（下）](https://www.atatech.org/articles/90787)》 
 
@@ -18,15 +18,15 @@
 
 - 从16 年下半年的 React 系技术小试到后来踩过 “React + Redux + React Router ” 全家桶的各种坑；
 
-- 从 Web 产品和钉钉 H5 微应用两种不同场景的研发与性能优化到前后端分离、组件化和SPA；
+- 从 Web 产品和钉钉 H5 微应用两种不同场景的研发与性能优化到前后端分离、组件化和 SPA；
 
 - 从 Webpack v1 到 v3 的构建工具升级到 Deer、Def、Just 和 Dawn 的探索；
 
 - 从本机 Mock 数据到 RAP、Swagger 等前后端接口约定和接口对比验证的探索；
 
-- 经历了 Fusion 和 Ant 两种不同 UI 解决方案的落地实践；
+- 经历了 Fusion 和 [Ant Design](https://github.com/ant-design/ant-design) 两种不同 UI 解决方案的落地实践；
 
-- 经历了 ECharts 和 G2 的图表可视化方案；
+- 经历了 ECharts 和 [AntV](https://github.com/antvis/) 的图表可视化方案；
 
   ……
 
@@ -34,36 +34,40 @@
 
 ### React 系单页面应用的前端技术
 
-|                       | 选型                                       | 说明                                       |
-| --------------------- | ---------------------------------------- | ---------------------------------------- |
-| 开发语言                  | TypeScript                               |                                          |
-| 格式规范                  | prettier、stylelint                       | 团队规范                                     |
-| 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） |
-| 包管理                   | yarn                                     | 考虑到 lock version 稳定                      |
-| 构建依赖包                 | node v8.0                                |                                          |
-| Git hook              | lint-staged、husky                        |                                          |
-| CSS 预处理               | [Sass](http://sass-lang.com/)、sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader) | 有限制的使用层级，变量，函数，宏 ，禁止 extend              |
-| web UI                | [Ant-design](http://ant.design/)         |                                          |
-| UI 组件                 | 部分自研                                     |                                          |
-| 图表                    | 部分自研                                     |                                          |
-| 工具库                   | lodash、[classnames](https://github.com/JedWatson/classnames)、moment |                                          |
-| View 层                | React                                    |                                          |
-| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                                          |
-| 异步 Action 和 Reducer 库 | Redux-Thunk                              |                                          |
-| 应用状态管理                | Redux                                    | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |
-| 测试                    | 暂无                                       |                                          |
+|                       | 选型                                       | 说明                                       | 探索                                       |
+| --------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| 开发语言                  | TypeScript                               |                                          |                                          |
+| 格式规范                  | prettier、stylelint                       | 团队规范                                     |                                          |
+| 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） | [Parcel](https://github.com/parcel-bundler/parcel)、[Poi](https://github.com/egoist/poi) |
+| 包管理                   | yarn                                     | 考虑到 lock version 稳定                      |                                          |
+| 构建依赖包                 | node v8.0                                |                                          |                                          |
+| Git hook              | lint-staged、husky                        |                                          |                                          |
+| CSS 预处理               | [Sass](http://sass-lang.com/)、sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader) | 有限制的使用层级，变量，函数，宏 ，禁止 extend              |                                          |
+| web UI                | [Ant-design](http://ant.design/)         |                                          |                                          |
+| UI 组件                 | 部分自研                                     |                                          |                                          |
+| 图表                    | 部分自研                                     |                                          |                                          |
+| 工具库                   | lodash、[classnames](https://github.com/JedWatson/classnames)、moment |                                          |                                          |
+| View 层                | React                                    |                                          |                                          |
+| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                                          |                                          |
+| 异步 Action 和 Reducer 库 | Redux-Thunk                              |                                          |                                          |
+| 应用状态管理                | Redux                                    | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |                                          |
+| 测试                    | 暂无                                       |                                          |                                          |
 
 ### 优良实践
 
-1. 命令式生成常规列表和表单的 generater；
+1. Code Snippet 方式：命令式生成常规列表和表单的 generater；
 2. 保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；
 3. 沉淀出一些业务级或通用级的组件和工具库；
-4. G11N 全球化实现方案。
+4. G11N 全球化实现方案；
+5. 复杂状态树划分实现方案；
+6. 前端测试方案。
 
 ### 痛点
 
 - 样板代码较多。有没有更适合的，如 [Dva](https://github.com/dvajs/dva) 或其他？
 - Mock 方案，造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？
+- 状态管理：多个 SPA 和 react-router 的优良实践？
+- PWA：
 
 ## 对未来的一些思考
 
@@ -139,6 +143,9 @@
 
 | 工具                                       | 个人点评                                     |
 | ---------------------------------------- | ---------------------------------------- |
+| [Parcel](https://github.com/parcel-bundler/parcel) | 17年8月出现的打包工具，号称比 webpack “更快、零配置”。       |
+| [Poi](https://github.com/egoist/poi)     | 国内 EGOIST 主支持， 17年2月出现，替代 [react-scripts](https://www.npmjs.com/package/react-scripts) ，以实现可灵活配置。示例项目 [create-poi-react-app](https://github.com/egoist/create-poi-react-app) |
+| [Webpack](https://github.com/webpack/webpack) | 16～17年，主流的打包工具。工具生态完善。                   |
 | [Yeamon](http://yeoman.io/)              | 开源的老牌工具，不过依赖 generators 也确实有些不错的实践。比如[这里](https://www.zhihu.com/question/58406043/answer/161501084)。 |
 | [Ink](https://github.com/vadimdemedes/ink) | 严格来讲，它只是 React 风格写 Cli 罢了。不过作者提供了 [generator-ink-cli](https://github.com/vadimdemedes/generator-ink-cli)。我想，可能受 Yeamon 启发吧。 |
 
