@@ -1,6 +1,6 @@
 # 关于 React 系前端技术的思考
 
-> 本文最后更新于 2017年12月28日。
+> 本文最后更新于 2018年01月02日。
 >
 > 最初文章地址在ATA社区《[关于 React 系前端技术的思考（上）](https://www.atatech.org/articles/90786)》和《[关于 React 系前端技术的思考（下）](https://www.atatech.org/articles/90787)》 
 
@@ -36,7 +36,7 @@
 
 |                       | 选型                                       | 说明                                       | 探索                                       |
 | --------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| 开发语言                  | TypeScript                               |                                          |                                          |
+| 开发语言（／ JavaScript 编译器 | TypeScript                               |                                          | [ReasonReact](https://github.com/reasonml/reason-react) 和  [BuckleScript](https://github.com/BuckleScript/bucklescript) |
 | 格式规范                  | prettier、stylelint                       | 团队规范                                     |                                          |
 | 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） | [Parcel](https://github.com/parcel-bundler/parcel)、[Poi](https://github.com/egoist/poi) |
 | 包管理                   | yarn                                     | 考虑到 lock version 稳定                      |                                          |
@@ -48,7 +48,7 @@
 | 图表                    | 部分自研                                     |                                          |                                          |
 | 工具库                   | lodash、[classnames](https://github.com/JedWatson/classnames)、moment |                                          |                                          |
 | View 层                | React                                    |                                          |                                          |
-| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                                          |                                          |
+| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                                          | [React-Keeper](https://github.com/vifird/react-keeper) |
 | 异步 Action 和 Reducer 库 | Redux-Thunk                              |                                          |                                          |
 | 应用状态管理                | Redux                                    | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |                                          |
 | 测试                    | 暂无                                       |                                          |                                          |
@@ -64,7 +64,7 @@
 
 ### 痛点
 
-- 样板代码较多。有没有更适合的，如 [Dva](https://github.com/dvajs/dva) 或其他？
+- 样板代码较多。更适合的优化，如 [Dva](https://github.com/dvajs/dva) 或 Kea 其他？
 - Mock 方案，造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？
 - 状态管理：多个 SPA 和 react-router 的优良实践？
 - PWA：
