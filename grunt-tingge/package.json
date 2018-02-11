@@ -16,7 +16,7 @@
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.6.1",
     "html2canvas": "^0.5.0-beta4",
-    "jquery": "^2.2.3",
+    "jquery": "^3.0.0",
     "justice": "github:okor/justice",
     "octocard": "github:zmmbreeze/octocard"
   }
