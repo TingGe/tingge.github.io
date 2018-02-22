@@ -1,10 +1,10 @@
 # 关于 React 系前端技术的思考
 
+![](/img/react-redux-reactrouter.png)
+
 > 本文最后更新于 2018年02月22日。
 >
 > 最初文章地址在ATA社区《[关于 React 系前端技术的思考（上）](https://www.atatech.org/articles/90786)》和《[关于 React 系前端技术的思考（下）](https://www.atatech.org/articles/90787)》 
-
-![](/img/react-redux-reactrouter.png)
 
 ## 目标
 
@@ -73,7 +73,7 @@
   - 问题：造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？
   - 解决思路：按经验可根据后端代码或前后端接口文档来生成 services 层代码，具体到 Redux实现是根据接口约定生成 Action 和 Reducer 层代码。值得注意的是，建议**同时考虑基于特性组织的项目代码结构**。
 - 状态管理：更好地处理 View、Store 和 service 层关系，如 ReKit 的 “[one action per file pattern](https://medium.com/@nate_wang/a-new-approach-for-managing-redux-actions-91c26ce8b5da#.9em77fuwk)” ？
-- PWA：更好地适配移动场景，Google [Lighthouse](https://github.com/GoogleChrome/lighthouse) 的评分？
+- PWA：更好地适配移动场景，可参考 [HNPWA](https://hnpwa.com/) 实现、用 Google [Lighthouse](https://github.com/GoogleChrome/lighthouse) 的评分？
 
 ## 对未来的一些思考
 
