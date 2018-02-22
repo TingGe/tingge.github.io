@@ -1,18 +1,22 @@
 # 关于 React 系前端技术的思考
 
-> 本文最后更新于 2018年01月02日。
+> 本文最后更新于 2018年02月22日。
 >
 > 最初文章地址在ATA社区《[关于 React 系前端技术的思考（上）](https://www.atatech.org/articles/90786)》和《[关于 React 系前端技术的思考（下）](https://www.atatech.org/articles/90787)》 
 
-## 起因
+![](/img/react-redux-reactrouter.png)
 
-最近，我和朋友聊到在用的一些前端技术。一番侃大山后，我感觉不妨将一些思考与各位前端或全栈开发者们分享和交流下。
+## 目标
 
-所谓“侃”，大抵是面广而点到为止。请各位大牛们本着“历史最久的未必是最好的、宣传最凶的未必是合适的”实用精神，用心点评、多多指教。
+开源的 [Rekit](https://github.com/supnate/rekit)  是一个使用 React、Redux 和 React-router 构建可伸缩 Web 应用程序的工具包，用于创建现代React应用程序的一体化解决方案。 它可以帮助您专注于业务逻辑，而不是处理大量的库，模式，配置等。 
+
+而本文通过对前端技术的总结、思考，期望形成一套高效、稳定、可复用、易扩展、易测试、易维护、易重构的**适合中后台业务的前端解决方案**。
+
+“历史最久的未必是最好的、宣传最响的未必是合适的” 。欢迎读者用心点评、多多指教。
 
 ## 背景和现状
 
-我最近一年，参与的产品和项目的共同特征：数据型业务、企业级（Web 和 H5）应用。最常用 Table、Form、Chart 等组件。  因此，今天主要探讨这类场景的技术和解决方案。
+近几年，我主要参与中后台业务产品的前端研发。这类产品的共同特征是交互复杂、偏数据型业务和企业级（Web 和 H5）。最常用 Table、Form 和 Chart 等组件。  因此，今天主要探讨这类场景的技术和解决方案。
 
 技术上大致经历：
 
@@ -30,44 +34,46 @@
 
   ……
 
-至今，我暂称为一套 React 系的单页面应用的前端技术吧。
+至今，形成一套 React 系单页面应用的前端技术。
 
 ### React 系单页面应用的前端技术
 
 |                       | 选型                                       | 说明                                       | 探索                                       |
 | --------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| 开发语言（／ JavaScript 编译器 | TypeScript                               |                                          | [ReasonReact](https://github.com/reasonml/reason-react) 和  [BuckleScript](https://github.com/BuckleScript/bucklescript) |
-| 格式规范                  | prettier、stylelint                       | 团队规范                                     |                                          |
-| 构建                    | Webpack 3、ts-node                        | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） | [Parcel](https://github.com/parcel-bundler/parcel)、[Poi](https://github.com/egoist/poi) |
-| 包管理                   | yarn                                     | 考虑到 lock version 稳定                      |                                          |
-| 构建依赖包                 | node v8.0                                |                                          |                                          |
-| Git hook              | lint-staged、husky                        |                                          |                                          |
-| CSS 预处理               | [Sass](http://sass-lang.com/)、sass-loader、[style-loader](https://github.com/webpack-contrib/style-loader) | 有限制的使用层级，变量，函数，宏 ，禁止 extend              |                                          |
+| 开发语言（／ JavaScript 编译器 | [TypeScript](https://www.typescriptlang.org/) |                                          | [ReasonReact](https://github.com/reasonml/reason-react) 和  [BuckleScript](https://github.com/BuckleScript/bucklescript) |
+| 格式规范                  | [prettier](https://prettier.io/)、[stylelint](https://stylelint.io/) | 团队规范                                     |                                          |
+| 构建                    | [Webpack](https://webpack.js.org/)、[ts-node](https://github.com/TypeStrong/ts-node) | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） | [Parcel](https://github.com/parcel-bundler/parcel)、[Poi](https://github.com/egoist/poi) |
+| 包管理                   | [yarn](https://yarnpkg.com/)             | 考虑到 lock version 稳定                      |                                          |
+| 构建依赖包                 | [node](https://nodejs.org)               |                                          |                                          |
+| Git hook              | [lint-staged](https://github.com/okonet/lint-staged)、[husky](https://github.com/typicode/husky) |                                          |                                          |
+| CSS 预处理               | [Sass](http://sass-lang.com/)、[sass-loader](https://github.com/webpack-contrib/sass-loader)、[style-loader](https://github.com/webpack-contrib/style-loader) | 有限制的使用层级，变量，函数，宏 ，禁止 extend              |                                          |
 | web UI                | [Ant-design](http://ant.design/)         |                                          |                                          |
 | UI 组件                 | 部分自研                                     |                                          |                                          |
 | 图表                    | 部分自研                                     |                                          |                                          |
-| 工具库                   | lodash、[classnames](https://github.com/JedWatson/classnames)、moment |                                          |                                          |
-| View 层                | React                                    |                                          |                                          |
-| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 react-redux、 react-router-redux |                                          | [React-Keeper](https://github.com/vifird/react-keeper) |
-| 异步 Action 和 Reducer 库 | Redux-Thunk                              |                                          |                                          |
-| 应用状态管理                | Redux                                    | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |                                          |
-| 测试                    | 暂无                                       |                                          |                                          |
+| 工具库                   | [lodash](https://lodash.com/docs/)、[classnames](https://github.com/JedWatson/classnames)、[moment](https://momentjs.com/) | 优先 React 和 JS 的原生方法，当考虑稳定和兼容时再使用工具库中的方法  |                                          |
+| View 层                | [React](https://reactjs.org/)            |                                          |                                          |
+| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 [react-redux](https://github.com/reactjs/react-redux)、 [react-router-redux](https://github.com/reactjs/react-router-redux) |                                          | [React-Keeper](https://github.com/vifird/react-keeper) |
+| 异步 Action 和 Reducer 库 | [Redux-Thunk](https://github.com/gaearon/redux-thunk) |                                          |                                          |
+| 应用状态管理                | [Redux](https://redux.js.org/)           | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |                                          |
+| 测试                    | [AVA-Testing](https://github.com/TingGe/ava-testing) |                                          |                                          |
 
 ### 优良实践
 
-1. Code Snippet 方式：命令式生成常规列表和表单的 generater；
-2. 保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；
-3. 沉淀出一些业务级或通用级的组件和工具库；
-4. G11N 全球化实现方案；
-5. 复杂状态树划分实现方案；
-6. 前端测试方案。
+1. 保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；
+2. 沉淀出一些业务级或通用级的组件和工具库；
+3. G11N 全球化实现方案；
+4. 前端打包体积优化：[react-router Code Splitting](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/code-splitting.md) 和 [Webpack Scope Hoisting](https://www.cnblogs.com/chris-oil/p/8457377.html)；
+5. 前端测试方案：[AVA-Testing](https://github.com/TingGe/ava-testing)；
+6. Code generator ：命令式生成常规列表和表单的 generater。
 
 ### 痛点
 
 - 样板代码较多。更适合的优化，如 [Dva](https://github.com/dvajs/dva) 或 Kea 其他？
-- Mock 方案，造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？
-- 状态管理：多个 SPA 和 react-router 的优良实践？
-- PWA：
+- Mock 方案
+  - 问题：造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？
+  - 解决思路：按经验可根据后端代码或前后端接口文档来生成 services 层代码，具体到 Redux实现是根据接口约定生成 Action 和 Reducer 层代码。值得注意的是，建议**同时考虑基于特性组织的项目代码结构**。
+- 状态管理：更好地处理 View、Store 和 service 层关系，如 ReKit 的 “[one action per file pattern](https://medium.com/@nate_wang/a-new-approach-for-managing-redux-actions-91c26ce8b5da#.9em77fuwk)” ？
+- PWA：更好地适配移动场景，Google [Lighthouse](https://github.com/GoogleChrome/lighthouse) 的评分？
 
 ## 对未来的一些思考
 
@@ -121,13 +127,13 @@
 
 #### 小结
 
-以上是宋潇男关于开源技术选型的方法，大致从技术/功能、项目运作模式、技术提供者的产业背景和生态环境四个方面来综合考量。我想，结合加权评分法和德尔菲法或其他群体决策的方式，就可以得出以较严谨、科学的结论。
+以上是宋潇男关于开源技术选型的方法，大致从技术/功能、项目运作模式、技术提供者的产业背景和生态环境四个方面来综合考量。我想，结合加权评分法和德尔菲法或其他群体决策的方式，可以得出以较严谨、科学的结论。
 
 另外，此话题还可以引申出“何时自研 vs 选用开源技术”，我想，大概取决于整合资源的能力吧。
 
 ### 前端工程化
 
-当下，主流的 React、Angular、Vue 前端框架各自形成了全家桶式开发方式。或许，成也萧何败也萧何吧。
+当下，主流的 React、Angular、Vue 前端框架各自形成了全家桶式开发方式。或许，成也萧何败也萧何。
 
 前端工程化方面，大致还还处于类 creat-react-app 改造、各个群体基于 “commander + prompt + semver” 自研或相互学习、相互融合阶段。
 
@@ -160,13 +166,22 @@
 
 以项目结构为例，在实际项目执行中，怎样的项目结构可以节约文件导航、便于重构和 Bug 修复呢？
 
-答案很简单，基于特性进行组织。 如 [r-park/todo-react-redux](https://github.com/r-park/todo-react-redux) 中结构：
+答案很简单，基于特性进行组织（[feature oriented architecture](https://medium.com/@nate_wang/feature-oriented-architecture-for-web-applications-2b48e358afb0)）。 如 [r-park/todo-react-redux](https://github.com/r-park/todo-react-redux) 中结构：
 
 ![r-park 中 todo-react-redux 示例](https://tingge.github.io/img/todo-react-redux.jpg)
 
 当然，仅此还不够。 [Jack Hsu](https://github.com/jaysoo) 在《[Three Rules For Structuring (Redux) Applications](https://jaysoo.ca/2016/02/28/organizing-redux-application/)》中说，还要设计严格的模块边界，还要避免循环依赖。
 
 以上述三个规则为尺，每隔段时间修一修项目中代码的坏味道。如此，便一切安好。
+
+### 组件
+
+借用《[组件化通用模式](http://www.60sky.com/post/component-common-models-1.html)》中两句，简单概述下对组件设计和组件系统体系的理解。
+
+- 组件的设计方法分为 2 个打点：横向分类、纵向分层
+
+
+- 组件化的开发在结构上是一种分形架构的体现，是一个应用引向有序组件构成的过程。组件系统的复杂度可以理解成 f(x) = g(x) + u(x)，g(x) 表示特有功能，u(x) 表示功能的交集或者说有一定重合度的集合。组件弹性体现在 u(x) ->  0 (趋近) 的过程中，这个论点可参考：[面向积木（BO）的方法论与分形架构](http://cloudsinger.iteye.com/blog/1182996)
 
 ### 组合、分形与 Redux
 
@@ -208,9 +223,9 @@
 
 ## 总结
 
-随着产品或项目的不同阶段，我们在测试方案、分形、状态管理、前端报告等方面也在不断探索和成长。近期，我计划整合一套 [AVA](https://github.com/avajs/ava) 、[Enzyme](https://github.com/airbnb/enzyme) 和 [UIRecorder](https://github.com/alibaba/uirecorder) 的测试方案。后续分享，欢迎跟进。
+随着产品或项目的不同阶段，我们在分形、状态管理、前端报告等方面也在不断探索和成长。
 
-期待与各位同学交流学习。
+后续分享，期待与各位交流学习。
 
 ## 参考
 
