@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'egghead.io Learn to Code',
+    'author': 'egghead.io',
+    'url': 'https://egghead.io/'
+  }, {
     'name': 'A free guide to HTML',
     'author': '未知',
     'url': 'http://htmlreference.io/'
