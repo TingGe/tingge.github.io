@@ -2,7 +2,7 @@
 
 ![](/img/react-redux-reactrouter.png)
 
-> 本文最后更新于 2018年02月22日。
+> 本文最后更新于 2018年02月23日。
 >
 > 最初文章地址在ATA社区《[关于 React 系前端技术的思考（上）](https://www.atatech.org/articles/90786)》和《[关于 React 系前端技术的思考（下）](https://www.atatech.org/articles/90787)》 
 
