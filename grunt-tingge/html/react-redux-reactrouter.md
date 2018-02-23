@@ -60,18 +60,27 @@
 ### 优良实践
 
 1. 保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；
+
 2. 沉淀出一些业务级或通用级的组件和工具库；
+
 3. G11N 全球化实现方案；
+
 4. 前端打包体积优化：[react-router Code Splitting](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/code-splitting.md) 和 [Webpack Scope Hoisting](https://www.cnblogs.com/chris-oil/p/8457377.html)；
+
 5. 前端测试方案：[AVA-Testing](https://github.com/TingGe/ava-testing)；
-6. Code generator ：命令式生成常规列表和表单的 generater。
+
+6. Code generator ：
+
+   命令式生成常规列表和表单的 generater；
+
+   根据后端代码或前后端接口文档（[Rap](https://github.com/thx/rap2-delos)／[Swagger](https://swagger.io/tools/)）、结合 TypeScript 强类型约束，生成 Redux 的 Action 和 Reducer 的代码。
+
+   【个人建议】：Code generator 同时考虑基于特性组织的项目代码结构。
 
 ### 痛点
 
-- 样板代码较多。更适合的优化，如 [Dva](https://github.com/dvajs/dva) 或 Kea 其他？
-- Mock 方案
-  - 问题：造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？
-  - 解决思路：按经验可根据后端代码或前后端接口文档来生成 services 层代码，具体到 Redux实现是根据接口约定生成 Action 和 Reducer 层代码。值得注意的是，建议**同时考虑基于特性组织的项目代码结构**。
+- 样板代码较多：更适合的优化？
+- Mock 方案：造数成本较高。有没有更优秀的 Mock 数据方案？
 - 状态管理：更好地处理 View、Store 和 service 层关系，如 ReKit 的 “[one action per file pattern](https://medium.com/@nate_wang/a-new-approach-for-managing-redux-actions-91c26ce8b5da#.9em77fuwk)” ？
 - PWA：更好地适配移动场景，可参考 [HNPWA](https://hnpwa.com/) 实现、用 Google [Lighthouse](https://github.com/GoogleChrome/lighthouse) 的评分？
 
@@ -210,7 +219,7 @@
 | [Preact](https://preactjs.com/)          | [preact-compat](https://preactjs.com/guide/switching-to-preact) 兼容。缺点是有性能折损、对事件代理支持不足等问题。 |
 | [Inferno](https://www.infernojs.org/)    | [inferno-compat](https://github.com/infernojs/inferno/tree/master/packages/inferno-compat) 兼容。 |
 | [anu（又称 qreact）](https://github.com/RubyLouvre/anu) | [迁移成本低](https://rubylouvre.github.io/anu/install.html)。去哪儿司徒正美主力，基于 preact 改进，待观察。 |
-| [react-lite](https://github.com/Lucifier129/react-lite) | 迁移成本低。携程工业聚主力，小有名气，待观察。                  |
+| [react-lite](https://github.com/Lucifier129/react-lite) | 迁移成本低。携程工业聚主力，待观察。                       |
 | [Rax](https://alibaba.github.io/rax/)    | 迁移成本低。阿里的一个跨容器的渲染引擎。                     |
 
 我个人感受是替代品在兼容性和 “Learn once, write everywhere” 上尚有欠缺。不过，在 H5 站点的场景，这些替代品值得一试。

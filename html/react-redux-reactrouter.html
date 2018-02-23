@@ -213,21 +213,26 @@
 </table>
 <h3 id="-">优良实践</h3>
 <ol>
-<li>保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；</li>
-<li>沉淀出一些业务级或通用级的组件和工具库；</li>
-<li>G11N 全球化实现方案；</li>
-<li>前端打包体积优化：<a href="https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/code-splitting.md">react-router Code Splitting</a> 和 <a href="https://www.cnblogs.com/chris-oil/p/8457377.html">Webpack Scope Hoisting</a>；</li>
-<li>前端测试方案：<a href="https://github.com/TingGe/ava-testing">AVA-Testing</a>；</li>
-<li>Code generator ：命令式生成常规列表和表单的 generater。</li>
+<li><p>保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；</p>
+</li>
+<li><p>沉淀出一些业务级或通用级的组件和工具库；</p>
+</li>
+<li><p>G11N 全球化实现方案；</p>
+</li>
+<li><p>前端打包体积优化：<a href="https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/code-splitting.md">react-router Code Splitting</a> 和 <a href="https://www.cnblogs.com/chris-oil/p/8457377.html">Webpack Scope Hoisting</a>；</p>
+</li>
+<li><p>前端测试方案：<a href="https://github.com/TingGe/ava-testing">AVA-Testing</a>；</p>
+</li>
+<li><p>Code generator ：</p>
+<p>命令式生成常规列表和表单的 generater；</p>
+<p>根据后端代码或前后端接口文档（<a href="https://github.com/thx/rap2-delos">Rap</a>／<a href="https://swagger.io/tools/">Swagger</a>）、结合 TypeScript 强类型约束，生成 Redux 的 Action 和 Reducer 的代码。</p>
+<p>【个人建议】：Code generator 同时考虑基于特性组织的项目代码结构。</p>
+</li>
 </ol>
 <h3 id="-">痛点</h3>
 <ul>
-<li>样板代码较多。更适合的优化，如 <a href="https://github.com/dvajs/dva">Dva</a> 或 Kea 其他？</li>
-<li>Mock 方案<ul>
-<li>问题：造数成本较高。有没有结合 TypeScript 强类型约束，生成 Mock 数据的更优秀方案？</li>
-<li>解决思路：按经验可根据后端代码或前后端接口文档来生成 services 层代码，具体到 Redux实现是根据接口约定生成 Action 和 Reducer 层代码。值得注意的是，建议<strong>同时考虑基于特性组织的项目代码结构</strong>。</li>
-</ul>
-</li>
+<li>样板代码较多：更适合的优化？</li>
+<li>Mock 方案：造数成本较高。有没有更优秀的 Mock 数据方案？</li>
 <li>状态管理：更好地处理 View、Store 和 service 层关系，如 ReKit 的 “<a href="https://medium.com/@nate_wang/a-new-approach-for-managing-redux-actions-91c26ce8b5da#.9em77fuwk">one action per file pattern</a>” ？</li>
 <li>PWA：更好地适配移动场景，可参考 <a href="https://hnpwa.com/">HNPWA</a> 实现、用 Google <a href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a> 的评分？</li>
 </ul>
@@ -379,7 +384,7 @@
 </tr>
 <tr>
 <td><a href="https://github.com/Lucifier129/react-lite">react-lite</a></td>
-<td>迁移成本低。携程工业聚主力，小有名气，待观察。</td>
+<td>迁移成本低。携程工业聚主力，待观察。</td>
 </tr>
 <tr>
 <td><a href="https://alibaba.github.io/rax/">Rax</a></td>
