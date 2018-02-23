@@ -7,7 +7,7 @@
 1. [匠心之路](https://github.com/TingGe/develop-tools/)
 2. [关于 React 系前端技术的思考](https://tingge.github.io/html/react-redux-reactrouter.html)
 3. [一套编写 redux 最佳实践的案例](https://tingge.github.io/html/redux-best-practices.html)
-4. [我的前端技能路线图](/grunt-tingge/img/frontend.png)
+4. [Create React App 应用中添加 Storybook 指南](https://tingge.github.io/html/Adding-Storybook-Style-Guide-to-a-Create-React-App.html)
 
 
 ## Web 前端

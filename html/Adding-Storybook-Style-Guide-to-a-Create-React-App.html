@@ -1,0 +1,173 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TingGe Blog Agile agile JavaScript NodeJS">
+  <meta name="author" content="TingGe<505253293@163.com>">
+  <title>听歌实验室</title>
+  <link type="image/x-icon" rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/4074517?v=3&s=40" />
+  <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="/css/landing-page.css" rel="stylesheet">
+  <link href="/css/screenshots.css" rel="stylesheet">
+  <style media="screen">
+    #main {
+      padding-top: 55px;
+    }
+  </style>
+  <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/html2canvas/dist/html2canvas.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand topnav" href="/">
+          <i class="fa fa-flask icon-3x" aria-hidden="true"></i> 听歌实验室
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/html/js.html">JavaScript/NodeJS</a>
+          </li>
+          <li>
+            <a href="/index.html#agile">敏捷/项目管理(Agile/PMP)</a>
+          </li>
+          <li>
+            <a href="/html/cloud-bi.html">云商业智能(Cloud BI)</a>
+          </li>
+          <li>
+            <a href="/html/iot.html">物联网(WoT/IoT)</a>
+          </li>
+          <li>
+            <a href="/html/me.html">关于我</a>
+          </li>
+          <li>
+            <a href="/html/dt-alibaba.html">阿里数据</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div id="main" class="container">
+    <div class="row">
+      <div id="article" class="col-md-9 content-container">
+        <h1 id="create-react-app-storybook-">Create React App 应用中添加 Storybook 指南</h1>
+<p>更新于  2018年2月23日</p>
+<p>整理自 YouTube 视频《<a href="https://www.youtube.com/watch?v=va-JzrmaiUM">Adding Storybook Style Guide to a Create React App</a>》，感谢 Manorisms。</p>
+<h2 id="-">环境</h2>
+<ol>
+<li><p>从 create-react-app 创建示例项目 playground</p>
+<pre><code class="lang-bash">npx create-react-app playground
+</code></pre>
+</li>
+<li><p>playground 中创建 storybook</p>
+<pre><code class="lang-bash">cd playground
+npx storybook
+</code></pre>
+</li>
+<li><p>启用 storybook 开发模式</p>
+<pre><code class="lang-bash">npm run #查看 playground 项目中可执行的 scripts
+npm run storybook #进入 storybook 开发模式
+</code></pre>
+</li>
+<li><p>启动后，在浏览器中 <code>http://localhost:9009/</code> 即可查看默认的 Storybook。</p>
+</li>
+</ol>
+<h2 id="-storybook-playground-">整合 StoryBook 和 playground 项目</h2>
+<ol>
+<li><p>用编辑器打开文件 <code>playground/src/stories/index.js</code> ，添加以下代码：</p>
+<pre><code class="lang-javascript">...
+import App from &quot;../App&quot;; // 引入 playground 的 App
+...
+
+storiesOf(&quot;App&quot;, module)
+  .add(&quot;default&quot;, () =&gt; &lt;App /&gt;) // 创建默认 App 节点和页面
+  .add(&quot;with title&quot;, () =&gt; &lt;App title=&quot;My World&quot; /&gt;); // 创建带标题属性的 App 节点和页面
+</code></pre>
+</li>
+<li><p>用编辑器打开文件 <code>playground/src/App.js</code>， 为 App 组件增加 title 属性：</p>
+<pre><code class="lang-javascript">import React, { Component } from &#39;react&#39;;
+import logo from &#39;./logo.svg&#39;;
+import &#39;./App.css&#39;;
+
+class App extends Component {
+  render() {
+    const { title } = this.props; // 增加 props 的 title 
+    return (
+      &lt;div className=&quot;App&quot;&gt;
+        &lt;header className=&quot;App-header&quot;&gt;
+          &lt;img src={logo} className=&quot;App-logo&quot; alt=&quot;logo&quot; /&gt;
+          &lt;h1 className=&quot;App-title&quot;&gt;Welcome to {title}&lt;/h1&gt; // 页面中显示 title 值
+        &lt;/header&gt;
+        &lt;p className=&quot;App-intro&quot;&gt;
+          To get started, edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+/* 设置 title 默认值 */
+App.defaultProps = {
+  title: &quot;React&quot;
+};
+
+export default App;
+</code></pre>
+</li>
+<li><p>在浏览器中切换回  <code>http://localhost:9009/</code>  即可查看刚新增的 default 和 with title 节点。点击可在右侧预览对应的 App 页面。</p>
+</li>
+<li><p>在命令行中 Ctrl + C 退出 storybook 开发模式， 构建 <code>storybook-static</code>。</p>
+<pre><code class="lang-bash">npm run build-storybook
+</code></pre>
+</li>
+<li><p>启动 <code>storybook-static</code> 服务。</p>
+<pre><code class="lang-bash">npx serve storybook-static
+</code></pre>
+</li>
+<li><p>在浏览器中打开 <a href="http://localhost:5000">http://localhost:5000</a>  查看即可。</p>
+</li>
+</ol>
+
+      </div>
+      <div class="col-md-3" style="padding-top:20px;">
+        <iframe src="http://githubbadge.appspot.com/tingge?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <a id="html2canvas" title="截图下载-快照">&nbsp;</a>
+  <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/js/article.js" charset="utf-8"></script>
+  <!-- justice.js https://github.com/okor/justice  -->
+  <script src="/lib/justice.min.js" charset="utf-8"></script>
+  <!-- instantclick -->
+  <script src="/lib/instantclick.js" charset="utf-8"></script>
+  <script type="text/javascript" data-no-instant>
+    Justice.init();
+  </script>
+</body>
+
+</html>
