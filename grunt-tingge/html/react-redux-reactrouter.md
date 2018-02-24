@@ -34,7 +34,7 @@
 
   ……
 
-至今，形成一套 React 系单页面应用的前端技术。
+至今，形成一套 React 系单页面应用的前端技术。另外，[Hyperapp](https://github.com/hyperapp/hyperapp) + [Parcel](https://github.com/parcel-bundler/parcel) 也是个值得关注的组合。[hyperapp-parcel-app 项目](https://github.com/daftcode/hyperapp-parcel-app)和[相关文章](https://blog.daftcode.pl/hyperapp-parcel-71823bd93f1c)。
 
 ### React 系单页面应用的前端技术
 

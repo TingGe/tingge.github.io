@@ -153,8 +153,10 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 - 图表组件
   - [G2](https://github.com/antvis)、Echarts
   - 富文本编辑：[draft.js](https://draftjs.org/) + [draft-js-plugins](https://www.draft-js-plugins.com/)、ckeditor
+  - 代码编辑器：[Monaco-Editor](https://microsoft.github.io/monaco-editor/)
 - 非图表组件
   - 表格：
+  - 拖放：[draggable](https://github.com/Shopify/draggable)
 - 布局
   - 跨屏（PC、H5）：[react-grid-layout](https://github.com/STRML/react-grid-layout)、[gaea-editor](https://github.com/ascoders/gaea-editor)
   - 大屏：[golden-layout](https://github.com/deepstreamIO/golden-layout)、[react-mosaic](https://github.com/palantir/react-mosaic)
@@ -188,10 +190,10 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 - 邮件（newsletter）
   - 截屏：[Puppeteer](https://github.com/GoogleChrome/puppeteer)、[Chromeless](https://github.com/graphcool/chromeless)、[Headless Chromium](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-  - [邮件HTML模版](http://tingge.github.io/lab/rwd-edm.html)：[Ink](http://foundation.zurb.com/emails.html)
+  - [邮件HTML模版](http://tingge.github.io/lab/rwd-edm.html)：[Ink](http://foundation.zurb.com/emails.html)、[MJML](https://github.com/mjmlio/mjml)
 - 短消息（message）
-  - 站内（公告、审批、消息等）
-  - [IM](https://github.com/TingGe/develop-tools#mac或linux系)(钉钉、短信、微信)
+  - 站内（公告、审批、消息等）：[跨浏览器的桌面通知插件 Push.js](https://pushjs.org/)
+  - [IM](https://github.com/TingGe/develop-tools#mac或linux系)(钉钉、短信、微信)：
 - 支持BI功能模块嵌入业务系统：
   - 安全 iframe 嵌入研究：[Really Understanding iFrames](https://onlineadview.wordpress.com/2011/11/06/really-understanding-iframes/)、
 - 二维码

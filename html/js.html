@@ -75,6 +75,7 @@
     <div class="row">
       <div id="article" class="col-md-9 content-container">
         <h1 id="javascript-">JavaScript 和前端前沿技术探索</h1>
+<p>本文最后更新于 2018年02月24日。</p>
 <blockquote>
 <p>“一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 <a href="https://www.w3.org/2016/Talks/xq-0709-10th/">progresive web app</a> 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 @<a href="https://github.com/Lucifier129">携程-工业聚</a></p>
 <p>“集市” 和“大教堂”之争，推动着前端这个大生态的繁荣和演进。我把这个过程，总结为 “工程实践 + 标准化 =&gt; JavaScript 生态”。</p>
@@ -88,10 +89,11 @@
 <h2 id="web-">Web 前端</h2>
 <blockquote>
 <p>至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
-目前，主流的三大 FRP 框架 React系、Angular 2系、Vue系 在相互融合。其他类似框架或局部功能替代类库不足成事。</p>
+目前，主流的三大 FRP 框架 React系、Angular 2系、Vue系 在相互融合。</p>
+<p>另外，<a href="https://github.com/hyperapp/hyperapp">Hyperapp</a> + <a href="https://github.com/parcel-bundler/parcel">Parcel</a> 也是个值得关注的组合。<a href="https://github.com/daftcode/hyperapp-parcel-app">hyperapp-parcel-app 项目</a>和<a href="https://blog.daftcode.pl/hyperapp-parcel-71823bd93f1c">相关文章</a>。</p>
 </blockquote>
 <p>推荐的React设计模式、技术、技巧和窍门：<a href="https://vasanthk.gitbooks.io/react-bits/">React Bits</a></p>
-<p>更多： <a href="https://github.com/thoughtbit/it-note/issues/12">React.js 资料和教程</a></p>
+<p>更多： <a href="https://github.com/thoughtbit/it-note/issues/12">React.js 资料和教程</a>、<a href="http://microjs.com/">microjs</a></p>
 <table>
 <thead>
 <tr>
@@ -243,7 +245,15 @@
 <tr>
 <td>UI 层轻量级解决方案</td>
 <td>Vue、Inferno、Preact</td>
-<td>React、<a href="https://facebookincubator.github.io/react-vr/">React VR</a></td>
+<td>React、<a href="https://facebookincubator.github.io/react-vr/">React VR</a>、<a href="https://github.com/hyperapp/hyperapp">Hyperapp</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>高阶组件（HOC）</td>
+<td></td>
+<td><a href="https://github.com/acdlite/recompose">Recompose</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -266,8 +276,16 @@
 </tr>
 <tr>
 <td>动画</td>
+<td><a href="https://github.com/michalsnik/aos">AOS</a>、<a href="https://github.com/daneden/animate.css">Animate.css</a></td>
+<td>react-transition-group、<a href="https://www.npmjs.com/package/rc-queue-anim">rc-queue-anim</a>、<a href="https://github.com/jondot/react-flight">react-flight</a>、<a href="https://popmotion.io/">Popmotion</a>、<a href="https://motion.ant.design/">Ant Motion</a>、 <a href="https://github.com/chenglou/react-motion">React-Motion</a></td>
 <td></td>
-<td>react-transition-group、<a href="https://www.npmjs.com/package/rc-queue-anim">rc-queue-anim</a>、<a href="https://github.com/jondot/react-flight">react-flight</a>、<a href="https://popmotion.io/">Popmotion</a>、<a href="https://motion.ant.design/">Ant Motion</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>表单</td>
+<td></td>
+<td><a href="https://github.com/erikras/redux-form">redux-form</a>、 <a href="https://github.com/jaredpalmer/formik">Formik</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -275,7 +293,7 @@
 <tr>
 <td>表单验证</td>
 <td></td>
-<td>React 内置的 propTypes</td>
+<td>React 内置的 propTypes、<a href="https://github.com/jquense/yup">Yup</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -315,7 +333,7 @@
 <tr>
 <td>应用状态管理</td>
 <td><a href="ngrx/store">ngrx/store</a></td>
-<td>Redux（redux-promise/<a href="https://github.com/jasonslyvia/redux-sequence-action">redux-sequence-action</a>）、<a href="https://github.com/indexiatech/redux-immutablejs">redux-immutablejs</a></td>
+<td>Redux（redux-promise/<a href="https://github.com/jasonslyvia/redux-sequence-action">redux-sequence-action</a>、<a href="https://github.com/indexiatech/redux-immutablejs">redux-immutablejs</a>）、Mobx、Dob、<a href="https://github.com/solkimicreb/react-easy-state">React Easy State</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -420,7 +438,9 @@
 <p>专题 <a href="https://github.com/TingGe/develop-tools#工具">匠心之路—工具</a></p>
 </blockquote>
 <ol>
-<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test">rollup-test</a></li>
+<li>Parcel：号称“零配置、构建快”的打包工具，应用场景和 Webpack 类似</li>
+<li>Webpack：业务项目常用的打包工具</li>
+<li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test">rollup-test</a>：库项目常用的打包工具</li>
 <li><a href="https://tingge.github.io/lab/broccoli-babel-test/dist/index.html">broccoli-babel-test</a></li>
 <li><a href="https://tingge.github.io/lab/grunt-babel-test/dist/index.html">grunt-babel-test</a></li>
 <li><a href="https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test">phantomjs-test</a></li>
@@ -1208,9 +1228,18 @@
 <li><a href="https://www.html5rocks.com/zh/tutorials/appcache/beginner/#toc-updating-cache">应用缓存初级使用指南</a></li>
 <li><a href="https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage?hl=zh-cn">检查和管理存储、数据库与缓存</a></li>
 </ul>
-<h3 id="react-angular-vue">React &amp; Angular &amp; Vue</h3>
+<h3 id="react-angular-vue-">React &amp; Angular &amp; Vue 等</h3>
 <ul>
-<li><a href="http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/">手把手教你基于ES6架构自己的React Boilerplate项目</a></li>
+<li><a href="https://blog.logrocket.com/an-imperative-guide-to-forms-in-react-927d9670170a">An imperative guide to forms in React</a>：React 表单组件 Formik</li>
+</ul>
+<ul>
+<li><a href="https://medium.com/@solkimicreb/design-patterns-with-react-easy-state-830b927acc7c">Design Patterns with React Easy State</a>：React 状态管理 React Easy State</li>
+</ul>
+<ul>
+<li><p><a href="https://medium.com/hyperapp/hyperapp-for-redux-refugees-2507c9dd1ddc">Hyperapp for Redux refugees</a>：React 替代品 Hyperapp，包含 view 和类 Redux 的状态管理</p>
+</li>
+<li><p><a href="http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/">手把手教你基于ES6架构自己的React Boilerplate项目</a></p>
+</li>
 <li><a href="https://www.npmjs.com/package/react-scripts">Create React App</a>：一个 Facebook 的React Boilerplate项目</li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&amp;mid=2247483973&amp;idx=1&amp;sn=01bcd0a60e8cfa0b93f4e82c7d21a677">让React组件变得可响应</a></li>
 <li><a href="http://mp.weixin.qq.com/s/P9pZDvu7Zp8SkXvbWIHoHw">复杂单页应用的数据层设计</a></li>

@@ -1,5 +1,7 @@
 # JavaScript 和前端前沿技术探索
 
+本文最后更新于 2018年02月24日。
+
 > “一套单页面应用，任何 path 访问都是服务端渲染、然后客户端路由，既解决 seo 问题，又解决渲染问题和前后端分离问题，并且为未来的 [progresive web app](https://www.w3.org/2016/Talks/xq-0709-10th/) 做准备。套上 servie worker 就具有离线功能。所以，从前端开发者长期受益来看，放弃 node 是弊大于利的。”—— 语自 @[携程-工业聚](https://github.com/Lucifier129)
 >
 > “集市” 和“大教堂”之争，推动着前端这个大生态的繁荣和演进。我把这个过程，总结为 “工程实践 + 标准化 => JavaScript 生态”。
@@ -13,11 +15,13 @@
 ## Web 前端
 
 > 至今，没有最佳实践，大家对同一个问题通常有不同解法。这是 library 相对于 framework 的劣势。
-> 目前，主流的三大 FRP 框架 React系、Angular 2系、Vue系 在相互融合。其他类似框架或局部功能替代类库不足成事。
+> 目前，主流的三大 FRP 框架 React系、Angular 2系、Vue系 在相互融合。
+>
+> 另外，[Hyperapp](https://github.com/hyperapp/hyperapp) + [Parcel](https://github.com/parcel-bundler/parcel) 也是个值得关注的组合。[hyperapp-parcel-app 项目](https://github.com/daftcode/hyperapp-parcel-app)和[相关文章](https://blog.daftcode.pl/hyperapp-parcel-71823bd93f1c)。
 
 推荐的React设计模式、技术、技巧和窍门：[React Bits](https://vasanthk.gitbooks.io/react-bits/)
 
-更多： [React.js 资料和教程](https://github.com/thoughtbit/it-note/issues/12)
+更多： [React.js 资料和教程](https://github.com/thoughtbit/it-note/issues/12)、[microjs](http://microjs.com/)
 
 
 |                                | 技术                                       | React系(Webpack+ React + Redux)           | Progressive  Web  App | 微信小应用 | 支付宝小程序 |
@@ -39,16 +43,18 @@
 | 模版引擎                           | pug、Handlebars、Mustache、[doT](http://olado.github.io/doT/index.html) |                                          |                       |       |        |
 | 异步Task跟踪，分析，错误记录、开发调试跟踪等       | [zone.js](https://github.com/angular/zone.js) |                                          |                       |       |        |
 | 模块化                            | ES6 Modules、Browserify（CommonJS）、RequireJS（AMD）、SeaJS（CMD）、KMD.js（KMD）、[systemjs](https://github.com/systemjs/systemjs) |                                          |                       |       |        |
-| UI 层轻量级解决方案                    | Vue、Inferno、Preact                       | React、[React VR](https://facebookincubator.github.io/react-vr/) |                       |       |        |
+| UI 层轻量级解决方案                    | Vue、Inferno、Preact                       | React、[React VR](https://facebookincubator.github.io/react-vr/)、[Hyperapp](https://github.com/hyperapp/hyperapp) |                       |       |        |
+| 高阶组件（HOC）                      |                                          | [Recompose](https://github.com/acdlite/recompose) |                       |       |        |
 | MV* 框架(路由、数据获取、状态管理)           | Angular、[Aurelia](http://aurelia.io/)、Avalon、Ember |                                          |                       |       |        |
 | Pure Render                    |                                          | pure-render-decorator                    |                       |       |        |
-| 动画                             |                                          | react-transition-group、[rc-queue-anim](https://www.npmjs.com/package/rc-queue-anim)、[react-flight](https://github.com/jondot/react-flight)、[Popmotion](https://popmotion.io/)、[Ant Motion](https://motion.ant.design/) |                       |       |        |
-| 表单验证                           |                                          | React 内置的 propTypes                      |                       |       |        |
+| 动画                             | [AOS](https://github.com/michalsnik/aos)、[Animate.css](https://github.com/daneden/animate.css) | react-transition-group、[rc-queue-anim](https://www.npmjs.com/package/rc-queue-anim)、[react-flight](https://github.com/jondot/react-flight)、[Popmotion](https://popmotion.io/)、[Ant Motion](https://motion.ant.design/)、 [React-Motion](https://github.com/chenglou/react-motion) |                       |       |        |
+| 表单                             |                                          | [redux-form](https://github.com/erikras/redux-form)、 [Formik](https://github.com/jaredpalmer/formik) |                       |       |        |
+| 表单验证                           |                                          | React 内置的 propTypes、[Yup](https://github.com/jquense/yup) |                       |       |        |
 | 路由控制，可选                        |                                          | [react-router](https://github.com/ReactTraining/react-router)、react-router-redux、[junctions](https://github.com/jamesknelson/junctions) |                       |       |        |
 | 连接*React* 组件与 *Redux* store，可选 |                                          | [React-Redux](https://github.com/reactjs/react-redux) |                       |       |        |
 | 中间件与异步操作                       | Async、Q                                  | [redux-thunk](https://github.com/gaearon/redux-thunk) |                       |       |        |
 | 不可变数据结构                        |                                          | [Immutable.js](https://github.com/facebook/immutable-js/)、immutability-helper、seamless-immutable、  [mori](https://github.com/swannodette/mori)、[cortex](https://github.com/mquan/cortex) |                       |       |        |
-| 应用状态管理                         | [ngrx/store](ngrx/store)                 | Redux（redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)）、[redux-immutablejs](https://github.com/indexiatech/redux-immutablejs) |                       |       |        |
+| 应用状态管理                         | [ngrx/store](ngrx/store)                 | Redux（redux-promise/[redux-sequence-action](https://github.com/jasonslyvia/redux-sequence-action)、[redux-immutablejs](https://github.com/indexiatech/redux-immutablejs)）、Mobx、Dob、[React Easy State](https://github.com/solkimicreb/react-easy-state) |                       |       |        |
 | 静态网页生成器（SSG）                   | Gitlab pages、 Netlify、 Surge、 Now static、 Hexo、[Docsify](https://docsify.js.org/) | Gatsby                                   |                       |       |        |
 
 ### 模块化/组件化
@@ -92,11 +98,13 @@
 
 > 专题 [匠心之路—工具](https://github.com/TingGe/develop-tools#工具)
 
-1. [rollup-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test)
-2. [broccoli-babel-test](https://tingge.github.io/lab/broccoli-babel-test/dist/index.html)
-3. [grunt-babel-test](https://tingge.github.io/lab/grunt-babel-test/dist/index.html)
-4. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
-5. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
+1. Parcel：号称“零配置、构建快”的打包工具，应用场景和 Webpack 类似
+2. Webpack：业务项目常用的打包工具
+3. [rollup-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/rollup-test)：库项目常用的打包工具
+4. [broccoli-babel-test](https://tingge.github.io/lab/broccoli-babel-test/dist/index.html)
+5. [grunt-babel-test](https://tingge.github.io/lab/grunt-babel-test/dist/index.html)
+6. [phantomjs-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/phantomjs-test)
+7. [nightmare-test](https://github.com/TingGe/tingge.github.io/tree/master/lab/nightmare-test)
 
 ### 状态管理
 
@@ -411,7 +419,15 @@ JS框架的实践
 - [应用缓存初级使用指南](https://www.html5rocks.com/zh/tutorials/appcache/beginner/#toc-updating-cache)
 - [检查和管理存储、数据库与缓存](https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage?hl=zh-cn)
 
-### React & Angular & Vue
+### React & Angular & Vue 等
+
+- [An imperative guide to forms in React](https://blog.logrocket.com/an-imperative-guide-to-forms-in-react-927d9670170a)：React 表单组件 Formik
+
+
+- [Design Patterns with React Easy State](https://medium.com/@solkimicreb/design-patterns-with-react-easy-state-830b927acc7c)：React 状态管理 React Easy State
+
+
+- [Hyperapp for Redux refugees](https://medium.com/hyperapp/hyperapp-for-redux-refugees-2507c9dd1ddc)：React 替代品 Hyperapp，包含 view 和类 Redux 的状态管理
 
 - [手把手教你基于ES6架构自己的React Boilerplate项目](http://jiji262.github.io/2016/04/29/create-your-own-react-boilerplate/)
 - [Create React App](https://www.npmjs.com/package/react-scripts)：一个 Facebook 的React Boilerplate项目
