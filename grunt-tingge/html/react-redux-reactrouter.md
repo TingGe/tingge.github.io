@@ -82,7 +82,7 @@
 - 样板代码较多：更适合的优化？
 - Mock 方案：造数成本较高。有没有更优秀的 Mock 数据方案？
 - 状态管理：更好地处理 View、Store 和 service 层关系，如 ReKit 的 “[one action per file pattern](https://medium.com/@nate_wang/a-new-approach-for-managing-redux-actions-91c26ce8b5da#.9em77fuwk)” ？
-- PWA：更好地适配移动场景，可参考 [HNPWA](https://hnpwa.com/) 实现、用 Google [Lighthouse](https://github.com/GoogleChrome/lighthouse) 的评分？
+- PWA：更好地适配移动场景？可参考 [PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) 、 [HNPWA](https://hnpwa.com/) 实现，用 Google [Lighthouse](https://github.com/GoogleChrome/lighthouse) 的评分。
 
 ## 对未来的一些思考
 
