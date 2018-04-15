@@ -13,12 +13,12 @@
 
 ## 阅历
 
-> 基于知识体系的预估能力，是专家的价值所在。
-
 - 2009～2011，初涉 Web 开发，混迹于天朝帝都
-- 2012～2015，“广”而“数”缘，受教于[@周培公](https://github.com/peigong)，擅[互联网广告](https://github.com/TingGe/internet-ads)、[数据采集](https://github.com/TingGe/web-analytics)、[JavaScript](https://github.com/TingGe/develop-tools)
+- 2012～2015，“[广](https://github.com/TingGe/internet-ads)”而“[数](https://github.com/TingGe/web-analytics)”缘，受教于[@周培公](https://github.com/peigong)
+  - 擅[互联网广告](https://github.com/TingGe/internet-ads)、[数据采集](https://github.com/TingGe/web-analytics)、[JavaScript](https://github.com/TingGe/develop-tools)
+  - 专利《[一种网页加载方法和装置](https://patents.google.com/patent/CN103412890A/zh)》（专利号 CN103412890A）
 - 2015～2016，“数”业专攻，全栈、[敏捷/项目管理(Agile/PMP)](敏捷/项目管理(Agile/PMP))、[物联网（IoT、WoT）](http://tingge.github.io/html/iot.html)
-- 2016~至今，由“数”入“析”，中后台产品前端研发。[商业智能（Cloud BI）](http://tingge.github.io/html/cloud-bi.html)、[前端（React系技术战）](http://tingge.github.io/html/js.html)、智能数仓引擎（Dataphin）、统一数据资产管理平台（UDAP）
+- 2016~至今，由“数”入“析”，中后台产品前端研发。智能数仓引擎（Dataphin）、统一数据资产管理平台（UDAP）、[商业智能（Cloud BI）](http://tingge.github.io/html/cloud-bi.html)、[前端（React系技术栈）](http://tingge.github.io/html/js.html)
 
 ## 找到我
 

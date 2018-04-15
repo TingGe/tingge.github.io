@@ -17,7 +17,6 @@ module.exports = grunt => {
           flatten: false,
           src: [
             'bootstrap/dist/**',
-            'font-awesome/**',
             'jquery/dist/jquery.min.js',
             'autocjs/build/**',
             'html2canvas/dist/html2canvas.min.js'
