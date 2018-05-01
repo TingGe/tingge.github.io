@@ -2,7 +2,7 @@
 
 ![](/img/react-redux-reactrouter.png)
 
-> 本文最后更新于 2018年02月23日。
+> 本文最后更新于 2018年05月01日。
 >
 > 最初文章地址在ATA社区《[关于 React 系前端技术的思考（上）](https://www.atatech.org/articles/90786)》和《[关于 React 系前端技术的思考（下）](https://www.atatech.org/articles/90787)》 
 
@@ -38,38 +38,41 @@
 
 ### React 系单页面应用的前端技术
 
-|                       | 选型                                       | 说明                                       | 探索                                       |
-| --------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| 开发语言（／ JavaScript 编译器 | [TypeScript](https://www.typescriptlang.org/) |                                          | [ReasonReact](https://github.com/reasonml/reason-react) 和  [BuckleScript](https://github.com/BuckleScript/bucklescript) |
-| 格式规范                  | [prettier](https://prettier.io/)、[stylelint](https://stylelint.io/) | 团队规范                                     |                                          |
-| 构建                    | [Webpack](https://webpack.js.org/)、[ts-node](https://github.com/TypeStrong/ts-node) | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） | [Parcel](https://github.com/parcel-bundler/parcel)、[Poi](https://github.com/egoist/poi) |
-| 包管理                   | [yarn](https://yarnpkg.com/)             | 考虑到 lock version 稳定                      |                                          |
-| 构建依赖包                 | [node](https://nodejs.org)               |                                          |                                          |
-| Git hook              | [lint-staged](https://github.com/okonet/lint-staged)、[husky](https://github.com/typicode/husky) |                                          |                                          |
-| CSS 预处理               | [Sass](http://sass-lang.com/)、[sass-loader](https://github.com/webpack-contrib/sass-loader)、[style-loader](https://github.com/webpack-contrib/style-loader) | 有限制的使用层级，变量，函数，宏 ，禁止 extend              |                                          |
-| web UI                | [Ant-design](http://ant.design/)         |                                          |                                          |
-| UI 组件                 | 部分自研                                     |                                          |                                          |
-| 图表                    | 部分自研                                     |                                          |                                          |
-| 工具库                   | [lodash](https://lodash.com/docs/)、[classnames](https://github.com/JedWatson/classnames)、[moment](https://momentjs.com/) | 优先 React 和 JS 的原生方法，当考虑稳定和兼容时再使用工具库中的方法  |                                          |
-| View 层                | [React](https://reactjs.org/)            |                                          |                                          |
-| 路由控制                  | [react-router](https://github.com/ReactTraining/react-router)、 [react-redux](https://github.com/reactjs/react-redux)、 [react-router-redux](https://github.com/reactjs/react-router-redux) |                                          | [React-Keeper](https://github.com/vifird/react-keeper) |
-| 异步 Action 和 Reducer 库 | [Redux-Thunk](https://github.com/gaearon/redux-thunk) |                                          |                                          |
-| 应用状态管理                | [Redux](https://redux.js.org/)           | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |                                          |
-| 测试                    | [AVA-Testing](https://github.com/TingGe/ava-testing) |                                          |                                          |
+|                                | 选型                                                         | 说明                                                         | 探索                                                         |
+| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 开发语言（／ JavaScript 编译器 | [TypeScript](https://www.typescriptlang.org/)                |                                                              | [ReasonReact](https://github.com/reasonml/reason-react) 和  [BuckleScript](https://github.com/BuckleScript/bucklescript) |
+| 格式规范                       | [prettier](https://prettier.io/)、[stylelint](https://stylelint.io/) | 团队规范                                                     |                                                              |
+| 构建                           | [Webpack](https://webpack.js.org/)、[ts-node](https://github.com/TypeStrong/ts-node) | 只考虑现代浏览器，因此未选用构建效率较低的 babel。（Babel 生态中很多插件和预制分的足够细致，因此会造成一个项目依赖很多的情况） | [Parcel](https://github.com/parcel-bundler/parcel)、[Poi](https://github.com/egoist/poi) |
+| 包管理                         | [yarn](https://yarnpkg.com/)                                 | 考虑到 lock version 稳定                                     |                                                              |
+| 构建依赖包                     | [node](https://nodejs.org)                                   |                                                              |                                                              |
+| Git hook                       | [lint-staged](https://github.com/okonet/lint-staged)、[husky](https://github.com/typicode/husky) |                                                              |                                                              |
+| CSS 预处理                     | [Sass](http://sass-lang.com/)、[sass-loader](https://github.com/webpack-contrib/sass-loader)、[style-loader](https://github.com/webpack-contrib/style-loader) | 有限制的使用层级，变量，函数，宏 ，禁止 extend               |                                                              |
+| web UI                         | [Ant-design](http://ant.design/)                             |                                                              |                                                              |
+| UI 组件                        | 部分自研                                                     |                                                              |                                                              |
+| 图表                           | 部分自研                                                     |                                                              |                                                              |
+| 动画                           | [Lottie](https://airbnb.design/lottie/)、                    |                                                              | [Ant Motion](https://motion.ant.design/)                     |
+| 工具库                         | [lodash](https://lodash.com/docs/)、[classnames](https://github.com/JedWatson/classnames)、[moment](https://momentjs.com/) | 优先 React 和 JS 的原生方法，当考虑稳定和兼容时再使用工具库中的方法 |                                                              |
+| View 层                        | [React](https://reactjs.org/)                                |                                                              |                                                              |
+| 路由控制                       | [react-router](https://github.com/ReactTraining/react-router)、 [react-redux](https://github.com/reactjs/react-redux)、 [react-router-redux](https://github.com/reactjs/react-router-redux) |                                                              | [React-Keeper](https://github.com/vifird/react-keeper)       |
+| 异步 Action 和 Reducer 库      | [Redux-Thunk](https://github.com/gaearon/redux-thunk)        |                                                              |                                                              |
+| 应用状态管理                   | [Redux](https://redux.js.org/)                               | 降低样本代码的优良实践 [Dva](https://github.com/dvajs/dva)、[Kea](https://github.com/keajs/kea) 等 |                                                              |
+| 测试                           | [AVA-Testing](https://github.com/TingGe/ava-testing)         |                                                              |                                                              |
 
 ### 优良实践
 
-1. 保持团队代码风格和规范一致性：Code Review、开发工具插件保障和 precommit 矫正；
+1. 保持团队代码风格和规范一致性：设计和开发规范、Code Review、开发工具插件保障和矫正；
 
 2. 沉淀出一些业务级或通用级的组件和工具库；
 
-3. G11N 全球化实现方案；
+3. 数据领域和通用的数据可视化、数据领域的 SQL 编辑器的实现方案；
 
-4. 前端打包体积优化：[react-router Code Splitting](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/code-splitting.md) 和 [Webpack Scope Hoisting](https://www.cnblogs.com/chris-oil/p/8457377.html)；
+4. G11N 全球化实现和自动化测试方案；
 
-5. 前端测试方案：[AVA-Testing](https://github.com/TingGe/ava-testing)；
+5. 前端打包体积优化：[react-router Code Splitting](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/code-splitting.md) 和 [Webpack Scope Hoisting](https://www.cnblogs.com/chris-oil/p/8457377.html)；
 
-6. Code generator ：
+6. 自动化测试方案：[AVA-Testing](https://github.com/TingGe/ava-testing)；
+
+7. Code generator ：
 
    命令式生成常规列表和表单的 generater；
 
