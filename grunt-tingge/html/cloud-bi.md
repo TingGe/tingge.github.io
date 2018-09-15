@@ -238,6 +238,7 @@ Gartner 分析师们提出的未来主流BI的标准配置：
 
 ## 参考
 
+- [钉钉 h5 微应用开发](https://open-doc.dingtalk.com/docs/doc.htm?treeId=367&articleId=107520&docType=1)
 - adelaide: [Business Intelligence](https://www.adelaide.edu.au/planning/data-warehouse/)
 - 知乎：[大数据、云计算和商业智能这三者的关系到底如何，以后的发展前景有什么看法？](https://www.zhihu.com/question/20540118)
 - [44个基于SaaS的商业智能解决方案](http://www.d1net.com/software/news/457934.html)
