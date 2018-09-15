@@ -4,7 +4,7 @@
 
 ## 标签
 
-[DevOps](http://tingge.github.io/html/opsdev.html)、持续测试（Continuous testing）、中后台前端研发、移动端 H5 应用开发、[Chrome 扩展程序](https://github.com/TingGe/chrome-extensions)
+[DevOps](http://tingge.github.io/html/devops.html)、持续测试（Continuous testing）、中后台前端研发、移动端 H5 应用开发、[Chrome 扩展程序](https://github.com/TingGe/chrome-extensions)
 
 ## 常用
 
