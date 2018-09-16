@@ -1,9 +1,10 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TingGe Blog",
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "deploy": "git add .. && git commit"
   },
   "devDependencies": {
     "grunt": "~1.0.3",
