@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('BookCtrl', function BookCtrl($scope) {
   $scope.books = [{
+    'name': 'Pure javascript immutable arrays',
+    'author': 'Vincent Billey',
+    'url': 'https://vincent.billey.me/pure-javascript-immutable-array/'
+  },{
     'name': 'egghead.io Learn to Code',
     'author': 'egghead.io',
     'url': 'https://egghead.io/'

@@ -17,8 +17,8 @@
     "load-grunt-tasks": "^4.0.0"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "font-awesome": "^4.6.1",
+    "bootstrap": "^3.4.0",
+    "font-awesome": "^4.7.0",
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
     "justice": "github:okor/justice",
