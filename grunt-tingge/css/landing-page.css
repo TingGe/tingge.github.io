@@ -103,7 +103,7 @@ td:focus::before, tbody th:focus::before {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(https://unsplash.it/1900/840?image=1024) no-repeat center center;
+    background: url(https://lorempixel.com/1900/840?image=1024) no-repeat center center;
     background-size: cover;
 }
 .banner h2 {
